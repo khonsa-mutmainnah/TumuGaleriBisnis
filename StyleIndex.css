@@ -1,0 +1,208 @@
+.all{
+    background-color: #212932;
+    font-family: montserrat, sans-serif;
+}
+
+.navbar-brand{
+    margin-left: 60px;
+}
+
+.galeribisnis-navbar{
+    top: 15px;
+    font-size: 30px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.tagline-navbar{
+    top: 50px;
+    position: absolute;
+}
+.navbar{
+    top: 30px;
+    background-color: #8A7D63;
+    text-transform: capitalize;
+}
+
+.navbar-nav{
+    margin-left: 1000px;
+    font-size: 20px;
+}
+
+.nav-item{
+    margin-left: 15px;
+}
+.akun-dropdown img{
+    border-radius:50%; 
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.dropdown-toggle {
+    display:none;
+}
+
+/* home css */
+.Home{
+    margin-top: 130px;
+    margin-left: 150px;
+    color: #D9DFDB;
+}
+
+.Home h5{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.Home h1{
+    font-weight: 700;
+    font-size: 90px;
+    padding-bottom: 0px;
+    letter-spacing: 2%;
+}
+
+.Home .tagline-main{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.Home .tekan{
+    margin-top: 70px;   
+}
+
+.Home .tekan button{
+    background-color: #8A7D63;
+    width: 150px;
+    height: 50px;
+    color: #D9DFDB;
+    font-weight: 800;
+    border-radius: 40px;
+    border: none;
+    margin-left: 250px;
+}
+
+/* Pengunjung css */
+.Pengunjung .atas{
+    width: 1200px;
+    background-color: #D9DFDB;
+    margin-top: 120px;
+    margin-left: 80px;
+    border-radius: 15px;
+    position: absolute;
+}
+
+.Pengunjung .atas img{
+    border-radius:50%; 
+    height: 110px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+   
+}
+
+.Pengunjung .atas h3{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 200px;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.Pengunjung .tagline-profil{
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 100px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.Pengunjung .kategori{
+    position: absolute;
+    margin-left: 522px;
+    margin-top: 100px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.Pengunjung .jml-produk{
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.Pengunjung .bawah{
+    width: 1200px;
+    background-color: #C4C4C4;
+    margin-top: 260px;
+    margin-left: 80px;
+    position: absolute;
+}
+
+.Pengunjung .bawah img{
+    width: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.Pengunjung .bawah p{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.Pengunjung .p-3{
+    margin-top: 350px;
+    margin-left: 0px;
+}
+
+.Pengunjung .col{
+    width: 1000px;
+}
+
+.Pengunjung .col-sm .gambar-toko{
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.Pengunjung .col-sm p{
+    color: #212932;
+    text-align: left;
+    margin-left: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.Pengunjung .col-sm h3{
+    text-align: center;
+    color: #212932;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.Pengunjung .satu-produk{
+    background-color: #D9DFDB;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    width: 300px;
+}
+
+.Pengunjung .barang{
+    margin-top: 370px;
+    position: absolute;
+    width: 1349px;
+}
+
+.Pengunjung .col-sm .pensil{
+    width: 30px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
