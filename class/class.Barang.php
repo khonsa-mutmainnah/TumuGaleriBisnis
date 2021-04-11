@@ -9,7 +9,7 @@ class Barang{
     private $gambar;
     private $status;
 
-    //User Contructor
+    //barang Contructor
     public function __construct(
         $kode;
         $namaBarang;
