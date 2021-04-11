@@ -82,6 +82,6 @@
             }
         ?>
     </div>
-    <!-- faqih ganteng -->
+ 
 </body>
 </html>
