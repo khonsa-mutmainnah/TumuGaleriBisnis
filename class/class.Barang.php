@@ -1,6 +1,6 @@
 <?php 
 
-class User{
+class Barang{
     private $kode;
     private $namaBarang;
     private $deskripsi;
