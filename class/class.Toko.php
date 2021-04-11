@@ -10,7 +10,7 @@ class Toko{
     private $status;
     private $website;
 
-    //Toko Contructor
+    //Contructor Toko
     public function __construct(
         $idToko;
         $namaToko;
