@@ -8,6 +8,7 @@ class Toko{
     private $tagline;
     private $noTelp;
     private $status;
+    private $instagram;
     private $website;
 
     //Contructor Toko
@@ -19,6 +20,7 @@ class Toko{
         $tagline;
         $noTelp;
         $status;
+        $instagram;
         $website;
     )
     {
@@ -29,6 +31,7 @@ class Toko{
         $this->tagline = $tagline;
         $this->noTelp = $noTelp;
         $this->status = $status;
+        $this->instagram = $instagram;
         $this->website = $website;
     }
 
