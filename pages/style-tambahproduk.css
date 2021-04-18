@@ -1,0 +1,151 @@
+.all{
+    background-color: #212932;
+    font-family: montserrat, sans-serif;
+}
+
+.main{
+    height: 2000px;
+    /*width: 1000px;*/
+    margin-top: 100px;
+    /*background-color: yellow;*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.all-form{
+    width: 1054px;
+    height: 1392px;
+    background-color: #D9DFDB;
+    margin-left: 150px;
+}
+
+.judul{
+    margin-bottom: 90px;
+}
+
+.judul p{
+    margin-left: 350px;
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.input h4{
+    font-weight: 600;
+}
+
+
+
+/* atas */
+
+.input{
+    margin-left: 120px;
+    margin-bottom: 60px;
+}
+
+.input h4{
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+input[name=file] {
+    /* width: 246px;
+    height: 189px;
+    margin-left: 76px;
+    align-items: center;
+    background-color: white;
+    border-color: black;
+    border-width: medium; */
+    display: none;
+}
+
+
+.label-file{
+    width: 249px;
+    height: 189px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: medium;
+}
+
+.label-file img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: block;
+}
+
+
+/* bawah */
+
+.form-semua{
+    /* margin-left: 120px; */
+    font-weight: 600;
+}
+  
+input[name=nproduk] {
+    width: 615px;
+    height: 62px;
+    margin-left: 62px;
+    align-items: center;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+}
+
+textarea[name=dproduk] {
+    width: 615px;
+    height: 261px;
+    margin-left: 200px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+    margin-bottom: 25px;
+    
+}
+
+input[name=harga] {
+    width: 615px;
+    height: 62px;
+    margin-left: 129px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+    margin-bottom: 25px;
+}
+
+input[name=hgrosir] {
+    width: 615px;
+    height: 62px;
+    margin-left: 68px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+    margin-bottom: 25px;
+}
+
+input[name=variasi] {
+    width: 615px;
+    height: 62px;
+    margin-left: 122px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+}
+
+.footer{
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 118px;
+}
+
+.footer input{
+    border-radius: 15px;
+    width: 192px;
+    height: 64px;
+    background-color: #212932;
+    color: #FFFDD6;
+}
+

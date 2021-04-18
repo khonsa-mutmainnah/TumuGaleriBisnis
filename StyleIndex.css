@@ -3,7 +3,13 @@
     font-family: montserrat, sans-serif;
 }
 
-.navbar-brand{
+.navbar{
+    background-color: #8A7D63;
+    box-shadow: 0 5px 10px #8A7D63;
+    margin-top: 60px;
+}
+
+/* .navbar-brand{
     margin-left: 60px;
 }
 
@@ -41,7 +47,7 @@
 
 .dropdown-toggle {
     display:none;
-}
+} */
 
 /* home css */
 .Home{
