@@ -13,6 +13,24 @@
     margin-left: 15px;
 }
 
+.header .tagline-navbar{
+    top: 50px;
+    position: absolute;
+}
+
+.header .galeribisnis-navbar{
+    top: 15px;
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.header .navbar{
+    top: 30px;
+    background-color: #8A7D63;
+    text-transform: capitalize;
+}
+
 /* .navbar-brand{
     margin-left: 60px;
 }
@@ -215,27 +233,30 @@
 }
 
 /* tambah produk css */
-.all-form{
+.tambahproduk{
+    margin-left: 10px;
+}
+.tambahproduk all-form{
     width: 1054px;
     height: 1392px;
     background-color: #D9DFDB;
     margin-top: 80px;
     position: absolute;
-    left: 15%;
+    margin-left: 1px;
 }
 
-.judul{
+.tambahproduk .judul{
     margin-bottom: 90px;
 }
 
-.judul p{
-    margin-left: 350px;
+.tambahproduk .judul p{
+    text-align: center;
     margin-top: 80px;
     font-weight: 600;
     font-size: 40px;
 }
 
-.input h4{
+.tambahproduk .input h4{
     font-weight: 600;
 }
 
@@ -243,17 +264,17 @@
 
 /* atas */
 
-.input{
+.tambahproduk .input{
     margin-left: 120px;
     margin-bottom: 60px;
 }
 
-.input h4{
+.tambahproduk .input h4{
     margin-bottom: 40px;
     font-weight: 600;
 }
 
-input[name=file] {
+.tambahproduk .input[name=file] {
     /* width: 246px;
     height: 189px;
     margin-left: 76px;
@@ -265,7 +286,7 @@ input[name=file] {
 }
 
 
-.label-file{
+.tambahproduk .label-file{
     width: 249px;
     height: 189px;
     background-color: white;
@@ -274,7 +295,7 @@ input[name=file] {
     border-width: medium;
 }
 
-.label-file img{
+.tambahproduk .label-file img{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -284,12 +305,12 @@ input[name=file] {
 
 /* bawah */
 
-.form-semua{
+.tambahproduk .form-semua{
     /* margin-left: 120px; */
     font-weight: 600;
 }
   
-input[name=nproduk] {
+.tambahproduk .input[name=nproduk] {
     width: 615px;
     height: 62px;
     margin-left: 62px;
@@ -299,7 +320,7 @@ input[name=nproduk] {
     border-width: medium;
 }
 
-textarea[name=dproduk] {
+.tambahproduk .textarea[name=dproduk] {
     width: 615px;
     height: 261px;
     margin-left: 200px;
@@ -310,7 +331,7 @@ textarea[name=dproduk] {
     
 }
 
-input[name=harga] {
+.tambahproduk .input[name=harga] {
     width: 615px;
     height: 62px;
     margin-left: 129px;
@@ -320,7 +341,7 @@ input[name=harga] {
     margin-bottom: 25px;
 }
 
-input[name=hgrosir] {
+.tambahproduk .input[name=hgrosir] {
     width: 615px;
     height: 62px;
     margin-left: 68px;
@@ -330,7 +351,7 @@ input[name=hgrosir] {
     margin-bottom: 25px;
 }
 
-input[name=variasi] {
+.tambahproduk .input[name=variasi] {
     width: 615px;
     height: 62px;
     margin-left: 122px;
@@ -339,13 +360,13 @@ input[name=variasi] {
     border-width: medium;
 }
 
-.footer{
+.tambahproduk .footer{
     text-align: right;
     margin-top: 50px;
     margin-right: 118px;
 }
 
-.footer input{
+.tambahproduk .footer input{
     border-radius: 15px;
     width: 192px;
     height: 64px;
