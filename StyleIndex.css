@@ -9,6 +9,10 @@
     margin-top: 60px;
 }
 
+.nav-item{
+    margin-left: 15px;
+}
+
 /* .navbar-brand{
     margin-left: 60px;
 }
@@ -38,16 +42,13 @@
 .nav-item{
     margin-left: 15px;
 }
-.akun-dropdown img{
+#akunDropdown img{
     border-radius:50%; 
     height: 30px;
     margin-left: 15px;
     margin-top: 8px;
 }
-
-.dropdown-toggle {
-    display:none;
-} */
+*/
 
 /* home css */
 .Home{
@@ -212,3 +213,351 @@
     margin-left: 250px;
     margin-bottom: 20px;
 }
+
+/* tambah produk css */
+.all-form{
+    width: 1054px;
+    height: 1392px;
+    background-color: #D9DFDB;
+    margin-top: 80px;
+    position: absolute;
+    left: 15%;
+}
+
+.judul{
+    margin-bottom: 90px;
+}
+
+.judul p{
+    margin-left: 350px;
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.input h4{
+    font-weight: 600;
+}
+
+
+
+/* atas */
+
+.input{
+    margin-left: 120px;
+    margin-bottom: 60px;
+}
+
+.input h4{
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+input[name=file] {
+    /* width: 246px;
+    height: 189px;
+    margin-left: 76px;
+    align-items: center;
+    background-color: white;
+    border-color: black;
+    border-width: medium; */
+    display: none;
+}
+
+
+.label-file{
+    width: 249px;
+    height: 189px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: medium;
+}
+
+.label-file img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: block;
+}
+
+
+/* bawah */
+
+.form-semua{
+    /* margin-left: 120px; */
+    font-weight: 600;
+}
+  
+input[name=nproduk] {
+    width: 615px;
+    height: 62px;
+    margin-left: 62px;
+    align-items: center;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+}
+
+textarea[name=dproduk] {
+    width: 615px;
+    height: 261px;
+    margin-left: 200px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+    margin-bottom: 25px;
+    
+}
+
+input[name=harga] {
+    width: 615px;
+    height: 62px;
+    margin-left: 129px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+    margin-bottom: 25px;
+}
+
+input[name=hgrosir] {
+    width: 615px;
+    height: 62px;
+    margin-left: 68px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+    margin-bottom: 25px;
+}
+
+input[name=variasi] {
+    width: 615px;
+    height: 62px;
+    margin-left: 122px;
+    background-color: #D9DFDB;
+    border-color: black;
+    border-width: medium;
+}
+
+.footer{
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 118px;
+}
+
+.footer input{
+    border-radius: 15px;
+    width: 192px;
+    height: 64px;
+    background-color: #212932;
+    color: #FFFDD6;
+}
+
+/* GALERI BISNIS */
+.galeri-bisnis .judul{
+    margin-top: 50px;
+    
+    margin-bottom: 0px;
+}
+
+.galeri-bisnis h2{
+    font-weight: 600;
+    font-size: 40px;
+    color: #D9DFDB;
+    text-transform: uppercase;
+    text-align: center;
+}
+.galeri-bisnis .d-flex{
+    margin-top: 15px;
+    margin-left: 490px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.d-flex button{
+    border: none;
+}
+
+.galeri-bisnis .d-flex img{
+    width: 30px;
+}
+
+.galeri-bisnis .d-flex button{
+    border: none;
+}
+  
+.galeri-bisnis .nav-link{
+    border: none;
+}
+
+  .galeri-bisnis .nav-link:hover{
+    background-color: #8A7D63;
+    color: #212932;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: none;
+  }
+
+  .galeri-bisnis .nav-link{
+    background-color: #212932;
+    color: #8A7D63;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: none;
+  }
+  
+  .galeri-bisnis   .tab button.active {
+    background-color: #ccc;
+    color: #212932;
+    font-weight: 500;
+    border: none;
+    text-transform: capitalize;
+  }
+  
+  .galeri-bisnis   .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  
+  .galeri-bisnis p{
+      color: black;
+  }
+  
+  .galeri-bisnis .p-3{
+      background-color: #545454;
+      width: 150px;
+      height: 70px;
+      margin-left: 10px;
+      text-decoration-line: none;
+      text-align: center;
+      border-color: #E8CB92;
+  }
+  
+  .galeri-bisnis .p-3 a{
+      color: #E8CB92;
+      text-transform: capitalize;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+  }
+  
+  .galeri-bisnis .fnb{
+      font-size: 12px;
+  }
+  
+  .galeri-bisnis .col button{
+      width: 120px;
+      height: 50px;
+      padding-top: 0px;
+      background-color: #8A7D63;
+      margin-top: 55px; 
+      color: white;
+      text-transform: capitalize;
+      font-weight: 500;
+  }
+  
+  .galeri-bisnis .p-3{
+      background-color: #212932;
+  }
+  
+  .galeri-bisnis .populer{
+      background-color: #8A7D63;
+      margin-top: 70px;
+  }
+  
+  .galeri-bisnis .populer .btn{
+      margin-left:400px;
+  }
+  .galeri-bisnis .populer h3{
+      text-align: center;
+      text-transform: uppercase;
+      color: #8A7D63;
+      font-weight: 600;
+      padding-top: 20px;
+  }
+  
+   .galeri-bisnis .tab-content{
+      border: none;
+  }
+  
+  .galeri-bisnis .tab-content p{
+      margin-left:8px;
+      color: #212932;
+      font-size: 10px;
+  }
+  .galeri-bisnis .tab-content h3{
+      margin-left:5px;
+      color: #212932;
+      text-align: center;
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 22px;
+  }
+  
+  .galeri-bisnis .tab-content .btn{
+      background-color: #8A7D63;
+      width: 190px;
+      margin-top: 35px;
+      margin-left: 60px;
+      margin-bottom: 20px;
+      border-radius: 30px;
+  }
+  
+  .galeri-bisnis .btn p{
+      color: #212932;
+      text-align: left;
+      font-weight: 500;
+      text-transform: capitalize;
+  }
+   */
+  .galeri-bisnis .gambar-toko{
+      width: 90%;
+      margin-top: 13px;
+      margin-bottom: 10px;
+  }
+  
+  .galeri-bisnis .telfon{
+      width: 15%;
+      margin-left: 115px;
+      padding-bottom: 15px;
+  }
+  
+  .galeri-bisnis .populer .btn{
+      width: 90px;
+      margin-left: 150px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+  }
+  
+  .galeri-bisnis .populer h5{
+      color: #212932;
+      font-size: 10px;
+      text-transform: capitalize;
+      padding-bottom: 2px;
+      margin-top: 10px;
+      font-weight: 600;
+  }
+  .galeri-bisnis .gambar-toko{
+      width: 80%;
+      margin-top: 10px;
+  }
+  
+  .galeri-bisnis .populer h3{
+      margin-left:5px;
+      color: #212932;
+      text-align: center;
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 40px;
+  }
+
+  .galeri-bisnis .nav-tabs{
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    color: #212932;
+    font-size: 15px;
+    border: none;
+  }
