@@ -35,43 +35,25 @@
 <body class="all">
     <div class="header">
             <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="?p=Beranda"><img src="./gambar/logo.png" alt="logo" style="width: 65px; margin-left:20px;"></a>
+                    <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.png" alt="logo" style="width: 65px; margin-left:20px;"></a>
                     <div class="judul-navbar">
                         <h3 class="galeribisnis-navbar">galeri bisnis</h3>
                         <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>
                     </div>
-
+                    
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto justify-content-end">
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./gambar/notif.png" style="height:30px;" alt="">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.php?p=tambahproduk">Something else here</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./gambar/toko.png" style="height:30px;" alt="">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                            <a class="navbar-brand" href="index.php?p=toko-penjual"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="index.php?p=Pengunjung">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="index.php?p=Pengunjung">ganti toko</a>
+                                <a class="dropdown-item" href="#">edit profil</a>
+                                <a class="dropdown-item" href="index.php?p=tambahproduk">tambah barang</a>
                                 <div class="dropdown-divider"></div>
                                     <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
                                 </div>
@@ -111,7 +93,7 @@
                 }
             } 
             else {
-                include "./pages/home.php";
+                include "./pages/Home.php";
             }
         ?>
     </div>

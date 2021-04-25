@@ -1,4 +1,4 @@
-<div class="pengunjung">
+<div class="toko-pengunjung">
             <div class="profil">
                 <div class="card mb-3 start-50 translate-middle-x" style="max-width: 1200px; margin-top:100px;">
                     <div class="row g-0">
@@ -12,7 +12,7 @@
                                         <h5 class="card-title fs-2 fw-bolder">Nama toko</h5>
                                         <p class="card-text fs-4">tagline toko</p>
                                         <p class="card-text">Alamat Toko</p>
-                                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                        <p class="card-text"><small>Jumlah produk</small></p>
                                     </div>
                                 </div>
                             <div class="col-md-7">
