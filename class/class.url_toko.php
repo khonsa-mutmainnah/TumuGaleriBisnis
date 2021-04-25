@@ -4,7 +4,7 @@ class url_toko{
     private $id_toko;
     private $url_toko;
 
-    //kategori Contructor
+    // Contructor
     public function __construct(
         $id_toko,
         $url_toko
