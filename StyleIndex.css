@@ -678,6 +678,7 @@
     font-size: 40px;
     font-weight: 400;
     color: #D9DFDB;
+    padding-bottom: 20px;
 }
 
 .tokolist .table{
@@ -690,4 +691,28 @@
     color: #212932;
     margin-top: 30px;
     align-items: center;
+}
+
+/* toko */
+.toko .table{
+    margin-left: 40px;
+    color: #D9DFDB;
+}
+
+.toko h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #D9DFDB;
+    padding-bottom: 20px;
+}
+
+.toko .form-check{
+    margin-left: 20px;
+    size: 200%;
+}
+
+.toko .btn{
+    background-color: #8A7D63;
+    margin-top: 70px;
 }

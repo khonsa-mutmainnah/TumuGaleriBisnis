@@ -19,7 +19,6 @@
             $objEmployee->AddToko();
         }
     }
-    echo "<script> alert('$objToko->message'); </script>";
     if($objToko->hasil){
         echo '<script> window.location = "index.php?p=tokolist";
         </script>';
@@ -29,36 +28,65 @@
         $objToko->SelectOneToko();
     }
 ?>
-
-<h4 class="title">
-    <span class="text"><strong>Employee</strong></span>
-</h4>
+<div class="toko">
+<h4 class="title" >TOKO</h4>
 <form action="" method="post">
-    <table class="table table-bordered" style="color:white;">
-<tr>
-    <td>SSN</td>
-    <td>:</td>
-    <td><input type="text" class="form-control" name="ssn"
-    value="<?php echo $objEmployee->ssn; ?>"></td>
-</tr>
-<tr>
-    <td>Name</td>
-    <td>:</td>
-    <td><input type="text" class="formcontrol" ssn="fname" name="fname"
-    value="<?php echo $objEmployee->fname; ?>"></td>
-</tr>
-
-<tr>
-    <td>Address</td>
-    <td>:</td>
-    <td><textarea class="formcontrol" name="address" rows="3" cols="19">
-    <?php echo $objEmployee->address; ?></textarea></td>
-</tr>
-<tr>
-    <td colspan="2"></td>
-    <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-    <a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a></td>
-</tr>
-</table>
+    <table class="table table-borderless table-responsive" style="color:#D9DFDB;">
+        <tr>
+            <td>id toko</td>
+            <td>:</td>
+            <td><input type="text" class="form-control" name="id_toko"
+            value="<?php echo $objToko->id_toko; ?>"></td>
+        </tr>
+        <tr>
+            <td>nama toko</td>
+            <td>:</td>
+            <td><input type="text" class="formcontrol" name="fname"value="<?php echo $objToko->fname; ?>"></td>
+        </tr>
+        <tr>
+            <td>Logo</td>
+            <td>:</td>
+            <td><input type="file" class="form-control" id="foto" name="foto">
+            <input type="hidden" name="currentfoto" value="<?php echo $objToko->foto; ?>">
+        </tr>
+        <tr>
+            <td>tagline</td>
+            <td>:</td>
+            <td><input type="text-area" class="form-control" id="tagline" name="tagline" value="<?php echo $objToko->tagline; ?>">
+        </tr>
+        <tr>
+            <td>No telepon</td>
+            <td>:</td>
+            <td><input type="text" class="form-control" id="no_telp" name="no_telp" value="<?php echo $objToko->no_telp; ?>">
+        </tr>
+        <tr>
+            <td>instagram</td>
+            <td>:</td>
+            <td><input type="text" class="form-control" id="instagram" name="instagram" value="<?php echo $objToko->instagram; ?>">
+        </tr>
+        <tr>
+            <td>Status toko</td>
+            <td>:</td>
+            <td><div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Default radio
+                    </label>
+                </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                Default checked radio
+            </label>
+            </div>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
+            <a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a></td>
+        </tr>
+    </table>
 </form>
+
+</div>
 

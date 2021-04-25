@@ -1,6 +1,6 @@
 <?php 
 
-class Toko extends Connection{
+class Toko{
     private $id_toko;
     private $nama_toko;
     private $logo;
@@ -37,7 +37,7 @@ class Toko extends Connection{
     }
 
     public function AddToko(){
-        $sql = "INSERT INTO employee(ssn, fname, alamat)
+        $sql = "INSERT INTO toko(ssn, fname, alamat)
                 VALUES ('$this->ssn', '$this->fname', '$this->alamat')";
                 $this->hasil=mysqli_query($this->connection, $sql);
 
@@ -45,6 +45,59 @@ class Toko extends Connection{
             $this->message='data berhasil ditambahkan!';
         else
             $this->message='data gagal ditambahkan';
+    }
+
+    public function UpdateToko(){
+        $sql = "UPDATE employee
+                SET fname='$this->fname', alamat = '$this->alamat'
+                WHERE ssn = '$this->ssn'";
+        
+        if($this->hasil)
+            $this->message='data berhasil diupdate!';
+        else
+            $this->message='data gagal diupdate';
+    }
+
+    public function DeleteToko(){
+        $sql = "DELETE FROM employee WHERE ssn='$this->ssn'";
+        $this->hasil = mysqli_query($this->connection, $sql);
+
+        if($this->hasil)
+            $this->message='data berhasil dihapus!';
+        else
+            $this->message='data gagal dihapus';
+    }
+
+    public function SelectAllToko(){
+        $sql="SELECT * FROM employee";
+        $result = mysqli_query($this->connection, $sql);
+        $arrResult= Array();
+        $cnt=0;
+
+        if(mysqli_num_rows($result)>0){
+            while ($data=mysqli_fetch_Array($result)){
+                $objEmployee = new Employee();
+                $objEmployee->ssn=$data['ssn'];
+                $objEmployee->fname=$data['fname'];
+                $objEmployee->alamat=$data['alamat'];
+                $arrResult[$cnt]=$objEmployee;
+                $cnt++;
+            }
+        }
+        return $arrResult;
+    }
+
+    public function SelectOneEmployee(){
+        $sql="SELECT* FROM employee WHERE ssn='$this->ssn'";
+        $resultOne = mysqli_query($this->connection, $sql);
+
+        if(mysqli_num_rows($resultOne)==1){
+            $this->hasil=true;
+
+            $data=mysqli_fetch_assoc($resultOne);
+            $this->fname=$data['fname'];
+            $this->alamat=$data['alamat'];
+        }
     }
 }
 ?>
