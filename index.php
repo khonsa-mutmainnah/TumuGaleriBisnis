@@ -111,7 +111,7 @@
                 }
             } 
             else {
-                include "./pages/home.php";
+                include "./pages/Home.php";
             }
         ?>
     </div>

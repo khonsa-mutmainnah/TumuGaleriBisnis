@@ -1,31 +1,34 @@
 <?php 
 
 class Barang{
-    private $kode;
-    private $namaBarang;
-    private $deskripsi;
+    private $id_barang;
+    private $nama_barang;
+    private $deskripsi_barang;
     private $harga;
     private $variasi;
     private $gambar;
+    private $id_toko;
     private $status;
 
     //Contructor Barang
     public function __construct(
-        $kode;
-        $namaBarang;
-        $deskripsi;
-        $harga;
-        $variasi;
-        $gambar;
-        $status;
+        $id_barang,
+        $nama_barang,
+        $deskripsi_barang,
+        $harga,
+        $variasi,
+        $gambar,
+        $id_toko,
+        $status
     )
     {
-        $this->kode = $kode;
-        $this->namaBarang = $namaBarang;
-        $this->deskripsi = $deskripsi;
+        $this->id_barang = $id_barang;
+        $this->nama_barang = $nama_barang;
+        $this->deskripsi_barang = $deskripsi_barang;
         $this->harga = $harga;
         $this->variasi = $variasi;
         $this->gambar = $gambar;
+        $this->id_toko = $id_toko;
         $this->status = $status;
     }
 
