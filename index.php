@@ -4,7 +4,7 @@
     <title>Tumu Galeri Bisnis</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="StyleIndex.css">
+    <link rel="stylesheet" href="StyleIndex.css?v=<?php echo time(); ?>">
 
     <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -35,60 +35,42 @@
 <body class="all">
     <div class="header">
             <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="?p=Beranda"><img src="./gambar/logo.png" alt="logo" style="width: 65px; margin-left:20px;"></a>
+                    <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.png" alt="logo" style="width: 65px; margin-left:20px;"></a>
                     <div class="judul-navbar">
                         <h3 class="galeribisnis-navbar">galeri bisnis</h3>
                         <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>
                     </div>
-
+                    
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto justify-content-end">
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./gambar/notif.png" style="height:30px;" alt="">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.php?p=tambahproduk">Something else here</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./gambar/toko.png" style="height:30px;" alt="">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                            <a class="navbar-brand" href="index.php?p=toko-penjual"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="index.php?p=Pengunjung">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="index.php?p=Pengunjung">ganti toko</a>
+                                <a class="dropdown-item" href="#">edit profil</a>
+                                <a class="dropdown-item" href="index.php?p=tambahproduk">tambah barang</a>
                                 <div class="dropdown-divider"></div>
                                     <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
                                 </div>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-body">
-                                        Anda yakin ingin keluar?
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-body">
+                                            Anda yakin ingin keluar?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                            <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
+                                        </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
-                                    </div>
-                                    </div>
-                                </div>
                                 </div>
                             </li>
                         </ul>
@@ -115,6 +97,5 @@
             }
         ?>
     </div>
- 
 </body>
 </html>
