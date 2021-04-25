@@ -22,15 +22,14 @@ class Toko{
         $instagram
     )
     {
-        $this->idToko = $idToko;
-        $this->namaToko = $namaToko;
+        $this->id_toko = $id_toko;
+        $this->nama_toko = $nama_toko;
         $this->logo = $logo;
-        $this->alamat = $alamat;
+        $this->id_lokasi = $id_lokasi;
         $this->tagline = $tagline;
-        $this->noTelp = $noTelp;
+        $this->no_telp = $no_telp;
         $this->status = $status;
         $this->instagram = $instagram;
-        $this->website = $website;
     }
 
     //Get Automatic
