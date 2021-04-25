@@ -1,27 +1,25 @@
 <?php 
 
 class Toko{
-    private $idToko;
-    private $namaToko;
+    private $id_toko;
+    private $nama_toko;
     private $logo;
-    private $alamat;
+    private $id_lokasi;
     private $tagline;
-    private $noTelp;
+    private $no_telp;
     private $status;
     private $instagram;
-    private $website;
 
     //Contructor Toko
     public function __construct(
-        $idToko;
-        $namaToko;
-        $logo;
-        $alamat;
-        $tagline;
-        $noTelp;
-        $status;
-        $instagram;
-        $website;
+        $id_toko,
+        $nama_toko,
+        $logo,
+        $id_lokasi,
+        $tagline,
+        $no_telp,
+        $status,
+        $instagram
     )
     {
         $this->idToko = $idToko;
