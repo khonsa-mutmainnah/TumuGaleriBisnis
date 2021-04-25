@@ -1,6 +1,7 @@
+<div class="tokolist">
 <h4 class="title"><span class="text"><strong>LIST TOKO</strong></span></h4>
-<a class=btn btn-primary href="index.php?p=employee" style="color:yellow;">ADD</a>
-<table class="table table-bordered" id="tabelemployee" style="color:white;">
+<a class="btn position-absolute start-50 translate-middle" href="index.php?p=employee" >ADD</a>
+<table class="table table-bordered" id="tabelemployee">
     <tr>
         <th>NO.</th>
         <th>id_toko</th>
@@ -40,3 +41,4 @@
         }
     ?>
 </table>
+</div>

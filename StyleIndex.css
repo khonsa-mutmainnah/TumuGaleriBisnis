@@ -667,3 +667,27 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* toko list */
+.tokolist {
+    margin-top: 50px;
+}
+
+.tokolist h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #D9DFDB;
+}
+
+.tokolist .table{
+    color: #D9DFDB;
+}
+
+.tokolist .btn{
+    background-color: #8A7D63;
+    font-weight: 600;
+    color: #212932;
+    margin-top: 30px;
+    align-items: center;
+}

@@ -1,6 +1,6 @@
 <?php 
 
-class Toko{
+class Toko extends Connection{
     private $id_toko;
     private $nama_toko;
     private $logo;
@@ -23,11 +23,28 @@ class Toko{
     }
 
     //Get Automatic
-    public function __get($atribute){
-        if(property_exists($this, $atribute))
+    public function __get($atribut){
+        if(property_exists($this, $atribut))
         {
-            return $this->$atribute;
+            return $this->$atribut;
         }
+    }
+
+    public function __set($atribut, $value){
+        if(property_exists($this,$atribut)){
+            $this->atribut=$value;
+        }
+    }
+
+    public function AddToko(){
+        $sql = "INSERT INTO employee(ssn, fname, alamat)
+                VALUES ('$this->ssn', '$this->fname', '$this->alamat')";
+                $this->hasil=mysqli_query($this->connection, $sql);
+
+        if($this->hasil)
+            $this->message='data berhasil ditambahkan!';
+        else
+            $this->message='data gagal ditambahkan';
     }
 }
 ?>

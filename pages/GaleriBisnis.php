@@ -47,7 +47,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
+                <a class="btn" href="?p=toko-pengunjung" role="button" style="background-color: #D9DFDB;">
                     <img class="gambar-toko" src="./gambar/pensil.png">
                     <h3>Nama toko</h3>
                     <p>tagline toko</p>
