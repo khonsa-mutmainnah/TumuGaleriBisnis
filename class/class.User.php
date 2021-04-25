@@ -17,7 +17,7 @@ class User{
         $email,
         $no_hp,
         $kota,
-        $role,
+        $role
     )
     {
         $this->username = $username;
