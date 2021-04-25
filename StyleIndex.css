@@ -6,6 +6,7 @@
 .header .navbar{
     background-color: #8A7D63;
     box-shadow: 0 5px 10px #8A7D63;
+    top: 20px;
 }
 
 .nav-item{
@@ -332,8 +333,7 @@
     text-align: center;
 }
 .galeri-bisnis .d-flex{
-    margin-top: 15px;
-    margin-left: 490px;
+    margin-top: 200px;
     margin-bottom: 10px;
     width: 400px;
 }
@@ -527,10 +527,73 @@
   }
 
   /*pengunjung*/
+  .pengunjung .card{
+      background-color: #D9DFDB;
+  }
 
-  .Pengunjung {
-      color: #212932;
+  .pengunjung .table{
+      margin-top: 10px;
   }
-  .profil{
-      color: #212932;
+  .pengunjung .col-md-7 img{
+    padding-top: 20px;
+    width: 20px;
   }
+
+  .pengunjung .row{
+    margin-left: 10px;
+  }
+
+.pengunjung .col-sm .gambar-toko{
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.pengunjung .col-sm p{
+    color: #212932;
+    text-align: left;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pengunjung .col-sm h3{
+    text-align: center;
+    color: #212932;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.pengunjung .satu-produk{
+    background-color: #D9DFDB;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    border-radius: 30px;
+    width: 180px;
+}
+
+.pengunjung .barang{
+    margin-top: 30px;
+    position: absolute;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 1000px;
+}
+
+.pengunjung #toko{
+    margin-left: 30px;
+    width: 300px;
+    height: max-content;
+}
+
+.pengunjung .barang{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

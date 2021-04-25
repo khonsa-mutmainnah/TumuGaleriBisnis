@@ -4,7 +4,7 @@
     <title>Tumu Galeri Bisnis</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="StyleIndex.css">
+    <link rel="stylesheet" href="StyleIndex.css?v=<?php echo time(); ?>">
 
     <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -78,17 +78,17 @@
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-body">
-                                        Anda yakin ingin keluar?
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-body">
+                                            Anda yakin ingin keluar?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                            <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
+                                        </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
-                                    </div>
-                                    </div>
-                                </div>
                                 </div>
                             </li>
                         </ul>
@@ -115,6 +115,5 @@
             }
         ?>
     </div>
- 
 </body>
 </html>

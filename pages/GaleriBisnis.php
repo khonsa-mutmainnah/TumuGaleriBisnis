@@ -1,9 +1,9 @@
 <div class="galeri-bisnis">
     <div class="judul">
-        <h2 id="judul-main" >tumu galeri bisnis</h2>
+        <h2 id="judul-main text-center" >tumu galeri bisnis</h2>
     </div>
 
-    <form class="d-flex">
+    <form class="d-flex mb-3 position-absolute top-0 start-50 translate-middle-x">
         <input class="form-control" type="search" placeholder="cari toko" aria-label="Search">
         <button class="btn btn-outline-success" type="submit"><img src="./gambar/search.png"></button>
     </form>
@@ -55,122 +55,10 @@
                     <p>jumlah produk</p>
                     <img class="telfon" src="./gambar/telfon.png">
                 </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
                 <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
                     <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
                     <h3>Nama toko</h3>
                     <p>tagline toko</p>
                     <p>Kategori produk</p>
@@ -187,47 +75,6 @@
                     <p>jumlah produk</p>
                     <img class="telfon" src="./gambar/telfon.png">
                 </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
-                
             </div>
         </div>
     </div>
