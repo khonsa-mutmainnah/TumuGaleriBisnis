@@ -1,6 +1,15 @@
 <div class="Pengunjung">
             <div class="profil">
-                <div class="atas">
+
+                <div class="card">
+                    <h5 class="card-header">Featured</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <!-- <div class="atas">
                     <h3>Nama toko</h3>
                     <p class="tagline-profil">tagline toko</p>
                     <p class="kategori">alamat toko : </p>
@@ -31,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="barang">
                 <div class="container">

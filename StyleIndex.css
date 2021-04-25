@@ -3,70 +3,14 @@
     font-family: montserrat, sans-serif;
 }
 
-.navbar{
-    background-color: #8A7D63;
-    box-shadow: 0 5px 10px #8A7D63;
-    margin-top: 60px;
-}
-
-.nav-item{
-    margin-left: 15px;
-}
-
-.header .tagline-navbar{
-    top: 50px;
-    position: absolute;
-}
-
-.header .galeribisnis-navbar{
-    top: 15px;
-    font-size: 20px;
-    position: absolute;
-    font-weight: 600;
-}
-
 .header .navbar{
-    top: 30px;
     background-color: #8A7D63;
-    text-transform: capitalize;
-}
-
-/* .navbar-brand{
-    margin-left: 60px;
-}
-
-.galeribisnis-navbar{
-    top: 15px;
-    font-size: 30px;
-    position: absolute;
-    font-weight: 600;
-}
-
-.tagline-navbar{
-    top: 50px;
-    position: absolute;
-}
-.navbar{
-    top: 30px;
-    background-color: #8A7D63;
-    text-transform: capitalize;
-}
-
-.navbar-nav{
-    margin-left: 1000px;
-    font-size: 20px;
+    /*box-shadow: 0 5px 10px #8A7D63;*/
 }
 
 .nav-item{
     margin-left: 15px;
 }
-#akunDropdown img{
-    border-radius:50%; 
-    height: 30px;
-    margin-left: 15px;
-    margin-top: 8px;
-}
-*/
 
 /* home css */
 .Home{
@@ -581,4 +525,10 @@
     color: #212932;
     font-size: 15px;
     border: none;
+  }
+
+  /*pengunjung*/
+
+  .Pengunjung .card{
+    padding-top: 20px;
   }
