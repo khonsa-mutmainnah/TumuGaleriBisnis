@@ -1,18 +1,18 @@
 <?php 
 
 class Kategori{
-    private $idKategori;
-    private $namaKategori;
+    private $id_kategori;
+    private $nama_kategori;
 
     //kategori Contructor
     public function __construct(
-        $idKategori;
-        $namaKategori;
+        $id_kategori,
+        $nama_kategori
 
     )
     {
-        $this->idKategori = $idKategori;
-        $this->namaKategori = $namaKategori;
+        $this->id_kategori = $id_kategori;
+        $this->nama_kategori = $nama_kategori;
     
     }
 
