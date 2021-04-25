@@ -47,6 +47,9 @@
                             <a class="navbar-brand" href="index.php?p=toko-penjual"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
                             </li>
                             <li class="nav-item dropdown">
+                            <a class="navbar-brand" href="index.php?p=toko"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
                                 </a>
