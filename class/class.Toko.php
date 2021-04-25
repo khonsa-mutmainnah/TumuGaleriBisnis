@@ -2,7 +2,7 @@
 
 class Toko{
     private $id_toko;
-    private $nama-toko;
+    private $nama_toko;
     private $logo;
     private $id_lokasi;
     private $tagline;
@@ -11,17 +11,7 @@ class Toko{
     private $instagram;
 
     //Contructor Toko
-    public function __construct(
-        $id_toko,
-        $nama_toko,
-        $logo,
-        $id_lokasi,
-        $tagline,
-        $no_telp,
-        $status,
-        $instagram
-    )
-    {
+    public function __construct(){
         $this->id_toko = $id_toko;
         $this->nama_toko = $nama_toko;
         $this->logo = $logo;

@@ -5,7 +5,7 @@
         $objToko->idToko=$_POST['id_toko'];
         $objToko->namaToko=$POST['nama_toko'];
         $objToko->logo=$_POST['logo'];
-        $objToko->id_lokaso=$_POST['id_lokasi'];
+        $objToko->id_lokasi=$_POST['id_lokasi'];
         $objToko->tagline=$_POST['tagline'];
         $objToko->no_telp=$_POST['no_telp'];
         $objToko->status=$_POST['status'];
@@ -25,8 +25,8 @@
         </script>';
     }
     else if(isset($_GET['id_toko'])){
-        $objtoko->id_toko = $_GET['id_toko'];
-        $objtoko->SelectOneToko();
+        $objToko->id_toko = $_GET['id_toko'];
+        $objToko->SelectOneToko();
     }
 ?>
 
@@ -34,18 +34,18 @@
 <span class="text"><strong>Employee</strong></span>
 </h4>
 <form action="" method="post">
-<table class="table table-bordered" style="color:white;">
+    <table class="table table-bordered" style="color:white;">
 <tr>
-<td>SSN</td>
-<td>:</td>
-<td><input type="text" class="form-control" name="ssn"
-value="<?php echo $objEmployee->ssn; ?>"></td>
-</tr>
-<tr>
-<td>Name</td>
-<td>:</td>
-<td><input type="text" class="formcontrol" ssn="fname" name="fname"
-value="<?php echo $objEmployee->fname; ?>"></td>
+    <td>SSN</td>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="ssn"
+    value="<?php echo $objEmployee->ssn; ?>"></td>
+    </tr>
+    <tr>
+    <td>Name</td>
+    <td>:</td>
+    <td><input type="text" class="formcontrol" ssn="fname" name="fname"
+    value="<?php echo $objEmployee->fname; ?>"></td>
 </tr>
 
 <tr>
