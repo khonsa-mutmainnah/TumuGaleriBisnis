@@ -1,17 +1,30 @@
-<div class="Pengunjung">
+<div class="pengunjung">
             <div class="profil">
-
-                <div class="card">
-                    <h5 class="card-header">Featured</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="card mb-3 start-50 translate-middle-x" style="max-width: 1200px; margin-top:100px;">
+                    <div class="row g-0">
+                        <div class="col-md-4" style="max-width: 200px">
+                            <img src="./gambar/aa.jpg" alt="gambar" style="width: 200px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-2 fw-bolder">Nama toko</h5>
+                                        <p class="card-text fs-4">tagline toko</p>
+                                        <p class="card-text">Alamat Toko</p>
+                                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            <div class="col-md-4">
+                            </div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- <div class="atas">
-                    <h3>Nama toko</h3>
-                    <p class="tagline-profil">tagline toko</p>
+                    <h3></h3>
+                    <p class="tagline-profil"></p>
                     <p class="kategori">alamat toko : </p>
                     <p class="jml-produk">jumlah produk : </p>
                     <img src="toko.jpg" id="logo-toko" >

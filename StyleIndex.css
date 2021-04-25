@@ -5,7 +5,7 @@
 
 .header .navbar{
     background-color: #8A7D63;
-    /*box-shadow: 0 5px 10px #8A7D63;*/
+    box-shadow: 0 5px 10px #8A7D63;
 }
 
 .nav-item{
@@ -321,7 +321,6 @@
 /* GALERI BISNIS */
 .galeri-bisnis .judul{
     margin-top: 50px;
-    
     margin-bottom: 0px;
 }
 
@@ -529,6 +528,9 @@
 
   /*pengunjung*/
 
-  .Pengunjung .card{
-    padding-top: 20px;
+  .Pengunjung {
+      color: #212932;
+  }
+  .profil{
+      color: #212932;
   }

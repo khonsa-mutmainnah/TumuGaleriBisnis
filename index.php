@@ -51,7 +51,7 @@
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="?p=tambahproduk">Something else here</a>
+                                <a class="dropdown-item" href="index.php?p=tambahproduk">Something else here</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -70,7 +70,7 @@
                                 <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="?p=Pengunjung">Action</a>
+                                <a class="dropdown-item" href="index.php?p=Pengunjung">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <div class="dropdown-divider"></div>
                                     <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                        <a class="btn btn-primary" role="button" href="?p=Home"  >Ya</a>
+                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
                                     </div>
                                     </div>
                                 </div>
