@@ -1,17 +1,21 @@
-<h4 class="title"><span class="text"><strong>EMPLOYEE LIST</strong></span></h4>
-<a class=btn btn-primary href="index.php?p=employee">ADD</a>
+<h4 class="title"><span class="text"><strong>LIST TOKO</strong></span></h4>
+<a class=btn btn-primary href="index.php?p=employee" style="color:yellow;">ADD</a>
 <table class="table table-bordered" id="tabelemployee" style="color:white;">
     <tr>
         <th>NO.</th>
-        <th>SSN</th>
-        <th>NAME</th>
-        <th>ADDRESS</th>
-        <th>ACTION</th>
+        <th>id_toko</th>
+        <th>nama_toko</th>
+        <th>logo</th>
+        <th>id_lokasi</th>
+        <th>tagline</th>
+        <th>no_telp</th>
+        <th>status</th>
+        <th>instagram</th>
     </tr>
 
     <?php
         require_once('./class/class.Toko.php');
-        $objEmployee = new Employee();
+        $objEmployee = new Toko();
         $arrayResult = $objEmployee->SelectAllEmployee();
 
         if(count($arrayResult)==0){

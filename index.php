@@ -47,7 +47,7 @@
                                 <a class="navbar-brand" href="index.php?p=toko-pengunjung"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="navbar-brand" href="index.php?p=toko"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
+                                <a class="navbar-brand" href="index.php?p=tokolist"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
                             </li>
 
                             <?php

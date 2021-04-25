@@ -31,7 +31,7 @@
 ?>
 
 <h4 class="title">
-<span class="text"><strong>Employee</strong></span>
+    <span class="text"><strong>Employee</strong></span>
 </h4>
 <form action="" method="post">
     <table class="table table-bordered" style="color:white;">
@@ -40,8 +40,8 @@
     <td>:</td>
     <td><input type="text" class="form-control" name="ssn"
     value="<?php echo $objEmployee->ssn; ?>"></td>
-    </tr>
-    <tr>
+</tr>
+<tr>
     <td>Name</td>
     <td>:</td>
     <td><input type="text" class="formcontrol" ssn="fname" name="fname"
@@ -49,15 +49,15 @@
 </tr>
 
 <tr>
-<td>Address</td>
-<td>:</td>
-<td><textarea class="formcontrol" name="address" rows="3" cols="19">
-<?php echo $objEmployee->address; ?></textarea></td>
+    <td>Address</td>
+    <td>:</td>
+    <td><textarea class="formcontrol" name="address" rows="3" cols="19">
+    <?php echo $objEmployee->address; ?></textarea></td>
 </tr>
 <tr>
-<td colspan="2"></td>
-<td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-<a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a></td>
+    <td colspan="2"></td>
+    <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
+    <a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a></td>
 </tr>
 </table>
 </form>
