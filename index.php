@@ -1,3 +1,6 @@
+<?php 
+require "connection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +62,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="index.php?p=userlist">user</a>
                                 <a class="dropdown-item" href="#">role</a>
-                                <a class="dropdown-item" href="#">kategori</a>
+                                <a class="dropdown-item" href="index.php?p=kategorilist">kategori</a>
                                 <a class="dropdown-item" href="index.php?p=tokolist">toko</a>
                                 <a class="dropdown-item" href="#">barang</a>
                                 <a class="dropdown-item" href="#">gambar barang</a>

@@ -1,7 +1,7 @@
 <div class="tokolist">
 <h4 class="title"><span class="text"><strong>LIST TOKO</strong></span></h4>
 <a class="btn position-absolute start-50 translate-middle" href="index.php?p=toko" >ADD</a>
-<table class="table" id="tabelemployee">
+<table class="table" id="tabeltoko">
     <tr>
         <th>NO.</th>
         <th>id_toko</th>

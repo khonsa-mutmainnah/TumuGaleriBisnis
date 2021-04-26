@@ -1,6 +1,6 @@
 <?php 
 
-class Toko extends connection{
+class Toko extends Connection{
     private $id_toko;
     private $nama_toko;
     private $logo;
@@ -13,16 +13,16 @@ class Toko extends connection{
     private $message='';
 
     //Contructor Toko
-    public function __construct(){
-        $this->id_toko = $id_toko;
-        $this->nama_toko = $nama_toko;
-        $this->logo = $logo;
-        $this->id_lokasi = $id_lokasi;
-        $this->tagline = $tagline;
-        $this->no_telp = $no_telp;
-        $this->status = $status;
-        $this->instagram = $instagram;
-    }
+    // public function __construct(){
+    //     $this->id_toko = $id_toko;
+    //     $this->nama_toko = $nama_toko;
+    //     $this->logo = $logo;
+    //     $this->id_lokasi = $id_lokasi;
+    //     $this->tagline = $tagline;
+    //     $this->no_telp = $no_telp;
+    //     $this->status = $status;
+    //     $this->instagram = $instagram;
+    // }
 
     //Get Automatic
     public function __get($atribut){
@@ -94,7 +94,7 @@ class Toko extends connection{
         return $arrResult;
     }
 
-    public function SelectOneEmployee(){
+    public function SelectOneKategori(){
         $sql="SELECT* FROM toko WHERE id_toko='$this->id_toko'";
         $resultOne = mysqli_query($this->connection, $sql);
 

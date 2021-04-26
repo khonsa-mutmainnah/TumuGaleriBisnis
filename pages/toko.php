@@ -1,5 +1,5 @@
 <?php
-    require_once('./class/class.Toko.php');
+    require_once ('./class/class.Toko.php');
     $objToko= new Toko();
     if(isset($_POST['btnSubmit'])){
         $objToko->id_Toko=$_POST['id_toko'];
@@ -16,7 +16,7 @@
             $objToko->UpdateToko();
         }
         else{
-            $objEmployee->AddToko();
+            $objToko->AddToko();
         }
     }
     if($objToko->hasil){

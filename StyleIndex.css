@@ -720,5 +720,82 @@
 .toko input{
     width: 500px;
 }
+/* toko list */
+.tokolist {
+    margin-top: 50px;
+}
 
+.tokolist h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #D9DFDB;
+    padding-bottom: 20px;
+}
+
+.tokolist .table{
+    color: #D9DFDB;
+    margin-top: 100px;
+}
+
+.tokolist .btn{
+    background-color: #8A7D63;
+    font-weight: 600;
+    color: #212932;
+    margin-top: 30px;
+    align-items: center;
+}
+
+/* Kategori */
+.kategori .table{
+    margin-left: 40px;
+    color: #D9DFDB;
+}
+
+.kategori h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #D9DFDB;
+    padding-bottom: 20px;
+}
+
+.kategori .form-check{
+    margin-left: 20px;
+    size: 200%;
+}
+
+.kategori .btn{
+    background-color: #8A7D63;
+    margin-top: 70px;
+}
+
+.kategori input{
+    width: 500px;
+}
+/* kategori list */
+.kategorilist {
+    margin-top: 50px;
+}
+
+.kategorilist h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #D9DFDB;
+    padding-bottom: 20px;
+}
+
+.kategorilist .table{
+    color: #D9DFDB;
+    margin-top: 100px;
+}
+
+.kategorilist .btn{
+    background-color: #8A7D63;
+    font-weight: 600;
+    color: #212932;
+    margin-top: 30px;
+    align-items: center;
+}
 /* user */
