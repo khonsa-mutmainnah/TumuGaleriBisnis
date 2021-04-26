@@ -27,7 +27,7 @@
                 echo '<td> <a class="btn btn-warning"
                 href="index.php?p=kategori&id_kategori='.$dataKategori->id_kategori.'"> Edit </a> |
                 <a class="btn btn-danger" 
-                href="index.php?p=delete-kategori&id_kategoti='.$dataKategori->id_kategori.'" 
+                href="index.php?p=delete-kategori&id_kategori='.$dataKategori->id_kategori.'" 
                 onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
                 echo '</tr>';
                 $no++;

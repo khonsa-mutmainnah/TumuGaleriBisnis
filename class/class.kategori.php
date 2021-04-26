@@ -58,9 +58,9 @@ class Kategori extends connection{
         $this->hasil = mysqli_query($this->connection, $sql);
 
         if($this->hasil)
-            $this->message='data berhasil dihapus!';
+            $this->message = 'data berhasil dihapus!';
         else
-            $this->message='data gagal dihapus';
+            $this->message = 'data gagal dihapus';
     }
 
     public function SelectAllKategori(){
