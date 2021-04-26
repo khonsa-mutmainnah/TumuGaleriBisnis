@@ -30,7 +30,7 @@
     }
 ?>
 
-<div class="toko">
+<div class="user">
     <h4 class="title" >USER</h4>
     <form action="" method="post">
         <table class="table table-borderless table-responsive" style="color:#D9DFDB;">

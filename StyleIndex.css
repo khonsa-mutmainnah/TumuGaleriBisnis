@@ -773,6 +773,35 @@
 .kategori input{
     width: 500px;
 }
+
+/* User */
+.user .table{
+    margin-left: 40px;
+    color: #D9DFDB;
+}
+
+.user h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #D9DFDB;
+    padding-bottom: 20px;
+}
+
+.user .form-check{
+    margin-left: 20px;
+    size: 200%;
+}
+
+.user .btn{
+    background-color: #8A7D63;
+    margin-top: 70px;
+}
+
+.user input{
+    width: 500px;
+}
+
 /* kategori list */
 .kategorilist {
     margin-top: 50px;

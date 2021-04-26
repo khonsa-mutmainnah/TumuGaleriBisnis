@@ -1,6 +1,6 @@
 <?php
     require_once('./class/class.kategori.php');
-    $objToko= new Kategori();
+    $objKategori= new Kategori();
     if(isset($_POST['btnSubmit'])){
         $objKategori->id_Kategori=$_POST['id_kategori'];
         $objKategori->nama_kategori=$POST['nama_kategori'];
