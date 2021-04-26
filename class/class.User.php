@@ -8,7 +8,7 @@ class User extends connection{
     private $no_hp = "";
     private $kota = "";
     private $role = "";
-    private $hasil=false;
+    private $hasil= true;
     private $message= "";
 
     // //User Contructor

@@ -25,14 +25,14 @@ class Kategori extends connection{
             return $this->$atribute;
         }
     }
-    public function __set($atribut, $value){
-        if(property_exists($this,$atribut)){
-            $this->atribut=$value;
+    public function __set($atribute, $value){
+        if(property_exists($this,$atribute)){
+            $this->atribute=$value;
         }
     }
 
     public function AddKategori(){
-        $sql = "INSERT INTO toko(id_kategori, nama_kategori)
+        $sql = "INSERT INTO kategori (id_kategori, nama_kategori)
                 VALUES ('$this->id_kategori', '$this->nama_kategori')";
                 $this->hasil=mysqli_query($this->connection, $sql);
 
@@ -72,8 +72,8 @@ class Kategori extends connection{
         if(mysqli_num_rows($result)>0){
             while ($data=mysqli_fetch_Array($result)){
                 $objKategori = new Kategori();
-                $objKategori->id_kategori = $id_kategori['id_kategori'];
-                $objKategori->nama_kategori = $nama_kategori['nama_kategori'];
+                $objKategori->id_kategori = $data['id_kategori'];
+                $objKategori->nama_kategori = $data['nama_kategori'];
                 $arrResult[$cnt] = $objKategori;
                 $cnt++;
             }
@@ -85,7 +85,7 @@ class Kategori extends connection{
         $sql="SELECT* FROM kategori WHERE id_kategori='$this->id_kategori'";
         $resultOne = mysqli_query($this->connection, $sql);
 
-        if(mysqli_num_rows($resultOne)==1){
+        if(mysqli_num_rows($resultOne) == 1){
             $this->hasil=true;
 
             $data=mysqli_fetch_assoc($resultOne);
