@@ -1,7 +1,7 @@
 <div class="tokolist">
-    <h4 class="title"><span class="text"><strong>LIST TOKO</strong></span></h4>
+    <h4 class="title"><span class="text"><strong>LIST USER</strong></span></h4>
     <a class="btn position-absolute start-50 translate-middle" href="index.php?p=user" >ADD</a>
-    <table class="table" id="tabelemployee">
+    <table class="table" id="tabelUser">
         <tr>
             <th>NO.</th>
             <th>username</th>
@@ -15,7 +15,7 @@
 
         <?php
             require_once('./class/class.User.php');
-            $objEmployee = new User();
+            $objUser = new User();
             $arrayResult = $objUser->SelectAllUser();
 
             if(count($arrayResult)==0){
@@ -23,16 +23,20 @@
             }
             else{
                 $no=1;
-                foreach ($arrayResult as $dataEmployee){
+                foreach ($arrayResult as $dataUser){
                     echo '<tr>';
                     echo '<td>'.$no.'</td>';
-                    echo '<td>'.$dataEmployee->ssn.'</td>';
-                    echo '<td>'.$dataEmployee->fname.'</td>';
-                    echo '<td>'.$dataEmployee->alamat.'</td>';
+                    echo '<td>'.$dataUser->username.'</td>';
+                    echo '<td>'.$dataUser->password.'</td>';
+                    echo '<td>'.$dataUser->nama.'</td>';
+                    echo '<td>'.$dataUser->email.'</td>';
+                    echo '<td>'.$dataUser->no_hp.'</td>';
+                    echo '<td>'.$dataUser->kota.'</td>';
+                    echo '<td>'.$dataUser->role.'</td>';
                     echo '<td> <a class="btn btn-warning"
-                    href="index.php?p=toko&ssn='.$dataEmployee->ssn.'"> Edit </a> |
+                    href="index.php?p=user&username='.$dataUser->username.'"> Edit </a> |
                     <a class="btn btn-danger" 
-                    href="index.php?p=delete-toko&ssn='.$dataEmployee->ssn.'" 
+                    href="index.php?p=delete-user&username='.$dataUser->username.'" 
                     onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
                     echo '</tr>';
                     $no++;

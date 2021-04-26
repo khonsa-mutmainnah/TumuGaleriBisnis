@@ -1,20 +1,21 @@
 <?php
     require_once('./class/class.User.php');
-    $objToko= new User();
+    $objUser= new User();
     if(isset($_POST['btnSubmit'])){
-        $objToko->username=$_POST['username'];
-        $objToko->nama=$POST['password'];
-        $objToko->email=$_POST['email'];
-        $objToko->no_hp=$_POST['no_hp'];
-        $objToko->kota=$_POST['kota'];
-        $objToko->role=$_POST['role'];
+        $objUser->username=$_POST['username'];
+        $objUser->password=$POST['password'];
+        $objUser->nama=$POST['nama'];
+        $objUser->email=$_POST['email'];
+        $objUser->no_hp=$_POST['no_hp'];
+        $objUser->kota=$_POST['kota'];
+        $objUser->role=$_POST['role'];
 
         if(isset($_GET['username'])){
-            $objToko->id_toko= $_GET['username'];
-            $objToko->UpdateUser();
+            $objUser->id_toko= $_GET['username'];
+            $objUser->UpdateUser();
         }
         else{
-            $objEmployee->AddUser();
+            $objUser->AddUser();
         }
     }
     if($objUser->hasil){
@@ -22,8 +23,8 @@
         </script>';
     }
     else if(isset($_GET['username'])){
-        $objToko->username = $_GET['username'];
-        $objToko->SelectOneUser();
+        $objUser->username = $_GET['username'];
+        $objUser->SelectOneUser();
     }
 ?>
 
@@ -40,7 +41,7 @@
             <tr>
                 <td>password</td>
                 <td>:</td>
-                <td><input type="password" class="formcontrol" name="pass"value="<?php echo $objToko->password; ?>"></td>
+                <td><input type="password" class="formcontrol" name="pass"value="<?php echo $objUser->password; ?>"></td>
             </tr>
             <tr>
                 <td>nama</td>

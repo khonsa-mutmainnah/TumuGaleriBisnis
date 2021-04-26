@@ -1,26 +1,26 @@
 <?php 
 
 class User extends connection{
-    private $username;
-    private $password;
-    private $nama;
-    private $email;
-    private $no_hp;
-    private $kota;
-    private $role;
+    private $username = "";
+    private $password = "";
+    private $nama = "";
+    private $email = "";
+    private $no_hp = "";
+    private $kota = "";
+    private $role = "";
     private $hasil=false;
-    private $message='';
+    private $message= "";
 
-    //User Contructor
-    public function __construct(){
-        $this->username = $username;
-        $this->password = $password;
-        $this->nama = $nama;
-        $this->email = $email;
-        $this->no_hp = $no_hp;
-        $this->kota = $kota;
-        $this->role = $role;
-    }
+    // //User Contructor
+    // public function __construct(){
+    //     $this->username = $username;
+    //     $this->password = $password;
+    //     $this->nama = $nama;
+    //     $this->email = $email;
+    //     $this->no_hp = $no_hp;
+    //     $this->kota = $kota;
+    //     $this->role = $role;
+    // }
 
     //Get Automatic
     public function __get($atribute){
@@ -30,8 +30,8 @@ class User extends connection{
         }
     }
 
-    public function __set($atribut, $value){
-        if(property_exists($this,$atribut)){
+    public function __set($atribute, $value){
+        if(property_exists($this,$atribute)){
             $this->atribut=$value;
         }
     }
@@ -68,7 +68,7 @@ class User extends connection{
     }
 
     public function SelectAllUser(){
-        $sql="SELECT * FROM toko";
+        $sql="SELECT * FROM user";
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;
@@ -76,13 +76,13 @@ class User extends connection{
         if(mysqli_num_rows($result)>0){
             while ($data=mysqli_fetch_Array($result)){
                 $objUser = new User();
-                $objUser->username = $username['username'];
-                $objUser->password = $password['password'];
-                $objUser->nama = $nama['nama'];
-                $objUser->email = $email['email'];
-                $objUser->no_hp = $no_hp['no_hp'];
-                $objUser->kota = $kota['kota'];
-                $objUser->role = $role['role'];
+                $objUser->username = $data['username'];
+                $objUser->password = $data['password'];
+                $objUser->nama = $data['nama'];
+                $objUser->email = $data['email'];
+                $objUser->no_hp = $data['no_hp'];
+                $objUser->kota = $data['kota'];
+                $objUser->role = $data['role'];
                 $arrResult[$cnt]=$objUser;
                 $cnt++;
             }
@@ -97,13 +97,13 @@ class User extends connection{
         if(mysqli_num_rows($resultOne)==1){
             $this->hasil=true;
 
-            $objUser->username = $username['username'];
-            $objUser->password = $password['password'];
-            $objUser->nama = $nama['nama'];
-            $objUser->email = $email['email'];
-            $objUser->no_hp = $no_hp['no_hp'];
-            $objUser->kota = $kota['kota'];
-            $objUser->role = $role['role'];
+            $objUser->username = $data['username'];
+            $objUser->password = $data['password'];
+            $objUser->nama = $data['nama'];
+            $objUser->email = $data['email'];
+            $objUser->no_hp = $data['no_hp'];
+            $objUser->kota = $data['kota'];
+            $objUser->role = $data['role'];
         }
     }
 }

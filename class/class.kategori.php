@@ -1,8 +1,10 @@
 <?php 
 
 class Kategori extends connection{
-    private $id_kategori;
-    private $nama_kategori;
+    private $id_kategori = "";
+    private $nama_kategori = "";
+    private $hasil = false;
+    private $message = "";
 
     // //kategori Contructor
     // public function __construct(
@@ -72,6 +74,7 @@ class Kategori extends connection{
                 $objKategori = new Kategori();
                 $objKategori->id_kategori = $id_kategori['id_kategori'];
                 $objKategori->nama_kategori = $nama_kategori['nama_kategori'];
+                $arrResult[$cnt] = $objKategori;
                 $cnt++;
             }
         }

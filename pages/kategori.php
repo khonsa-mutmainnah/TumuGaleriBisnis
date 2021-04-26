@@ -38,12 +38,7 @@
             <td><input type="text" class="formcontrol" name="fname"value="<?php echo $objKategori->nama_kategori; ?>"></td>
         </tr>
 
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="<?php echo $objKategori->status=false; ?>checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-                Tolak
-            </label>
-            </div>
+
         </tr>
         <tr>
             <td colspan="2"></td>
