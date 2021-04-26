@@ -43,7 +43,7 @@
         <tr>
             <td colspan="2"></td>
             <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-            <a href="index.php?p=tokolist" class="btn btnwarning">Cancel</a></td>
+            <a href="index.php?p=kategorilist" class="btn btnwarning">Cancel</a></td>
         </tr>
     </table>
 </form>

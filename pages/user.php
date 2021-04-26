@@ -1,26 +1,28 @@
 <?php
-    require_once('./class/class.User.php');
+    require_once ('./class/class.User.php');
     $objUser= new User();
     if(isset($_POST['btnSubmit'])){
-        $objUser->username=$_POST['username'];
-        $objUser->password=$POST['password'];
-        $objUser->nama=$POST['nama'];
-        $objUser->email=$_POST['email'];
-        $objUser->no_hp=$_POST['no_hp'];
-        $objUser->kota=$_POST['kota'];
-        $objUser->role=$_POST['role'];
+        $objUser->username= $_POST['username'];
+        $objUser->password= $_POST['password'];
+        $objUser->nama= $_POST['nama'];
+        $objUser->email= $_POST['email'];
+        $objUser->no_hp= $_POST['no_hp'];
+        $objUser->kota= $_POST['kota'];
+        $objUser->role= $_POST['role'];
 
         if(isset($_GET['username'])){
-            $objUser->id_toko= $_GET['username'];
+            $objUser->username= $_GET['username'];
             $objUser->UpdateUser();
         }
         else{
             $objUser->AddUser();
         }
+        echo "<script> alert('$objUser->message'); </script>";
+        if($objUser->hasil){
+            echo '<script> window.location = "index.php?p=userlist";
+            </script>';
     }
-    if($objUser->hasil){
-        echo '<script> window.location = "index.php?p=userlist";
-        </script>';
+    
     }
     else if(isset($_GET['username'])){
         $objUser->username = $_GET['username'];
@@ -35,13 +37,13 @@
             <tr>
                 <td>username</td>
                 <td>:</td>
-                <td><input type="text" class="form-control" name="id_toko"
+                <td><input type="text" class="form-control" name="username"
                 value="<?php echo $objUser->username; ?>"></td>
             </tr>
             <tr>
                 <td>password</td>
                 <td>:</td>
-                <td><input type="password" class="formcontrol" name="pass"value="<?php echo $objUser->password; ?>"></td>
+                <td><input type="password" class="formcontrol" name="password"value="<?php echo $objUser->password; ?>"></td>
             </tr>
             <tr>
                 <td>nama</td>

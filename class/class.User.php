@@ -32,7 +32,7 @@ class User extends connection{
 
     public function __set($atribute, $value){
         if(property_exists($this,$atribute)){
-            $this->atribut=$value;
+            $this->atribute=$value;
         }
     }
 
@@ -52,9 +52,9 @@ class User extends connection{
                 WHERE username = '$this->username'";
         
         if($this->hasil)
-            $this->message='toko berhasil diupdate!';
+            $this->message='Data berhasil diupdate!';
         else
-            $this->message='toko gagal diupdate';
+            $this->message='Data gagal diupdate';
     }
 
     public function DeleteUser(){
