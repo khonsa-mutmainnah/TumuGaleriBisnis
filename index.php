@@ -49,12 +49,44 @@
                             <li class="nav-item dropdown">
                                 <a class="navbar-brand" href="index.php?p=tokolist"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
                             </li>
-
+                            <li class="nav-item dropdown">
+                                <a class="navbar-brand" href="index.php?p=toko-penjual"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
+                                </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="index.php?p=userlist">user</a>
+                                <a class="dropdown-item" href="#">role</a>
+                                <a class="dropdown-item" href="#">kategori</a>
+                                <a class="dropdown-item" href="index.php?p=tokolist">toko</a>
+                                <a class="dropdown-item" href="#">barang</a>
+                                <a class="dropdown-item" href="#">gambar barang</a>
+                                <a class="dropdown-item" href="#">web toko</a>
+                                <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
+                                </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        Anda yakin ingin keluar?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                             <?php
                                 if(isset($_SESSION["role"])){
                                     if($_SESSION["role"] == "admin"){
                             ?>
-                                <li class="nav-item dropdown">
+                               <!--  <li class="nav-item dropdown">
                                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
                                     </a>
@@ -69,7 +101,7 @@
                                         <div class="dropdown-divider"></div>
                                             <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
                                         </div>
-                                        <!-- Modal -->
+                                        modal
                                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -103,7 +135,7 @@
                                         <div class="dropdown-divider"></div>
                                             <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
                                         </div>
-                                        <!-- Modal -->
+                                        modal
                                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -117,11 +149,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 <?php
                                         }
                                     }
-                                ?>
+                                ?> 
                         </ul>
                     </div>
             </nav>

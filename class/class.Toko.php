@@ -44,9 +44,9 @@ class Toko extends connection{
                 $this->hasil=mysqli_query($this->connection, $sql);
 
         if($this->hasil)
-            $this->message='data berhasil ditambahkan!';
+            $this->message='toko berhasil ditambahkan!';
         else
-            $this->message='data gagal ditambahkan';
+            $this->message='toko gagal ditambahkan';
     }
 
     public function UpdateToko(){

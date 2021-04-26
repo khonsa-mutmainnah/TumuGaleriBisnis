@@ -1,6 +1,6 @@
 <div class="tokolist">
     <h4 class="title"><span class="text"><strong>LIST TOKO</strong></span></h4>
-    <a class="btn position-absolute start-50 translate-middle" href="index.php?p=toko" >ADD</a>
+    <a class="btn position-absolute start-50 translate-middle" href="index.php?p=user" >ADD</a>
     <table class="table" id="tabelemployee">
         <tr>
             <th>NO.</th>

@@ -67,14 +67,14 @@
         <tr>
             <td>Status toko</td>
             <td>:</td>
-            <td><div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="<?php echo $objToko->status=true; ?>">
+            <td><div class="form-check" >
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="<?php echo $objToko->status=true; ?>" style="width:15px;">
                     <label class="form-check-label" for="flexRadioDefault1">
                         Setuju
                     </label>
                 </div>
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="<?php echo $objToko->status=false; ?>checked>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" style="width:15px;" value="<?php echo $objToko->status=false; ?>checked>
             <label class="form-check-label" for="flexRadioDefault2">
                 Tolak
             </label>
@@ -82,8 +82,8 @@
         </tr>
         <tr>
             <td colspan="2"></td>
-            <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-            <a href="index.php?p=tokolist" class="btn btnwarning">Cancel</a></td>
+            <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit" style="width: 100px;">
+            <a href="index.php?p=tokolist" class="btn btnwarning" style="width: 100px;">Cancel</a></td>
         </tr>
     </table>
 </form>

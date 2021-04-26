@@ -1,6 +1,6 @@
 <?php
     require_once('./class/class.User.php');
-    $objToko= new Toko();
+    $objToko= new User();
     if(isset($_POST['btnSubmit'])){
         $objToko->username=$_POST['username'];
         $objToko->nama=$POST['password'];
@@ -32,57 +32,45 @@
     <form action="" method="post">
         <table class="table table-borderless table-responsive" style="color:#D9DFDB;">
             <tr>
-                <td>id toko</td>
+                <td>username</td>
                 <td>:</td>
                 <td><input type="text" class="form-control" name="id_toko"
-                value="<?php echo $objToko->id_toko; ?>"></td>
+                value="<?php echo $objUser->username; ?>"></td>
             </tr>
             <tr>
-                <td>nama toko</td>
+                <td>password</td>
                 <td>:</td>
-                <td><input type="text" class="formcontrol" name="fname"value="<?php echo $objToko->fname; ?>"></td>
+                <td><input type="password" class="formcontrol" name="pass"value="<?php echo $objToko->password; ?>"></td>
             </tr>
             <tr>
-                <td>Logo</td>
+                <td>nama</td>
                 <td>:</td>
-                <td><input type="file" class="form-control" id="foto" name="foto">
-                <input type="hidden" name="currentfoto" value="<?php echo $objToko->foto; ?>">
+                <td><input type="text" class="form-control" id="nama" name="nama" value="<?php echo $objUser->nama; ?>">
             </tr>
             <tr>
-                <td>tagline</td>
+                <td>email</td>
                 <td>:</td>
-                <td><input type="text-area" class="form-control" id="tagline" name="tagline" value="<?php echo $objToko->tagline; ?>">
+                <td><input type="text" class="form-control" id="email" name="email" value="<?php echo $objUser->email; ?>">
             </tr>
             <tr>
-                <td>No telepon</td>
+                <td>no hp</td>
                 <td>:</td>
-                <td><input type="text" class="form-control" id="no_telp" name="no_telp" value="<?php echo $objToko->no_telp; ?>">
+                <td><input type="text" class="form-control" id="no_hp" name="no_hp" value="<?php echo $objUser->no_hp; ?>">
             </tr>
             <tr>
-                <td>instagram</td>
+                <td>kota</td>
                 <td>:</td>
-                <td><input type="text" class="form-control" id="instagram" name="instagram" value="<?php echo $objToko->instagram; ?>">
+                <td><input type="text" class="form-control" id="kota" name="kota" value="<?php echo $objUser->kota; ?>">
             </tr>
             <tr>
-                <td>Status toko</td>
+                <td>role</td>
                 <td>:</td>
-                <td><div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Default radio
-                        </label>
-                    </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                    Default checked radio
-                </label>
-                </div>
+                <td><input type="text" class="form-control" id="role" name="role" value="<?php echo $objUser->role; ?>">
             </tr>
             <tr>
                 <td colspan="2"></td>
-                <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-                <a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a></td>
+                <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit" style="width: 100px;">
+                <a href="index.php?p=userlist" class="btn btnwarning" style="width: 100px;">Cancel</a></td>
             </tr>
         </table>
     </form>
