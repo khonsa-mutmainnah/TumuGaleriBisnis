@@ -67,6 +67,7 @@ require "connection.php";
                                 <a class="dropdown-item" href="#">barang</a>
                                 <a class="dropdown-item" href="#">gambar barang</a>
                                 <a class="dropdown-item" href="#">web toko</a>
+                                <a class="dropdown-item" href="index.php?p=info-penjual">regis Info Penjual</a>
                                 <div class="dropdown-divider"></div>
                                     <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
                                 </div>

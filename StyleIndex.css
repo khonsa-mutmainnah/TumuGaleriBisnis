@@ -799,3 +799,115 @@
     align-items: center;
 }
 /* user */
+
+/* info penjual */
+.main{
+    height: 2000px;
+    /*width: 1000px;*/
+    margin-top: 100px;
+    /*background-color: yellow;*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.all-form{
+    width: 1292px;
+    /* height: 2000px; */
+    background-color: #D9DFDB;
+    text-align: center;
+}
+
+.judul{
+    margin-bottom: 90px;
+}
+
+.judul p{
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.input h4{
+    font-weight: 600;
+}
+
+.main-form{
+    width: 700.25px;
+    margin: auto;
+}
+
+
+
+/* atas */
+
+.ufile{
+    text-align: center;
+}
+
+.ufile p{
+    margin-top: 10px;
+    font-weight: 350;
+    font-size: 16x;
+}
+
+.input{
+    /* margin-left: 120px; */
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.input h4{
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+input[name=file] {
+    /* width: 246px;
+    height: 189px;
+    margin-left: 76px;
+    align-items: center;
+    background-color: white;
+    border-color: black;
+    border-width: medium; */
+    display: none;
+}
+
+
+.label-file{
+    width: 225px;
+    height: 230px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 50%;
+}
+
+/* bawah */
+
+
+
+.form-semua{
+    /* margin-left: 120px; */
+    font-weight: 600;
+}
+
+.footer{
+    text-align: right;
+    margin-top: 50px;
+   
+   
+
+}
+
+.footer input{
+    border-radius: 15px;
+    width: 192px;
+    height: 64px;
+    background-color: #212932;
+    color: #FFFDD6;
+}
