@@ -59,10 +59,10 @@
                                         <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.php?p=Pengunjung">user</a>
+                                        <a class="dropdown-item" href="index.php?p=userlist">user</a>
                                         <a class="dropdown-item" href="#">role</a>
                                         <a class="dropdown-item" href="#">kategori</a>
-                                        <a class="dropdown-item" href="#">toko</a>
+                                        <a class="dropdown-item" href="t=index.php?p=tokolist">toko</a>
                                         <a class="dropdown-item" href="#">barang</a>
                                         <a class="dropdown-item" href="#">gambar barang</a>
                                         <a class="dropdown-item" href="#">web toko</a>

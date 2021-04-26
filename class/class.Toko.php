@@ -9,6 +9,8 @@ class Toko{
     private $no_telp;
     private $status;
     private $instagram;
+    private $hasil=false;
+    private $message='';
 
     //Contructor Toko
     public function __construct(){
@@ -37,8 +39,8 @@ class Toko{
     }
 
     public function AddToko(){
-        $sql = "INSERT INTO toko(ssn, fname, alamat)
-                VALUES ('$this->ssn', '$this->fname', '$this->alamat')";
+        $sql = "INSERT INTO toko(id_toko, nama_toko, logo, id_lokasi, tagline, no_telp, status, instagram)
+                VALUES ('$this->id_toko', '$this->nama_toko', '$this->logo', '$this->id_lokasi', '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram')";
                 $this->hasil=mysqli_query($this->connection, $sql);
 
         if($this->hasil)
@@ -48,18 +50,18 @@ class Toko{
     }
 
     public function UpdateToko(){
-        $sql = "UPDATE employee
-                SET fname='$this->fname', alamat = '$this->alamat'
-                WHERE ssn = '$this->ssn'";
+        $sql = "UPDATE toko
+                SET '$this->id_toko', '$this->nama_toko', '$this->logo', '$this->id_lokasi', '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram'
+                WHERE id_toko = '$this->toko'";
         
         if($this->hasil)
-            $this->message='data berhasil diupdate!';
+            $this->message='toko berhasil diupdate!';
         else
-            $this->message='data gagal diupdate';
+            $this->message='toko gagal diupdate';
     }
 
     public function DeleteToko(){
-        $sql = "DELETE FROM employee WHERE ssn='$this->ssn'";
+        $sql = "DELETE FROM employee WHERE id_toko='$this->id_toko'";
         $this->hasil = mysqli_query($this->connection, $sql);
 
         if($this->hasil)
@@ -69,18 +71,23 @@ class Toko{
     }
 
     public function SelectAllToko(){
-        $sql="SELECT * FROM employee";
+        $sql="SELECT * FROM toko";
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;
 
         if(mysqli_num_rows($result)>0){
             while ($data=mysqli_fetch_Array($result)){
-                $objEmployee = new Employee();
-                $objEmployee->ssn=$data['ssn'];
-                $objEmployee->fname=$data['fname'];
-                $objEmployee->alamat=$data['alamat'];
-                $arrResult[$cnt]=$objEmployee;
+                $objToko = new Toko();
+                $objToko->id_toko = $id_toko['id_toko'];
+                $objToko->nama_toko = $nama_toko['nama_toko'];
+                $objToko->logo = $logo['logo'];
+                $objToko->id_lokasi = $id_lokasi['id_lokasi'];
+                $objToko->tagline = $tagline['tagline'];
+                $objToko->no_telp = $no_telp['no_telp'];
+                $objToko->status = $status['status'];
+                $objToko->instagram = $instagram['instagram'];
+                $arrResult[$cnt]=$objToko;
                 $cnt++;
             }
         }
@@ -88,15 +95,21 @@ class Toko{
     }
 
     public function SelectOneEmployee(){
-        $sql="SELECT* FROM employee WHERE ssn='$this->ssn'";
+        $sql="SELECT* FROM toko WHERE id_toko='$this->id_toko'";
         $resultOne = mysqli_query($this->connection, $sql);
 
         if(mysqli_num_rows($resultOne)==1){
             $this->hasil=true;
 
             $data=mysqli_fetch_assoc($resultOne);
-            $this->fname=$data['fname'];
-            $this->alamat=$data['alamat'];
+            $objToko->id_toko = $id_toko['id_toko'];
+            $objToko->nama_toko = $nama_toko['nama_toko'];
+            $objToko->logo = $logo['logo'];
+            $objToko->id_lokasi = $id_lokasi['id_lokasi'];
+            $objToko->tagline = $tagline['tagline'];
+            $objToko->no_telp = $no_telp['no_telp'];
+            $objToko->status = $status['status'];
+            $objToko->instagram = $instagram['instagram'];
         }
     }
 }

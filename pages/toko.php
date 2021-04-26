@@ -2,8 +2,8 @@
     require_once('./class/class.Toko.php');
     $objToko= new Toko();
     if(isset($_POST['btnSubmit'])){
-        $objToko->idToko=$_POST['id_toko'];
-        $objToko->namaToko=$POST['nama_toko'];
+        $objToko->id_Toko=$_POST['id_toko'];
+        $objToko->nama_toko=$POST['nama_toko'];
         $objToko->logo=$_POST['logo'];
         $objToko->id_lokasi=$_POST['id_lokasi'];
         $objToko->tagline=$_POST['tagline'];
@@ -68,22 +68,22 @@
             <td>Status toko</td>
             <td>:</td>
             <td><div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="<?php echo $objToko->status=true; ?>">
                     <label class="form-check-label" for="flexRadioDefault1">
-                        Default radio
+                        Setuju
                     </label>
                 </div>
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="<?php echo $objToko->status=false; ?>checked>
             <label class="form-check-label" for="flexRadioDefault2">
-                Default checked radio
+                Tolak
             </label>
             </div>
         </tr>
         <tr>
             <td colspan="2"></td>
             <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-            <a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a></td>
+            <a href="index.php?p=tokolist" class="btn btnwarning">Cancel</a></td>
         </tr>
     </table>
 </form>

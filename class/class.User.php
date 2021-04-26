@@ -8,18 +8,11 @@ class User{
     private $no_hp;
     private $kota;
     private $role;
+    private $hasil=false;
+    private $message='';
 
     //User Contructor
-    public function __construct(
-        $username,
-        $password,
-        $nama,
-        $email,
-        $no_hp,
-        $kota,
-        $role
-    )
-    {
+    public function __construct(){
         $this->username = $username;
         $this->password = $password;
         $this->nama = $nama;
@@ -34,6 +27,12 @@ class User{
         if(property_exists($this, $atribute))
         {
             return $this->$atribute;
+        }
+    }
+    
+    public function __set($atribut, $value){
+        if(property_exists($this,$atribut)){
+            $this->atribut=$value;
         }
     }
 }
