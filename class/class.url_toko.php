@@ -1,6 +1,6 @@
 <?php 
 
-class url_toko{
+class url_toko extends connection{
     private $id_toko;
     private $url_toko;
 

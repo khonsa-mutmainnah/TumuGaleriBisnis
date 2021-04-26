@@ -1,6 +1,6 @@
 <?php 
 
-class Barang{
+class Barang extends connection{
     private $id_barang;
     private $nama_barang;
     private $deskripsi_barang;

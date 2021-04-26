@@ -1,6 +1,6 @@
 <?php 
 
-class lokasi{
+class lokasi extends connection{
     private $id_lokasi;
     private $kecamatan;
     private $kota;

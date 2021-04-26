@@ -1,6 +1,6 @@
 <?php 
 
-class Toko{
+class Toko extends connection{
     private $id_toko;
     private $nama_toko;
     private $logo;

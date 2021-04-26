@@ -1,6 +1,6 @@
 <?php 
 
-class Kategori{
+class Kategori extends connection{
     private $id_kategori;
     private $nama_kategori;
 

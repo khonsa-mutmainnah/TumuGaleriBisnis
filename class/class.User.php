@@ -1,6 +1,6 @@
 <?php 
 
-class User{
+class User extends connection{
     private $username;
     private $password;
     private $nama;
