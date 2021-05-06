@@ -36,132 +36,30 @@ require "connection.php";
     
 </head>
 <body class="all">
+    <!-- header -->
     <div class="header">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.png" alt="logo" style="width: 65px; margin-left:20px;"></a>
-                    <div class="judul-navbar">
-                        <h3 class="galeribisnis-navbar">galeri bisnis</h3>
-                        <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.jpeg" alt="logo" style="width: 50px; margin-left:20px;"></a>
+                <div class="judul-navbar">
+                    <h4 class="galeribisnis-navbar">galeri bisnis</h4>
+                    <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-link active " style="color: #002f3f;"aria-current="page" href="#">Tokoku</a>
+                        <a class="nav-link " style="color: #002f3f;"href="#">+Produk</a>
+                        <a class="nav-link " style="color: #002f3f;"href="#">Pricing</a>
                     </div>
-                    
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto justify-content-end">
-                            <li class="nav-item dropdown">
-                                <a class="navbar-brand" href="index.php?p=toko-pengunjung"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="navbar-brand" href="index.php?p=tokolist"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="navbar-brand" href="index.php?p=toko-penjual"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
-                                </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="index.php?p=userlist">user</a>
-                                <a class="dropdown-item" href="#">role</a>
-                                <a class="dropdown-item" href="index.php?p=kategorilist">kategori</a>
-                                <a class="dropdown-item" href="index.php?p=tokolist">toko</a>
-                                <a class="dropdown-item" href="#">barang</a>
-                                <a class="dropdown-item" href="#">gambar barang</a>
-                                <a class="dropdown-item" href="#">web toko</a>
-                                <a class="dropdown-item" href="index.php?p=info-penjual">regis Info Penjual</a>
-                                <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
-                                </div>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        Anda yakin ingin keluar?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                            <?php
-                                if(isset($_SESSION["role"])){
-                                    if($_SESSION["role"] == "admin"){
-                            ?>
-                               <!--  <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.php?p=userlist">user</a>
-                                        <a class="dropdown-item" href="#">role</a>
-                                        <a class="dropdown-item" href="#">kategori</a>
-                                        <a class="dropdown-item" href="t=index.php?p=tokolist">toko</a>
-                                        <a class="dropdown-item" href="#">barang</a>
-                                        <a class="dropdown-item" href="#">gambar barang</a>
-                                        <a class="dropdown-item" href="#">web toko</a>
-                                        <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
-                                        </div>
-                                        modal
-                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        Anda yakin ingin keluar?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <?php
-                                        }
-                                        else if($_SESSION["role"] == "penjual"){
-                                ?>
-                                    <li class="nav-item dropdown">
-                                        <a class="navbar-brand" href="index.php?p=toko-penjual"><img src="./gambar/toko.png" alt="logo" style="width: 30px; margin-left:20px;"></a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="./gambar/aa.jpg" style="height:30px; border-radius:50%;" alt="">
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.php?p=Pengunjung">ganti toko</a>
-                                        <a class="dropdown-item" href="#">edit profil</a>
-                                        <a class="dropdown-item" href="index.php?p=tambahproduk">tambah barang</a>
-                                        <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a>
-                                        </div>
-                                        modal
-                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        Anda yakin ingin keluar?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                                        <a class="btn btn-primary" role="button" href="index.php?p=Home"  >Ya</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>-->
-                                <?php
-                                        }
-                                    }
-                                ?> 
-                        </ul>
-                    </div>
-            </nav>
-        </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- isi dynamic page -->
     <div class="isi">
         <?php
             $pages_dir = 'pages';
@@ -182,5 +80,10 @@ require "connection.php";
             }
         ?>
     </div>
+
+    <!-- footer -->
+    <footer class="text-center" id="foot">
+    @TumuGB-2021
+    </footer>
 </body>
 </html>

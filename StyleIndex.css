@@ -1,57 +1,63 @@
 .all{
-    background-color: #212932;
+    background-color: #e4edea;
     font-family: montserrat, sans-serif;
+    color: #002f3f;
 }
 
-.header .navbar{
-    background-color: #8A7D63;
-    box-shadow: 0 5px 10px #8A7D63;
-    top: 20px;
+.navbar{
+    background-color: #e4edea;
+    top: 10px;
 }
 
-.nav-item{
-    margin-left: 15px;
+.tagline-navbar{
+    font-size: smaller;
+}
+
+.collapse{
+    margin-right: 20px;
 }
 
 /* home css */
-.Home{
-    margin-top: 130px;
-    margin-left: 150px;
-    color: #D9DFDB;
+.card{
+    margin-top: 50px;
+    
 }
 
-.Home h5{
-    text-transform: capitalize;
-    font-weight: 300;
-    font-size: 20px;
+.row{
+    margin-top:30px;
 }
 
-.Home h1{
-    font-weight: 700;
-    font-size: 90px;
-    padding-bottom: 0px;
-    letter-spacing: 2%;
+.nav-link{
+    margin-right: 10px;
 }
-
-.Home .tagline-main{
-    font-size: 30px;
-    text-transform: capitalize;
-    font-weight: 400;
+.nav-link:hover{
+    background-color: #cdac81;
 }
-
-.Home .tekan{
-    margin-top: 70px;   
+.text-center .btn{
+    background-color: #e4edea;
+    color: #002f3f;
+    font-size: 9px;
 }
-
-.Home .tekan button{
-    background-color: #8A7D63;
-    width: 150px;
-    height: 50px;
-    color: #D9DFDB;
-    font-weight: 800;
-    border-radius: 40px;
+.text-center .btn:hover{
+    background-color: #cdac81;
+    color: #002f3f;
     border: none;
-    margin-left: 250px;
+}
+.card-text{
+    font-size: 13px;
+}
+
+.card img{
+    width:20px;
+}
+
+#foot{
+    background-color: #cdac81;
+    color: #002f3f;
+    padding: 2px;
+    margin-top:50px;
+    font-size: small;
+    font-weight: 500;
 }
 
 /* Pengunjung css */
