@@ -25,15 +25,15 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><img src="./gambar/telfon.png" style="padding-top:0px;"></th>
+                                        <th scope="row"><img src="./gambar/foto.jpeg" style="padding-top:0px;"></th>
                                         <td>Jacob</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="./gambar/ig.png" style="padding-top:0px;"></th>
+                                        <th scope="row"><img src="./gambar/foto.jpeg" style="padding-top:0px;"></th>
                                         <td>Mark</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="./gambar/web.png" style="padding-top:0px;"></th>
+                                        <th scope="row"><img src="./gambar/foto.jpeg" style="padding-top:0px;"></th>
                                         <td>Jacob</td>
                                     </tr>
                                 </tbody>

@@ -40,7 +40,7 @@ require "connection.php";
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.jpeg" alt="logo" style="width: 50px; margin-left:20px;"></a>
+                <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.png" alt="logo" style="width: 50px; margin-left:20px;"></a>
                 <div class="judul-navbar">
                     <h4 class="galeribisnis-navbar">galeri bisnis</h4>
                     <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>
@@ -50,8 +50,9 @@ require "connection.php";
                 </button>
                 <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
-                        <a class="nav-link active " style="color: #002f3f;"aria-current="page" href="#">Tokoku</a>
+                        <a class="nav-link active " style="color: #002f3f;"aria-current="page" href="?p=login">Tokoku</a>
                         <a class="nav-link " style="color: #002f3f;"href="#">+Produk</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
                         <a class="nav-link " style="color: #002f3f;"href="#">Pricing</a>
                     </div>
                 </div>

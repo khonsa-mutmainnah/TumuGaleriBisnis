@@ -61,13 +61,13 @@
         <div id="carouselExampleControlsNoTouching_1" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_1" data-bs-slide="prev">
@@ -94,13 +94,13 @@
         <div id="carouselExampleControlsNoTouching_2" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_2" data-bs-slide="prev">
@@ -127,13 +127,13 @@
         <div id="carouselExampleControlsNoTouching_3" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_3" data-bs-slide="prev">
@@ -160,13 +160,13 @@
         <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./gambar/foto.jpeg" class="d-block w-100" alt="...">
+              <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
