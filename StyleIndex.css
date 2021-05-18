@@ -1,6 +1,7 @@
 .all{
     background-color: #e4edea;
     font-family: montserrat, sans-serif;
+    text-transform: capitalize;
     color: #002f3f;
 }
 
@@ -20,14 +21,12 @@
 /* log in css*/
 
 .log-in .login-form{
-    /* border: 1px solid #002f3f; */
-    border-radius: 2%;
+    border-radius: 10px;
     padding: 50px 60px;
     margin-top: 15vh;
     margin-bottom: 16vh;
     background-color: #002f3f;
     color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
 }
 
 .log-in .logol img{
@@ -42,12 +41,83 @@
     background-color: #cdac81;
 }
 
-.text-center h2{
+.log-in .text-center h2{
     font-weight: 600;
     font-size: 30px;
     margin-top: 50px;
     color: #002f3f;
     text-transform: uppercase;
+}
+
+.log-in .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.log-in .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.log-in .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.log-in .btn:hover{
+    background-color: #cdac81;
+}
+
+/* register user css */
+.register-user .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.register-user .username{
+    margin-top: 15px;
+}
+
+.register-user .form-label{
+    margin-top: 15px;
+}
+
+.register-user .register-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
+}
+
+.register-user .logol img{
+    width: 80px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+}
+.register-user .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.register-user .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.register-user .btn:hover{
+    background-color: #cdac81;
 }
 
 /* home css */

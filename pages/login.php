@@ -1,9 +1,8 @@
-<div class="container log-in">
-  <div class="col-lg-4 offset-lg-4">
+<div class="container log-in col-lg-4">
     <form class="login-form">
       <div class="text-center logol">
         <img src="./gambar/logo.png" class="rounded" alt="...">
-        <h1 class="masuk">log in</h1>
+        <h1 class="masuk">masuk</h1>
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Username</label>
@@ -13,11 +12,12 @@
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      <div class="button-end">
+        <input class="btn col-lg-4" type="submit" value="Masuk">
       </div>
-      <button type="submit" class="btn col-6 mx-auto" id="submit-login">Submit</button>
+      <label for="" class="form-label">belum punya akun?</label>
+      <div class="button-end">
+        <a class="btn col-lg-4" href="#" role="button">Daftar</a>
+      </div>
     </form>
-  </div>
 </div>

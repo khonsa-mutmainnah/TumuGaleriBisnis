@@ -50,9 +50,10 @@ require "connection.php";
                 </button>
                 <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
-                        <a class="nav-link active " style="color: #002f3f;"aria-current="page" href="?p=login">Tokoku</a>
+                        <a class="nav-link active " style="color: #002f3f;"aria-current="page" href="?p=masuk">Tokoku</a>
                         <a class="nav-link " style="color: #002f3f;"href="#">+Produk</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=register-user">reg</a>
                         <a class="nav-link " style="color: #002f3f;"href="#">Pricing</a>
                     </div>
                 </div>
@@ -81,10 +82,5 @@ require "connection.php";
             }
         ?>
     </div>
-
-    <!-- footer -->
-    <footer class="text-center" id="foot">
-    @TumuGB-2021
-    </footer>
 </body>
 </html>
