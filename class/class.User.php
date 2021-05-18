@@ -10,7 +10,7 @@ class User extends connection{
     private $instagram_user = '';
     private $foto = '';
     private $role = '';
-    private $hasil= true;
+    private $hasil= false;
     private $message= '';
 
     // //User Contructor
@@ -32,9 +32,10 @@ class User extends connection{
         }
     }
 
-    public function __set($atribute, $value){
-        if(property_exists($this,$atribute)){
-            $this->atribute=$value;
+    public function __set($atribute, $value)
+    {
+        if (property_exists($this, $atribute)) {
+            return $this->$atribute = $value;
         }
     }
 
@@ -50,9 +51,10 @@ class User extends connection{
 
     public function UpdateUser(){
         $sql = "UPDATE user
-                SET '$this->username', '$this->password', '$this->nama', '$this->email', '$this->no_hp', '$this->kota', '$this->foto','$this->instagram_user', '$this->role'
+                SET password = '$this->password', nama = '$this->nama', email = '$this->email', no_hp = '$this->no_hp', kota = '$this->kota', foto = '$this->foto', instagram_user = '$this->instagram_user', role = '$this->role'
                 WHERE username = '$this->username'";
         
+        $this->hasil = mysqli_query($this->connection, $sql);
         if($this->hasil)
             $this->message='Data berhasil diupdate!';
         else

@@ -1,29 +1,28 @@
 <?php
     require_once ('./class/class.User.php');
     $objUser= new User();
-    if(isset($_POST['btnSubmit'])){
-        $objUser->username= $_POST['username'];
-        $objUser->password= $_POST['password'];
-        $objUser->nama= $_POST['nama'];
-        $objUser->email= $_POST['email'];
-        $objUser->no_hp= $_POST['no_hp'];
-        $objUser->kota= $_POST['kota'];
-        $objUser->foto= $_POST['foto'];
-        $objUser->role= $_POST['role'];
-        $objUser->instagram_user= $_POST['instagram_user'];
-
-        if(isset($_GET['username'])){
-            $objUser->username= $_GET['username'];
-            $objUser->UpdateUser();
-        }
-        else{
-            $objUser->AddUser();
-        }
-        echo "<script> alert('$objUser->message'); </script>";
-        if($objUser->hasil){
-            echo '<script> window.location = "index.php?p=userlist";
-            </script>';
-        }
+    if (isset($_POST['btnSubmit'])){
+      $objUser->username= $_POST['username'];
+      $objUser->password= $_POST['password'];
+      $objUser->nama= $_POST['nama'];
+      $objUser->email= $_POST['email'];
+      $objUser->no_hp= $_POST['no_hp'];
+      $objUser->kota= $_POST['kota'];
+      $objUser->foto= $_POST['foto'];
+      $objUser->role= $_POST['role'];
+      $objUser->instagram_user= $_POST['instagram_user'];
+      
+      if(isset($_GET['username'])){
+        $objUser->username= $_GET['username'];
+        $objUser->UpdateUser();
+      }
+      else{
+        $objUser->AddUser();
+      }
+      echo "<script> alert('$objUser->message'); </script>";
+      if($objUser->hasil){
+        echo '<script> window.location = "index.php?p=userlist"; </script>';
+      }
     }
     else if(isset($_GET['username'])){
         $objUser->username = $_GET['username'];
@@ -68,7 +67,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="@instagram_user" value="<?php echo $objUser->instagram_user; ?>">
         </div>
         <div class="col-lg-4 button-end">
-          <input class="btn" name="btnSubmit" type="submit" value="Save" >
+          <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
         </div>
       </form>
     </div>
