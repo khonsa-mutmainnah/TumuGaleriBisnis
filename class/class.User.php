@@ -1,15 +1,17 @@
 <?php 
 
 class User extends connection{
-    private $username = "";
-    private $password = "";
-    private $nama = "";
-    private $email = "";
-    private $no_hp = "";
-    private $kota = "";
-    private $role = "";
+    private $username = '';
+    private $password = '';
+    private $nama = '';
+    private $email = '';
+    private $no_hp = '';
+    private $kota = '';
+    private $instagram_user = '';
+    private $foto = '';
+    private $role = '';
     private $hasil= true;
-    private $message= "";
+    private $message= '';
 
     // //User Contructor
     // public function __construct(){
@@ -37,8 +39,8 @@ class User extends connection{
     }
 
     public function AddUser(){
-        $sql = "INSERT INTO user(username, password, nama, email, no_hp, kota, role)
-                VALUES ('$this->username', '$this->password', '$this->nama', '$this->email', '$this->no_hp', '$this->kota', '$this->role')";
+        $sql = "INSERT INTO user(username, password, nama, email, no_hp, kota, foto, instagram_user, role)
+                VALUES ('$this->username', '$this->password', '$this->nama', '$this->email', '$this->no_hp', '$this->kota', '$this->foto','$this->instagram_user', '$this->role')";
                 $this->hasil=mysqli_query($this->connection, $sql);
         if($this->hasil)
             $this->message='user berhasil ditambahkan!';
@@ -48,7 +50,7 @@ class User extends connection{
 
     public function UpdateUser(){
         $sql = "UPDATE user
-                SET '$this->username', '$this->password', '$this->nama', '$this->email', '$this->no_hp', '$this->kota', '$this->role'
+                SET '$this->username', '$this->password', '$this->nama', '$this->email', '$this->no_hp', '$this->kota', '$this->foto','$this->instagram_user', '$this->role'
                 WHERE username = '$this->username'";
         
         if($this->hasil)
@@ -97,12 +99,15 @@ class User extends connection{
         if(mysqli_num_rows($resultOne)==1){
             $this->hasil=true;
 
+            $data=mysqli_fetch_Assoc($resultOne);
             $objUser->username = $data['username'];
             $objUser->password = $data['password'];
             $objUser->nama = $data['nama'];
             $objUser->email = $data['email'];
             $objUser->no_hp = $data['no_hp'];
             $objUser->kota = $data['kota'];
+            $objUser->instagram_user = $data['instagram_user'];
+            $objUser->foto = $data['foto'];
             $objUser->role = $data['role'];
         }
     }

@@ -8,6 +8,7 @@
         $objUser->email= $_POST['email'];
         $objUser->no_hp= $_POST['no_hp'];
         $objUser->kota= $_POST['kota'];
+        $objUser->foto= $_POST['foto'];
         $objUser->role= $_POST['role'];
         $objUser->instagram_user= $_POST['instagram_user'];
 
@@ -67,7 +68,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="@instagram_user" value="<?php echo $objUser->instagram_user; ?>">
         </div>
         <div class="col-lg-4 button-end">
-          <input class="btn" name="btnSubmit" type="submit" value="tambah user" >
+          <input class="btn" name="btnSubmit" type="submit" value="Save" >
         </div>
       </form>
     </div>

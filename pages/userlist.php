@@ -13,6 +13,8 @@
                     <th scope="col">no_hp</th>
                     <th scope="col">kota</th>
                     <th scope="col">role</th>
+                    <th scope="col">instagram_user</th>
+                    <th scope="col">foto</th>
                     <th scope="col">action</th>
                 </tr>
             </thead>
@@ -35,6 +37,8 @@
                         echo '<td>'.$dataUser->email.'</td>';
                         echo '<td>'.$dataUser->no_hp.'</td>';
                         echo '<td>'.$dataUser->kota.'</td>';
+                        echo '<td>'.$dataUser->instagram_user.'</td>';
+                        echo '<td>'.$dataUser->foto.'</td>';
                         echo '<td>'.$dataUser->role.'</td>';
                         echo '<td> <a class="btn btn-warning"
                         href="index.php?p=user&username='.$dataUser->username.'"> Edit </a> |

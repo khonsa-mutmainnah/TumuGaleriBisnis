@@ -54,7 +54,7 @@ require "connection.php";
                         <a class="nav-link " style="color: #002f3f;"href="#">+Produk</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=register-user">reg</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=user">Pricing</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=user">user</a>
                     </div>
                 </div>
             </div>
