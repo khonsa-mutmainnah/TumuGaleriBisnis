@@ -5,6 +5,24 @@
       <h1 class="daftar">daftar</h1>
     </div>
     <div class="col">
+      <img id="image-preview" alt="image preview" class="rounded mx-auto ">
+      <div class="mb-3">
+        <label for="formFile" class="form-label">foto</label>
+        <input class="form-control" type="file" id="image-source" onchange="previewImage();">
+      </div>
+      <script>
+        function previewImage() {
+          document.getElementById("image-preview").style.display = "block";
+          var oFReader = new FileReader();
+          oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+          oFReader.onload = function(oFREvent) {
+            document.getElementById("image-preview").src = oFREvent.target.result;
+          };
+        };
+      </script>
+    </div>
+    <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Nama lengkap</label>
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nama lengkap">
     </div>

@@ -2,6 +2,41 @@
 <h4 class="title"><span class="text"><strong>LIST TOKO</strong></span></h4>
 <a class="btn position-absolute start-50 translate-middle" href="index.php?p=toko" >ADD</a>
 <table class="table" id="tabeltoko">
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">NO.</th>
+            <th scope="col">id_toko</th>
+            <th scope="col">nama_toko</th>
+            <th scope="col">logo</th>
+            <th scope="col">id_lokasi</th>
+            <th scope="col">tagline</th>
+            <th scope="col">no_telp</th>
+            <th scope="col">status</th>
+            <th scope="col">instagram</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        </tr>
+        <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        </tr>
+        <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        </tr>
+    </tbody>
+    </table>
+
     <tr>
         <th>NO.</th>
         <th>id_toko</th>

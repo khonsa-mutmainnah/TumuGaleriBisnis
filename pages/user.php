@@ -9,6 +9,7 @@
         $objUser->no_hp= $_POST['no_hp'];
         $objUser->kota= $_POST['kota'];
         $objUser->role= $_POST['role'];
+        $objUser->instagram_user= $_POST['instagram_user'];
 
         if(isset($_GET['username'])){
             $objUser->username= $_GET['username'];
@@ -21,8 +22,7 @@
         if($objUser->hasil){
             echo '<script> window.location = "index.php?p=userlist";
             </script>';
-    }
-    
+        }
     }
     else if(isset($_GET['username'])){
         $objUser->username = $_GET['username'];
@@ -31,50 +31,44 @@
 ?>
 
 <div class="user">
-    <h4 class="title" >USER</h4>
-    <form action="" method="post">
-        <table class="table table-borderless table-responsive" style="color:#D9DFDB;">
-            <tr>
-                <td>username</td>
-                <td>:</td>
-                <td><input type="text" class="form-control" name="username"
-                value="<?php echo $objUser->username; ?>"></td>
-            </tr>
-            <tr>
-                <td>password</td>
-                <td>:</td>
-                <td><input type="password" class="formcontrol" name="password"value="<?php echo $objUser->password; ?>"></td>
-            </tr>
-            <tr>
-                <td>nama</td>
-                <td>:</td>
-                <td><input type="text" class="form-control" id="nama" name="nama" value="<?php echo $objUser->nama; ?>">
-            </tr>
-            <tr>
-                <td>email</td>
-                <td>:</td>
-                <td><input type="text" class="form-control" id="email" name="email" value="<?php echo $objUser->email; ?>">
-            </tr>
-            <tr>
-                <td>no hp</td>
-                <td>:</td>
-                <td><input type="text" class="form-control" id="no_hp" name="no_hp" value="<?php echo $objUser->no_hp; ?>">
-            </tr>
-            <tr>
-                <td>kota</td>
-                <td>:</td>
-                <td><input type="text" class="form-control" id="kota" name="kota" value="<?php echo $objUser->kota; ?>">
-            </tr>
-            <tr>
-                <td>role</td>
-                <td>:</td>
-                <td><input type="text" class="form-control" id="role" name="role" value="<?php echo $objUser->role; ?>">
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit" style="width: 100px;">
-                <a href="index.php?p=userlist" class="btn btnwarning" style="width: 100px;">Cancel</a></td>
-            </tr>
-        </table>
-    </form>
+    <div class="container col-lg-7">
+      <form form action="" method="post" class="register-form">
+        <h4 class="title text-center fs-1 fw-bolder" >USER</h4>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">Nama lengkap</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama lengkap" value="<?php echo $objUser->nama; ?>">
+        </div>
+        <div class="container">
+            <div class="row username">
+                <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value="<?php echo $objUser->username; ?>">
+                </div>
+                <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" value="<?php echo $objUser->password; ?>">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">nomor handphone</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="088888888" value="<?php echo $objUser->no_hp; ?>">
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">asal kota</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="kota" value="<?php echo $objUser->kota; ?>">
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="user@email.com" value="<?php echo $objUser->email; ?>">
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">instagram</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="@instagram_user" value="<?php echo $objUser->instagram_user; ?>">
+        </div>
+        <div class="col-lg-4 button-end">
+          <input class="btn" name="btnSubmit" type="submit" value="tambah user" >
+        </div>
+      </form>
+    </div>
 </div>

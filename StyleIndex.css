@@ -120,6 +120,12 @@
     background-color: #cdac81;
 }
 
+.register-user #image-preview{
+    display:none;
+    width : 250px;
+    border-radius: 50%;
+}
+
 /* home css */
 .card{
     margin-top: 50px;
@@ -286,6 +292,74 @@
     margin-bottom: 20px;
 }
 
+/* user css */
+.user .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.user .username{
+    margin-top: 15px;
+}
+
+.user .form-label{
+    margin-top: 15px;
+}
+
+.user .register-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
+}
+
+.user .logol img{
+    width: 80px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+}
+.user .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.user .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.user .btn:hover{
+    background-color: #cdac81;
+}
+
+/* userlist */
+.userlist .table th{
+    color:#002f3f;
+}
+.table td{
+    color:#002f3f;
+}
+.table tr{
+    color:#002f3f;
+}
+
+.userlist .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    border-color: none;
+}
+.userlist .btn:hover{
+    background-color: #cdac81;
+}
 /* tambah produk css */
 .tambahproduk{
     margin-left: 10px;
@@ -883,34 +957,6 @@
     width: 500px;
 }
 
-/* User */
-.user .table{
-    margin-left: 40px;
-    color: #D9DFDB;
-}
-
-.user h4{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 600;
-    color: #D9DFDB;
-    padding-bottom: 20px;
-}
-
-.user .form-check{
-    margin-left: 20px;
-    size: 200%;
-}
-
-.user .btn{
-    background-color: #8A7D63;
-    margin-top: 70px;
-}
-
-.user input{
-    width: 500px;
-}
-
 /* kategori list */
 .kategorilist {
     margin-top: 50px;
@@ -936,47 +982,6 @@
     margin-top: 30px;
     align-items: center;
 }
-/* user */
-
-/* info penjual */
-.main{
-    height: 2000px;
-    /*width: 1000px;*/
-    margin-top: 100px;
-    /*background-color: yellow;*/
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.all-form{
-    width: 1292px;
-    /* height: 2000px; */
-    background-color: #D9DFDB;
-    text-align: center;
-}
-
-.judul{
-    margin-bottom: 90px;
-}
-
-.judul p{
-    text-align: center;
-    margin-top: 80px;
-    font-weight: 600;
-    font-size: 40px;
-}
-
-.input h4{
-    font-weight: 600;
-}
-
-.main-form{
-    width: 700.25px;
-    margin: auto;
-}
-
-
 
 /* atas */
 
