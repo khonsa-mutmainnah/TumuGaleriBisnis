@@ -1,7 +1,7 @@
 <div class="container userlist">
     <div class="text-center">
         <h1 class="judul"><strong>USERLIST</strong></h1>
-        <a class="btn add" href="index.php?p=user">ADD</a>
+        <a class="btn" href="index.php?p=user">ADD</a>
     </div>
     <table class="table">
         <thead>
