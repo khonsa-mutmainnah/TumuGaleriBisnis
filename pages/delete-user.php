@@ -3,7 +3,7 @@
 
     if(isset($_GET['username'])){
         $objUser = new User();
-        $objUser->id_toko = $_GET['username'];
+        $objUser->username = $_GET['username'];
         $objUser->DeleteUser();
         echo "<script> alert('$objUser->message'); </script>";
         echo "<script>window.location = 'index.php?p=userlist'</script>";
