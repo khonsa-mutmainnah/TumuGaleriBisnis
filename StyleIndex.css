@@ -512,21 +512,13 @@
     margin-bottom: 0px;
 }
 
-.galeri-bisnis h2{
-    font-weight: 600;
-    font-size: 40px;
-    color: #D9DFDB;
-    text-transform: uppercase;
-    text-align: center;
-}
-.galeri-bisnis .d-flex{
-    margin-top: 200px;
+.galeri-bisnis #searchToko {
+    margin-top: 20px;
     margin-bottom: 10px;
-    width: 400px;
-}
-
-.d-flex button{
-    border: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
 }
 
 .galeri-bisnis .d-flex img{
