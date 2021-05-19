@@ -1,43 +1,73 @@
 <?php 
 
-class Barang extends connection{
-    private $id_barang;
-    private $nama_barang;
-    private $deskripsi_barang;
-    private $harga;
-    private $variasi;
-    private $gambar;
-    private $id_toko;
-    private $status;
+	require
+	/**
+	 * 
+	 */
+	class Barang extends Connection
+	{
+		
+		private $id_barang = '';
+		private $nama_barang = '';
+		private $deskripsi = '';
+		private $harga = '';
+		private $variasi = '';
+		private $id_toko = '';
 
-    //Contructor Barang
-    public function __construct(
-        $id_barang,
-        $nama_barang,
-        $deskripsi_barang,
-        $harga,
-        $variasi,
-        $gambar,
-        $id_toko,
-        $status
-    )
-    {
-        $this->id_barang = $id_barang;
-        $this->nama_barang = $nama_barang;
-        $this->deskripsi_barang = $deskripsi_barang;
-        $this->harga = $harga;
-        $this->variasi = $variasi;
-        $this->gambar = $gambar;
-        $this->id_toko = $id_toko;
-        $this->status = $status;
-    }
+		public function __get($atribute) {
+			if (property_exists($this, $atribute)) {
+				return $this->$atribute;
+			}
+		}
+		public function __set($atribut, $value){
+			if (property_exists($this, $atribut)) {
+				$this->$atribut = $value;
+			}
+		}
 
-    //Get Automatic
-    public function __get($atribute){
-        if(property_exists($this, $atribute))
-        {
-            return $this->$atribute;
-        }
-    }
-}
-?>
+		function __construct() {
+			parent::__construct();
+		}
+
+		public function SelectAllBarang(){
+			$sql = "SELECT b.*, t.nama_toko FROM barang b INNER JOIN toko t ON b.id_toko = t.id_toko";
+			$result = mysql_query($this->connection, $sql);
+
+			$arrResult = Array();
+			$cnt = 0;
+
+			if (mysqli_num_rows($result)>0) {
+				while ($data = mysqli_fetch_array($result)) {
+					$objBarang = new Barang();
+					$objBarang->id_barang=$data['id_barang'];
+					$objBarang->nama_barang = $data['nama_barang'];
+					$objBarang->deskripsi= $data['deskripsi'];
+					$objBarang->harga = $data['harga'];
+					$objBarang->variasi = $data['variasi'];
+					$objBarang->id_toko = $data['id_toko'];
+					$cnt++;
+				}
+				return $arrResult				
+			}
+		}
+
+		public function AddBarang(){
+		$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga) VALUES ($this->id_barang, '$this->nama_barang', '$this->deskripsi', ".$this->dept->dnumber.")";
+		$this->hasil = mysqli_query($this->connection, $sql);
+			if($this->hasil)
+				$this->message ='Data berhasil ditambahkan!';
+			else
+				$this->message ='Data gagal ditambahkan!';
+		}
+
+		public function UpdateProject(){
+			$sql = "UPDATE barang SET 
+					id_barang = '$this->id_barang'
+					nama_barang = '$this->nama_barang'
+					deskripsi = '$this->deskripsi'
+					harga = '$this->harga'
+					variasi = '$this->variasi'
+					WHERE id_toko = '$this->id_toko';"
+		}
+	}
+ ?>
