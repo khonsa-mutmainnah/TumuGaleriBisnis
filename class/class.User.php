@@ -43,6 +43,7 @@ class User extends connection{
         $sql = "INSERT INTO user(username, password, nama, email, no_hp, kota, foto, instagram_user, role)
                 VALUES ('$this->username', '$this->password', '$this->nama', '$this->email', '$this->no_hp', '$this->kota', '$this->foto','$this->instagram_user', '$this->role')";
                 $this->hasil=mysqli_query($this->connection, $sql);
+        
         if($this->hasil)
             $this->message='user berhasil ditambahkan!';
         else
