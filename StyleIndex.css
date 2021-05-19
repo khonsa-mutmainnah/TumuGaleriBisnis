@@ -341,6 +341,9 @@
 }
 
 /* userlist */
+.userlist .judul{
+    color: #002f3f;
+}
 .userlist .table th{
     color:#002f3f;
 }
@@ -360,6 +363,7 @@
 .userlist .btn:hover{
     background-color: #cdac81;
 }
+
 /* tambah produk css */
 .tambahproduk{
     margin-left: 10px;
@@ -934,15 +938,6 @@
     margin-left: 40px;
     color: #D9DFDB;
 }
-
-.kategori h4{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 600;
-    color: #D9DFDB;
-    padding-bottom: 20px;
-}
-
 .kategori .form-check{
     margin-left: 20px;
     size: 200%;
@@ -962,23 +957,15 @@
     margin-top: 50px;
 }
 
-.kategorilist h4{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 400;
-    color: #D9DFDB;
-    padding-bottom: 20px;
-}
-
 .kategorilist .table{
     color: #D9DFDB;
     margin-top: 100px;
 }
 
 .kategorilist .btn{
-    background-color: #8A7D63;
+    background-color: #002f3f;
     font-weight: 600;
-    color: #212932;
+    color: #e4edea;
     margin-top: 30px;
     align-items: center;
 }

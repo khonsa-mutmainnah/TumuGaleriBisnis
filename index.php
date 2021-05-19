@@ -55,6 +55,19 @@ require "connection.php";
                         <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=register-user">reg</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=user">user</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="?p=userlist">user</a></li>
+                                <li><a class="dropdown-item" href="?p=tokolist">toko</a></li>
+                                <li><a class="dropdown-item" href="?p=lokasilist">lokasi</a></li>
+                                <li><a class="dropdown-item" href="?p=baranglist">produk</a></li>
+                                <li><a class="dropdown-item" href="?p=gambarlist">gambar produk</a></li>
+                                <li><a class="dropdown-item" href="?p=kategorilist">kategori</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
