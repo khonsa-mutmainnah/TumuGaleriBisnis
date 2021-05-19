@@ -35,7 +35,7 @@
         <tr>
             <td>nama kategori</td>
             <td>:</td>
-            <td><input type="text" class="formcontrol" name="fname"value="<?php echo $objKategori->nama_kategori; ?>"></td>
+            <td><input type="text" class="formcontrol" name="nama_kategori" value="<?php echo $objKategori->nama_kategori; ?>"></td>
         </tr>
 
 
