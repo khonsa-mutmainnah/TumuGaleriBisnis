@@ -95,3 +95,5 @@ class Lokasi extends Connection
         }
     }
 }
+
+?>

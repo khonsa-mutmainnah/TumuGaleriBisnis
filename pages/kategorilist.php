@@ -1,13 +1,13 @@
 <div class="container kategorilist">
     <div class="text-center">
         <h1 class="judul"><strong>KATEGORI</strong></h1>
-        <a class="btn add" href="index.php?p=kategori">ADD</a>
+        <a class="btn add" #id="addButton" href="index.php?p=kategori">ADD</a>
     </div>
     <table class="table" id="tabelkategori">
         <thead>
             <tr>
                 <th>NO.</th>
-                <th>id kategori</th>
+                <th>ID kategori</th>
                 <th>nama kategori</th>
                 <th>action</th>
             </tr>
@@ -39,5 +39,4 @@
             }
         ?>
     </table>
-</div>
 </div>

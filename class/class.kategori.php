@@ -1,23 +1,11 @@
-<?php 
-
-class Kategori extends connection{
+<?php
+class Kategori extends Connection{
     private $id_kategori = "";
     private $nama_kategori = "";
     private $hasil = false;
     private $message = "";
 
-    // //kategori Contructor
-    // public function __construct(
-    //     $id_kategori,
-    //     $nama_kategori
-
-    // )
-    // {
-    //     $this->id_kategori = $id_kategori;
-    //     $this->nama_kategori = $nama_kategori;
     
-    // }
-
     //Get Automatic
     public function __get($atribute){
         if(property_exists($this, $atribute))
@@ -44,8 +32,8 @@ class Kategori extends connection{
 
     public function UpdateKategori(){
         $sql = "UPDATE kategori
-                SET '$this->id_kategori', '$this->nama_kategori'
-                WHERE id_kategori = '$this->kategori'";
+                SET '$this->nama_kategori'
+                WHERE id_kategori = '$this->id_kategori'";
         
         if($this->hasil)
             $this->message='Kategori berhasil diupdate!';
@@ -66,7 +54,7 @@ class Kategori extends connection{
     public function SelectAllKategori(){
         $sql="SELECT * FROM kategori";
         $result = mysqli_query($this->connection, $sql);
-        $arrResult= Array();
+        $arrResult= array();
         $cnt=0;
 
         if(mysqli_num_rows($result)>0){
@@ -89,10 +77,10 @@ class Kategori extends connection{
             $this->hasil=true;
 
             $data=mysqli_fetch_assoc($resultOne);
-            $objKategori->id_kategori = $id_kategori['id_kategori'];
-            $objKategori->nama_kategori = $nama_kategori['nama_kategori'];
+            $this->nama_kategori = $data['nama_kategori'];
             
         }
     }
 }
+
 ?>

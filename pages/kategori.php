@@ -1,11 +1,11 @@
 <?php
-    require_once('./class/class.kategori.php');
+    require_once ('./class/class.kategori.php');
     $objKategori= new Kategori();
-    if(isset($_POST['btnSubmit'])){
-        $objKategori->id_Kategori=$_POST['id_kategori'];
-        $objKategori->nama_kategori=$POST['nama_kategori'];
+    if(isset ($_POST['btnSubmit'])){
+        $objKategori->id_kategori = $_POST['id_kategori'];
+        $objKategori->nama_kategori = $_POST['nama_kategori'];
 
-        if(isset($_GET['id_kategori'])){
+        if(isset ($_GET['id_kategori'])){
             $objKategori->id_kategori= $_GET['id_kategori'];
             $objKategori->UpdateKategori();
         }
@@ -27,13 +27,13 @@
 <form action="" method="post">
     <table class="table table-borderless table-responsive" style="color:#D9DFDB;">
         <tr>
-            <td>id kategori</td>
+            <td>ID Kategori</td>
             <td>:</td>
             <td><input type="text" class="form-control" name="id_kategori"
             value="<?php echo $objKategori->id_kategori; ?>"></td>
         </tr>
         <tr>
-            <td>nama kategori</td>
+            <td>Nama Kategori</td>
             <td>:</td>
             <td><input type="text" class="formcontrol" name="nama_kategori" value="<?php echo $objKategori->nama_kategori; ?>"></td>
         </tr>
