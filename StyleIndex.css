@@ -343,6 +343,14 @@
 /* userlist */
 .userlist .judul{
     color: #002f3f;
+    margin-top: 40px;
+}
+
+.userlist  .add{
+    margin-top: 10px;
+}
+.userlist .table{
+    margin-top: 50px;
 }
 .userlist .table th{
     color:#002f3f;
@@ -358,9 +366,143 @@
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
-    border-color: none;
+    border-color: #002f3f;
 }
 .userlist .btn:hover{
+    background-color: #cdac81;
+}
+
+/* lokasi css */
+.lokasi .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.lokasi .username{
+    margin-top: 15px;
+}
+
+.lokasi .form-label{
+    margin-top: 15px;
+}
+
+.lokasi .lokasi-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
+}
+.lokasi .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.lokasi .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.lokasi .btn:hover{
+    background-color: #cdac81;
+}
+
+/* lokasilist css */
+.lokasilist .judul{
+    color: #002f3f;
+    margin-top: 40px;
+}
+
+.lokasilist  .add{
+    margin-top: 10px;
+}
+.lokasilist .table{
+    margin-top: 50px;
+}
+.lokasilist .table th{
+    color:#002f3f;
+}
+
+.lokasilist .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    border-color: #002f3f;
+}
+.lokasilist .btn:hover{
+    background-color: #cdac81;
+}
+
+/* Kategori */
+.kategori .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.kategori .username{
+    margin-top: 15px;
+}
+
+.kategori .form-label{
+    margin-top: 15px;
+}
+
+.kategori .lokasi-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
+}
+.kategori .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.kategori .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.kategori .btn:hover{
+    background-color: #cdac81;
+}
+
+/* kategori list */
+.kategorilist .judul{
+    color: #002f3f;
+    margin-top: 40px;
+}
+
+.kategorilist  .add{
+    margin-top: 10px;
+}
+.kategorilist .table{
+    margin-top: 50px;
+}
+.kategorilist .table th{
+    color:#002f3f;
+}
+
+.kategorilist .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    border-color: #002f3f;
+}
+.kategorilist .btn:hover{
     background-color: #cdac81;
 }
 
@@ -512,21 +654,13 @@
     margin-bottom: 0px;
 }
 
-.galeri-bisnis h2{
-    font-weight: 600;
-    font-size: 40px;
-    color: #D9DFDB;
-    text-transform: uppercase;
-    text-align: center;
-}
-.galeri-bisnis .d-flex{
-    margin-top: 200px;
+.galeri-bisnis #searchToko {
+    margin-top: 20px;
     margin-bottom: 10px;
-    width: 400px;
-}
-
-.d-flex button{
-    border: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
 }
 
 .galeri-bisnis .d-flex img{
@@ -929,43 +1063,6 @@
     background-color: #8A7D63;
     font-weight: 600;
     color: #212932;
-    margin-top: 30px;
-    align-items: center;
-}
-
-/* Kategori */
-.kategori .table{
-    margin-left: 40px;
-    color: #D9DFDB;
-}
-.kategori .form-check{
-    margin-left: 20px;
-    size: 200%;
-}
-
-.kategori .btn{
-    background-color: #8A7D63;
-    margin-top: 70px;
-}
-
-.kategori input{
-    width: 500px;
-}
-
-/* kategori list */
-.kategorilist {
-    margin-top: 50px;
-}
-
-.kategorilist .table{
-    color: #D9DFDB;
-    margin-top: 100px;
-}
-
-.kategorilist .btn{
-    background-color: #002f3f;
-    font-weight: 600;
-    color: #e4edea;
     margin-top: 30px;
     align-items: center;
 }

@@ -1,36 +1,12 @@
-<div class="galeri-bisnis">
+<div class="container galeri-bisnis">
     <div class="judul">
-        <h2 id="judul-main text-center" >tumu galeri bisnis</h2>
+        <h1 class="judul-main text-center" ><strong>tumu galeri bisnis</strong></h1>
     </div>
 
-    <form class="d-flex mb-3 position-absolute top-0 start-50 translate-middle-x">
-        <input class="form-control" type="search" placeholder="cari toko" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><img src="./gambar/search.png"></button>
-    </form>
-
-    <div class="populer">
-        <h3>populer</h3>
-
-        <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-            <img class="gambar-toko-pop" src="logo6.png">
-            <h5>Nama toko</h5>
-        </a>
-        <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-            <img class="gambar-toko-pop" src="logo7.png">
-            <h5>Nama toko</h5>
-        </a>
-        <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-            <img class="gambar-toko-pop" src="10.png">
-            <h5>Nama toko</h5>
-        </a>
-        <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-            <img class="gambar-toko-pop" src="11.png">
-            <h5>Nama toko</h5>
-        </a>
-        <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-            <img class="gambar-toko-pop" src="12.png">
-            <h5>Nama toko</h5>
-        </a>
+    <div class="input-group col-5 " >
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary"><img src="./gambar/search.png" style="width: 24px;"></button>
     </div>
 
     <div class="kategori-dan-toko">
