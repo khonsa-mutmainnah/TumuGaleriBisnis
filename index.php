@@ -53,8 +53,7 @@ require "connection.php";
                         <a class="nav-link active " style="color: #002f3f;"aria-current="page" href="?p=masuk">Tokoku</a>
                         <a class="nav-link " style="color: #002f3f;"href="#">+Produk</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=register-user">reg</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=user">user</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=GaleriBisnis">gb</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=lokasi">lokasi</a>
                         <div class="btn-group">
                             <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">

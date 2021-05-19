@@ -3,7 +3,7 @@
         <h1 class="judul"><strong>USERLIST</strong></h1>
         <a class="btn" href="index.php?p=user">ADD</a>
     </div>
-    <table class="table">
+    <table class="table table-responsive">
         <thead>
         <tr>
             <th> NO.</th>
@@ -13,10 +13,10 @@
             <th> no hp</th>
             <th> email</th>
             <th> kota</th>
-            <!-- <th> role</th> -->
             <th> instagram</th>
-            <!-- <th> foto</th> -->
-            <!-- <th> action</th> -->
+            <th> foto</th>
+            <th> role</th>
+            <th> action</th>
         </tr>
         </thead>
         <?php
@@ -33,16 +33,16 @@
                 echo '<td>'.$dataUser->username .'</td>';
                 echo '<td>'.$dataUser->password .'</td>';
                 echo '<td>'.$dataUser->nama .'</td>';
-                echo '<td>'.$dataUser->email .'</td>';
                 echo '<td>'.$dataUser->no_hp .'</td>';
+                echo '<td>'.$dataUser->email .'</td>';
                 echo '<td>'.$dataUser->kota .'</td>';
                 echo '<td>'.$dataUser->instagram_user .'</td>';
-                echo '<td>'.$dataUser->foto .'</td>';
+                echo "<td><img src='./gambar/aa.jpg".$dataUser->foto."' width='50px'/></td>";
                 echo '<td>'.$dataUser->role .'</td>';
                 echo '<td>
-                <a class="btn btn-warning"
+                <a class="btn"
                 href="index.php?p=user&username=' . $dataUser->username . '"> Edit </a> |
-                <a class="btn btn-danger"
+                <a class="btn"
                 href="index.php?p=delete-user&username=' . $dataUser->username . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
                 echo '</tr>';
                 $no++;

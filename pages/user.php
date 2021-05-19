@@ -30,101 +30,45 @@
     }
 ?>
 
-<h4 class="title">
-<span class="text"><strong>User</strong></span>
-</h4>
-<form action="" method="post">
-<table class="table">
-<tr>
-<td>Username</td>
-<td>:</td>
-<td><input type="text" class="form-control" name="username"
-value="<?php echo $objUser->username; ?>"></td>
-</tr>
-<tr>
-<td>Password</td>
-<td>:</td>
-<td><input type="password" class="formcontrol" username="password" name="password"
-value="<?php echo $objUser->password; ?>"></td>
-</tr>
-<tr>
-<td>Nama Lengkap</td>
-<td>:</td>
-<td><input type="text" class="formcontrol" username="nama" name="nama"
-value="<?php echo $objUser->nama; ?>"></td>
-</tr>
-<tr>
-<td>Nomor Handphone</td>
-<td>:</td>
-<td><input type="text" class="formcontrol" username="no_hp" name="no_hp"
-value="<?php echo $objUser->nama; ?>"></td>
-</tr>
-<tr>
-<td>Email</td>
-<td>:</td>
-<td><input type="text" class="formcontrol" username="email" name="email"
-value="<?php echo $objUser->email; ?>"></td>
-</tr>
-<tr>
-<td>Kota</td>
-<td>:</td>
-<td><input type="text" class="formcontrol" username="kota" name="kota"
-value="<?php echo $objUser->kota; ?>"></td>
-</tr>
-<tr>
-<td>Instagram</td>
-<td>:</td>
-<td><input type="text" class="formcontrol" username="instagram_user" name="instagram_user"
-value="<?php echo $objUser->instagram_user; ?>"></td>
-</tr>
-
-<tr>
-<td colspan="2"></td>
-<td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-<a href="index.php?p=userlist" class="btn btnwarning">Cancel</a></td>
-</tr>
-</table>
-</form>
-
-<!-- <div class="user">
+<div class="user">
     <div class="container col-lg-7">
-      <form form action="" method="post" class="register-form">
+      <form form action="" method="post" class="user-form">
         <h4 class="title text-center fs-1 fw-bolder" >USER</h4>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">Nama lengkap</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama lengkap" value="<?php echo $objUser->nama; ?>">
-        </div>
-        <div class="container">
-            <div class="row username">
-                <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value="<?php echo $objUser->username; ?>">
-                </div>
-                <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" value="<?php echo $objUser->password; ?>">
-                </div>
-            </div>
+          <label for="exampleFormControlInput1" class="form-label">username</label>
+          <input type="text" class="form-control" name="username" value="<?php echo $objUser->username; ?>" placeholder="username" class="form-control">
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">nomor handphone</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="088888888" value="<?php echo $objUser->no_hp; ?>">
+          <label for="exampleFormControlInput1" class="form-label">password</label>
+          <input type="password" name="password" value="<?php echo $objUser->username; ?>" class="form-control" id="exampleFormControlInput1" placeholder="password">
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">asal kota</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="kota" value="<?php echo $objUser->kota; ?>">
+          <label for="exampleFormControlInput1" class="form-label">nama lengkap</label>
+          <input type="text" username="nama" name="nama" value="<?php echo $objUser->nama; ?>" class="form-control" id="exampleFormControlInput1" placeholder="nama kota">
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">no hp</label>
+          <input type="text" username="no_hp" name="no_hp" value="<?php echo $objUser->nama; ?>" class="form-control" id="exampleFormControlInput1" placeholder="08888888">
         </div>
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">email</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="user@email.com" value="<?php echo $objUser->email; ?>">
+          <input type="text" username="email" name="email" value="<?php echo $objUser->email; ?>" class="form-control" id="exampleFormControlInput1" placeholder="email@gm.com">
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">kota</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama kota" username="kota" name="kota" value="<?php echo $objUser->kota; ?>">
         </div>
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">instagram</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="@instagram_user" value="<?php echo $objUser->instagram_user; ?>">
+          <input type="text" class="form-control" id="exampleFormControlInput1" username="@instagram" name="instagram_user" value="<?php echo $objUser->instagram_user; ?>">
         </div>
-        <div class="col-lg-4 button-end">
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">role</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1"username="irole" name="role" value="<?php echo $objUser->role; ?>">
+        </div>
+        <div class="col-lg-6 button-end">
           <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
         </div>
       </form>
     </div>
-</div> -->
+</div>

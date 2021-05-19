@@ -127,40 +127,40 @@
 }
 
 /* home css */
-.card{
+.home .card{
     margin-top: 50px;
     
 }
 
-.row{
+.home .row{
     margin-top:30px;
 }
 
-.nav-link{
+.home .nav-link{
     margin-right: 10px;
 }
-.nav-link:hover{
+.home .nav-link:hover{
     background-color: #cdac81;
 }
-.text-center .btn{
+.home .text-center .btn{
     background-color: #e4edea;
     color: #002f3f;
     font-size: 9px;
 }
-.text-center .btn:hover{
+.home .text-center .btn:hover{
     background-color: #cdac81;
     color: #002f3f;
     border: none;
 }
-.card-text{
+.home .card-text{
     font-size: 13px;
 }
 
-.card img{
+.home .card img{
     width:20px;
 }
 
-#foot{
+.home #foot{
     background-color: #cdac81;
     color: #002f3f;
     padding: 2px;
@@ -308,7 +308,7 @@
     margin-top: 15px;
 }
 
-.user .register-form{
+.user .user-form{
     border-radius: 10px;
     padding: 50px 60px;
     margin-top: 15vh;
@@ -654,199 +654,43 @@
     margin-bottom: 0px;
 }
 
-.galeri-bisnis #searchToko {
+.galeri-bisnis .search {
     margin-top: 20px;
-    margin-bottom: 10px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
 }
 
-.galeri-bisnis .d-flex img{
-    width: 30px;
-}
-
-.galeri-bisnis .d-flex button{
-    border: none;
+.galeri-bisnis .btn:hover{
+    background-color: #e4edea;
 }
   
 .galeri-bisnis .nav-link{
     border: none;
 }
 
-  .galeri-bisnis .nav-link:hover{
-    background-color: #8A7D63;
-    color: #212932;
-    font-weight: 500;
-    text-transform: capitalize;
-    border: none;
-  }
-
-  .galeri-bisnis .nav-link{
-    background-color: #212932;
-    color: #8A7D63;
-    font-weight: 500;
-    text-transform: capitalize;
-    border: none;
-  }
-  
-  .galeri-bisnis   .tab button.active {
-    background-color: #ccc;
-    color: #212932;
+.galeri-bisnis .nav-link:hover{
+    background-color: #cdac81;
+    color: #002f3f;
     font-weight: 500;
     border: none;
-    text-transform: capitalize;
-  }
-  
-  .galeri-bisnis   .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
-  
-  .galeri-bisnis p{
-      color: black;
-  }
-  
-  .galeri-bisnis .p-3{
-      background-color: #545454;
-      width: 150px;
-      height: 70px;
-      margin-left: 10px;
-      text-decoration-line: none;
-      text-align: center;
-      border-color: #E8CB92;
-  }
-  
-  .galeri-bisnis .p-3 a{
-      color: #E8CB92;
-      text-transform: capitalize;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-  }
-  
-  .galeri-bisnis .fnb{
-      font-size: 12px;
-  }
-  
-  .galeri-bisnis .col button{
-      width: 120px;
-      height: 50px;
-      padding-top: 0px;
-      background-color: #8A7D63;
-      margin-top: 55px; 
-      color: white;
-      text-transform: capitalize;
-      font-weight: 500;
-  }
-  
-  .galeri-bisnis .p-3{
-      background-color: #212932;
-  }
-  
-  .galeri-bisnis .populer{
-      background-color: #8A7D63;
-      margin-top: 70px;
-  }
-  
-  .galeri-bisnis .populer .btn{
-      margin-left:400px;
-  }
-  .galeri-bisnis .populer h3{
-      text-align: center;
-      text-transform: uppercase;
-      color: #8A7D63;
-      font-weight: 600;
-      padding-top: 20px;
-  }
-  
-   .galeri-bisnis .tab-content{
-      border: none;
-  }
-  
-  .galeri-bisnis .tab-content p{
-      margin-left:8px;
-      color: #212932;
-      font-size: 10px;
-  }
-  .galeri-bisnis .tab-content h3{
-      margin-left:5px;
-      color: #212932;
-      text-align: center;
-      font-weight: 700;
-      text-transform: capitalize;
-      font-size: 22px;
-  }
-  
-  .galeri-bisnis .tab-content .btn{
-      background-color: #8A7D63;
-      width: 190px;
-      margin-top: 35px;
-      margin-left: 60px;
-      margin-bottom: 20px;
-      border-radius: 30px;
-  }
-  
-  .galeri-bisnis .btn p{
-      color: #212932;
-      text-align: left;
-      font-weight: 500;
-      text-transform: capitalize;
-  }
-   */
-  .galeri-bisnis .gambar-toko{
-      width: 90%;
-      margin-top: 13px;
-      margin-bottom: 10px;
-  }
-  
-  .galeri-bisnis .telfon{
-      width: 15%;
-      margin-left: 115px;
-      padding-bottom: 15px;
-  }
-  
-  .galeri-bisnis .populer .btn{
-      width: 90px;
-      margin-left: 150px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-  }
-  
-  .galeri-bisnis .populer h5{
-      color: #212932;
-      font-size: 10px;
-      text-transform: capitalize;
-      padding-bottom: 2px;
-      margin-top: 10px;
-      font-weight: 600;
-  }
-  .galeri-bisnis .gambar-toko{
-      width: 80%;
-      margin-top: 10px;
-  }
-  
-  .galeri-bisnis .populer h3{
-      margin-left:5px;
-      color: #212932;
-      text-align: center;
-      font-weight: 700;
-      text-transform: capitalize;
-      font-size: 40px;
-  }
-
-  .galeri-bisnis .nav-tabs{
-    margin-top: 35px;
-    margin-bottom: 20px;
-    padding-left: 40px;
-    color: #212932;
-    font-size: 15px;
+}
+.galeri-bisnis .nav-link:active{
+    background-color: #cdac81;
+    color: #002f3f;
+    font-weight: 500;
     border: none;
-  }
+}
 
+.galeri-bisnis .card img{
+    width: 300px;
+    margin-top: 20px;
+}
+  /* .galeri-bisnis  .tab button .active {
+    background-color: #cdac81;
+    color: #212932;
+    font-weight: 500;
+    border: none;
+    text-transform: capitalize;
+  } */
+  
   /*toko pengunjung*/
   .toko-pengunjung .card{
       background-color: #D9DFDB;

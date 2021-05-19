@@ -2,13 +2,14 @@
     <div class="judul">
         <h1 class="judul-main text-center" ><strong>tumu galeri bisnis</strong></h1>
     </div>
-
-    <div class="input-group col-5 " >
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-            aria-describedby="search-addon" />
-        <button type="button" class="btn btn-outline-primary"><img src="./gambar/search.png" style="width: 24px;"></button>
+    <div class="container-fluid">
+    <div class="input-group col-5 mx-auto search" >
+        <input type="search" class="form-control rounded " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn"><img src="./gambar/search.png" style="width: 24px;"></button>
     </div>
-
+    </div>
+    
+    
     <div class="kategori-dan-toko">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -23,14 +24,44 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <a class="btn" href="?p=toko-pengunjung" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
