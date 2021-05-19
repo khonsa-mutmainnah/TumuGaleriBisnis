@@ -10,13 +10,13 @@
             <th> username</th>
             <th> password</th>
             <th> nama</th>
-            <th> email</th>
             <th> no hp</th>
+            <th> email</th>
             <th> kota</th>
-            <th> role</th>
+            <!-- <th> role</th> -->
             <th> instagram</th>
-            <th> foto</th>
-            <th> action</th>
+            <!-- <th> foto</th> -->
+            <!-- <th> action</th> -->
         </tr>
         </thead>
         <?php
