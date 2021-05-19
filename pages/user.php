@@ -1,7 +1,7 @@
 <?php
     require_once ('./class/class.User.php');
     $objUser= new User();
-    if (isset($_POST['btnSubmit'])){
+    if (isset ($_POST['btnSubmit'])){
       $objUser->username= $_POST['username'];
       $objUser->password= $_POST['password'];
       $objUser->nama= $_POST['nama'];
