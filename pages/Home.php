@@ -1,4 +1,4 @@
-<div class="Home">
+<div class="home">
     <div class=container>
     <div class="card text-center">
         <div class="card-body">
@@ -34,20 +34,20 @@
         </div>
         </div>
         <div class="card-footer">
-        <div class="row align-items-start">
-            <div class="col">
-            <img src="./gambar/telfon.png" style="padding-top:0px;">
-            <p>088888888888</p>
-            </div>
-            <div class="col">
-            <img src="./gambar/ig.png" style="padding-top:0px;">
-            <p>@nama_instagram</p>
-            </div>
-            <div class="col">
-            <img src="./gambar/web.png" style="padding-top:0px;">
-            <p>www.web-toko.com</p>
-            </div>
-        </div>
+          <div class="row align-items-start">
+              <div class="col">
+              <img src="./gambar/telfon.png" style="padding-top:0px; width:20px;">
+              <p>088888888888</p>
+              </div>
+              <div class="col">
+              <img src="./gambar/ig.png" style="padding-top:0px; width:20px;">
+              <p>@nama_instagram</p>
+              </div>
+              <div class="col">
+              <img src="./gambar/web.png" style="padding-top:0px; width:20px;">
+              <p>www.web-toko.com</p>
+              </div>
+          </div>
         </div>
     </div>
     </div>
@@ -55,7 +55,7 @@
 
 <!-- jajs -->
 <div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col">
       <div class="card">
         <div id="carouselExampleControlsNoTouching_1" class="carousel slide" data-bs-touch="false" data-bs-interval="false">

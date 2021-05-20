@@ -24,64 +24,184 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
                     <div class="col">
                         <div class="card">
-                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="...">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
                         </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
                         </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
                         </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <a class="btn" href="TampilanToko.html" role="ig" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/pensil.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                <a class="btn" href="TampilanToko.html" role="button" style="background-color: #D9DFDB;">
-                    <img class="gambar-toko" src="./gambar/ig.png">
-                    <h3>Nama toko</h3>
-                    <p>tagline toko</p>
-                    <p>Kategori produk</p>
-                    <p>jumlah produk</p>
-                    <img class="telfon" src="./gambar/telfon.png">
-                </a>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">nama toko</h5>
+                            <p class="card-text">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
+                            <p class="card-text">kecamatan, kota, provinsi</p>
+                            <p class="card-text">@instagram_toko</p>
+                            <p class="card-text">00000000</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
