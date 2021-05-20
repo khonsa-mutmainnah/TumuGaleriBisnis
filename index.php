@@ -54,7 +54,7 @@ require "connection.php";
                         <a class="nav-link " style="color: #002f3f;"href="#">+Produk</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
                         <a class="nav-link " style="color: #002f3f;"href="?p=GaleriBisnis">gb</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=lokasi">lokasi</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=lokasi">babaaa</a>
                         <div class="btn-group">
                             <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
