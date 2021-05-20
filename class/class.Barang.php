@@ -60,7 +60,7 @@
 				$this->message ='Data gagal ditambahkan!';
 		}
 
-		public function UpdateProject(){
+		public function UpdateBarang(){
 			$sql = "UPDATE barang SET 
 					id_barang = '$this->id_barang'
 					nama_barang = '$this->nama_barang'
@@ -68,6 +68,24 @@
 					harga = '$this->harga'
 					variasi = '$this->variasi'
 					WHERE id_toko = '$this->id_toko';"
+
+			if($this->hasil)
+			$this->message ='Data berhasil ditambahkan!';
+			else
+			$this->message ='Data gagal ditambahkan!';
+			}
+		}
+
+		public function DeleteBarang(){
+			$sql = "DELETE FROM barang WHERE id_barang='$this->id_barang'";
+
+			$this->hasil = mysqli_query($this->connection, $sql);
+
+			if ($this->hasil) {
+				$this->message = 'Data berhasil di hapus!';
+			}else{
+				$this->message = 'Data Gagal Dihapus';
+			}
 		}
 	}
  ?>
