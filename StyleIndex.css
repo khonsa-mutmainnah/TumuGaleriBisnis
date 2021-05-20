@@ -133,7 +133,7 @@
 }
 
 .home .row{
-    margin-top:30px;
+    margin-top:5px;
 }
 
 .home .nav-link{
@@ -156,10 +156,6 @@
     font-size: 13px;
 }
 
-.home .card img{
-    width:20px;
-}
-
 .home #foot{
     background-color: #cdac81;
     color: #002f3f;
@@ -169,6 +165,13 @@
     font-weight: 500;
 }
 
+.home .card-footer{
+    margin-top: 10px;
+}
+
+.home p{
+    font-size: 10px;
+}
 /* Pengunjung css */
 .Pengunjung .atas{
     width: 1200px;
@@ -663,6 +666,7 @@
 }
   
 .galeri-bisnis .nav-link{
+    margin-top: 40px;
     border: none;
 }
 
@@ -679,17 +683,15 @@
     border: none;
 }
 
-.galeri-bisnis .card img{
-    width: 300px;
-    margin-top: 20px;
+.galeri-bisnis .card p{
+    font-size: 10px;
 }
-  /* .galeri-bisnis  .tab button .active {
-    background-color: #cdac81;
-    color: #212932;
-    font-weight: 500;
-    border: none;
-    text-transform: capitalize;
-  } */
+
+.galeri-bisnis .card{
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: justify;
+}
   
   /*toko pengunjung*/
   .toko-pengunjung .card{
