@@ -62,12 +62,11 @@
 
 		public function UpdateBarang(){
 			$sql = "UPDATE barang SET 
-					id_barang = '$this->id_barang'
 					nama_barang = '$this->nama_barang'
 					deskripsi = '$this->deskripsi'
 					harga = '$this->harga'
 					variasi = '$this->variasi'
-					WHERE id_toko = '$this->id_toko';"
+					WHERE id_barang = '$this->id_barang';"
 
 			if($this->hasil)
 			$this->message ='Data berhasil ditambahkan!';
@@ -85,6 +84,19 @@
 				$this->message = 'Data berhasil di hapus!';
 			}else{
 				$this->message = 'Data Gagal Dihapus';
+			}
+		}
+
+		public function SelectSatuBarang(){
+			$sql = "SELECT * FROM barang WHERE id_barang = '$this->id_barang'"
+			$resultOne = mysqli_query($this->connection, $sql);
+
+			if (mysqli_num_rows($resultOne)==1) {
+				$this->hasil = true;
+
+				$data = mysql_fetch_assoc($resultOne);
+				$this->nama_barang = $data['nama_barang'];
+				$this->deskripsi = $data['deskripsi'];
 			}
 		}
 	}
