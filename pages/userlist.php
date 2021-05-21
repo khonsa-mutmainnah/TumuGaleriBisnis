@@ -29,21 +29,21 @@
             $no = 1;
             foreach ($arrayResult as $dataUser) {
                 echo '<tr>';
-                echo '<td>'.$no .'</td>';
-                echo '<td>'.$dataUser->username .'</td>';
-                echo '<td>'.$dataUser->password .'</td>';
-                echo '<td>'.$dataUser->nama .'</td>';
-                echo '<td>'.$dataUser->no_hp .'</td>';
-                echo '<td>'.$dataUser->email .'</td>';
-                echo '<td>'.$dataUser->kota .'</td>';
-                echo '<td>'.$dataUser->instagram_user .'</td>';
-                echo "<td><img src='./gambar/aa.jpg".$dataUser->foto."' width='50px'/></td>";
-                echo '<td>'.$dataUser->role .'</td>';
+                echo '<td class="text-break">'.$no .'</td>';
+                echo '<td class="text-break">'.$dataUser->username .'</td>';
+                echo '<td class="text-break">'.$dataUser->password .'</td>';
+                echo '<td class="text-break">'.$dataUser->nama .'</td>';
+                echo '<td class="text-break">'.$dataUser->no_hp .'</td>';
+                echo '<td class="text-break">'.$dataUser->email .'</td>';
+                echo '<td class="text-break">'.$dataUser->kota .'</td>';
+                echo '<td class="text-break">'.$dataUser->instagram_user .'</td>';
+                echo "<td ><img src='./gambar/aa.jpg".$dataUser->foto."' width='50px'/></td>";
+                echo '<td class="text-break">'.$dataUser->role .'</td>';
                 echo '<td>
                 <a class="btn"
-                href="index.php?p=user&username=' . $dataUser->username . '"> Edit </a> |
+                href="index.php?p=user&username=' . $dataUser->username . '"> Edit </a> 
                 <a class="btn"
-                href="index.php?p=delete-user&username=' . $dataUser->username . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
+                href="index.php?p=delete-user&username=' . $dataUser->username . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
                 echo '</tr>';
                 $no++;
             }

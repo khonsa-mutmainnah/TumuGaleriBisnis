@@ -90,7 +90,7 @@
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card barang">
         <div id="carouselExampleControlsNoTouching_2" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">

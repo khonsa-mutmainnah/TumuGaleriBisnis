@@ -169,7 +169,7 @@
     margin-top: 10px;
 }
 
-.home p{
+.home .barang p{
     font-size: 10px;
 }
 /* Pengunjung css */
@@ -458,7 +458,7 @@
     margin-top: 15px;
 }
 
-.kategori .lokasi-form{
+.kategori .kategori-form{
     border-radius: 10px;
     padding: 50px 60px;
     margin-top: 15vh;
@@ -482,6 +482,45 @@
 .kategori .btn:hover{
     background-color: #cdac81;
 }
+/* .kategori .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.kategori .username{
+    margin-top: 15px;
+}
+
+.kategori .form-label{
+    margin-top: 15px;
+}
+
+.kategori .lokasi-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
+}
+.kategori .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.kategori .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.kategori .btn:hover{
+    background-color: #cdac81;
+} */
 
 /* kategori list */
 .kategorilist .judul{
@@ -683,7 +722,7 @@
     border: none;
 }
 
-.galeri-bisnis .card p{
+.galeri-bisnis .tab-content p{
     font-size: 10px;
 }
 

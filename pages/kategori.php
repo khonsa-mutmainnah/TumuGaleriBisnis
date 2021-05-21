@@ -23,6 +23,24 @@
     }
 ?>
 <div class="kategori">
+    <div class="container col-lg-7">
+      <form form action="" method="post" class="kategori-form">
+        <h4 class="title text-center fs-1 fw-bolder" >LOKASI</h4>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">id_kategori</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="id kategori" name="id_kategori" value="<?php echo $objKategori->id_kategori; ?>">
+        </div>
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">nama kategori</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama kategori" name="nama_kategori" value="<?php echo $objKategori->nama_kategori; ?>">
+        </div>
+        <div class="col-lg-6 button-end">
+          <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
+        </div>
+      </form>
+    </div>
+</div>
+<!-- <div class="kategori">
 <h4 class="title" >KATEGORI</h4>
 <form action="" method="post">
     <table class="table table-borderless table-responsive" style="color:#D9DFDB;">
@@ -46,7 +64,7 @@
             <a href="index.php?p=kategorilist" class="btn btnwarning">Cancel</a></td>
         </tr>
     </table>
-</form>
+</form> -->
 
 </div>
 
