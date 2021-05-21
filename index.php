@@ -66,6 +66,7 @@ require "connection.php";
                                 <li><a class="dropdown-item" href="?p=baranglist">produk</a></li>
                                 <li><a class="dropdown-item" href="?p=gambarlist">gambar produk</a></li>
                                 <li><a class="dropdown-item" href="?p=kategorilist">kategori</a></li>
+                                <li><a class="dropdown-item" href="?p=baranglist">Barang</a></li>
                             </ul>
                         </div>
                     </div>

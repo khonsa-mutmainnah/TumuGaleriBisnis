@@ -1,14 +1,14 @@
 <?php 
-	require_once('./class/class.Barang.php')
+	require_once ('./class/class.Barang.php')
 	$objBarang = new Barang();
 
-	if (isset($_POST['btnSubmit'])) {
+	if (isset ($_POST['btnSubmit'])) {
 		$objBarang->id_barang = $_POST['id_barang'];
 		$objBarang->nama_barang = $_POST['nama_barang'];
 		$objBarang->deskripsi= $_POST['deskripsi'];
 		$objBarang->harga = $_POST['harga'];
 		$objBarang->variasi = $_POST['variasi'];
-		$objBarang->id_toko = $_POST['id_toko'];
+		// $objBarang->id_toko = $_POST['id_toko'];
 
 		if (isset($_GET['id_barang'])) {
 			$objBarang->id_barang = $_GET['id_barang'];
@@ -19,10 +19,10 @@
 
 		echo "<script> alert('$objBarang->message'); </script>";
 		if($objBarang->hasil){
-		echo '<script> window.location = "index.php?p=listbarang";
+		echo '<script> window.location = "index.php?p=baranglist";
 		</script>';}
-	}
-
+		}
+	}	
 	elseif (isset($_GET['id_barang'])) {
 		$objBarang->id_barang = $_GET['id_barang'];
 		$objEmployee->SelectSatuBarang();
@@ -30,32 +30,38 @@
 ?>
 
 	<h4 class="title">
-		<span class="text"><strong>Employee</strong></span>
+		<span class="text"><strong>Barang</strong></span>
 	</h4>
 	<form action="" method="post">
 		<table class="table">
 			<tr>
-				<td>SSN</td>
+				<td>ID Barang</td>
 				<td>:</td>
-				<td><input type="text" class="form-control" name="ssn"
-				value="<?php echo $objEmployee->ssn; ?>"></td>
+				<td><input type="text" class="form-control" name="id_barang"
+				value="<?php echo $objBarang->id_barang; ?>"></td>
 			</tr>
 			<tr>
-				<td>Name</td>
+				<td>Nama Barang</td>
 				<td>:</td>
-				<td><input type="text" class="formcontrol" ssn="fname" name="fname"
-				value="<?php echo $objEmployee->fname; ?>"></td>
+				<td><input type="text" class="formcontrol" id_barang="nama_barang" name="nama_barang"
+				value="<?php echo $objBarang->nama_barang; ?>"></td>
 			</tr>
 			<tr>
-				<td>Address</td>
+				<td>Deskripsi</td>
 				<td>:</td>
-				<td><textarea class="formcontrol" name="address" rows="3" cols="19">
-				<?php echo $objEmployee->address; ?></textarea></td>
+				<td><textarea class="formcontrol" name="deskripsi" rows="3" cols="19">
+				<?php echo $objBarang->deskripsi; ?></textarea></td>
+			</tr>
+			<tr>
+				<td>Variasi</td>
+				<td>:</td>
+				<td><input type="text" class="formcontrol" id_barang="variasi" name="variasi"
+				value="<?php echo $objBarang->variasi; ?>"></td>
 			</tr>
 			<tr>
 				<td colspan="2"></td>
 				<td><input type="submit" class="btn btnsuccess" value="Save" name="btnSubmit">
-					<a href="index.php?p=employeelist" class="btn btnwarning">Cancel</a>
+					<a href="index.php?p=baranglist" class="btn btnwarning">Cancel</a>
 				</td>
 			</tr>
 		</table>
