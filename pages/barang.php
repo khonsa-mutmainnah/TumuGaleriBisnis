@@ -55,7 +55,7 @@
 			<tr>
 				<td>Harga</td>
 				<td>:</td>
-				<td><textarea class="form-control" name="Harga" rows="3" cols="19"
+				<td><textarea class="form-control" name="harga" rows="3" cols="19"
 				value="<?php echo $objBarang->harga; ?>"></textarea>
 				</td>
 			</tr>
