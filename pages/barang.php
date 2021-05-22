@@ -53,6 +53,20 @@
 				</td>
 			</tr>
 			<tr>
+				<td>Harga</td>
+				<td>:</td>
+				<td><textarea class="form-control" name="Harga" rows="3" cols="19"
+				value="<?php echo $objBarang->Harga; ?>"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>id toko</td>
+				<td>:</td>
+				<td><textarea class="form-control" name="id_toko" rows="3" cols="19"
+				value="<?php echo $objBarang->id_toko; ?>"></textarea>
+				</td>
+			</tr>
+			<tr>
 				<td>Variasi</td>
 				<td>:</td>
 				<td><input type="text" class="form-control" id_barang="variasi" name="variasi"
