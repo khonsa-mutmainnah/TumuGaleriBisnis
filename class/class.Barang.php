@@ -78,7 +78,7 @@
 					$cnt++;
 				}
 			}	
-			return $arrResult				
+			return $arrResult;				
 		}
 
 		public function SelectSatuBarang(){
