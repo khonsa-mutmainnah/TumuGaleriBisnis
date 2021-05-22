@@ -1,5 +1,5 @@
 <?php 
-	require_once ('./class/class.Barang.php')
+	require_once ('./class/class.Barang.php');
 	$objBarang = new Barang();
 
 	if (isset ($_POST['btnSubmit'])) {
