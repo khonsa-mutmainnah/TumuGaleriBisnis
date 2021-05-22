@@ -28,7 +28,7 @@
 
 		public function AddBarang(){
 		$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi) 
-		VALUES ($this->id_barang, '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi')";
+		VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi')";
 		$this->hasil = mysqli_query($this->connection, $sql);
 			if($this->hasil)
 				$this->message ='Data berhasil ditambahkan!';

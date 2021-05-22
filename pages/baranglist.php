@@ -1,4 +1,4 @@
-<div class="container lokasilist">
+<div class="container baranglist">
     <div class="text-center">
         <h1 class="judul"><strong>Barang</strong></h1>
         <a class="btn add" #id="addButton" href="index.php?p=barang">ADD</a>
