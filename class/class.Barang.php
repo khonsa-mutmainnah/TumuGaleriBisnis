@@ -82,7 +82,7 @@
 		}
 
 		public function SelectSatuBarang(){
-			$sql = "SELECT * FROM barang WHERE id_barang = '$this->id_barang'"
+			$sql = "SELECT * FROM barang WHERE id_barang = '$this->id_barang'";
 			$resultOne = mysqli_query($this->connection, $sql);
 
 			if (mysqli_num_rows($resultOne)==1) {
