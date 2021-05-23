@@ -8,7 +8,7 @@
 		$objBarang->deskripsi= $_POST['deskripsi'];
 		$objBarang->harga = $_POST['harga'];
 		$objBarang->variasi = $_POST['variasi'];
-		// $objBarang->id_toko = $_POST['id_toko'];
+		$objBarang->id_toko = $_POST['id_toko'];
 
 		if (isset($_GET['id_barang'])) {
 			$objBarang->id_barang = $_GET['id_barang'];
@@ -55,14 +55,9 @@
 			<tr>
 				<td>Harga</td>
 				<td>:</td>
-<<<<<<< HEAD
 				<td><input type="text" class="form-control" id_barang="harga" name="harga"
 				value="<?php echo $objBarang->harga; ?>"></td>
-=======
-				<td><textarea class="form-control" name="harga" rows="3" cols="19"
-				value="<?php echo $objBarang->harga; ?>"></textarea>
-				</td>
->>>>>>> 464f91eff5b8e7cec27846b0910167480f146b0c
+				
 			</tr>
 			<!-- <tr>
 				<td>id toko</td>

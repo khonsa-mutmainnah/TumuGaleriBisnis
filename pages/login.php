@@ -17,7 +17,7 @@
       </div>
       <label for="" class="form-label">belum punya akun?</label>
       <div class="button-end">
-        <a class="btn col-lg-4" href="#" role="button">Daftar</a>
+        <a class="btn col-lg-4" href="index.php?p=register-user" role="button">Daftar</a>
       </div>
     </form>
 </div>
