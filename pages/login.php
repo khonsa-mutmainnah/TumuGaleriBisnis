@@ -1,3 +1,42 @@
+<?php
+  require_once('./class/class.User.php');
+  if(isset($_POST['btnLogin'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $objUser = new User();
+    $objUser->hasil = true;
+    $objUser->ValidateEmail($email);
+    if($objUser->hasil){
+      $ismatch = password_verify($password, $objUser->password);
+      if($ismatch){
+        if (!isset($_SESSION)) {
+        session_start();
+        }
+        $_SESSION["username"]= $objUser->usename;
+        $_SESSION["role"]= $objUser->role;
+        $_SESSION["name"]= $objUser->name;
+        $_SESSION["email"]= $objUser->email;
+        echo "<script>alert('Login sukses');</script>";
+        if($objUser->role == 'employee'){
+          echo '<script>window.location = "dashboardemployee.php";</script>';
+        }
+        else if($objUser->role == 'manager'){
+          echo '<script>window.location = "dashboardmanager.php";</script>';
+        }
+        else if($objUser->role == 'admin'){
+          echo '<script>window.location = "dashboardadmin.php";</script>';
+        }
+        else{
+          echo "<script>alert('Password tidak match');</script>";
+        }
+      }
+    }
+  }
+  else{
+  echo "<script>alert('Email tidak terdaftar');</script>";
+  }
+?>
+
 <div class="container log-in col-lg-4">
     <form class="login-form">
       <div class="text-center logol">
@@ -13,7 +52,7 @@
         <input type="password" class="form-control" id="exampleInputPassword1">
       </div>
       <div class="button-end">
-        <input class="btn col-lg-4" type="submit" value="Masuk">
+        <input class="btn col-lg-4" type="submit" value="Masuk" name="btnLogin">
       </div>
       <label for="" class="form-label">belum punya akun?</label>
       <div class="button-end">

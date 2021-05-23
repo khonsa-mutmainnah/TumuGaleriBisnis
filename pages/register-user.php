@@ -1,7 +1,7 @@
 <?php 
   require_once './class/class.User.php';
 
-  if (isset($_POST['btnSubmit'])) {
+  if (isset($_POST["btnSubmit"])) {
     $inputemail = $_POST["email"];
     $objUser = new User();
     $objUser->ValidateEmail($inputemail);
@@ -12,13 +12,13 @@
     else{
             $password = $_POST['password'];
             $objUser->password = password_hash($password, PASSWORD_DEFAULT);
-            $objUser->nama = =$_POST['nama'];
-            $objUser->no_hp = =$_POST['no_hp'];
-            $objUser->email = =$_POST['email'];
-            $objUser->kota = =$_POST['kota'];
-            $objUser->role = =$_POST['role'];
-            $objUser->instagram_user = =$_POST['instagram_user'];
-            $objUser->foto = =$_POST['foto'];
+            $objUser->nama = $_POST['nama'];
+            $objUser->no_hp = $_POST['no_hp'];
+            $objUser->email = $_POST['email'];
+            $objUser->kota = $_POST['kota'];
+            $objUser->role = $_POST['role'];
+            $objUser->instagram_user = $_POST['instagram_user'];
+            $objUser->foto = $_POST['foto'];
             $objUser->AddUser();
 
             if ($objUser->hasil) {
@@ -55,13 +55,13 @@
     </div>
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Nama lengkap</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nama lengkap">
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama lengkap">
     </div>
     <div class="container">
       <div class="row username">
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">Username</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">Password</label>
@@ -82,7 +82,7 @@
       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="@instagram_user">
     </div>
     <div class="col-lg-4 button-end">
-      <input class="btn col-8" type="submit" value="Daftar">
+      <input class="btn col-8" type="submit" value="Daftar" name="btnSubmit">
     </div>
     <label for="" class="form-label">sudah punya akun?</label>
     <div class="col-lg-4 button-end">
