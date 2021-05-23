@@ -7,7 +7,7 @@
 		private $deskripsi = "";
 		private $harga = "";
 		private $variasi = "";
-		private $id_toko = "";
+		// private $id_toko = "";
 		private $hasil = false;
 		private $message = "";
 
@@ -22,14 +22,15 @@
 			}
 		}
 
-		function __construct() {
-			parent::__construct();
-		}
+		// function __construct() {
+		// 	parent::__construct();
+		// }
 
 		public function AddBarang(){
-		$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi) 
-		VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi')";
-		$this->hasil = mysqli_query($this->connection, $sql);
+			$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi) 
+			VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi')";
+			$this->hasil = mysqli_query($this->connection, $sql);
+			
 			if($this->hasil)
 				$this->message ='Data berhasil ditambahkan!';
 			else
@@ -69,12 +70,12 @@
 			if (mysqli_num_rows($result)>0) {
 				while ($data = mysqli_fetch_array($result)) {
 					$objBarang = new Barang();
-					$objBarang->id_barang=$data['id_barang'];
+					$objBarang->id_barang = $data['id_barang'];
 					$objBarang->nama_barang = $data['nama_barang'];
 					$objBarang->deskripsi= $data['deskripsi'];
 					$objBarang->harga = $data['harga'];
 					$objBarang->variasi = $data['variasi'];
-					$objBarang->id_toko = $data['id_toko'];
+					// $objBarang->id_toko = $data['id_toko'];
 					$cnt++;
 				}
 			}	
