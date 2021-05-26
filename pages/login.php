@@ -56,11 +56,7 @@
       </div>
       <label for="" class="form-label">belum punya akun?</label>
       <div class="button-end">
-<<<<<<< HEAD
-        <a class="btn col-lg-4" href="?p=register-user" role="button">Daftar</a>
-=======
         <a class="btn col-lg-4" href="index.php?p=register-user" role="button">Daftar</a>
->>>>>>> 167f4f486de4e4014d9259ba1f3ab979e5165501
       </div>
     </form>
 </div>
