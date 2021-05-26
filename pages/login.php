@@ -1,6 +1,7 @@
 <?php
   require_once('./class/class.User.php');
   if(isset($_POST['btnLogin'])){
+    $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $objUser = new User();
@@ -17,11 +18,11 @@
         $_SESSION["name"]= $objUser->name;
         $_SESSION["email"]= $objUser->email;
         echo "<script>alert('Login sukses');</script>";
-        if($objUser->role == 'employee'){
-          echo '<script>window.location = "dashboardemployee.php";</script>';
+        if($objUser->role == 'penjual'){
+          echo '<script>window.location = "dashboardpenjual.php";</script>';
         }
         else if($objUser->role == 'manager'){
-          echo '<script>window.location = "dashboardmanager.php";</script>';
+          echo '<script>window.location = "dashboardpembeli.php";</script>';
         }
         else if($objUser->role == 'admin'){
           echo '<script>window.location = "dashboardadmin.php";</script>';
@@ -45,11 +46,11 @@
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Username</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
       </div>
       <div class="button-end">
         <input class="btn col-lg-4" type="submit" value="Masuk" name="btnLogin">

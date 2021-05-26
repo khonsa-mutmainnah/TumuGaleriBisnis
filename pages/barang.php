@@ -57,18 +57,14 @@
 				<td>:</td>
 				<td><input type="text" class="form-control" id_barang="harga" name="harga"
 				value="<?php echo $objBarang->harga; ?>"></td>
-<<<<<<< HEAD
-=======
-				
->>>>>>> 167f4f486de4e4014d9259ba1f3ab979e5165501
 			</tr>
-			<!-- <tr>
+			<tr>
 				<td>id toko</td>
 				<td>:</td>
 				<td><textarea class="form-control" name="id_toko" rows="3" cols="19"
 				value="<?php echo $objBarang->id_toko; ?>"></textarea>
 				</td>
-			</tr> -->
+			</tr>
 			<tr>
 				<td>Variasi</td>
 				<td>:</td>
@@ -83,4 +79,3 @@
 			</tr>
 		</table>
 	</form>
-
