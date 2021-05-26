@@ -1,5 +1,5 @@
 <?php 
-  require_once './class/class.User.php';
+  require_once ('./class/class.User.php');
 
   if (isset($_POST["btnSubmit"])) {
     $inputemail = $_POST["email"];
@@ -25,11 +25,14 @@
 
             if ($objUser->hasil) {
               echo "<script> alert('Registrasi Berhasil'); </script>";
-              echo '<script> window.location="index.php?p=login";';
+              echo '<script> window.location="index.php?p=login";</script>';
             }
     }
   }
- ?>
+  else{
+    echo "<script>alert('Email sudah terdaftar');</script>";
+  }
+?>
 
 <div class="container register-user col-lg-7">
   <form class="register-form">
@@ -63,7 +66,7 @@
       <div class="row username">
         <div class="col">
           <label for="username" class="form-label">Username</label>
-          <input type="text" class="form-control" id="username" placeholder="name@example.com" name="username">
+          <input type="text" class="form-control" id="username" placeholder="username" name="username">
         </div>
         <div class="col">
           <label for="password" class="form-label">Password</label>
@@ -83,8 +86,12 @@
       <label for="instagram_user" class="form-label">instagram</label>
       <input type="text" class="form-control" id="instagram_user" placeholder="@instagram_user" name="instagram_user">
     </div>
+    <div class="col">
+      <label for="role" class="form-label">Role</label>
+      <input type="text" class="form-control" id="role" placeholder="role" name="role">
+    </div>
     <div class="col-lg-4 button-end">
-      <input class="btn col-8" type="submit" value="Daftar" name="btnSubmit">
+      <input class="btn col-8" type="submit" value="Daftar" name="btnSubmit" id="btnSubmit">
     </div>
     <label for="" class="form-label">sudah punya akun?</label>
     <div class="col-lg-4 button-end">
