@@ -57,10 +57,7 @@
 				<td>:</td>
 				<td><input type="text" class="form-control" id_barang="harga" name="harga"
 				value="<?php echo $objBarang->harga; ?>"></td>
-<<<<<<< HEAD
-=======
 				
->>>>>>> 167f4f486de4e4014d9259ba1f3ab979e5165501
 			</tr>
 			<!-- <tr>
 				<td>id toko</td>

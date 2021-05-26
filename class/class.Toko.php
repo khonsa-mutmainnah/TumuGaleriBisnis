@@ -68,18 +68,18 @@ class Toko extends Connection{
         $arrResult= Array();
         $cnt=0;
 
-        if(mysqli_num_rows($result)>0){
+        if(mysqli_num_rows($result) > 0){
             while ($data=mysqli_fetch_Array($result)){
                 $objToko = new Toko();
-                $objToko->id_toko = $id_toko['id_toko'];
-                $objToko->nama_toko = $nama_toko['nama_toko'];
-                $objToko->logo = $logo['logo'];
-                $objToko->id_lokasi = $id_lokasi['id_lokasi'];
-                $objToko->tagline = $tagline['tagline'];
-                $objToko->no_telp = $no_telp['no_telp'];
-                $objToko->status = $status['status'];
-                $objToko->instagram = $instagram['instagram'];
-                $objToko->username = $username['username'];
+                $objToko->id_toko = $data['id_toko'];
+                $objToko->nama_toko = $data['nama_toko'];
+                $objToko->logo = $data['logo'];
+                $objToko->id_lokasi = $data['id_lokasi'];
+                $objToko->tagline = $data['tagline'];
+                $objToko->no_telp = $data['no_telp'];
+                $objToko->status = $data['status'];
+                $objToko->instagram = $data['instagram'];
+                $objToko->username = $data['username'];
                 $arrResult[$cnt]=$objToko;
                 $cnt++;
             }
