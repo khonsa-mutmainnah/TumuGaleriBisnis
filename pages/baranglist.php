@@ -26,13 +26,13 @@
             $no = 1;
             foreach ($arrayResult as $dataBarang) {
                 echo '<tr>';
-				// echo "<td>" . $no . "</td>";
-				echo "<td>" . $data->id_barang . "</td>";
-				echo "<td>" . $data->nama_barang . "</td>";
-				echo "<td>" . $data->deskripsi . "</td>";
-				echo "<td>" . $data->harga . "</td>";
-				echo "<td>" . $data->variasi . "</td>";
-                echo "<td>" . $data->id_toko . "</td>";
+				echo '<td>' . $no . '</td>';
+				echo '<td>' . $data->id_barang . '</td>';
+				echo '<td>' . $data->nama_barang . '</td>';
+				echo '<td>' . $data->deskripsi . '</td>';
+				echo '<td>' . $data->harga . '</td>';
+				echo '<td>' . $data->variasi . '</td>';
+                echo '<td>' . $data->id_toko . '</td>';
                 echo '<td>
                 <a class="btn"
                 href="index.php?p=barang&id_barang=' . $dataBarang->id_barang . '"> Edit </a> |
