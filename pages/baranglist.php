@@ -6,11 +6,13 @@
     <table class="table">
         <thead>
             <tr>
-			<th>id_barang</th>
-			<th>nama_barang</th>
+			<th>id barang</th>
+			<th>nama barang</th>
 			<th>deskripsi</th>
 			<th>harga</th>
 			<th>variasi</th>
+            <th>nama toko</th>
+            <th>action</th>
             </tr>
         </thead>
 
@@ -24,12 +26,13 @@
             $no = 1;
             foreach ($arrayResult as $dataBarang) {
                 echo '<tr>';
-				echo "<td>" . $no . "</td>";
+				// echo "<td>" . $no . "</td>";
 				echo "<td>" . $data->id_barang . "</td>";
 				echo "<td>" . $data->nama_barang . "</td>";
 				echo "<td>" . $data->deskripsi . "</td>";
 				echo "<td>" . $data->harga . "</td>";
 				echo "<td>" . $data->variasi . "</td>";
+                echo "<td>" . $data->id_toko . "</td>";
                 echo '<td>
                 <a class="btn"
                 href="index.php?p=barang&id_barang=' . $dataBarang->id_barang . '"> Edit </a> |

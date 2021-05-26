@@ -41,9 +41,9 @@
                     echo '<td>'.$dataToko->status.'</td>';
                     echo '<td>'.$dataToko->instagram.'</td>';
                     echo '<td> <a class="btn btn-warning"
-                    href="index.php?p=toko&ssn='.$dataEmployee->ssn.'"> Edit </a> |
+                    href="index.php?p=toko&id_toko='.$dataToko->id_toko.'"> Edit </a> |
                     <a class="btn btn-danger" 
-                    href="index.php?p=delete-toko&ssn='.$dataEmployee->ssn.'" 
+                    href="index.php?p=delete-toko&id_toko='.$dataToko->id_toko.'" 
                     onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
                     echo '</tr>';
                     $no++;

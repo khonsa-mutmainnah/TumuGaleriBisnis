@@ -1,28 +1,18 @@
 <?php 
+include 'class.User.php';
 
 class Toko extends Connection{
-    private $id_toko;
-    private $nama_toko;
-    private $logo;
+    private $id_toko='';
+    private $nama_toko='';
+    private $logo='';
     private $id_lokasi;
-    private $tagline;
-    private $no_telp;
-    private $status;
-    private $instagram;
+    private $tagline='';
+    private $no_telp='';
+    private $status='';
+    private $instagram='';
+    private $username;
     private $hasil=false;
     private $message='';
-
-    //Contructor Toko
-    // public function __construct(){
-    //     $this->id_toko = $id_toko;
-    //     $this->nama_toko = $nama_toko;
-    //     $this->logo = $logo;
-    //     $this->id_lokasi = $id_lokasi;
-    //     $this->tagline = $tagline;
-    //     $this->no_telp = $no_telp;
-    //     $this->status = $status;
-    //     $this->instagram = $instagram;
-    // }
 
     //Get Automatic
     public function __get($atribut){
@@ -71,7 +61,9 @@ class Toko extends Connection{
     }
 
     public function SelectAllToko(){
-        $sql="SELECT * FROM toko";
+        $sql="SELECT t.*, u.username
+        FROM toko t INNER JOIN user u
+        ON t.username=u.username";
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;
@@ -87,6 +79,7 @@ class Toko extends Connection{
                 $objToko->no_telp = $no_telp['no_telp'];
                 $objToko->status = $status['status'];
                 $objToko->instagram = $instagram['instagram'];
+                $objToko->username = $username['username'];
                 $arrResult[$cnt]=$objToko;
                 $cnt++;
             }
