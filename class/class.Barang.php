@@ -1,4 +1,5 @@
 <?php 
+include 'class.Toko.php';
 	class Barang extends Connection
 	{
 		
@@ -7,7 +8,7 @@
 		private $deskripsi = "";
 		private $harga = "";
 		private $variasi = "";
-		// private $id_toko = "";
+		private $id_toko;
 		private $hasil = false;
 		private $message = "";
 
@@ -22,13 +23,9 @@
 			}
 		}
 
-		// function __construct() {
-		// 	parent::__construct();
-		// }
-
 		public function AddBarang(){
-			$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi) 
-			VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi')";
+			$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi, id_toko) 
+			VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi','$this->id_toko')";
 			$this->hasil = mysqli_query($this->connection, $sql);
 			
 			if($this->hasil)
@@ -39,7 +36,7 @@
 
 		public function UpdateBarang(){
 			$sql = "UPDATE barang 
-			SET nama_barang = '$this->nama_barang', deskripsi = '$this->deskripsi', harga = '$this->harga', variasi = '$this->variasi'
+			SET nama_barang = '$this->nama_barang', deskripsi = '$this->deskripsi', harga = '$this->harga', variasi = '$this->variasi', id_toko = '$this->id_toko'
 			WHERE id_barang = '$this->id_barang'";
 
 			if($this->hasil)
@@ -62,9 +59,12 @@
 		}
 
 		public function SelectAllBarang(){
-			$sql = "SELECT * FROM barang";
+			$sql = "SELECT b.*, t.nama_toko 
+			FROM barang b INNER JOIN toko t
+			ON b.id_toko=t.id_toko
+			ORDER BY b.id_barang";
 			$result = mysqli_query($this->connection, $sql);
-			$arrResult = array();
+			$arrResult = Array();
 			$cnt = 0;
 
 			if (mysqli_num_rows($result)>0) {
@@ -75,7 +75,7 @@
 					$objBarang->deskripsi= $data['deskripsi'];
 					$objBarang->harga = $data['harga'];
 					$objBarang->variasi = $data['variasi'];
-					// $objBarang->id_toko = $data['id_toko'];
+					$objBarang->id_toko = $data['id_toko'];
 					$cnt++;
 				}
 			}	
@@ -94,6 +94,7 @@
 				$this->deskripsi = $data['deskripsi'];
 				$this->harga = $data['harga'];
 				$this->variasi = $data['variasi'];
+				$this->id_toko = $data['id_toko'];
 			}
 		}
 	}

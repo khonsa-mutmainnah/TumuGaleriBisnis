@@ -1,15 +1,15 @@
 <?php
     require_once ('./class/class.Toko.php');
-    $objToko= new Toko();
-    if(isset($_POST['btnSubmit'])){
-        $objToko->id_Toko=$_POST['id_toko'];
-        $objToko->nama_toko=$POST['nama_toko'];
-        $objToko->logo=$_POST['logo'];
-        $objToko->id_lokasi=$_POST['id_lokasi'];
-        $objToko->tagline=$_POST['tagline'];
-        $objToko->no_telp=$_POST['no_telp'];
-        $objToko->status=$_POST['status'];
-        $objToko->instagram=$_POST['instagram'];
+    $objToko = new Toko();
+    if(isset ($_POST['btnSubmit'])){
+        $objToko->id_Toko = $_POST['id_toko'];
+        $objToko->nama_toko = $_POST['nama_toko'];
+        $objToko->logo = $_POST['logo'];
+        $objToko->id_lokasi = $_POST['id_lokasi'];
+        $objToko->tagline = $_POST['tagline'];
+        $objToko->no_telp = $_POST['no_telp'];
+        $objToko->status = $_POST['status'];
+        $objToko->instagram = $_POST['instagram'];
 
         if(isset($_GET['id_toko'])){
             $objToko->id_toko= $_GET['id_toko'];
@@ -19,9 +19,9 @@
             $objToko->AddToko();
         }
     }
+    echo "<script> alert('$objToko->message'); </script>";
     if($objToko->hasil){
-        echo '<script> window.location = "index.php?p=tokolist";
-        </script>';
+        echo '<script> window.location = "index.php?p=tokolist"; </script>';
     }
     else if(isset($_GET['id_toko'])){
         $objToko->id_toko = $_GET['id_toko'];

@@ -21,8 +21,8 @@
 
         <?php
             require_once('./class/class.Toko.php');
-            $objEmployee = new Toko();
-            $arrayResult = $objEmployee->SelectAllToko();
+            $objToko = new Toko();
+            $arrayResult = $objToko->SelectAllToko();
 
             if(count($arrayResult)==0){
                 echo '<tr><td colspan="9">TIDAK ADA DATA!</td></tr>';
@@ -31,19 +31,19 @@
                 $no=1;
                 foreach ($arrayResult as $dataToko){
                     echo '<tr>';
-                    echo '<td>'.$no.'</td>';
-                    echo '<td>'.$dataToko->id_toko.'</td>';
-                    echo '<td>'.$dataToko->nama_toko.'</td>';
-                    echo '<td>'.$dataToko->logo.'</td>';
-                    echo '<td>'.$dataToko->id_lokasi.'</td>';
-                    echo '<td>'.$dataToko->tagline.'</td>';
-                    echo '<td>'.$dataToko->no_telp.'</td>';
-                    echo '<td>'.$dataToko->status.'</td>';
-                    echo '<td>'.$dataToko->instagram.'</td>';
+                    echo '<td>' . $no . '</td>';
+                    echo '<td>' . $dataToko->id_toko . '</td>';
+                    echo '<td>' . $dataToko->nama_toko . '</td>';
+                    echo '<td>' . $dataToko->logo . '</td>';
+                    echo '<td>' . $dataToko->id_lokasi . '</td>';
+                    echo '<td>' . $dataToko->tagline . '</td>';
+                    echo '<td>' . $dataToko->no_telp . '</td>';
+                    echo '<td>' . $dataToko->status . '</td>';
+                    echo '<td>' . $dataToko->instagram . '</td>';
                     echo '<td> <a class="btn btn-warning"
-                    href="index.php?p=toko&ssn='.$dataEmployee->ssn.'"> Edit </a> |
+                    href="index.php?p=toko&id_toko='.$dataToko->id_toko.'"> Edit </a> |
                     <a class="btn btn-danger" 
-                    href="index.php?p=delete-toko&ssn='.$dataEmployee->ssn.'" 
+                    href="index.php?p=delete-toko&id_toko='.$dataToko->id_toko.'" 
                     onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
                     echo '</tr>';
                     $no++;
