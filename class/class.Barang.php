@@ -8,7 +8,7 @@ include 'class.Toko.php';
 		private $deskripsi = '';
 		private $harga = '';
 		private $variasi = '';
-		private $id_toko;
+		private $toko;
 		private $hasil = false;
 		private $message = '';
 
@@ -25,19 +25,45 @@ include 'class.Toko.php';
 		
 		function __construct(){
 			parent::__construct();
-			$this->toko=new Toko();
+			$this->toko= new Toko();
+		}
+
+		public function AddBarang(){
+			$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi, id_toko) 
+			VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi',".$this->toko->id_toko.")";
+			echo $sql;
+			$this->hasil = mysqli_query($this->connection, $sql);
+			
+			if($this->hasil)
+				$this->message ='Data berhasil ditambahkan!';
+			else
+				$this->message ='Data gagal ditambahkan!';
+		}
+		public function UpdateBarang(){
+			$sql = "UPDATE barang 
+			SET nama_barang = '$this->nama_barang', 
+			id_toko = ".$this->id_toko.", 
+			deskripsi = '$this->deskripsi', 
+			harga = '$this->harga', 
+			variasi = '$this->variasi'
+			WHERE id_barang = $this->id_barang";
+			echo $sql;
+			
+			$this->hasil = mysqli_query($this->connection, $sql);
+			if($this->hasil)
+				$this->message ='Data berhasil ditambahkan!';
+			else
+				$this->message ='Data gagal ditambahkan!';
 		}
 
 		public function SelectAllBarang(){
 			$sql = "SELECT b.*, t.nama_toko 
-			FROM barang b INNER JOIN toko t
-			ON b.id_toko=t.id_toko
-			ORDER BY b.id_barang";
+			FROM barang b INNER JOIN toko t ON b.id_toko = id_toko ORDER BY b.id_barang";
 			$result = mysqli_query($this->connection, $sql);
 			$arrResult = Array();
 			$cnt = 0;
 
-			if (mysqli_num_rows($result)>0) {
+			if (mysqli_num_rows($result) > 0) {
 				while ($data = mysqli_fetch_array($result)) {
 					$objBarang = new Barang();
 					$objBarang->id_barang = $data['id_barang'];
@@ -45,64 +71,37 @@ include 'class.Toko.php';
 					$objBarang->deskripsi= $data['deskripsi'];
 					$objBarang->harga = $data['harga'];
 					$objBarang->variasi = $data['variasi'];
-					$objBarang->toko = $data['id_toko'];
-					$objBarang->toko = $data['nama_toko'];
+					$objBarang->toko->id_toko = $data['id_toko'];
+					$objBarang->toko->nama_toko = $data['nama_toko'];
+					$arrResult[$cnt] = $objBarang;
 					$cnt++;
 				}
 			}	
 			return $arrResult;				
 		}
-
-		public function AddBarang(){
-			$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi, id_toko) 
-			VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi',".$this->toko->id_toko.")";
-			$this->hasil = mysqli_query($this->connection, $sql);
-			
-			if($this->hasil)
-				$this->message ='Data berhasil ditambahkan!';
-			else
-				$this->message ='Data gagal ditambahkan!';
-		}
-
-		public function UpdateBarang(){
-			$sql = "UPDATE barang 
-			SET nama_barang = '$this->nama_barang', deskripsi = '$this->deskripsi', harga = '$this->harga', variasi = '$this->variasi', id_toko=".$this->id_toko."
-			WHERE id_barang = $this->id_barang";
-
-			if($this->hasil)
-				$this->message ='Data berhasil ditambahkan!';
-			else
-				$this->message ='Data gagal ditambahkan!';
-		}
-
-		public function DeleteBarang(){
-			$sql = "DELETE FROM barang WHERE id_barang='$this->id_barang'";
-
-			$this->hasil = mysqli_query($this->connection, $sql);
-
-			if ($this->hasil)
-				$this->message = 'Data berhasil di hapus!';
-			else
-				$this->message = 'Data Gagal Dihapus';
-			
-		}
-
-		
-
 		public function SelectSatuBarang(){
 			$sql = "SELECT * FROM barang WHERE id_barang = '$this->id_barang'";
-			$resultOne = mysqli_query($this->connection, $sql);
+			$resultOne = mysqli_query($this->connection, $sql) or die(mysqli_error($this->connection));
 
 			if (mysqli_num_rows($resultOne)==1) {
 				$this->hasil = true;
-
 				$data = mysql_fetch_assoc($resultOne);
+				$this->id_barang = $data['id_barang'];
 				$this->nama_barang = $data['nama_barang'];
 				$this->deskripsi = $data['deskripsi'];
 				$this->harga = $data['harga'];
 				$this->variasi = $data['variasi'];
 				$this->toko->id_toko=$data['id_toko'];
 			}
+		}
+		public function DeleteBarang(){
+			$sql = "DELETE FROM barang WHERE id_barang='$this->id_barang'";
+			$this->hasil = mysqli_query($this->connection, $sql);
+			if ($this->hasil)
+				$this->message = 'Data berhasil di hapus!';
+			else
+				$this->message = 'Data Gagal Dihapus';
+			
 		}
 	}
  ?>

@@ -27,6 +27,10 @@ class Toko extends Connection{
             $this->atribut=$value;
         }
     }
+    function __construct() {
+        parent::__construct();
+        $this->username = new User();
+    }
 
     public function AddToko(){
         $sql = "INSERT INTO toko(id_toko, nama_toko, logo, id_lokasi, tagline, no_telp, status, instagram)
@@ -87,7 +91,7 @@ class Toko extends Connection{
         return $arrResult;
     }
 
-    public function SelectOneKategori(){
+    public function SelectOneToko(){
         $sql="SELECT* FROM toko WHERE id_toko='$this->id_toko'";
         $resultOne = mysqli_query($this->connection, $sql);
 
