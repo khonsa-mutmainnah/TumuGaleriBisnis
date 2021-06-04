@@ -10,7 +10,7 @@
       echo "<script>alert('Email sudah terdaftar');</script>";
     }
     else{
-            echo "<script>alert('Email blom terdaftar');</script>";
+            echo "<script>alert('Email belum terdaftar');</script>";
             $objUser->username = $_POST['username'];
             $password = $_POST['password'];
             $objUser->password = password_hash($password, PASSWORD_DEFAULT);
