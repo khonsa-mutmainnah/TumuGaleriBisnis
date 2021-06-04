@@ -1,41 +1,63 @@
-<?php 
-  require_once ('./class/class.User.php');
+<?php
+require_once('./class/class.User.php');
 
-  if (isset($_POST["btnSubmit"])) {
-    $inputemail = $_POST["email"];
-    $objUser = new User();
-    $objUser->ValidateEmail($inputemail);
+if (isset($_POST["btnSubmit"])) {
+  $inputemail = $_POST["email"];
+  $objUser = new User();
+  $objUser->ValidateEmail($inputemail);
 
-    if ($objUser->hasil) {
-      echo "<script>alert('Email sudah terdaftar');</script>";
-    }
-    else{
-            echo "<script>alert('Email belum terdaftar');</script>";
-            $objUser->username = $_POST['username'];
-            $password = $_POST['password'];
-            $objUser->password = password_hash($password, PASSWORD_DEFAULT);
-            $objUser->nama = $_POST['nama'];
-            $objUser->no_hp = $_POST['no_hp'];
-            $objUser->email = $_POST['email'];
-            $objUser->kota = $_POST['kota'];
-            $objUser->role = $_POST['role'];
-            $objUser->instagram_user = $_POST['instagram_user'];
-            $objUser->foto = $_POST['foto'];
-            $objUser->AddUser();
-
-            if ($objUser->hasil) {
-              echo "<script> alert('Registrasi Berhasil'); </script>";
-              echo '<script> window.location="index.php?p=login";</script>';
-            }
-    }
-  }
-  else{
+  //kalau terdaftar
+  if ($objUser->hasil) {
     echo "<script>alert('Email sudah terdaftar');</script>";
   }
+
+  //kalau nggak
+  else {
+    $lokasi_file = @$_FILES['foto']['tmp_name'];
+    $ukuran_file = @$_FILES['foto']['size'];
+    $type_file = @$_FILES['foto']['type'];
+    $folder = './upload/';
+
+    //image not compatible
+    if ($type_file != "image/gif" and $type_file != "image/jpeg" and $type_file != "image/png") {
+      echo "<script>
+      alert('Gagal Menambahkan Foto, gambarnya nggak kompetible')
+      </script>";
+    }
+
+    //competible
+    else {
+      //move photo to foto folder
+      $uniquesavename = time() . uniqid(rand());
+      $new_destination = $folder . $uniquesavename . ".png";
+      $succes_move = move_uploaded_file($lokasi_file, $new_destination);
+
+      //berhasil pindah
+      if ($succes_move) {
+        $objUser->username = $_POST['username'];
+        $password = $_POST['password'];
+        $objUser->password = password_hash($password, PASSWORD_DEFAULT);
+        $objUser->nama = $_POST['nama'];
+        $objUser->no_hp = $_POST['no_hp'];
+        $objUser->email = $_POST['email'];
+        $objUser->kota = $_POST['kota'];
+        $objUser->role = $_POST['role'];
+        $objUser->instagram_user = $_POST['instagram_user'];
+        $objUser->foto = $new_destination;
+        $objUser->AddUser();
+
+        if ($objUser->hasil) {
+          echo "<script> alert('Registrasi Berhasil'); </script>";
+          echo '<script> window.location="index.php?p=login";</script>';
+        }
+      }
+    }
+  }
+}
 ?>
 
 <div class="container register-user col-lg-7">
-  <form class="register-form">
+  <form class="register-form" method="POST" enctype="multipart/form-data">
     <div class="text-center logol">
       <img src="./gambar/logo.png" class="rounded" alt="...">
       <h1 class="daftar">daftar</h1>
@@ -46,17 +68,6 @@
         <label for="formFile" class="form-label">foto</label>
         <input class="form-control" type="file" id="foto" name="foto" onchange="previewImage();">
       </div>
-      <script>
-        function previewImage() {
-          document.getElementById("image-preview").style.display = "block";
-          var oFReader = new FileReader();
-          oFReader.readAsDataURL(document.getElementById("foto").files[0]);
-
-          oFReader.onload = function(oFREvent) {
-            document.getElementById("image-preview").src = oFREvent.target.result;
-          };
-        };
-      </script>
     </div>
     <div class="col">
       <label for="nama" class="form-label">Nama lengkap</label>
@@ -87,6 +98,10 @@
       <input type="text" class="form-control" id="instagram_user" placeholder="@instagram_user" name="instagram_user">
     </div>
     <div class="col">
+      <label for="kota" class="form-label">kota</label>
+      <input type="text" class="form-control" id="kota" placeholder="kota" name="kota">
+    </div>
+    <div class="col">
       <label for="role" class="form-label">Role</label>
       <input type="text" class="form-control" id="role" placeholder="role" name="role">
     </div>
@@ -98,4 +113,16 @@
       <a class="btn col-8" href="index.php?p=login" role="button">Masuk</a>
     </div>
   </form>
+
+  <script>
+    function previewImage() {
+      document.getElementById("image-preview").style.display = "block";
+      var oFReader = new FileReader();
+      oFReader.readAsDataURL(document.getElementById("foto").files[0]);
+
+      oFReader.onload = function(oFREvent) {
+        document.getElementById("image-preview").src = oFREvent.target.result;
+      };
+    };
+  </script>
 </div>
