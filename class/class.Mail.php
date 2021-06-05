@@ -44,7 +44,8 @@ class Mail extends Connection
         //sesuaikan dengan email yang digunakan 
         $mail->setFrom('galeribisnisa@gmail.com', 'Admin Galeri Bisnis');
         $mail->addAddress($this->mailUser);
-        $bodyContent = '<p>ini adalah isi dari email : </p>';
+        $link = "<http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/?p=reset-new-pw'> Klik Disini Untuk Mengganti Password </a>";
+        $bodyContent = '<p>ini adalah isi dari email</p>' .$link;
         $mail->Body = $bodyContent;
 
         $mail->send();

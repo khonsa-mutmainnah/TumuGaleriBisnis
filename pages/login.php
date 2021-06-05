@@ -32,9 +32,9 @@
         }
       }
     }
-  }
-  else{
-  echo "<script>alert('Email tidak terdaftar');</script>";
+    else{
+      echo "<script>alert('Email tidak terdaftar');</script>";
+      }
   }
 ?>
 
@@ -51,6 +51,9 @@
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+      </div>
+      <div class="button-end">
+      <a class="btn col-lg-4" href="index.php?p=reset-pw-form" role="button">Lupa Password?</a>
       </div>
       <div class="button-end">
         <input class="btn col-lg-4" type="submit" value="Masuk" name="btnLogin">

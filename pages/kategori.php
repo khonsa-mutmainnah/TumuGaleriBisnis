@@ -12,10 +12,10 @@
         else{
             $objKategori->AddKategori();
         }
-    }
-    if($objKategori->hasil){
-        echo '<script> window.location = "index.php?p=kategorilist";
-        </script>';
+        echo "<script> alert('$objKategori->message'); </script>";
+        if($objKategori->hasil){
+            echo '<script> window.location = "index.php?p=kategorilist"; </script>';
+        }
     }
     else if(isset($_GET['id_kategori'])){
         $objKategori->id_kategori = $_GET['id_kategori'];

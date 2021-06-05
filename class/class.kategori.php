@@ -1,5 +1,6 @@
 <?php
 class Kategori extends Connection{
+
     private $id_kategori = "";
     private $nama_kategori = "";
     private $hasil = false;
@@ -32,9 +33,10 @@ class Kategori extends Connection{
 
     public function UpdateKategori(){
         $sql = "UPDATE kategori
-                SET '$this->nama_kategori'
+                SET nama_kategori = '$this->nama_kategori'
                 WHERE id_kategori = '$this->id_kategori'";
         
+        $this->hasil = mysqli_query($this->connection, $sql);
         if($this->hasil)
             $this->message='Kategori berhasil diupdate!';
         else

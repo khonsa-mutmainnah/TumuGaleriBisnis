@@ -6,10 +6,9 @@
         <td>:</td> 
         <td> 
 
-        <input type="email" name="email" id="email" class="form-control" maxlength="30" required> </tr> 
+        <input type="email" name="email" id="email" class="form-control" maxlength="50" required> </tr> 
 
 
-        <td><input type="submit" class="btn btn-primary" value="Submit" name="btnSubmit"> 
-        <a class="btn btn-danger">Cancel</a></td> 
+        <td><input type="submit" class="btn btn-primary" value="Submit" name="btnSubmit">  
         </tr> 
     </table>
