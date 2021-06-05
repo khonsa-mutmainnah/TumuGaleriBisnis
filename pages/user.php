@@ -19,6 +19,7 @@
       else{
         $objUser->AddUser();
       }
+      
       echo "<script> alert('$objUser->message'); </script>";
       if($objUser->hasil){
         echo '<script> window.location = "index.php?p=userlist"; </script>';

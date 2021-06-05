@@ -1,5 +1,7 @@
 <?php 
 include 'class.User.php';
+include 'class.Kategori.php';
+include 'class.Lokasi.php';
 
 class Toko extends Connection{
     private $id_toko='';
@@ -29,12 +31,15 @@ class Toko extends Connection{
     }
     function __construct() {
         parent::__construct();
-        $this->username = new User();
+        $this->lokasi = new Lokasi();
     }
 
     public function AddToko(){
-        $sql = "INSERT INTO toko(id_toko, nama_toko, logo, id_lokasi, tagline, no_telp, status, instagram)
-                VALUES ('$this->id_toko', '$this->nama_toko', '$this->logo', '$this->id_lokasi', '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram')";
+        $sql = "INSERT INTO toko(id_toko, nama_toko, logo, kecamatan, kota, provinsi, tagline, no_telp, status, instagram, nama_kategori, username, id_kategori)
+                VALUES ('$this->id_toko', '$this->nama_toko', '$this->logo', 
+                        ".$this->lokasi->kecamatan.", ".$this->lokasi->kota.", ".$this->lokasi->provinsi.",
+                        '$this->id_lokasi', '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram'
+                        '$this->username', '$this->id_kategori')";
                 $this->hasil=mysqli_query($this->connection, $sql);
 
         if($this->hasil)
@@ -45,7 +50,10 @@ class Toko extends Connection{
 
     public function UpdateToko(){
         $sql = "UPDATE toko
-                SET '$this->id_toko', '$this->nama_toko', '$this->logo', '$this->id_lokasi', '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram'
+                SET id_toko='$this->id_toko', nama_toko='$this->nama_toko', logo='$this->logo',
+                kecamatan=".$this->lokasi->kecamatan.", kota=".$this->lokasi->kota.", provinsi=".$this->lokasi->provinsi.",
+                tagline='$this->tagline', no_telp='$this->no_telp', status='$this->status', instagram='$this->instagram'
+                kategori='$this->kategori, 'username='$this->username'
                 WHERE id_toko = '$this->toko'";
         
         if($this->hasil)
@@ -65,9 +73,10 @@ class Toko extends Connection{
     }
 
     public function SelectAllToko(){
-        $sql="SELECT t.*, u.username
-        FROM toko t INNER JOIN user u
-        ON t.username=u.username";
+        $sql="SELECT t.id_toko, t.nama_toko, t.logo, t.tagline, t.no_telp, t.instagram, u.username, l.kecamatan, l.kota, l.provinsi, k.nama_kategori, t.status
+            FROM toko t INNER JOIN user u ON t.username=u.username
+            INNER JOIN lokasi l ON t.id_lokasi=l.id_lokasi
+            INNER JOIN kategori k ON t.id_kategori=k.id_kategori";
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;
@@ -75,15 +84,19 @@ class Toko extends Connection{
         if(mysqli_num_rows($result)>0){
             while ($data=mysqli_fetch_Array($result)){
                 $objToko = new Toko();
-                $objToko->id_toko = $id_toko['id_toko'];
-                $objToko->nama_toko = $nama_toko['nama_toko'];
-                $objToko->logo = $logo['logo'];
-                $objToko->id_lokasi = $id_lokasi['id_lokasi'];
-                $objToko->tagline = $tagline['tagline'];
-                $objToko->no_telp = $no_telp['no_telp'];
-                $objToko->status = $status['status'];
-                $objToko->instagram = $instagram['instagram'];
-                $objToko->username = $username['username'];
+                $objToko->id_toko = $data['id_toko'];
+                $objToko->nama_toko = $data['nama_toko'];
+                $objToko->logo = $data['logo'];
+                $objToko->id_lokasi = $data['id_lokasi'];
+                $objToko->tagline = $data['tagline'];
+                $objToko->no_telp = $data['no_telp'];
+                $objToko->status = $data['status'];
+                $objToko->instagram = $data['instagram'];
+                $objToko->user->username = $data['username'];
+                $objToko->lokasi->kecamatan = $data['kecamatan'];
+                $objToko->lokasi->kota = $data['kota'];
+                $objToko->lokasi->provinsi = $data['provinsi'];
+                $objToko->kategori->nama_kategori = $data['kategori'];
                 $arrResult[$cnt]=$objToko;
                 $cnt++;
             }
@@ -99,14 +112,19 @@ class Toko extends Connection{
             $this->hasil=true;
 
             $data=mysqli_fetch_assoc($resultOne);
-            $objToko->id_toko = $id_toko['id_toko'];
-            $objToko->nama_toko = $nama_toko['nama_toko'];
-            $objToko->logo = $logo['logo'];
-            $objToko->id_lokasi = $id_lokasi['id_lokasi'];
-            $objToko->tagline = $tagline['tagline'];
-            $objToko->no_telp = $no_telp['no_telp'];
-            $objToko->status = $status['status'];
-            $objToko->instagram = $instagram['instagram'];
+            $this->id_toko = $data['id_toko'];
+            $this->nama_toko = $data['nama_toko'];
+            $this->logo = $data['logo'];
+            $this->id_lokasi = $data['id_lokasi'];
+            $this->tagline = $data['tagline'];
+            $this->no_telp = $data['no_telp'];
+            $this->status = $data['status'];
+            $this->instagram = $data['instagram'];
+            $this->user->username = $data['username'];
+            $this->lokasi->kecamatan = $data['kecamatan'];
+            $this->lokasi->kota = $data['kota'];
+            $this->lokasi->provinsi = $data['provinsi'];
+            $this->kategori->nama_kategori = $data['kategori'];
         }
     }
 }

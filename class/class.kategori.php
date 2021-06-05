@@ -20,8 +20,8 @@ class Kategori extends Connection{
     }
 
     public function AddKategori(){
-        $sql = "INSERT INTO kategori (id_kategori, nama_kategori)
-                VALUES ('$this->id_kategori', '$this->nama_kategori')";
+        $sql = "INSERT INTO kategori (nama_kategori)
+                VALUES ('$this->nama_kategori')";
                 $this->hasil=mysqli_query($this->connection, $sql);
 
         if($this->hasil)
@@ -32,9 +32,10 @@ class Kategori extends Connection{
 
     public function UpdateKategori(){
         $sql = "UPDATE kategori
-                SET '$this->nama_kategori'
+                SET nama_kategori = '$this->nama_kategori'
                 WHERE id_kategori = '$this->id_kategori'";
         
+        $this->hasil = mysqli_query($this->connection, $sql);
         if($this->hasil)
             $this->message='Kategori berhasil diupdate!';
         else
