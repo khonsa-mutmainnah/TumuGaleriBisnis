@@ -5,9 +5,11 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-if (isset($_SESSION["role"])) {
-    echo '<script>window.location = "dashboard-admin.php";</script>';
-}
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+$email = $_SESSION['email'];
+$nama = $_SESSION['nama'];
+$role = $_SESSION['role'];
 
 ?>
 <!DOCTYPE html>
@@ -49,7 +51,7 @@ if (isset($_SESSION["role"])) {
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img src="./gambar/logo.png" alt="logo" style="width: 50px; margin-left:20px;"></a>
+                <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.png" alt="logo" style="width: 50px; margin-left:20px;"></a>
                 <div class="judul-navbar">
                     <h4 class="galeribisnis-navbar">galeri bisnis</h4>
                     <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>
@@ -59,8 +61,24 @@ if (isset($_SESSION["role"])) {
                 </button>
                 <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
-                        <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=register-user">register</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=reset-pw-form">Nyobaa</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="?p=userlist">user</a></li>
+                                <li><a class="dropdown-item" href="?p=tokolist">toko</a></li>
+                                <li><a class="dropdown-item" href="?p=lokasilist">lokasi</a></li>
+                                <li><a class="dropdown-item" href="?p=baranglist">produk</a></li>
+                                <li><a class="dropdown-item" href="?p=gambarlist">gambar produk</a></li>
+                                <li><a class="dropdown-item" href="?p=kategorilist">kategori</a></li>
+                                <li><a class="dropdown-item" href="?p=baranglist">Barang</a></li>
+                                <li><a class="dropdown-item" href="?p=gambarBarangList">gambar Barang</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,7 +102,7 @@ if (isset($_SESSION["role"])) {
                 }
             } 
             else {
-                include "./pages/GaleriBisnis.php";
+                include "./pages/Home.php";
             }
         ?>
     </div>

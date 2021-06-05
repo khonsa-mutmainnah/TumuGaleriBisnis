@@ -116,11 +116,11 @@ class User extends Connection
         if (mysqli_num_rows ($result) == 1){
             $this->hasil = true;
             $data = mysqli_fetch_assoc($result);
-            $this->userid = $data['userid'];
+            $this->username = $data['username'];
             $this->password = $data['password'];
-            $this->name=$data['name'];
-            $this->email=$data['email'];
-            $this->role=$data['role'];
+            $this->nama = $data['nama'];
+            $this->email = $data['email'];
+            $this->role = $data['role'];
         }
     }
 }

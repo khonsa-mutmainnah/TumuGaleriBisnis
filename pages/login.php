@@ -1,23 +1,27 @@
 <?php
   require_once('./class/class.User.php');
   if(isset($_POST['btnLogin'])){
-    $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $objUser = new User();
     $objUser->hasil = true;
     $objUser->ValidateEmail($email);
+
     if($objUser->hasil){
       $ismatch = password_verify($password, $objUser->password);
+
       if($ismatch){
         if (!isset($_SESSION)) {
         session_start();
         }
         $_SESSION["username"]= $objUser->usename;
-        $_SESSION["role"]= $objUser->role;
-        $_SESSION["name"]= $objUser->name;
+        $_SESSION["password"]= $objUser->password;
         $_SESSION["email"]= $objUser->email;
+        $_SESSION["nama"]= $objUser->nama;
+        $_SESSION["role"]= $objUser->role;
+
         echo "<script>alert('Login sukses');</script>";
+
         if($objUser->role == 'penjual'){
           echo '<script>window.location = "dashboardpenjual.php";</script>';
         }
@@ -25,12 +29,14 @@
           echo '<script>window.location = "dashboardpembeli.php";</script>';
         }
         else if($objUser->role == 'admin'){
-          echo '<script>window.location = "dashboardadmin.php";</script>';
-        }
-        else{
-          echo "<script>alert('Password tidak match');</script>";
+          echo '<script>window.location = "dashboard-admin.php";</script>';
         }
       }
+
+      else{
+        echo "<script>alert('Password tidak match');</script>";
+      }
+
     }
     else{
       echo "<script>alert('Email tidak terdaftar');</script>";
@@ -39,14 +45,14 @@
 ?>
 
 <div class="container log-in col-lg-4">
-    <form class="login-form">
+    <form class="login-form" method = "post">
       <div class="text-center logol">
         <img src="./gambar/logo.png" class="rounded" alt="...">
         <h1 class="masuk">masuk</h1>
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Username</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
