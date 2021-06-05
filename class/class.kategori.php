@@ -1,5 +1,6 @@
 <?php
 class Kategori extends Connection{
+
     private $id_kategori = "";
     private $nama_kategori = "";
     private $hasil = false;
