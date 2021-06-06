@@ -6,5 +6,6 @@
     $mail = new Mail();
     $mail->mailUser = $email;
     $mail->sendMailAction();
-    echo "ini adalah email anda" . $email;
+    echo "<script>alert('Berhasil Mengirim Konfirmasi')</script>";
+    echo '<script>window.location = "index.php";</script>';
 ?>
