@@ -69,13 +69,13 @@
     font-weight: 400;
 }
 .log-in .button-end h4{
-    /* background-color: #002f3f; */
-    text-indent: 30px;
+    background-color: #002f3f;
+    /* text-indent: 30px;
 	line-height: 30px;
     border: 120px;
     min-width: 150px;
     max-width: 150px;
-    margin-left: 200px;
+    margin-left: 200px; */
     color:#e4edea;
     font-weight: 700;
 }
