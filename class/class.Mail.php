@@ -32,7 +32,16 @@ class Mail extends Connection
     //     <div class="button-end">
     //     <input class="btn col-lg-4" type="submit" value="Save" name="btnReset">
     //   </div>
-        $link = "<a href= http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/?p=reset-new-pw> Klik Disini Untuk Mengganti Password </a>";
+        $link = 
+        '<div class="button-end">
+      <a class="btn col-lg-4" href="http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/?p=reset-new-pw" role="button">Klik Disini?</a>
+      </div>';
+        // '
+        // <div class="container log-in col-lg-4">
+        //     <div class="button-end">
+        //         <a href= http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/?p=reset-new-pw> Klik Disini Untuk Mengganti Password </a>
+        //     </div>
+        // </div>';
 
         $mail = new PHPMailer(true);
         $mail->SMTPDebug = 0;
