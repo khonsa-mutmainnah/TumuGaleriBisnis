@@ -8,21 +8,22 @@ class Kategori extends Connection{
 
     
     //Get Automatic
-    public function __get($atribute){
-        if(property_exists($this, $atribute))
-        {
+    public function __get($atribute)
+    {
+        if (property_exists($this, $atribute)) {
             return $this->$atribute;
         }
     }
-    public function __set($atribute, $value){
-        if(property_exists($this,$atribute)){
-            $this->atribute=$value;
+
+    public function __set($atribute, $value)
+    {
+        if (property_exists($this, $atribute)) {
+            return $this->$atribute = $value;
         }
     }
 
     public function AddKategori(){
-        $sql = "INSERT INTO kategori (nama_kategori)
-                VALUES ('$this->nama_kategori')";
+        $sql = "INSERT INTO kategori (nama_kategori) VALUES ('$this->nama_kategori')";
                 $this->hasil=mysqli_query($this->connection, $sql);
 
         if($this->hasil)

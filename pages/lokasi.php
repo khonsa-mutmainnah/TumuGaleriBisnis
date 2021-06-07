@@ -4,7 +4,6 @@ require_once("./akses-admin.php");
 
 $objLokasi = new Lokasi();
 if (isset ($_POST['btnSubmit'])){
-    $objLokasi->id_lokasi = $_POST['id_lokasi'];
     $objLokasi->kecamatan = $_POST['kecamatan'];
     $objLokasi->kota = $_POST['kota'];
     $objLokasi->provinsi = $_POST['provinsi'];
@@ -18,7 +17,7 @@ if (isset ($_POST['btnSubmit'])){
     }
     echo "<script> alert('$objLokasi->message'); </script>";
     if($objLokasi->hasil){
-        echo '<script> window.location = "index.php?p=lokasilist"; </script>';
+        echo '<script> window.location = "dashboard.php?p=lokasilist"; </script>';
     }
 }
 else if(isset($_GET['id_lokasi'])){
@@ -31,10 +30,6 @@ else if(isset($_GET['id_lokasi'])){
     <div class="container col-lg-7">
       <form form action="" method="post" class="lokasi-form">
         <h4 class="title text-center fs-1 fw-bolder" >LOKASI</h4>
-        <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">id_lokasi</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="id lokasi" name="id_lokasi" value="<?php echo $objLokasi->id_lokasi; ?>">
-        </div>
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">kecamatan</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama kecamatan" name="kecamatan" value="<?php echo $objLokasi->kecamatan; ?>">

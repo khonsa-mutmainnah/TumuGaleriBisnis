@@ -1,7 +1,7 @@
 <div class="container kategorilist">
     <div class="text-center">
         <h1 class="judul"><strong>KATEGORI</strong></h1>
-        <a class="btn add" #id="addButton" href="index.php?p=kategori">ADD</a>
+        <a class="btn add" #id="addButton" href="?p=kategori">ADD</a>
     </div>
     <table class="table" id="tabelkategori">
         <thead>
@@ -29,9 +29,9 @@
                     echo '<td>'.$dataKategori->id_kategori.'</td>';
                     echo '<td>'.$dataKategori->nama_kategori.'</td>';
                     echo '<td> <a class="btn"
-                    href="index.php?p=kategori&id_kategori='.$dataKategori->id_kategori.'"> Edit </a> |
+                    href="?p=kategori&id_kategori='.$dataKategori->id_kategori.'"> Edit </a> |
                     <a class="btn" 
-                    href="index.php?p=delete-kategori&id_kategori='.$dataKategori->id_kategori.'" 
+                    href="?p=delete-kategori&id_kategori='.$dataKategori->id_kategori.'" 
                     onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
                     echo '</tr>';
                     $no++;
