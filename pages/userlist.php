@@ -37,7 +37,7 @@
                 echo '<td class="text-break">'.$dataUser->email .'</td>';
                 echo '<td class="text-break">'.$dataUser->kota .'</td>';
                 echo '<td class="text-break">'.$dataUser->instagram_user .'</td>';
-                // echo "<td ><img src='./upload".$dataUser->foto."' width='50px'/></td>";
+                echo "<td ><img src='".$dataUser->foto."' width='50px'/></td>";
                 echo '<td class="text-break">'.$dataUser->role .'</td>';
                 echo '<td>
                 <a class="btn"
