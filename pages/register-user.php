@@ -41,7 +41,7 @@ if (isset($_POST["btnSubmit"])) {
         $objUser->no_hp = $_POST['no_hp'];
         $objUser->email = $_POST['email'];
         $objUser->kota = $_POST['kota'];
-        $objUser->role = $_POST['role'];
+        $objUser->role = 'penjual';
         $objUser->instagram_user = $_POST['instagram_user'];
         $objUser->foto = $new_destination;
         $objUser->AddUser();
@@ -100,10 +100,6 @@ if (isset($_POST["btnSubmit"])) {
     <div class="col">
       <label for="kota" class="form-label">kota</label>
       <input type="text" class="form-control" id="kota" placeholder="kota" name="kota">
-    </div>
-    <div class="col">
-      <label for="role" class="form-label">Role</label>
-      <input type="text" class="form-control" id="role" placeholder="role" name="role">
     </div>
     <div class="col-lg-4 button-end">
       <input class="btn col-8" type="submit" value="Daftar" name="btnSubmit" id="btnSubmit">

@@ -1,5 +1,7 @@
 <?php
-require_once ('./class/class.lokasi.php');
+require_once("./class/class.lokasi.php");
+require_once("./akses-admin.php");
+
 $objLokasi = new Lokasi();
 if (isset ($_POST['btnSubmit'])){
     $objLokasi->id_lokasi = $_POST['id_lokasi'];

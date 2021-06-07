@@ -23,13 +23,10 @@
         echo "<script>alert('Login sukses');</script>";
 
         if($objUser->role == 'penjual'){
-          echo '<script>window.location = "dashboardpenjual.php";</script>';
-        }
-        else if($objUser->role == 'manager'){
-          echo '<script>window.location = "dashboardpembeli.php";</script>';
+          echo '<script>window.location = "dashboard.php";</script>';
         }
         else if($objUser->role == 'admin'){
-          echo '<script>window.location = "dashboard-admin.php";</script>';
+          echo '<script>window.location = "dashboard.php";</script>';
         }
       }
 

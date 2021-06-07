@@ -1,3 +1,5 @@
+<?php require_once("./akses-admin.php"); ?>
+
 <div class="container lokasilist">
     <div class="text-center">
         <h1 class="judul"><strong>Lokasi</strong></h1>

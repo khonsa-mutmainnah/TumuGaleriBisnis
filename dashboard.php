@@ -61,24 +61,53 @@ $role = $_SESSION['role'];
                 </button>
                 <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
-                        <a class="nav-link " style="color: #002f3f;"href="?p=reset-pw-form">Nyobaa</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
-
-                        <div class="btn-group">
-                            <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a class="dropdown-item" href="?p=userlist">user</a></li>
-                                <li><a class="dropdown-item" href="?p=tokolist">toko</a></li>
-                                <li><a class="dropdown-item" href="?p=lokasilist">lokasi</a></li>
-                                <li><a class="dropdown-item" href="?p=baranglist">produk</a></li>
-                                <li><a class="dropdown-item" href="?p=gambarlist">gambar produk</a></li>
-                                <li><a class="dropdown-item" href="?p=kategorilist">kategori</a></li>
-                                <li><a class="dropdown-item" href="?p=baranglist">Barang</a></li>
-                                <li><a class="dropdown-item" href="?p=gambarBarangList">gambar Barang</a></li>
-                            </ul>
-                        </div>
+                <?php
+                    if(isset($_SESSION["role"])){
+                        if($_SESSION["role"]=="admin"){
+                ?>
+                            <a class="nav-link " style="color: #002f3f;"href="?p=reset-pw-form">Nyobaa</a>
+                            <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
+    
+                            <div class="btn-group">
+                                <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a class="dropdown-item" href="?p=userlist">user</a></li>
+                                    <li><a class="dropdown-item" href="?p=tokolist">toko</a></li>
+                                    <li><a class="dropdown-item" href="?p=lokasilist">lokasi</a></li>
+                                    <li><a class="dropdown-item" href="?p=baranglist">produk</a></li>
+                                    <li><a class="dropdown-item" href="?p=gambarlist">gambar produk</a></li>
+                                    <li><a class="dropdown-item" href="?p=kategorilist">kategori</a></li>
+                                    <li><a class="dropdown-item" href="?p=baranglist">Barang</a></li>
+                                    <li><a class="dropdown-item" href="?p=gambarBarangList">gambar Barang</a></li>
+                                </ul>
+                            </div>
+                <?php
+                        }
+                        else{
+                ?>
+                            <a class="nav-link " style="color: #002f3f;"href="?p=reset-pw-form">Nyobaa</a>
+                            <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
+    
+                            <div class="btn-group">
+                                <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a class="dropdown-item" href="?p=userlist">tokoku</a></li>
+                                    <li><a class="dropdown-item" href="?p=lokasilist">tambah toko</a></li>
+                                    <li><a class="dropdown-item" href="?p=userlist">ubah profil</a></li>
+                                </ul>
+                            </div>
+                <?php
+                        }
+                
+                    }
+                ?>
+                
+                
+                        
                     </div>
                 </div>
             </div>
