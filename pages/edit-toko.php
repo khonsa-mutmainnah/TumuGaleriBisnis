@@ -12,59 +12,62 @@
     $objKategori= new Kategori();
     $objKategoriList= $objKategori->SelectAllKategori();
 
-    if (isset($_POST["btnSubmit"])) {
-        // kalau nggak
-            $lokasi_file = @$_FILES['logo']['tmp_name'];
-            $ukuran_file = @$_FILES['logo']['size'];
-            $type_file = @$_FILES['logo']['type'];
-            $folder = './upload/';
-      
-            // //image not compatible
-            if ($type_file != "image/gif" and $type_file != "image/jpeg" and $type_file != "image/png" and $type_file != "image/jpg") {
-                echo "<script>
-                alert('Gagal Menambahkan Foto, gambarnya nggak kompetible')
-                </script>";
-            }
-            // //competible
-            else {
-                //move photo to foto folder
-                $uniquesavename = time() . uniqid(rand());
-                $new_destination = $folder . $uniquesavename . ".png";
-                $succes_move = move_uploaded_file($lokasi_file, $new_destination);
-                if($succes_move){
-                    $objToko->logo=$new_destination;
-                }
+    if(isset($_POST['btnSubmit'])){
+        $objToko = new Toko();
+        $objToko->nama_toko = $_POST['nama_toko'];
+        // $objToko->logo = $_POST['logo'];
+        $objToko->tagline = $_POST['tagline'];
+        $objToko->no_telp = $_POST['no_telp'];
+        // $objToko->status = $_POST['status'];
+        $objToko->instagram = $_POST['instagram'];
+        $objToko->url_toko = $_POST['url_toko'];
+        $objToko->user->id_user= $_POST['id_user'];
+        $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
+        $objToko->kategori->id_kategori = $_POST['id_kategori'];
 
-                //berhasil pindah
-                if ($succes_move) {
-                    $objToko->nama_toko = $_POST['nama_toko'];
-                    // $objToko->logo = $_POST['logo'];
-                    $objToko->tagline = $_POST['tagline'];
-                    $objToko->no_telp = $_POST['no_telp'];
-                    // $objToko->status = $_POST['status'];
-                    $objToko->instagram = $_POST['instagram'];
-                    $objToko->url_toko = $_POST['url_toko'];
-                    $objToko->user->id_user= $_POST['id_user'];
-                    $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
-                    $objToko->kategori->id_kategori = $_POST['id_kategori'];
-                    $objToko->AddToko();
-        
-                if ($objToko->hasil) {
-                    echo "<script> alert('tambah toko Berhasil'); </script>";
-                    echo '<script> window.location="?p=tokolist";</script>';
-                }
-                else{
-                    echo "<script> alert('gaaaaaaaaagal'); </script>";
-                    echo '<script> window.location="?p=tokolist";</script>';
-                }
-             }
-            
+        $lokasi_file = @$_FILES['logo']['tmp_name'];
+        $ukuran_file = @$_FILES['logo']['size'];
+        $type_file = @$_FILES['logo']['type'];
+        $folder = './upload/';
+
+        //image not compatible
+        if ($type_file != "image/gif" and $type_file != "image/jpeg" and $type_file != "image/png" and $type_file != "image/jpg") {
+            echo "<script>
+            alert('Gagal Menambahkan Foto, gambarnya nggak kompetible')
+            </script>";
         }
+        //competible
+        else {
+            //move photo to foto folder
+            $uniquesavename = time() . uniqid(rand());
+            $new_destination = $folder . $uniquesavename . ".png";
+            $succes_move = move_uploaded_file($lokasi_file, $new_destination);
+            if($succes_move){
+                $objToko->logo=$new_destination;
+            }
+        }
+
+        if(isset($_GET['id_toko'])){
+            $objToko->id_toko= $_GET['id_toko'];
+            $objToko->UpdateToko();
+        }
+        else{
+            $objToko->AddToko();
+        }
+
+        if($objToko->hasil){
+        echo '<script> window.location = "?p=tokolist";
+        </script>';
+    }
+    }
+    else if(isset($_GET['id_toko'])){
+        $objToko->id_toko = $_GET['id_toko'];
+        $objToko->SelectOneToko();
     }
 ?>
 <div class="toko">
     <div class="container col-lg-7">
-        <form form action="" method="POST" class="toko-form" enctype="multipart/form-data">
+        <form form action="" method="post" class="toko-form" enctype="multipart/form-data">
             <h4 class="title text-center fs-1 fw-bolder" >toko</h4>
             <div class="col">
                 <img id="image-preview" alt="image preview" class="rounded mx-auto" style="width:40px;">

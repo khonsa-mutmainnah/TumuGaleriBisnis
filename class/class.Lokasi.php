@@ -7,8 +7,6 @@ class Lokasi extends Connection{
     private $hasil = false;
     private $message;
 
-
-
     public function __get($atribute)
     {
         if (property_exists($this, $atribute)) {

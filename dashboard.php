@@ -51,7 +51,7 @@ $role = $_SESSION['role'];
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="?p=Home"><img src="./gambar/logo.png" alt="logo" style="width: 50px; margin-left:20px;"></a>
+                <a class="navbar-brand" href="?p=GaleriBisnis"><img src="./gambar/logo.png" alt="logo" style="width: 50px; margin-left:20px;"></a>
                 <div class="judul-navbar">
                     <h4 class="galeribisnis-navbar">galeri bisnis</h4>
                     <div class="tagline-navbar">tunjukkan bisnismu di sini!</div>

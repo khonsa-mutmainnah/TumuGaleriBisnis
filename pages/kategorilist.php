@@ -7,7 +7,6 @@
         <thead>
             <tr>
                 <th>NO.</th>
-                <th>ID kategori</th>
                 <th>nama kategori</th>
                 <th>action</th>
             </tr>
@@ -26,7 +25,6 @@
                 foreach ($arrayResult as $dataKategori){
                     echo '<tr>';
                     echo '<td>'.$no.'</td>';
-                    echo '<td>'.$dataKategori->id_kategori.'</td>';
                     echo '<td>'.$dataKategori->nama_kategori.'</td>';
                     echo '<td> <a class="btn"
                     href="?p=kategori&id_kategori='.$dataKategori->id_kategori.'"> Edit </a> |
