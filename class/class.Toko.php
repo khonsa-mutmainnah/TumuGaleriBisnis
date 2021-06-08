@@ -29,52 +29,17 @@ class Toko extends Connection{
             $this->atribut=$value;
         }
     }
+
     function __construct() {
         parent::__construct();
         $this->lokasi = new Lokasi();
-    }
-
-    public function AddToko(){
-        $sql = "INSERT INTO toko(id_toko, nama_toko, logo, kecamatan, kota, provinsi, tagline, no_telp, status, instagram, nama_kategori, username, id_kategori)
-                VALUES ('$this->id_toko', '$this->nama_toko', '$this->logo', 
-                        ".$this->lokasi->kecamatan.", ".$this->lokasi->kota.", ".$this->lokasi->provinsi.",
-                        '$this->id_lokasi', '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram'
-                        '$this->username', '$this->id_kategori')";
-                $this->hasil=mysqli_query($this->connection, $sql);
-
-        if($this->hasil)
-            $this->message='toko berhasil ditambahkan!';
-        else
-            $this->message='toko gagal ditambahkan';
-    }
-
-    public function UpdateToko(){
-        $sql = "UPDATE toko
-                SET id_toko='$this->id_toko', nama_toko='$this->nama_toko', logo='$this->logo',
-                kecamatan=".$this->lokasi->kecamatan.", kota=".$this->lokasi->kota.", provinsi=".$this->lokasi->provinsi.",
-                tagline='$this->tagline', no_telp='$this->no_telp', status='$this->status', instagram='$this->instagram'
-                kategori='$this->kategori, 'username='$this->username'
-                WHERE id_toko = '$this->toko'";
-        
-        if($this->hasil)
-            $this->message='toko berhasil diupdate!';
-        else
-            $this->message='toko gagal diupdate';
-    }
-
-    public function DeleteToko(){
-        $sql = "DELETE FROM employee WHERE id_toko='$this->id_toko'";
-        $this->hasil = mysqli_query($this->connection, $sql);
-
-        if($this->hasil)
-            $this->message='data berhasil dihapus!';
-        else
-            $this->message='data gagal dihapus';
+        $this->user = new User();
+        $this->kategori = new Kategori();
     }
 
     public function SelectAllToko(){
         $sql="SELECT t.id_toko, t.nama_toko, t.logo, t.tagline, t.no_telp, t.instagram, u.username, l.kecamatan, l.kota, l.provinsi, k.nama_kategori, t.status
-            FROM toko t INNER JOIN user u ON t.username=u.username
+            FROM toko t INNER JOIN user u ON t.id_user=u.id_user
             INNER JOIN lokasi l ON t.id_lokasi=l.id_lokasi
             INNER JOIN kategori k ON t.id_kategori=k.id_kategori";
         $result = mysqli_query($this->connection, $sql);
@@ -87,12 +52,11 @@ class Toko extends Connection{
                 $objToko->id_toko = $data['id_toko'];
                 $objToko->nama_toko = $data['nama_toko'];
                 $objToko->logo = $data['logo'];
-                $objToko->id_lokasi = $data['id_lokasi'];
                 $objToko->tagline = $data['tagline'];
                 $objToko->no_telp = $data['no_telp'];
                 $objToko->status = $data['status'];
                 $objToko->instagram = $data['instagram'];
-                $objToko->user->username = $data['username'];
+                $objToko->user->id_user = $data['id_user'];
                 $objToko->lokasi->kecamatan = $data['kecamatan'];
                 $objToko->lokasi->kota = $data['kota'];
                 $objToko->lokasi->provinsi = $data['provinsi'];
@@ -104,28 +68,65 @@ class Toko extends Connection{
         return $arrResult;
     }
 
+    public function AddToko(){
+        $sql = "INSERT INTO toko(id_toko, nama_toko, logo, id_lokasi, tagline, no_telp, status, 
+        instagram, id_kategori, id_user)
+                VALUES ('$this->id_toko', '$this->nama_toko', '$this->logo', ".$this->lokasi->id_lokasi.",
+                        '$this->tagline', '$this->no_telp', '$this->status', '$this->instagram'
+                        ".$this->kategori->id_kategori.", ".$this->user->id_user.")";
+                $this->hasil=mysqli_query($this->connection, $sql);
+
+        if($this->hasil)
+            $this->message='toko berhasil ditambahkan!';
+        else
+            $this->message='toko gagal ditambahkan';
+    }
+
+    public function UpdateToko(){
+        $sql = "UPDATE toko
+                SET (id_toko='$this->id_toko', nama_toko='$this->nama_toko', logo='$this->logo', id_lokasi=".$this->lokasi->id_lokasi.",
+                        tagline='$this->tagline', no_telp='$this->no_telp', status='$this->status', instagram='$this->instagram',
+                        id_kategori=".$this->kategori->id_kategori.", id_user".$this->user->id_user.")";
+        
+        if($this->hasil)
+            $this->message='toko berhasil diupdate!';
+        else
+            $this->message='toko gagal diupdate';
+    }
+
     public function SelectOneToko(){
         $sql="SELECT* FROM toko WHERE id_toko='$this->id_toko'";
-        $resultOne = mysqli_query($this->connection, $sql);
+        $resultOne = mysqli_query($this->connection, $sql) or die(mysqli_error($this->connection));
 
         if(mysqli_num_rows($resultOne)==1){
             $this->hasil=true;
-
             $data=mysqli_fetch_assoc($resultOne);
+
             $this->id_toko = $data['id_toko'];
             $this->nama_toko = $data['nama_toko'];
             $this->logo = $data['logo'];
-            $this->id_lokasi = $data['id_lokasi'];
             $this->tagline = $data['tagline'];
             $this->no_telp = $data['no_telp'];
             $this->status = $data['status'];
             $this->instagram = $data['instagram'];
-            $this->user->username = $data['username'];
+            $this->user->id_user = $data['id_user'];
             $this->lokasi->kecamatan = $data['kecamatan'];
             $this->lokasi->kota = $data['kota'];
             $this->lokasi->provinsi = $data['provinsi'];
             $this->kategori->nama_kategori = $data['kategori'];
         }
     }
+
+    public function DeleteToko(){
+        $sql = "DELETE FROM toko WHERE id_toko='$this->id_toko'";
+        $this->hasil = mysqli_query($this->connection, $sql);
+
+        if($this->hasil)
+            $this->message='data berhasil dihapus!';
+        else
+            $this->message='data gagal dihapus';
+    }
+
+    
 }
 ?>

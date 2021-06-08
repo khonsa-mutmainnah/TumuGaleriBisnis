@@ -1,7 +1,7 @@
 <div class="container userlist">
     <div class="text-center">
         <h1 class="judul"><strong>USERLIST</strong></h1>
-        <a class="btn" href="index.php?p=user">ADD</a>
+        <a class="btn" href="?p=user">ADD</a>
     </div>
     <table class="table table-responsive">
         <thead>
@@ -41,9 +41,9 @@
                 echo '<td class="text-break">'.$dataUser->role .'</td>';
                 echo '<td>
                 <a class="btn"
-                href="index.php?p=user&username=' . $dataUser->username . '"> Edit </a> 
+                href="?p=user&username=' . $dataUser->username . '"> Edit </a> 
                 <a class="btn"
-                href="index.php?p=delete-user&username=' . $dataUser->username . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
+                href="?p=delete-user&username=' . $dataUser->username . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
                 echo '</tr>';
                 $no++;
             }
