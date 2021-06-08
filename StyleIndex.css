@@ -966,31 +966,44 @@
 }
 
 /* toko */
-.toko .table{
-    margin-left: 40px;
-    color: #D9DFDB;
-}
-
-.toko h4{
-    text-align: center;
-    font-size: 40px;
+.toko .text-center h1{
     font-weight: 600;
-    color: #D9DFDB;
-    padding-bottom: 20px;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
-.toko .form-check{
-    margin-left: 20px;
-    size: 200%;
+.toko .username{
+    margin-top: 15px;
 }
 
-.toko .btn{
-    background-color: #8A7D63;
-    margin-top: 70px;
+.toko .form-label{
+    margin-top: 15px;
 }
 
-.toko input{
-    width: 500px;
+.toko .toko-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
+}
+.toko .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.toko .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.toko .btn:hover{
+    background-color: #cdac81;
 }
 /* toko list */
 .tokolist {

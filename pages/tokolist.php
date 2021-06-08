@@ -1,7 +1,7 @@
 <div class="container tokolist">
     <div class="text-center">
         <h1 class="judul"><strong>TOKO</strong></h1>
-        <a class="btn" href="index.php?p=toko">ADD</a>
+        <a class="btn" href="?p=toko">ADD</a>
     </div>
     <table class="table" id="tabeltoko">
         <thead>

@@ -1,16 +1,14 @@
 <?php
 require_once('./class/class.kategori.php');
 
-if(isset($_GET['id_kategori']))
-{
+if(isset($_GET['id_kategori'])){
     $objKategori = new Kategori();
-    $objKategori->id_toko = $_GET['id_kategori'];
+    $objKategori->id_kategori = $_GET['id_kategori'];
     $objKategori->DeleteKategori();
     echo "<script> alert('$objKategori->message'); </script>";
-    echo "<script>window.location = 'index.php?p=kategorilist'</script>";
+    echo "<script>window.location = '?p=kategorilist'</script>";
 }
-else
-{
+else{
     echo '<script>window.history.back()</script>';
 }
 

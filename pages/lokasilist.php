@@ -1,15 +1,14 @@
-<?php require_once("./akses-admin.php"); ?>
+<!-- <?php require_once("./akses-admin.php"); ?> -->
 
 <div class="container lokasilist">
     <div class="text-center">
         <h1 class="judul"><strong>Lokasi</strong></h1>
-        <a class="btn add" #id="addButton" href="index.php?p=lokasi">ADD</a>
+        <a class="btn add" #id="addButton" href="dashboard.php?p=lokasi">ADD</a>
     </div>
     <table class="table">
         <thead>
             <tr>
                 <th>NO.</th>
-                <th>ID Lokasi</th>
                 <th>Kecamatan</th>
                 <th>Kota</th>
                 <th>Provinsi</th>
@@ -28,15 +27,14 @@
             foreach ($arrayResult as $dataLokasi) {
                 echo '<tr>';
                 echo '<td>' . $no . '</td>';
-                echo '<td>' . $dataLokasi->id_lokasi . '</td>';
                 echo '<td>' . $dataLokasi->kecamatan . '</td>';
                 echo '<td>' . $dataLokasi->kota . '</td>';
                 echo '<td>' . $dataLokasi->provinsi . '</td>';
                 echo '<td>
                 <a class="btn"
-                href="index.php?p=lokasi&id_lokasi=' . $dataLokasi->id_lokasi . '"> Edit </a> |
+                href="?p=lokasi&id_lokasi=' . $dataLokasi->id_lokasi . '"> Edit </a> |
                 <a class="btn"
-                href="index.php?p=delete-lokasi&id_lokasi=' . $dataLokasi->id_lokasi . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
+                href="?p=delete-lokasi&id_lokasi=' . $dataLokasi->id_lokasi . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
                             echo '</tr>';
                 $no++;
             }

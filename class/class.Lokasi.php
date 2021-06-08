@@ -1,12 +1,11 @@
 <?php
-class Lokasi extends Connection
-{
-    private $id_lokasi = "";
-    private $kecamatan = "";
-    private $kota = "";
-    private $provinsi = "";
+class Lokasi extends Connection{
+    private $id_lokasi;
+    private $kecamatan;
+    private $kota;
+    private $provinsi;
     private $hasil = false;
-    private $message = "";
+    private $message;
 
 
 
@@ -26,8 +25,8 @@ class Lokasi extends Connection
 
     public function AddLokasi()
     {
-        $sql = "INSERT INTO lokasi (id_lokasi, kecamatan, kota, provinsi)
-        VALUES ('$this->id_lokasi', '$this->kecamatan', '$this->kota', '$this->provinsi')";
+        $sql = "INSERT INTO lokasi (kecamatan, kota, provinsi)
+        VALUES ('$this->kecamatan', '$this->kota', '$this->provinsi')";
         $this->hasil = mysqli_query($this->connection, $sql);
 
         if ($this->hasil)
@@ -69,6 +68,7 @@ class Lokasi extends Connection
         $cnt = 0;
 
         if (mysqli_num_rows($result) > 0) {
+         
             while ($data = mysqli_fetch_array($result)) {
                 $objLokasi = new Lokasi();
                 $objLokasi->id_lokasi = $data['id_lokasi'];
