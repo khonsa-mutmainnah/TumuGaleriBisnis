@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 }
 
 if (isset($_SESSION["role"])) {
-    echo '<script>window.location = "dashboard-admin.php";</script>';
+    echo '<script>window.location = "dashboard.php";</script>';
 }
 
 ?>
