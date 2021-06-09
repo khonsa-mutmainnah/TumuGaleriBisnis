@@ -13,19 +13,72 @@
         <a class="btn btn-danger">Cancel</a></td> 
         </tr> 
     </table> -->
+<?php
+  require_once("./class/class.User.php");
 
+  // $newpass = $_POST['newpass'];
+  // $repass = $_POST['repass'];
+
+//is data empty
+if (empty($newpass)) {
+    echo "<script>
+    alert('Gagal Memperbaharui User, Pastikan semua data diiisi');
+    </script>";
+}
+
+//not empty
+else {
+    //password harus maching
+    if ($newpass) {
+
+        $user = new User();
+        $user->id_user = $id_user;
+        $user->password = $newpass;
+        $hasil = $user->resetPass();
+
+        //berhasil edit
+        if ($hasil == "berhasil mengedit") {
+            echo "<script>
+        alert('Berhasil memperbaharui Password')
+        window.location = 'index.php?p=login';
+        </script>";
+        }
+
+        //gagal edit
+        else {
+            echo "<script>
+        alert('Gagal Memperbaharui Password, Pastikan semua data benar')
+        window.location = 'index.php?p=user&id_user=$id_user';
+        </script>";
+        }
+    }
+
+    //password tidak semua
+    else {
+        echo "<script>
+        alert('Gagal Memperbaharui Password, Pastikan Password Sama')
+        window.location = 'index.php?p=user&id-user=$id_user';
+        </script>";
+    }
+}
+
+?>
     <div class="container reset col-lg-4">
-    <form class ="reset-form" action="?p=reset-pw" method = "post">
+    <form class ="reset-form" action="" method = "post">
       <div class="text-center logol">
         <img src="./gambar/logo.png" class="rounded" alt="...">
         <h1 class="masuk">Masukkan Password Baru</h1>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordHelp" name="password">
+        <label for="exampleInputPassword" class="form-label">New Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordHelp" name="newpass">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordHelp" name="repass">
       </div>
       <div class="button-end">
-        <input class="btn col-lg-4" type="submit" value="Save" name="btnReset">
+        <input href="login.php" class="btn col-lg-4" type="submit" value="Save" name="btnSubmit">
       </div>
 
     </form>
