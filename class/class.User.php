@@ -111,9 +111,9 @@ class User extends Connection
         }
     }
 
-    public function ValidateEmail($inputemail){
+    public function ValidateEmail($email){
 
-        $sql = "SELECT * FROM user WHERE email = '$inputemail'";
+        $sql = "SELECT * FROM user WHERE email = '$email'";
 
         $result = mysqli_query($this->connection, $sql);
         if (mysqli_num_rows ($result) == 1){
