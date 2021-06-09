@@ -16,20 +16,16 @@
 <?php
   require_once("./class/class.User.php");
 
-  // $newpass = $_POST['newpass'];
-  // $repass = $_POST['repass'];
 
 //is data empty
-if (empty($newpass)) {
-    echo "<script>
-    alert('Gagal Memperbaharui User, Pastikan semua data diiisi');
-    </script>";
-}
+if(isset($_POST['btnSubmit'])){
 
-//not empty
-else {
+  $id_user = $_GET['id_user'];
+  $newpass = $_POST['newpass'];
+  $repass = $_POST['repass'];
+
     //password harus maching
-    if ($newpass) {
+      if ($newpass) {
 
         $user = new User();
         $user->id_user = $id_user;
@@ -54,7 +50,7 @@ else {
     }
 
     //password tidak semua
-    else {
+      else {
         echo "<script>
         alert('Gagal Memperbaharui Password, Pastikan Password Sama')
         window.location = 'index.php?p=user&id-user=$id_user';

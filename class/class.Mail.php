@@ -32,10 +32,7 @@ class Mail extends Connection
     //     <div class="button-end">
     //     <input class="btn col-lg-4" type="submit" value="Save" name="btnReset">
     //   </div>
-        $link = 
-        '<div class="button-end">
-      <a class="btn col-lg-4" href="http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/?p=reset-new-pw" role="button">Klik Disini?</a>
-      </div>';
+        $link = "<a href = '$this->linkemail'>Klik Link Disini</a>";
         // '
         // <div class="container log-in col-lg-4">
         //     <div class="button-end">

@@ -15,6 +15,7 @@
 <?php
   require_once('./class/class.User.php');
   require_once('./class/class.Mail.php'); 
+
   if(isset($_POST['btnReset'])){
     $email = $_POST['email'];
     // $password = $_POST['password'];
@@ -27,6 +28,7 @@
       $email = $_POST['email'];
       $mail = new Mail();
       $mail->mailUser = $email;
+      $mail->linkemail = "http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/index.php?p=reset-new-pw&id_user=$objUser->id_user";
       $mail->sendMailAction();
     }
     else{
