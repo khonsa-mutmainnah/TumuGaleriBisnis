@@ -12,8 +12,8 @@
       $objUser->instagram_user = $_POST['instagram_user'];
       $objUser->foto = $_POST['foto'];
       
-      if(isset ($_GET['username'])){
-        $objUser->username= $_GET['username'];
+      if(isset ($_GET['id_user'])){
+        $objUser->id_user= $_GET['id_user'];
         $objUser->UpdateUser();
       }
       else{
@@ -25,8 +25,8 @@
         echo '<script> window.location = "index.php?p=userlist"; </script>';
       }
     }
-    else if(isset($_GET['username'])){
-        $objUser->username = $_GET['username'];
+    else if(isset($_GET['id_user'])){
+        $objUser->id_user = $_GET['id_user'];
         $objUser->SelectOneUser();
     }
 ?>
