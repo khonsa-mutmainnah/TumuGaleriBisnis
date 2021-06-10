@@ -42,7 +42,8 @@ class User extends Connection
     public function UpdateUser()
     {
         $sql = "UPDATE user
-        SET password ='$this->password', nama = '$this->nama', no_hp = '$this->no_hp', email = '$this->email', kota = '$this->kota', role = '$this->role', instagram_user = '$this->instagram_user', foto = '$this->foto' 
+        SET password ='$this->password', nama = '$this->nama', no_hp = '$this->no_hp', email = '$this->email', 
+        kota = '$this->kota', role = '$this->role', instagram_user = '$this->instagram_user', foto = '$this->foto' 
         WHERE username = '$this->username'";
 
         $this->hasil = mysqli_query($this->connection, $sql);

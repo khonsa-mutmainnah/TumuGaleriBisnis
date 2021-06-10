@@ -10,7 +10,7 @@ class Toko extends Connection{
     private $lokasi;
     private $tagline='';
     private $no_telp='';
-    private $status='';
+    private $status;
     private $instagram='';
     private $url_toko='';
     private $user;
@@ -74,10 +74,10 @@ class Toko extends Connection{
     }
 
     public function AddToko(){
-        $sql = "INSERT INTO toko(nama_toko, logo, id_lokasi, 
+        $sql = "INSERT INTO toko(nama_toko, id_lokasi, 
                 tagline, no_telp, instagram, url_toko, id_kategori, id_user)
-                VALUES ('$this->nama_toko', '$this->logo', ".$this->lokasi->id_lokasi.",
-                        '$this->tagline', '$this->no_telp', '$this->instagram', '$this->url_toko'
+                VALUES ('$this->nama_toko', ".$this->lokasi->id_lokasi.",
+                        '$this->tagline', '$this->no_telp', '$this->instagram', '$this->url_toko',
                         ".$this->kategori->id_kategori.", ".$this->user->id_user.")";
                 $this->hasil=mysqli_query($this->connection, $sql);
                 
@@ -87,11 +87,34 @@ class Toko extends Connection{
             $this->message='toko gagal ditambahkan';
     }
 
+    public function AddLogoToko(){
+        $sql = "INSERT INTO toko(logo)
+                VALUES ('$this->logo')";
+                $this->hasil=mysqli_query($this->connection, $sql);
+                
+        if($this->hasil)
+            $this->message='logo toko berhasil ditambahkan!';
+        else
+            $this->message='logo toko gagal ditambahkan';
+    }
+
     public function UpdateToko(){
         $sql = "UPDATE toko
-                SET (id_toko='$this->id_toko', nama_toko='$this->nama_toko', logo='$this->logo', id_lokasi=".$this->lokasi->id_lokasi.",
-                        tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', url_toko='$this->url_toko',
-                        id_kategori=".$this->kategori->id_kategori.", id_user".$this->user->id_user.")";
+                SET nama_toko='$this->nama_toko', id_lokasi=".$this->lokasi->id_lokasi.",
+                    tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', url_toko='$this->url_toko'
+                    id_kategori=".$this->kategori->id_kategori.", id_user=".$this->user->id_user."
+                WHERE id_toko = '$this->id_toko'";
+        
+        if($this->hasil)
+            $this->message='toko berhasil diupdate!';
+        else
+            $this->message='toko gagal diupdate';
+    }
+
+    public function UpdateLogoToko(){
+        $sql = "UPDATE toko
+                SET logo='$this->logo'
+                WHERE id_toko='$this->id_toko'";
         
         if($this->hasil)
             $this->message='toko berhasil diupdate!';
