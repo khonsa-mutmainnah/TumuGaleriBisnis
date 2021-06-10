@@ -57,16 +57,16 @@ class Mail extends Connection
         $mail->addAddress($this->mailUser);
 
         $mail->isHTML(true);
-        $mail->addEmbeddedImage('./gambar/gambaremail.jpg', 'image_cid1');
+        $mail->addEmbeddedImage('./gambar/mailOpen.png', 'image_cid1');
         $mail->Subject = "Konfirmasi Link";
-        // $bodyContent = '<p>ini adalah isi dari email</p>' .$link;
 
         $bodyContent = '
         <div class="card text-center" style="text-align: center">
             <div class="card-header">
                 <img src="cid:image_cid1">
-                <p>Ini Adalah Isi Dari Email<br></p>' . $link .
-            '<div>';
+                <h4 class="title text-center fs-1 fw-bolder" >TUMU GALERI BISNIS<br>Hello, Berikut Link Konfirmasimu</h4>
+                <p>Isi Email<br></p>' . $link .
+            '</div>';
         $mail->Body = $bodyContent;
 
         $mail->send();
