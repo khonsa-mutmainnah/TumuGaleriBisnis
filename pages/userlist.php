@@ -41,9 +41,9 @@
                 echo '<td class="text-break">'.$dataUser->role .'</td>';
                 echo '<td>
                 <a class="btn"
-                href="?p=user&username=' . $dataUser->username . '"> Edit </a> 
+                href="?p=user&id_user=' . $dataUser->id_user . '"> Edit </a> 
                 <a class="btn"
-                href="?p=delete-user&username=' . $dataUser->username . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
+                href="?p=delete-user&id_user=' . $dataUser->id_user . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
                 echo '</tr>';
                 $no++;
             }

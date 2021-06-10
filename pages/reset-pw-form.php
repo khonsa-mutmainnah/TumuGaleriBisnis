@@ -12,9 +12,33 @@
         <td><input type="submit" class="btn btn-primary" value="Submit" name="btnSubmit">  
         </tr> 
     </table> -->
+<?php
+  require_once('./class/class.User.php');
+  require_once('./class/class.Mail.php'); 
 
+  if(isset($_POST['btnReset'])){
+    $email = $_POST['email'];
+    // $password = $_POST['password'];
+    $objUser = new User();
+    $objUser->hasil = true;
+    $objUser->ValidateEmail($email);
+
+    if($objUser->hasil){
+      echo "<script>alert('Konfirmasi Telah dikirim Via email');</script>";
+      $email = $_POST['email'];
+      $mail = new Mail();
+      $mail->mailUser = $email;
+      $mail->linkemail = "http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/index.php?p=reset-new-pw&id_user=$objUser->id_user";
+      $mail->sendMailAction();
+    }
+    else{
+      echo "<script>alert('Email tidak terdaftar');</script>";
+    }
+  }
+
+?>
     <div class="container reset col-lg-4">
-    <form class ="reset-form" action="?p=reset-pw" method = "post">
+    <form class ="reset-form" action="" method = "post">
       <div class="text-center logol">
         <img src="./gambar/logo.png" class="rounded" alt="...">
         <h1 class="masuk">Masukkan Email</h1>

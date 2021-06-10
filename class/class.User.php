@@ -1,6 +1,7 @@
 <?php
 class User extends Connection
 {
+    private $id_user = "";
     private $username = "";
     private $password = "";
     private $nama = "";
@@ -29,8 +30,8 @@ class User extends Connection
 
     public function AddUser()
     {
-        $sql = "INSERT INTO user (username, password, nama, no_hp, email, kota, role, instagram_user, foto)
-        VALUES ('$this->username', '$this->password', '$this->nama', '$this->no_hp', '$this->email', '$this->kota', '$this->role', '$this->instagram_user', '$this->foto')";
+        $sql = "INSERT INTO user (id_user, username, password, nama, no_hp, email, kota, role, instagram_user, foto)
+        VALUES ('$this->id_user','$this->username', '$this->password', '$this->nama', '$this->no_hp', '$this->email', '$this->kota', '$this->role', '$this->instagram_user', '$this->foto')";
         $this->hasil = mysqli_query($this->connection, $sql);
 
         if ($this->hasil)
@@ -42,9 +43,8 @@ class User extends Connection
     public function UpdateUser()
     {
         $sql = "UPDATE user
-        SET password ='$this->password', nama = '$this->nama', no_hp = '$this->no_hp', email = '$this->email', 
-        kota = '$this->kota', role = '$this->role', instagram_user = '$this->instagram_user', foto = '$this->foto' 
-        WHERE username = '$this->username'";
+        SET username ='$this->username', '$this->password', nama = '$this->nama', no_hp = '$this->no_hp', email = '$this->email', kota = '$this->kota', role = '$this->role', instagram_user = '$this->instagram_user', foto = '$this->foto' 
+        WHERE id_user = '$this->id_user'";
 
         $this->hasil = mysqli_query($this->connection, $sql);
         if ($this->hasil)
@@ -56,7 +56,7 @@ class User extends Connection
 
     public function DeleteUser()
     {
-        $sql = "DELETE FROM user WHERE username = '$this->username'";
+        $sql = "DELETE FROM user WHERE id_user = '$this->id_user'";
 
         $this->hasil = mysqli_query($this->connection, $sql);
 
@@ -75,6 +75,7 @@ class User extends Connection
         if (mysqli_num_rows($result) > 0) {
             while ($data = mysqli_fetch_array($result)) {
                 $objUser = new User();
+                $objUser->id_user = $data['id_user'];
                 $objUser->username = $data['username'];
                 $objUser->password = $data['password'];
                 $objUser->nama = $data['nama'];
@@ -92,12 +93,13 @@ class User extends Connection
     }
     public function SelectOneUser()
     {
-        $sql = "SELECT * FROM user WHERE username='$this->username'";
+        $sql = "SELECT * FROM user WHERE id_user='$this->id_user'";
         $resultOne = mysqli_query($this->connection, $sql);
         if (mysqli_num_rows($resultOne) == 1) {
             $this->hasil = true;
 
             $data = mysqli_fetch_assoc($resultOne);
+            $this->username = $data['username'];
             $this->password = $data['password'];
             $this->nama = $data['nama'];
             $this->no_hp = $data['no_hp'];
@@ -109,14 +111,15 @@ class User extends Connection
         }
     }
 
-    public function ValidateEmail($inputemail){
+    public function ValidateEmail($email){
 
-        $sql = "SELECT * FROM user WHERE email = '$inputemail'";
+        $sql = "SELECT * FROM user WHERE email = '$email'";
 
         $result = mysqli_query($this->connection, $sql);
         if (mysqli_num_rows ($result) == 1){
             $this->hasil = true;
             $data = mysqli_fetch_assoc($result);
+            $this->id_user = $data['id_user'];
             $this->username = $data['username'];
             $this->password = $data['password'];
             $this->nama = $data['nama'];

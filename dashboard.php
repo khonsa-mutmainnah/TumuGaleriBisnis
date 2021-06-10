@@ -93,7 +93,8 @@ $role = $_SESSION['role'];
                                     <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="?p=userlist">tokoku</a></li>
+                                    <li><a class="dropdown-item" href="?p=tokolist">tokoku</a></li>
+                                    <li><a class="dropdown-item" href="?p=baranglist">Barang</a></li>
                                     <li><a class="dropdown-item" href="?p=lokasilist">tambah toko</a></li>
                                     <li><a class="dropdown-item" href="?p=userlist">ubah profil</a></li>
                                 </ul>
