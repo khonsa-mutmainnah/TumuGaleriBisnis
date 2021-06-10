@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Bulan Mei 2021 pada 19.16
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.4
+-- Generation Time: Jun 08, 2021 at 09:04 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `barang`
+-- Table structure for table `barang`
 --
 
 CREATE TABLE `barang` (
@@ -39,7 +39,7 @@ CREATE TABLE `barang` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gambar_barang`
+-- Table structure for table `gambar_barang`
 --
 
 CREATE TABLE `gambar_barang` (
@@ -50,7 +50,7 @@ CREATE TABLE `gambar_barang` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -58,23 +58,43 @@ CREATE TABLE `kategori` (
   `nama_kategori` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
+(1, 'mak'),
+(11, 'wadaw'),
+(12, 'makanannn');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lokasi`
+-- Table structure for table `lokasi`
 --
 
 CREATE TABLE `lokasi` (
   `id_lokasi` int(11) NOT NULL,
-  `kecamatan` varchar(20) NOT NULL,
-  `kota` varchar(20) NOT NULL,
-  `provinsi` varchar(20) NOT NULL
+  `kecamatan` varchar(30) NOT NULL,
+  `kota` varchar(30) NOT NULL,
+  `provinsi` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lokasi`
+--
+
+INSERT INTO `lokasi` (`id_lokasi`, `kecamatan`, `kota`, `provinsi`) VALUES
+(4, 'ccc', 'ccc', 'ccc'),
+(5, 'ddd', 'ddd', 'ddd'),
+(6, 'kashh', 'bandung', 'aweczxc'),
+(9, 'kashh', 'bandung', 'SQW'),
+(10, 'bahara', 'bageur', 'sekali');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `toko`
+-- Table structure for table `toko`
 --
 
 CREATE TABLE `toko` (
@@ -84,22 +104,31 @@ CREATE TABLE `toko` (
   `id_lokasi` int(11) NOT NULL,
   `tagline` varchar(100) DEFAULT NULL,
   `no_telp` varchar(13) NOT NULL,
-  `status` tinyint(1) NOT NULL,
   `instagram` varchar(256) NOT NULL,
   `id_kategori` int(11) NOT NULL,
-  `username` varchar(15) NOT NULL,
-  `url_toko` varchar(256) DEFAULT NULL
+  `id_user` int(11) NOT NULL,
+  `url_toko` varchar(256) DEFAULT NULL,
+  `status` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `toko`
+--
+
+INSERT INTO `toko` (`id_toko`, `nama_toko`, `logo`, `id_lokasi`, `tagline`, `no_telp`, `instagram`, `id_kategori`, `id_user`, `url_toko`, `status`) VALUES
+(1, 'bu ida', NULL, 1, 'tokoku bagus sekali', '02248855', 'bu_ida', 1, 2, NULL, 0),
+(2, 'molee', NULL, 3, 'waahhh enaknyaa', '024896521', 'molee_food', 1, 3, NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
   `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL,
+  `password` varchar(150) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `no_hp` varchar(13) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -110,72 +139,107 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `no_hp`, `email`, `kota`, `role`, `instagram_user`, `foto`) VALUES
+(1, '', '$2y$10$WSFAFSoh8wE8qGD2Triy5uGTR3Bmal6PbLwo8QgrMQ9Yc/woO02pi', 'kmosa', '', '', '', 'penjual', '', './upload/162312282677643818760bee38ae68c6.png'),
+(2, '1910130010', '$2y$10$p2gTYyXHP2n0fDzR9nFo1uZHdWQvUq6QspUlCuGAo1RsxKf1lRTAm', 'ocaaa', 'qwe', 'admin@a.a', 'sdda ', 'admin', 'qwe', './upload/162303220021511545560bd81885b374.png'),
+(3, 'kmosha', '$2y$10$hTFwViXyv8Cmcpl7FjZfFeVG/54AyHQxIsxjsfX617ldROXwzRUI6', 'khonsa mutmainnah', '099', 'khonsamutmainnah@gmail.com', 'bandung', 'penjual', '@khonsa_m', './upload/16230312963349598060bd7e002656e.png');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `barang`
+-- Indexes for table `barang`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`id_barang`),
   ADD KEY `fk_id_toko` (`id_toko`);
 
 --
--- Indeks untuk tabel `gambar_barang`
+-- Indexes for table `gambar_barang`
 --
 ALTER TABLE `gambar_barang`
   ADD PRIMARY KEY (`id_barang`,`gambar_barang`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indeks untuk tabel `lokasi`
+-- Indexes for table `lokasi`
 --
 ALTER TABLE `lokasi`
   ADD PRIMARY KEY (`id_lokasi`);
 
 --
--- Indeks untuk tabel `toko`
+-- Indexes for table `toko`
 --
 ALTER TABLE `toko`
   ADD PRIMARY KEY (`id_toko`),
   ADD KEY `fk_id_lokasi` (`id_lokasi`),
   ADD KEY `fk_id_kategori` (`id_kategori`),
-  ADD KEY `fk_username` (`username`);
+  ADD KEY `fk_id_user` (`id_user`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `barang`
+-- AUTO_INCREMENT for table `barang`
+--
+ALTER TABLE `barang`
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `lokasi`
+--
+ALTER TABLE `lokasi`
+  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `barang`
 --
 ALTER TABLE `barang`
   ADD CONSTRAINT `fk_id_toko` FOREIGN KEY (`id_toko`) REFERENCES `toko` (`id_toko`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `gambar_barang`
+-- Constraints for table `gambar_barang`
 --
 ALTER TABLE `gambar_barang`
   ADD CONSTRAINT `fk_id_barang` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `toko`
+-- Constraints for table `toko`
 --
 ALTER TABLE `toko`
-  ADD CONSTRAINT `fk_id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_id_lokasi` FOREIGN KEY (`id_lokasi`) REFERENCES `lokasi` (`id_lokasi`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_username` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

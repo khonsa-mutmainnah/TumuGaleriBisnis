@@ -127,4 +127,34 @@ class User extends Connection
             $this->role = $data['role'];
         }
     }
+
+    //reset pass user
+    public function resetPass()
+    {
+        try {
+
+            //if password null
+            $newpass = password_hash($this->password, PASSWORD_DEFAULT);
+            $sql = "UPDATE user SET password='$newpass' WHERE id_user=$this->id_user";
+            mysqli_query($this->connection, $sql);
+
+            return "berhasil mengedit";
+        } catch (PDOException $e) {
+            return "gagal mengedit";
+        }
+    }
+
+    // //reset pass user
+    // public function resetPass()
+    // {
+    //     $newpass = password_hash($this->password, PASSWORD_DEFAULT);
+    //     $sql = "UPDATE user SET password='$newpass' WHERE id_user=$this->id_user";
+    //     $result = mysqli_query($this->connection, $sql);
+    //     // if (mysqli_num_rows ($result) == 1) {
+
+    //     //     //if password null
+
+    //     //     return "berhasil mengedit";
+    //     // }
+    // }
 }

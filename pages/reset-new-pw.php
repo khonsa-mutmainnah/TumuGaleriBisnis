@@ -13,48 +13,55 @@
         <a class="btn btn-danger">Cancel</a></td> 
         </tr> 
     </table> -->
+
 <?php
   require_once("./class/class.User.php");
+  // $id_user = $_GET['id_user'];
+  if(isset($_POST['btnSubmit'])){
 
-
-//is data empty
-if(isset($_POST['btnSubmit'])){
-
-  $id_user = $_GET['id_user'];
   $newpass = $_POST['newpass'];
   $repass = $_POST['repass'];
+  // $id_user = $_POST['id_user'];
 
-    //password harus maching
-      if ($newpass) {
-
-        $user = new User();
-        $user->id_user = $id_user;
-        $user->password = $newpass;
-        $hasil = $user->resetPass();
-
-        //berhasil edit
-        if ($hasil == "berhasil mengedit") {
-            echo "<script>
-        alert('Berhasil memperbaharui Password')
-        window.location = 'index.php?p=login';
-        </script>";
-        }
-
-        //gagal edit
-        else {
-            echo "<script>
-        alert('Gagal Memperbaharui Password, Pastikan semua data benar')
-        window.location = 'index.php?p=user&id_user=$id_user';
-        </script>";
-        }
+//is data empty
+    if (empty($newpass) | empty($repass)) {
+      echo "Gagal Disini";
+        // echo "<script>
+        // alert('Gagal Memperbaharui User, Pastikan semua data diiisi')
+        // window.location = 'index.php?p=login&id_user=$id_user';
+        // </script>";
     }
 
-    //password tidak semua
-      else {
-        echo "<script>
-        alert('Gagal Memperbaharui Password, Pastikan Password Sama')
-        window.location = 'index.php?p=user&id-user=$id_user';
-        </script>";
+//not empty
+    else {
+        //password harus maching
+        if ($newpass == $repass) {
+
+            $user = new User();
+            // $user->id_user = $id_user;
+            $user->password = $newpass;
+            $hasil = $user->resetPass();
+
+            //berhasil edit
+            if ($hasil == "berhasil mengedit") {
+                echo "<script>
+            alert('Berhasil memperbaharui Password')
+            window.location = 'index.php?p=login';
+            </script>";
+            }
+
+            //gagal edit
+            else {
+                echo "<script> alert('Gagal Memperbaharui Password, Pastikan semua data benar')
+            window.location = 'index.php?p=reset-new-pw';
+            </script>";
+            }
+        }
+        else {
+          echo "<script> alert('Gagal Memperbaharui Password, Pastikan semua data benar')
+      window.location = 'index.php?p=reset-new-pw';
+      </script>";
+      }
     }
 }
 
