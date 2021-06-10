@@ -51,14 +51,14 @@
             }
 
             //gagal edit
-            else {
-                echo "<script> alert('Gagal Memperbaharui Password, Pastikan semua data benar')
-            window.location = 'index.php?p=reset-new-pw';
-            </script>";
-            }
+            // else {
+            //     echo "<script> alert('Gagal Memperbaharui Password, Pastikan semua data benar')
+            // window.location = 'index.php?p=reset-new-pw';
+            // </script>";
+            // }
         }
         else {
-          echo "<script> alert('Gagal Memperbaharui Password, Pastikan semua data benar')
+          echo "<script> alert('Password Gagal Diperbaharui')
       window.location = 'index.php?p=reset-new-pw';
       </script>";
       }
