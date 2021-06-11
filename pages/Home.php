@@ -14,24 +14,24 @@
         
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title text-center" id="staticBackdropLabel">Profil Penjual</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h5 class="modal-title text-center" id="staticBackdropLabel">Profil Penjual</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <div class="text-center">
-                <img src="./gambar/aa.jpg" class="rounded" alt="logo-toko" style="width: 110px;">
-                <h3>Nama pemilik toko</h3>
-                <p>0888888888</p>
-                <p>oca@email.com</p>
-                <p>Bandung</p>
-                </div>
+                  <div class="text-center">
+                    <img src="./gambar/aa.jpg" class="rounded" alt="logo-toko" style="width: 110px;">
+                    <h3>Nama pemilik toko</h3>
+                    <p>0888888888</p>
+                    <p>oca@email.com</p>
+                    <p>Bandung</p>
+                  </div>
                 </div>
             </div>
             </div>
-        </div>
+          </div>
         </div>
         <div class="card-footer">
           <div class="row align-items-start">

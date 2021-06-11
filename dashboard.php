@@ -84,7 +84,33 @@
                         }
                         else{
                 ?>
-                            <a class="nav-link " style="color: #002f3f;"href="?p=toko-penjual">tokoku</a>
+                            <!-- pilih mau masuk toko yang mana -->
+                            <a class="nav-link " style="color: #002f3f;" href="#" data-bs-toggle="modal" data-bs-target="#tokoku">tokoku</a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="tokoku" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="staticBackdropLabel">Tokoku</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row row-cols-1 row-cols-md-4 g-4">
+                                            <div class="col">
+                                                <div class="card">
+                                                <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                                                <div class="card-body">
+                                                    <a class="card-title text-center" href="?p=toko-penjual">nama toko</a>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
     
                             <div class="btn-group">
@@ -92,8 +118,6 @@
                                     <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="?p=barang">tambah barang</a></li>
-                                    <li><a class="dropdown-item" href="?p=toko">ganti toko</a></li>
                                     <li><a class="dropdown-item" href="?p=toko">tambah toko</a></li>
                                     <li><a class="dropdown-item" href="?p=user">edit profil</a></li>
                                 </ul>

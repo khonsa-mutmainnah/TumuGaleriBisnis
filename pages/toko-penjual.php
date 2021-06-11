@@ -9,7 +9,8 @@
         <p class="card-text">disini nantinya akan jadi tagline toko</p>
         <p class="card-text">kecamatan, kota, provinsi (alamat toko)</p>
         <p class="card-text">jumlah produk</p>
-        <a class="btn" href="?p=toko">edit toko</a>
+        <a class="btn" href="?p=toko">tambah barang</a>
+        <a class="btn" href="?p=toko-edit">edit toko</a>
         <!-- Button trigger modal -->
         <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil</a>
         
