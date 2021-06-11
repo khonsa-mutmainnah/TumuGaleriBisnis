@@ -1,11 +1,15 @@
 <?php 
 
-require_once('./class/class.gambar_barang.php'); 		
+require_once('./class/class.gambar_barang.php'); 	
+require_once('./class/class.Barang.php'); 	
+
 $objGambarBarang = new GambarBarang(); 
+$objBarang = new Barang(); 
+$objBarangList = $objBarang->SelectAllBarang(); 
 
 if(isset($_POST['btnSubmit'])){	
     $objGambarBarang->id_barang = $_POST['id_barang'];
-    $objGambarBarang->gambar_barang = $_POST['gambar_barang'];
+    // $objGambarBarang->gambar_barang = $_POST['gambar_barang'];
 	$message = '';
 		
 	if(isset($_GET['id_barang'])){		
@@ -13,7 +17,7 @@ if(isset($_POST['btnSubmit'])){
 		$objGambarBarang->UpdateGambarBarang();
 	}
 	else{
-		$objBanner->AddGambarBarang();					
+		$objGambarBarang->AddGambarBarang();					
 	}	
 		
 	if(!$objGambarBarang->hasil){			
@@ -21,56 +25,36 @@ if(isset($_POST['btnSubmit'])){
 		die();
 	}
 	
-	$folder		= './upload/';
-		//type file yang bisa diupload
-	$file_type	= array('jpg','jpeg','png','gif','bmp');
-	$max_size	= 1000000; // 1MB	
-	$isErrorFile   = false;
-	$isSuccessUpload = true;
+	$lokasi_file = @$_FILES['foto']['tmp_name'];
+    $ukuran_file = @$_FILES['foto']['size'];
+    $type_file = @$_FILES['foto']['type'];
+    $folder = './upload/';
 	
-	if (!empty($_FILES['foto']['name'])) {	
-		$file_name	= $_FILES['foto']['name'];
-		$file_size	= $_FILES['foto']['size'];
-		//cari extensi file dengan menggunakan fungsi explode
-		$explode	= explode('.',$file_name);
-		$extensi	= $explode[count($explode)-1];
-		//check apakah type file sudah sesuai
-		if(!in_array($extensi,$file_type)){
-			$isErrorFile   = true;
-			$message .= 'Type file yang anda upload tidak sesuai';
-		}
-		if($file_size > $max_size){
-			$isErrorFile   = true;
-			$message .= 'Ukuran file melebihi batas maximum';
-		}	
-		
-		if($isErrorFile){
-			echo "<script> alert('$message'); </script>";
-		}
-		else{
-			$objGambarBarang->foto = $objGambarBarang->id_barang.'.'.$extensi;			
-			$isSuccessUpload = move_uploaded_file($_FILES['foto']['tmp_name'], $folder.$objGambarBarang->gambar_barang);	
-			
-			if(!$isSuccessUpload){
-				echo "<script> alert('Upload error'); </script>";
-				die();
-			}			
+	if ($type_file != "image/gif" and $type_file != "image/jpeg" and $type_file != "image/png") {
+		echo "<script>
+		alert('Gagal Menambahkan Foto, gambarnya tidak kompetible')
+		</script>";
+	}
+	
+	else {
+		//move photo to foto folder
+		$uniquesavename = time() . uniqid(rand());
+		$new_destination = $folder . $uniquesavename . ".png";
+		$succes_move = move_uploaded_file($lokasi_file, $new_destination);
+  
+		//berhasil pindah
+		if ($succes_move) {
+		  $objGambarBarang->gambar_barang = $new_destination;
+		  $objGambarBarang->AddGambarBarang();
+  
+		  if ($objUser->hasil) {
+			echo "<script> alert('Registrasi Berhasil'); </script>";
+			echo '<script> window.location="?p=gambarBarangList";</script>';
+		  }
 		}
 	}
-		
-	if($isSuccessUpload){					 
-		$objGambarBarang->UpdateGambarBarang();
-		if($objGambarBarang->hasil){			
-			echo "<script> alert('$objBanner->message'); </script>";
-			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php?p=bannerlist">'; 				
-		}
-		else
-			echo "<script> alert('Proses update gagal. Silakan ulangi'); </script>";			
-	}
-	else
-		echo "<script> alert('Proses upload gagal. Silakan ulangi'); </script>";			
-				
-}
+}			
+
 else if(isset($_GET['id_barang'])){	
 	$objGambarBarang->id = $_GET['id_barang'];	
 	$objGambarBarang->SelectOneGambarBarang();
@@ -82,15 +66,39 @@ else if(isset($_GET['id_barang'])){
       <form form action="" method="post" class="gambarBarang-form" enctype="multipart/form-data">
         <h4 class="title text-center fs-1 fw-bolder" >gambar barang</h4>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">id_barang</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="id barang" name="id_barang" value="<?php echo $objGambarBarang->id_barang; ?>">
+		<label for="exampleFormControlInput1" class="form-label">barang</label>
+                <select name="id_barang" class="form-control">
+                    <option value="">--Please select barang--</option>
+                        <?php
+                            foreach ($objBarangList as $kategori){
+                                if($objBarang->barang->id_barang == $barang->id_barang)
+                                    echo '<option selected="true" value='.$barang->id_barang.'>'.$barang->nama_barang.'</option>';
+                                else
+                                    echo '<option value='.$barang->id_barang.'>'.$barang->nama_barang.'</option>';
+                            }
+                        ?>
+                </select>
         </div>
-        <div class="col mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" id="formFile" name="my_image">
-        </div>
+        <div class="col">
+			<img id="image-preview" alt="image preview" class="rounded mx-auto ">
+			<div class="mb-3">
+				<label for="formFile" class="form-label">foto</label>
+				<input class="form-control" type="file" id="foto" name="foto" onchange="previewImage();">
+			</div>
+		</div>
+		<script>
+			function previewImage() {
+				document.getElementById("image-preview").style.display = "block";
+				var oFReader = new FileReader();
+				oFReader.readAsDataURL(document.getElementById("foto").files[0]);
+
+				oFReader.onload = function(oFREvent) {
+					document.getElementById("image-preview").src = oFREvent.target.result;
+				};
+			};
+		</script>
         <div class="col-lg-6 button-end">
-          <input class="btn btnsuccess" type="submit" name="submit" value="Upload">
+          <input class="btn btnsuccess" type="submit" name="btnSubmit" value="Upload">
         </div>
       </form>
     </div>

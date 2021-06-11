@@ -1,13 +1,13 @@
 <div class="container gambarBarangList">
     <div class="text-center">
         <h1 class="judul"><strong>gambar barang</strong></h1>
-        <a class="btn add" #id="addButton" href="index.php?p=gambar_barang">ADD</a>
+        <a class="btn add" #id="addButton" href="?p=gambar_barang">ADD</a>
     </div>
     <table class="table" id="tabelgambarbarang">
         <thead>
             <tr>
                 <th>NO.</th>
-                <th>ID kategori</th>
+                <th>nama barang</th>
                 <th>gambar barang</th>
                 <th>action</th>
             </tr>

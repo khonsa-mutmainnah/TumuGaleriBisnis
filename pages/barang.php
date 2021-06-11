@@ -7,7 +7,7 @@
 	$objTokoList= $objToko->SelectAllToko();
 
 	if (isset($_POST['btnSubmit'])) {
-		$objBarang->id_barang = $_POST['id_barang'];
+		// $objBarang->id_barang = $_POST['id_barang'];
 		$objBarang->nama_barang = $_POST['nama_barang'];
 		$objBarang->deskripsi= $_POST['deskripsi'];
 		$objBarang->harga = $_POST['harga'];

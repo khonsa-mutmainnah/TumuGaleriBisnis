@@ -181,8 +181,8 @@
                 </select>
             </div> -->
             <div class="col">
-            <label for="exampleFormControlInput1" class="form-label">kategori</label>
-            <select name="id_kategori" class="form-control">
+                <label for="exampleFormControlInput1" class="form-label">kategori</label>
+                <select name="id_kategori" class="form-control">
                     <option value="">--Please select kategori--</option>
                         <?php
                             foreach ($objKategoriList as $kategori){

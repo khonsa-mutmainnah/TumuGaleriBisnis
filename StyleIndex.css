@@ -194,12 +194,7 @@
 
 /* home css */
 .home .card{
-    margin-top: 50px;
-    
-}
-
-.home .row{
-    margin-top:5px;
+    margin-top: 30px;
 }
 
 .home .nav-link{
@@ -1072,74 +1067,43 @@
     background-color: #cdac81;
 }
 
-/* atas */
-
-.ufile{
-    text-align: center;
-}
-
-.ufile p{
-    margin-top: 10px;
-    font-weight: 350;
-    font-size: 16x;
-}
-
-.input{
-    /* margin-left: 120px; */
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.input h4{
-    margin-bottom: 40px;
+/* gambar barang */
+.gambar_barang .text-center h1{
     font-weight: 600;
-    text-align: center;
-    
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
-input[name=file] {
-    /* width: 246px;
-    height: 189px;
-    margin-left: 76px;
-    align-items: center;
-    background-color: white;
-    border-color: black;
-    border-width: medium; */
-    display: none;
+.gambar_barang .username{
+    margin-top: 15px;
 }
 
-
-.label-file{
-    width: 225px;
-    height: 230px;
-    background-color: white;
-    border-color: black;
-    border-style: solid;
-    border-width: medium;
-    border-radius: 50%;
+.gambar_barang .form-label{
+    margin-top: 15px;
 }
 
-/* bawah */
-
-
-
-.form-semua{
-    /* margin-left: 120px; */
-    font-weight: 600;
+.gambar_barang .gambarBarang-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+    box-shadow: 1px 1px 1px #cdac81;
 }
-
-.footer{
-    text-align: right;
-    margin-top: 50px;
-   
-   
-
+.gambar_barang .button-end input{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
-
-.footer input{
-    border-radius: 15px;
-    width: 192px;
-    height: 64px;
-    background-color: #212932;
-    color: #FFFDD6;
+.gambar_barang .button-end a{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.gambar_barang .btn:hover{
+    background-color: #cdac81;
 }

@@ -34,6 +34,7 @@
                             <p class="card-text">kecamatan, kota, provinsi</p>
                             <p class="card-text">@instagram_toko</p>
                             <p class="card-text">00000000</p>
+                            <a class="card-text" href="?p=Home">kunjungi toko</a>
                         </div>
                         </div>
                     </div>
