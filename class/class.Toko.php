@@ -41,11 +41,11 @@ class Toko extends Connection{
     }
 
     public function SelectAllToko(){
-        $sql="SELECT t.nama_toko, t.logo, t.tagline, t.no_telp, t.instagram, t.url_toko,
-        u.username , k.nama_kategori, l.kecamatan, l.kota, l.provinsi
-        FROM toko t JOIN user u ON u.id_user=t.id_user 
-        JOIN kategori k ON k.id_kategori=t.id_kategori
-        JOIN lokasi l ON l.id_lokasi=t.id_lokasi";
+        $sql="SELECT t.id_toko, t.nama_toko, t.logo, t.tagline, t.no_telp, t.instagram, t.url_toko,
+                u.username , k.nama_kategori, l.kecamatan, l.kota, l.provinsi, t.status
+                FROM toko t JOIN user u ON u.id_user=t.id_user 
+                    JOIN kategori k ON k.id_kategori=t.id_kategori
+                    JOIN lokasi l ON l.id_lokasi=t.id_lokasi";
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;
@@ -53,12 +53,12 @@ class Toko extends Connection{
         if(mysqli_num_rows($result)>0){
             while ($data=mysqli_fetch_Array($result)){
                 $objToko = new Toko();
-                // $objToko->id_toko = $data['id_toko'];
+                $objToko->id_toko = $data['id_toko'];
                 $objToko->nama_toko = $data['nama_toko'];
                 $objToko->logo = $data['logo'];
                 $objToko->tagline = $data['tagline'];
                 $objToko->no_telp = $data['no_telp'];
-                // $objToko->status = $data['status'];
+                $objToko->status = $data['status'];
                 $objToko->instagram = $data['instagram'];
                 $objToko->url_toko = $data['url_toko'];
                 $objToko->user->username = $data['username'];
@@ -101,10 +101,11 @@ class Toko extends Connection{
     public function UpdateToko(){
         $sql = "UPDATE toko
                 SET nama_toko='$this->nama_toko', id_lokasi=".$this->lokasi->id_lokasi.",
-                    tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', url_toko='$this->url_toko'
+                    tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', url_toko='$this->url_toko',
                     id_kategori=".$this->kategori->id_kategori.", id_user=".$this->user->id_user."
                 WHERE id_toko = '$this->id_toko'";
-        
+                $this->hasil=mysqli_query($this->connection, $sql);
+
         if($this->hasil)
             $this->message='toko berhasil diupdate!';
         else

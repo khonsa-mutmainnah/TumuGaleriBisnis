@@ -1,15 +1,15 @@
 <?php 
-require "connection.php";
+    require "connection.php";
 
-if (!isset($_SESSION)) {
-    session_start();
-}
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-$email = $_SESSION['email'];
-$nama = $_SESSION['nama'];
-$role = $_SESSION['role'];
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    $email = $_SESSION['email'];
+    $nama = $_SESSION['nama'];
+    $role = $_SESSION['role'];
 
 ?>
 <!DOCTYPE html>
@@ -84,7 +84,7 @@ $role = $_SESSION['role'];
                         }
                         else{
                 ?>
-                            <a class="nav-link " style="color: #002f3f;"href="?p=Home">tokoku</a>
+                            <a class="nav-link " style="color: #002f3f;"href="?p=toko-penjual">tokoku</a>
                             <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
     
                             <div class="btn-group">

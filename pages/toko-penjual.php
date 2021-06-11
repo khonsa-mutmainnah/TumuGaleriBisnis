@@ -1,56 +1,96 @@
-<div class="toko-penjual">
-            <div class="profil">
-                <div class="card mb-3 start-50 translate-middle-x" style="max-width: 1200px; margin-top:100px;">
-                    <div class="row g-0">
-                        <div class="col-md-4 " style="max-width: 200px">
-                            <img src="./gambar/aa.jpg" alt="gambar" style="width: 200px;">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="row g-0">
-                                <div class="col-md-5">
-                                    <div class="card-body">
-                                        <h5 class="card-title fs-2 fw-bolder">Nama toko</h5>
-                                        <p class="card-text fs-4">tagline toko</p>
-                                        <p class="card-text">Alamat Toko</p>
-                                        <p class="card-text"><small>Jumlah Produk</small></p>
-                                    </div>
-                                </div>
-                            <div class="col-md-7">
-                            <table class="table table-borderless table-responsive">
-                                <thead>
-                                    <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">hubungi toko</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><img src="./gambar/foto.jpeg" style="padding-top:0px;"></th>
-                                        <td>Jacob</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><img src="./gambar/foto.jpeg" style="padding-top:0px;"></th>
-                                        <td>Mark</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><img src="./gambar/foto.jpeg" style="padding-top:0px;"></th>
-                                        <td>Jacob</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+<div class="home">
+    <div class=container>
+    <div class="card text-center">
+        <div class="card-body">
+        <div class="text-center">
+            <img src="./gambar/web.png" class="rounded" alt="logo-toko" style="width: 110px;">
+        </div>
+        <h4 class="card-title" style="font-weight: 600; margin-top:7px;">Nama Toko</h4>
+        <p class="card-text">disini nantinya akan jadi tagline toko</p>
+        <p class="card-text">kecamatan, kota, provinsi (alamat toko)</p>
+        <p class="card-text">jumlah produk</p>
+        <a class="btn" href="?p=toko">edit toko</a>
+        <!-- Button trigger modal -->
+        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil</a>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title text-center" id="staticBackdropLabel">Profil Penjual</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="text-center">
+                <img src="./gambar/aa.jpg" class="rounded" alt="logo-toko" style="width: 110px;">
+                <h3>Nama pemilik toko</h3>
+                <p>0888888888</p>
+                <p>oca@email.com</p>
+                <p>Bandung</p>
+                </div>
                 </div>
             </div>
-        </div>
-        <div class="barang">
-            <div class="card" id="toko" style="width: 18rem;">
-                <img src="./gambar/aa.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nama Barang</h5>
-                    <p class="card-text">deskripsi barang.</p>
-                    <a href=""><img class="pensil" src="./gambar/pensil.png" style="width: 30px;"></a>
-                </div>
             </div>
         </div>
+        </div>
+        <div class="card-footer">
+          <div class="row align-items-start">
+              <div class="col">
+              <img src="./gambar/telfon.png" style="padding-top:0px; width:20px;">
+              <p>088888888888</p>
+              </div>
+              <div class="col">
+              <img src="./gambar/ig.png" style="padding-top:0px; width:20px;">
+              <p>@nama_instagram</p>
+              </div>
+              <div class="col">
+              <img src="./gambar/web.png" style="padding-top:0px; width:20px;">
+              <p>www.web-toko.com</p>
+              </div>
+          </div>
+        </div>
+    </div>
+    </div>
+
+
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card">
+          <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">nama barang</h5>
+              <p class="card-text">di sini nantinya jadi deskripsi barang. isinya bisa pengertian barang atau apa apa yang terkait dengan barang tersebut.</p>
+              <p class="card-text text-break">harga barang</p>
+              <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
+              <p class="card-text">00000000</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- jajs -->

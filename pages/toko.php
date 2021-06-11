@@ -17,12 +17,12 @@
         $objToko->nama_toko = $_POST['nama_toko'];
         $objToko->tagline = $_POST['tagline'];
         $objToko->no_telp = $_POST['no_telp'];
-        $objToko->status = 1;
+        $objToko->status = 0;
         $objToko->instagram = $_POST['instagram'];
         $objToko->url_toko = $_POST['url_toko'];
-        $objToko->id_user = $_POST['id_user'];
-        $objToko->id_lokasi = $_POST['id_lokasi'];
-        $objToko->id_kategori = $_POST['id_kategori'];
+        $objToko->user->id_user = $_POST['id_user'];
+        $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
+        $objToko->kategori->id_kategori = $_POST['id_kategori'];
         // $objToko->user->username = $_POST['username'];
         // $objToko->lokasi->kecamatan = $_POST['kecamatan'];
         // $objToko->lokasi->kota = $_POST['kota'];
@@ -152,36 +152,9 @@
                         ?>
                 </select>
             </div>
-            <!-- <div class="col">
-            <label for="exampleFormControlInput1" class="form-label">kota</label>
-            <select name="id_lokasi" class="form-control">
-                    <option value="">--Please select kota--</option>
-                        <?php
-                            foreach ($lokasiList as $lokasi){
-                                if($objLokasi->lokasi->id_lokasi == $lokasi->id_lokasi)
-                                    echo '<option selected="true" value='.$lokasi->id_lokasi.'>'.$lokasi->kota.'</option>';
-                                else
-                                    echo '<option value='.$lokasi->id_lokasi.'>'.$lokasi->kota.'</option>';
-                            }
-                        ?>
-                </select>
-            </div> -->
-            <!-- <div class="col">
-            <label for="exampleFormControlInput1" class="form-label">provinsi</label>
-            <select name="id_lokasi" class="form-control">
-                    <option value="">--Please select kota--</option>
-                        <?php
-                            foreach ($lokasiList as $lokasi){
-                                if($objLokasi->lokasi->id_lokasi == $lokasi->id_lokasi)
-                                    echo '<option selected="true" value='.$lokasi->id_lokasi.'>'.$lokasi->provinsi.'</option>';
-                                else
-                                    echo '<option value='.$lokasi->id_lokasi.'>'.$lokasi->provinsi.'</option>';
-                            }
-                        ?>
-                </select>
-            </div> -->
             <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">kategori</label>
+                <?php echo $objToko->kategori->id_kategori ?>
                 <select name="id_kategori" class="form-control">
                     <option value="">--Please select kategori--</option>
                         <?php
@@ -192,6 +165,17 @@
                                     echo '<option value='.$kategori->id_kategori.'>'.$kategori->nama_kategori.'</option>';
                             }
                         ?>
+                </select>
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">status</label>
+                <?php echo $objToko->status ?>
+                <select name="status" class="form-control">
+                    <option value="">--Please select status--</option>
+                    <option value="">setujui</option>
+                    <option value="">tidak disetujui</option>
+                    <option value="">tidak disetujui</option>
+                    
                 </select>
             </div>
             <div class="col-lg-6 button-end">
