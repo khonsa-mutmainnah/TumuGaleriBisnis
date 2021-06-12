@@ -7,8 +7,9 @@
     
 
     $objToko= new Toko();
+    $objToko->id_toko=isset($_GET['id_toko']);
     $objUser= new User();
-    $objUser->id_user=$id_user;
+    $objToko->user->id_user=isset($_GET['id_user']);
     $objUserList= $objUser->SelectAllUser();
     $objLokasi= new Lokasi();
     $objLokasiList= $objLokasi->SelectAllLokasi();
@@ -122,21 +123,10 @@
                                     }
                                 ?>
                         </select>
-                        <span id="passwordHelpInline" class="form-text">kecamatan sudah terhubung dengan kota dan provinsi.</span>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">status</label>
-                <?php echo $objToko->status ?>
-                <select name="status" class="form-control">
-                    <option value="">--Please select status--</option>
-                    <option value="">setujui</option>
-                    <option value="">tidak disetujui</option>
-                    <option value="">tidak disetujui</option>
-                </select>
-            </div>
-            <div class="col-lg-6 button-end">
+            <div class="col-lg-12 button-end">
                 <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
             </div>
         </form>

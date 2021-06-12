@@ -1,4 +1,4 @@
-<div class="home">
+<div class="toko-penjual">
     <div class=container>
     <div class="card text-center">
         <div class="card-body">
@@ -9,7 +9,7 @@
         <p class="card-text">disini nantinya akan jadi tagline toko</p>
         <p class="card-text">kecamatan, kota, provinsi (alamat toko)</p>
         <p class="card-text">jumlah produk</p>
-        <a class="btn" href="?p=toko">tambah barang</a>
+        <a class="btn" href="?p=barang">tambah barang</a>
         <a class="btn" href="?p=toko-edit">edit toko</a>
         <!-- Button trigger modal -->
         <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil</a>
@@ -87,6 +87,7 @@
               <p class="card-text text-break">harga barang</p>
               <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
               <p class="card-text">00000000</p>
+              <a class="btn card-text d-grid gap-2" href="?p=barang">edit barang</a>
             </div>
         </div>
       </div>

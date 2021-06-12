@@ -12,7 +12,7 @@
         <!-- Button trigger modal -->
         <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil penjual</a>
         
-        <!-- Modal -->
+        <!-- Modal profil penjual -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

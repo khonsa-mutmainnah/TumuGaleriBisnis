@@ -60,7 +60,7 @@ if (isset($_SESSION["role"])) {
                 <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
                         <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=register-user">register</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=register">register</a>
                     </div>
                 </div>
             </div>

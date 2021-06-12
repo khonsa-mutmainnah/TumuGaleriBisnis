@@ -88,6 +88,7 @@
                             <a class="nav-link " style="color: #002f3f;" href="#" data-bs-toggle="modal" data-bs-target="#tokoku">tokoku</a>
 
                             <!-- Modal -->
+                            <!-- ini toko yang dipunya sama si user ini, kalau dia gapunya toko, arahin ke tambah toko -->
                             <div class="modal fade" id="tokoku" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
@@ -97,14 +98,12 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="row row-cols-1 row-cols-md-4 g-4">
-                                            <div class="col">
-                                                <div class="card">
-                                                <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
-                                                <div class="card-body">
-                                                    <a class="card-title text-center" href="?p=toko-penjual">nama toko</a>
+                                                <div class="col">
+                                                    <div class="card" style="background-color: #e4edea;">
+                                                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                                                        <a class="btn nama-toko-dash" style="font-size: 10px; margin-top:0px;" href="?p=toko-penjual">nama toko</a>
+                                                    </div>
                                                 </div>
-                                                </div>
-                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -119,7 +118,8 @@
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="?p=toko">tambah toko</a></li>
-                                    <li><a class="dropdown-item" href="?p=user">edit profil</a></li>
+                                    <li><a class="dropdown-item" href="?p=user-edit">edit profil</a></li>
+                                    <li><a class="dropdown-item" href="?p=reset-pw-form">ubah password</a></li>
                                 </ul>
                             </div>
                 <?php
@@ -153,7 +153,7 @@
                 }
             } 
             else {
-                include "./pages/Home.php";
+                include "./pages/GaleriBisnis.php";
             }
         ?>
     </div>

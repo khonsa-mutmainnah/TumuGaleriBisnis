@@ -18,6 +18,10 @@
     margin-right: 20px;
 }
 
+.card-body .btn .nama-toko-dash{
+    font-size: 8px;
+    background-color: #e4edea;
+}
 /* log in css*/
 
 .log-in .login-form{
@@ -219,7 +223,7 @@
     border: none;
 }
 .home .card-text{
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .home #foot{
@@ -238,6 +242,7 @@
 .home .barang p{
     font-size: 10px;
 }
+
 /* Pengunjung css */
 .Pengunjung .atas{
     width: 1200px;
@@ -325,29 +330,6 @@
     margin-bottom: 15px;
     margin-left: 30px;
 }
-
-/* .Pengunjung .col-sm p{
-    color: #212932;
-    text-align: left;
-    margin-left: 30px;
-    text-transform: capitalize;
-    font-weight: 500;
-}
-
-.Pengunjung .col-sm h3{
-    text-align: center;
-    color: #212932;
-    font-weight: 700;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-.Pengunjung .satu-produk{
-    background-color: #D9DFDB;
-    margin-left: 25px;
-    margin-bottom: 50px;
-    border-radius: 30px;
-    width: 300px; 
-}*/
 
 .Pengunjung .barang{
     margin-top: 370px;
@@ -773,6 +755,8 @@
 .galeri-bisnis .nav-link{
     margin-top: 40px;
     border: none;
+    background-color: #e4edea;
+    color:#002f3f;
 }
 
 .galeri-bisnis .nav-link:hover{
@@ -792,152 +776,58 @@
     font-size: 10px;
 }
 
+.galeri-bisnis .tab-content a{
+    font-size: 8px;
+    background-color: #e4edea;
+}
+
 .galeri-bisnis .card{
     border-radius: 20px;
     margin-top: 10px;
     text-align: justify;
 }
   
-  /*toko pengunjung*/
-  .toko-pengunjung .card{
-      background-color: #D9DFDB;
-  }
 
-  .toko-pengunjung .table{
-      margin-top: 10px;
-  }
-  .toko-pengunjung .col-md-7 img{
-    padding-top: 20px;
-    width: 20px;
-  }
-
-  .toko-pengunjung .row{
-    margin-left: 10px;
-  }
-
-.toko-pengunjung .col-sm .gambar-toko{
-    width: 80%;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    margin-left: 30px;
-}
-
-.toko-pengunjung .col-sm p{
-    color: #212932;
-    text-align: left;
-    margin-left: 10px;
-    text-transform: capitalize;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.toko-pengunjung .col-sm h3{
-    text-align: center;
-    color: #212932;
-    font-weight: 700;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-.toko-pengunjung .satu-produk{
-    background-color: #D9DFDB;
-    margin-left: 5px;
-    margin-bottom: 50px;
-    padding-bottom: 15px;
-    border-radius: 30px;
-    width: 180px;
-}
-
-.toko-pengunjung .barang{
-    margin-top: 30px;
-    position: absolute;
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 1000px;
-}
-
-.toko-pengunjung #toko{
-    margin-left: 30px;
-    width: 300px;
-    height: max-content;
-}
-
-.toko-pengunjung .barang{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/*toko penjual*/
+/* toko-penjual css */
 .toko-penjual .card{
-    background-color: #D9DFDB;
+    margin-top: 30px;
 }
 
-.toko-penjual .table{
+.toko-penjual .nav-link{
+    margin-right: 10px;
+}
+.toko-penjual .nav-link:hover{
+    background-color: #cdac81;
+}
+.toko-penjual .text-center .btn{
+    background-color: #e4edea;
+    color: #002f3f;
+    font-size: 9px;
+}
+.toko-penjual .text-center .btn:hover{
+    background-color: #cdac81;
+    color: #002f3f;
+    border: none;
+}
+.toko-penjual .card-text{
+    font-size: 10px;
+}
+
+.toko-penjual #foot{
+    background-color: #cdac81;
+    color: #002f3f;
+    padding: 2px;
+    margin-top:50px;
+    font-size: small;
+    font-weight: 500;
+}
+
+.toko-penjual .card-footer{
     margin-top: 10px;
 }
-.toko-penjual .col-md-7 img{
-  padding-top: 20px;
-  width: 20px;
-}
 
-.toko-penjual .row{
-  margin-left: 10px;
-}
-
-.toko-penjual .col-sm .gambar-toko{
-  width: 80%;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-}
-
-.toko-penjual .col-sm p{
-  color: #212932;
-  text-align: left;
-  margin-left: 10px;
-  text-transform: capitalize;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.toko-penjual .col-sm h3{
-  text-align: center;
-  color: #212932;
-  font-weight: 700;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-}
-.toko-penjual .satu-produk{
-  background-color: #D9DFDB;
-  margin-left: 5px;
-  margin-bottom: 50px;
-  padding-bottom: 15px;
-  border-radius: 30px;
-  width: 180px;
-}
-
-.toko-penjual .barang{
-  margin-top: 30px;
-  position: absolute;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: 1000px;
-}
-
-.toko-penjual  #toko{
-  margin-left: 30px;
-  width: 300px;
-  height: max-content;
-}
-
-.toko-penjual  .barang{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.toko-penjual .barang p{
+    font-size: 10px;
 }
 
 /* toko list */
