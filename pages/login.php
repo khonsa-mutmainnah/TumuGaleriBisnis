@@ -6,12 +6,13 @@
     $objUser = new User();
     $objUser->hasil = true;
     $objUser->ValidateEmail($email);
+    // $user->resetPass();
 
     if($objUser->hasil){
       $ismatch = password_verify($password, $objUser->password);
 
       if($ismatch){
-        if (!isset($_SESSION)) {
+      if (!isset($_SESSION)) {
         session_start();
         }
         $_SESSION["username"]= $objUser->usename;
