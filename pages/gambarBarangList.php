@@ -26,8 +26,8 @@
                 foreach ($arrayResult as $dataGambarBarang){
                     echo '<tr>';
                     echo '<td>'.$no.'</td>';
-                    echo '<td>'.$dataGambarBarang->id_barang.'</td>';
-                    echo '<td>'.$dataGambarBarang->gambar_barang.'</td>';
+                    echo '<td>'.$dataGambarBarang->barang->nama_barang.'</td>';
+                    echo '<td>'.$dataGambarBarang->lokasi_gambar.'</td>';
                     echo '<td> <a class="btn"
                     href="index.php?p=gambar_barang&id_barang='.$dataGambarBarang->id_barang.'"> Edit </a> |
                     <a class="btn" 

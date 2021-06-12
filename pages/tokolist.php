@@ -63,9 +63,10 @@
                     href="?p=toko&id_toko='.$dataToko->id_toko.'"> Edit </a> |
                     <a class="btn btn-danger" 
                     href="?p=delete-toko&id_toko='.$dataToko->id_toko.'" 
-                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
+                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a>| 
+                    <a class="btn btn-warning"
+                    href="?p=toko-logo&id_toko='.$dataToko->id_toko.'"> upload logo </a> </td>';
                     echo '</tr>';
-                    $no++;
                 }
             }
         ?>

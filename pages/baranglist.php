@@ -35,8 +35,8 @@
 				echo "<td>" . $dataBarang->variasi . "</td>";
                 echo "<td>" . $dataBarang->toko->nama_toko . "</td>";
                 echo '<td>
-                <a class="btn" href="index.php?p=barang&id_barang=' . $dataBarang->id_barang . '"> Edit </a> |
-                <a class="btn" href="index.php?p=delete-barang&id_barang=' . $dataBarang->id_barang . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
+                <a class="btn" href="?p=barang&id_barang=' . $dataBarang->id_barang . '"> Edit </a> |
+                <a class="btn" href="?p=delete-barang&id_barang=' . $dataBarang->id_barang . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
                             echo '</tr>';
                 $no++;
             }

@@ -90,7 +90,8 @@ include 'class.Toko.php';
 
 			if (mysqli_num_rows($resultOne)==1) {
 				$this->hasil = true;
-				$data = mysql_fetch_assoc($resultOne);
+				$data = mysqli_fetch_assoc($resultOne);
+
 				$this->id_barang = $data['id_barang'];
 				$this->nama_barang = $data['nama_barang'];
 				$this->deskripsi = $data['deskripsi'];

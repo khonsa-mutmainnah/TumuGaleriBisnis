@@ -111,6 +111,18 @@ class User extends Connection
         }
     }
 
+    public function UpdateFotoUser(){
+        $sql = "UPDATE user
+                SET foto='$this->foto'
+                WHERE id_user='$this->id_user'";
+                $this->hasil = mysqli_query($this->connection, $sql);
+        
+        if($this->hasil)
+            $this->message='toko berhasil diupdate!';
+        else
+            $this->message='toko gagal diupdate';
+    }
+
     public function ValidateEmail($email){
 
         $sql = "SELECT * FROM user WHERE email = '$email'";

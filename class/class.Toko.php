@@ -116,6 +116,7 @@ class Toko extends Connection{
         $sql = "UPDATE toko
                 SET logo='$this->logo'
                 WHERE id_toko='$this->id_toko'";
+                $this->hasil = mysqli_query($this->connection, $sql);
         
         if($this->hasil)
             $this->message='toko berhasil diupdate!';
@@ -154,7 +155,5 @@ class Toko extends Connection{
         else
             $this->message='data gagal dihapus';
     }
-
-    
 }
 ?>

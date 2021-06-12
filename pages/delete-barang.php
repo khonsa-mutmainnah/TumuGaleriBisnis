@@ -5,7 +5,7 @@
 		$objBarang->id_barang = $_GET['id_barang'];
 		$objBarang->DeleteBarang();
 		echo "<script> alert('$objBarang->message'); </script>";
-		echo "<script>window.location = 'index.php?p=baranglist'</script>";
+		echo "<script>window.location = '?p=baranglist'</script>";
 	}
 	else{
 		echo '<script> window.history.back() </script>';

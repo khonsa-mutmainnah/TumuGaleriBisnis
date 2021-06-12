@@ -5,6 +5,9 @@
     color: #002f3f;
 }
 
+.all table{
+    font-size: 12px;
+}
 .navbar{
     background-color: #e4edea;
     top: 10px;

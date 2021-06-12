@@ -37,15 +37,16 @@
                 echo '<td class="text-break">'.$dataUser->email .'</td>';
                 echo '<td class="text-break">'.$dataUser->kota .'</td>';
                 echo '<td class="text-break">'.$dataUser->instagram_user .'</td>';
-                echo "<td ><img src='".$dataUser->foto."' width='50px'/></td>";
+                echo "<td ><img src='./upload/user/".$dataUser->foto."' width='50px'/></td>";
                 echo '<td class="text-break">'.$dataUser->role .'</td>';
-                echo '<td>
-                <a class="btn"
-                href="?p=user&id_user=' . $dataUser->id_user . '"> Edit </a> 
-                <a class="btn"
-                href="?p=delete-user&id_user=' . $dataUser->id_user . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
-                echo '</tr>';
-                $no++;
+                echo '<td> <a class="btn btn-warning"
+                    href="?p=user&id_user='.$dataUser->id_user.'"> Edit </a> |
+                    <a class="btn btn-danger" 
+                    href="?p=delete-user&id_user='.$dataUser->id_user.'" 
+                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a>| 
+                    <a class="btn btn-warning"
+                    href="?p=user-foto&id_user='.$dataUser->id_user.'"> upload logo </a> </td>';
+                    echo '</tr>';
             }
         }
         ?>
