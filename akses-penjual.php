@@ -12,7 +12,8 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-else if ($_SESSION['role'] != 'admin') {
+//if level is not admin's level
+else if ($_SESSION['role'] != 'penjual') {
     echo "<script>
           alert('Maaf, Anda Tidak Mempunyai Akses Ke Halaman Ini')
           window.location = 'dashboard.php';

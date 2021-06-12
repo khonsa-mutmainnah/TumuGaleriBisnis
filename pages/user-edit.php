@@ -1,9 +1,13 @@
 <?php
 require_once('./class/class.User.php');
 
+
 if (isset($_POST["btnSubmit"])) {
   $inputemail = $_POST["email"];
   $objUser = new User();
+  $objUser->id_user=isset($_GET['id_user']);
+  $objUser->id_user = $_GET['id_user'];
+  $objUser->SelectOneUser();
   $objUser->ValidateEmail($inputemail);
 
   //kalau terdaftar
@@ -44,7 +48,7 @@ if (isset($_POST["btnSubmit"])) {
         $objUser->role = 'penjual';
         $objUser->instagram_user = $_POST['instagram_user'];
         $objUser->foto = $new_destination;
-        $objUser->AddUser();
+        $objUser->UpdateUser();
 
         if ($objUser->hasil) {
           echo "<script> alert('Registrasi Berhasil'); </script>";

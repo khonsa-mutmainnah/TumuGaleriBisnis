@@ -22,7 +22,7 @@
       
       echo "<script> alert('$objUser->message'); </script>";
       if($objUser->hasil){
-        echo '<script> window.location = "index.php?p=userlist"; </script>';
+        echo '<script> window.location = "?p=userlist"; </script>';
       }
     }
     else if(isset($_GET['id_user'])){

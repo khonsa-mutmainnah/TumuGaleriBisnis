@@ -1,15 +1,15 @@
 <?php 
-require "connection.php";
+    require "connection.php";
 
-if (!isset($_SESSION)) {
-    session_start();
-}
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-$email = $_SESSION['email'];
-$nama = $_SESSION['nama'];
-$role = $_SESSION['role'];
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    $email = $_SESSION['email'];
+    $nama = $_SESSION['nama'];
+    $role = $_SESSION['role'];
 
 ?>
 <!DOCTYPE html>
@@ -84,7 +84,32 @@ $role = $_SESSION['role'];
                         }
                         else{
                 ?>
-                            <a class="nav-link " style="color: #002f3f;"href="?p=Home">tokoku</a>
+                            <!-- pilih mau masuk toko yang mana -->
+                            <a class="nav-link " style="color: #002f3f;" href="#" data-bs-toggle="modal" data-bs-target="#tokoku">tokoku</a>
+
+                            <!-- Modal -->
+                            <!-- ini toko yang dipunya sama si user ini, kalau dia gapunya toko, arahin ke tambah toko -->
+                            <div class="modal fade" id="tokoku" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="staticBackdropLabel">Tokoku</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row row-cols-1 row-cols-md-4 g-4">
+                                                <div class="col">
+                                                    <div class="card" style="background-color: #e4edea;">
+                                                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
+                                                        <a class="btn nama-toko-dash" style="font-size: 10px; margin-top:0px;" href="?p=toko-penjual">nama toko</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
     
                             <div class="btn-group">
@@ -92,10 +117,9 @@ $role = $_SESSION['role'];
                                     <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="?p=barang">tambah barang</a></li>
-                                    <li><a class="dropdown-item" href="?p=toko">ganti toko</a></li>
                                     <li><a class="dropdown-item" href="?p=toko">tambah toko</a></li>
-                                    <li><a class="dropdown-item" href="?p=user">edit profil</a></li>
+                                    <li><a class="dropdown-item" href="?p=user-edit">edit profil</a></li>
+                                    <li><a class="dropdown-item" href="?p=reset-pw-form">ubah password</a></li>
                                 </ul>
                             </div>
                 <?php
@@ -129,7 +153,7 @@ $role = $_SESSION['role'];
                 }
             } 
             else {
-                include "./pages/Home.php";
+                include "./pages/GaleriBisnis.php";
             }
         ?>
     </div>
