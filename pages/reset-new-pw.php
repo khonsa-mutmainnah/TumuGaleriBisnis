@@ -16,20 +16,18 @@
 
 <?php
   require_once("./class/class.User.php");
-  // $id_user = $_GET['id_user'];
+  $id_user = $_GET['id_user'];
   if(isset($_POST['btnSubmit'])){
 
-  $newpass = $_POST['newpass'];
-  $repass = $_POST['repass'];
-  // $id_user = $_POST['id_user'];
+      $newpass = $_POST['newpass'];
+      $repass = $_POST['repass'];
+      // $id_user = $_POST['id_user'];
 
 //is data empty
-    if (empty($newpass) | empty($repass)) {
-      echo "Gagal Disini";
-        // echo "<script>
-        // alert('Gagal Memperbaharui User, Pastikan semua data diiisi')
-        // window.location = 'index.php?p=login&id_user=$id_user';
-        // </script>";
+    if (empty($newpass) | empty($repass) | empty($id_user)) {
+      echo "<script> alert('Password belum diisi')
+      window.location = 'http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/index.php?p=reset-new-pw&id_user=$id_user';
+      </script>";
     }
 
 //not empty
@@ -38,7 +36,7 @@
         if ($newpass == $repass) {
 
             $user = new User();
-            // $user->id_user = $id_user;
+            $user->id_user = $id_user;
             $user->password = $newpass;
             $hasil = $user->resetPass();
 
@@ -46,7 +44,7 @@
             if ($hasil == "berhasil mengedit") {
                 echo "<script>
             alert('Berhasil memperbaharui Password')
-            window.location = 'index.php?p=login';
+            window.location = '?p=login';
             </script>";
             }
 
@@ -55,18 +53,18 @@
             //     echo "<script> alert('Gagal Memperbaharui Password, Pastikan semua data benar')
             // window.location = 'index.php?p=reset-new-pw';
             // </script>";
-            // }
+            // }  
         }
         else {
           echo "<script> alert('Password Gagal Diperbaharui')
-      window.location = 'index.php?p=reset-new-pw';
+      window.location = 'http://localhost/kuliah/Final%20Project/TumuGaleriBisnis/index.php?p=reset-new-pw&id_user=$id_user';
       </script>";
       }
     }
 }
 
 ?>
-    <div class="container reset col-lg-4">
+<div class="container reset col-lg-4">
     <form class ="reset-form" action="" method = "post">
       <div class="text-center logol">
         <img src="./gambar/logo.png" class="rounded" alt="...">

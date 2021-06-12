@@ -38,7 +38,7 @@
     background-color: #e4edea;
 }
 .log-in #submit-login:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 .log-in .text-center h2{
@@ -85,7 +85,8 @@
     font-weight: 700;
 }
 .log-in .btn:hover{
-    background-color: #cdac81;
+    color: #e4edea;
+    background-color: #185adb;
 }
 
 /* reset password css*/
