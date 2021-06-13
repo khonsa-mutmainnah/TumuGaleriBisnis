@@ -155,7 +155,6 @@
 .register-user .text-center h1{
     font-weight: 600;
     color: #e4edea;
-    text-transform: uppercase;
     letter-spacing: 10px;
 }
 
@@ -240,111 +239,11 @@
 }
 
 .home .card-footer{
-    margin-top: 10px;
+    margin-top: 3px;
 }
 
 .home .barang p{
     font-size: 10px;
-}
-
-/* Pengunjung css */
-.Pengunjung .atas{
-    width: 1200px;
-    background-color: #D9DFDB;
-    margin-top: 120px;
-    margin-left: 80px;
-    border-radius: 15px;
-    position: absolute;
-}
-
-.Pengunjung .atas img{
-    border-radius:50%; 
-    height: 110px;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-   
-}
-
-.Pengunjung .atas h3{
-    position: absolute;
-    margin-top: 25px;
-    margin-left: 200px;
-    font-weight: 800;
-    font-size: 35px;
-}
-
-.Pengunjung .tagline-profil{
-    position: absolute;
-    margin-left: 200px;
-    margin-top: 100px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.Pengunjung .kategori{
-    position: absolute;
-    margin-left: 522px;
-    margin-top: 100px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.Pengunjung .jml-produk{
-    position: absolute;
-    margin-left: 500px;
-    margin-top: 40px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.Pengunjung .bawah{
-    width: 1200px;
-    background-color: #C4C4C4;
-    margin-top: 260px;
-    margin-left: 80px;
-    position: absolute;
-}
-
-.Pengunjung .bawah img{
-    width: 20px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
-.Pengunjung .bawah p{
-    position: absolute;
-    margin-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 12px;
-}
-
-.Pengunjung .p-3{
-    margin-top: 350px;
-    margin-left: 0px;
-}
-
-.Pengunjung .col{
-    width: 1000px;
-}
-
-.Pengunjung .col-sm .gambar-toko{
-    width: 80%;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    margin-left: 30px;
-}
-
-.Pengunjung .barang{
-    margin-top: 370px;
-    position: absolute;
-    width: 1349px;
-}
-
-.Pengunjung .col-sm .pensil{
-    width: 30px;
-    margin-left: 250px;
-    margin-bottom: 20px;
 }
 
 /* user css */
@@ -355,12 +254,8 @@
     letter-spacing: 10px;
 }
 
-.user .username{
-    margin-top: 15px;
-}
-
-.user .form-label{
-    margin-top: 15px;
+.user .col{
+    margin-top: 25px;
 }
 
 .user .user-form{
@@ -368,28 +263,17 @@
     padding: 50px 60px;
     margin-top: 15vh;
     margin-bottom: 16vh;
-    
     background-color: #002f3f;
     color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
 }
 
-.user .logol img{
-    width: 80px;
-    margin-top: -30px;
-    margin-bottom: 10px;
-}
-.user .button-end input{
+.user .button-end .btn{
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
+}
+.user .button-end{
     margin-top: 40px;
-    margin-bottom: 10px;
-}
-.user .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
 }
 .user .btn:hover{
     background-color: #cdac81;
@@ -421,9 +305,263 @@
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
+    font-size: 13px;
     border-color: #002f3f;
+    margin: 2px;
 }
 .userlist .btn:hover{
+    background-color: #cdac81;
+}
+
+/* user-foto */
+.user-foto .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.user-foto .col{
+    margin-top: 25px;
+}
+
+.user-foto .user-foto-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+}
+
+.user-foto .button-end .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.user-foto .button-end{
+    margin-top: 40px;
+}
+.user-foto .btn:hover{
+    background-color: #cdac81;
+}
+
+/* toko */
+.toko .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.toko .col{
+    margin-top: 25px;
+}
+
+.toko .toko-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+}
+
+.toko .button-end .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.toko .button-end{
+    margin-top: 40px;
+}
+.toko .btn:hover{
+    background-color: #cdac81;
+}
+
+/* toko-penjual css */
+.toko-penjual .card{
+    margin-top: 30px;
+}
+
+.toko-penjual .nav-link{
+    margin-right: 10px;
+}
+.toko-penjual .nav-link:hover{
+    background-color: #cdac81;
+}
+.toko-penjual .text-center .btn{
+    background-color: #e4edea;
+    color: #002f3f;
+    font-size: 9px;
+}
+.toko-penjual .text-center .btn:hover{
+    background-color: #cdac81;
+    color: #002f3f;
+    border: none;
+}
+.toko-penjual .card-text{
+    font-size: 10px;
+}
+
+.toko-penjual #foot{
+    background-color: #cdac81;
+    color: #002f3f;
+    padding: 2px;
+    margin-top:50px;
+    font-size: small;
+    font-weight: 500;
+}
+
+.toko-penjual .card-footer{
+    margin-top: 10px;
+}
+
+.toko-penjual .barang p{
+    font-size: 10px;
+}
+
+/* toko list */
+.tokolist .judul{
+    color: #002f3f;
+    margin-top: 40px;
+}
+
+.tokolist  .add{
+    margin-top: 10px;
+}
+
+.tokolist .table{
+    margin-top: 50px;
+}
+
+.tokolist .table th{
+    color:#002f3f;
+}
+
+.tokolist td{
+    color:#002f3f;
+}
+
+.tokolist tr{
+    color:#002f3f;
+}
+
+.tokolist .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #002f3f;
+    margin: 2px;
+}
+
+.tokolist .btn:hover{
+    background-color: #cdac81;
+}
+
+/* toko-logo */
+.toko-logo .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.toko-logo .col{
+    margin-top: 25px;
+}
+
+.toko-logo .toko-logo-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+}
+
+.toko-logo .button-end .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.toko-logo .button-end{
+    margin-top: 40px;
+}
+.toko-logo .btn:hover{
+    background-color: #cdac81;
+}
+
+/* barang */
+.barang .text-center h1{
+    font-weight: 600;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.barang .col{
+    margin-top: 25px;
+}
+
+.barang .barang-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+}
+
+.barang .button-end .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
+.barang .button-end{
+    margin-top: 40px;
+}
+.barang .btn:hover{
+    background-color: #cdac81;
+}
+
+/* barang list */
+.baranglist .judul{
+    color: #002f3f;
+    margin-top: 40px;
+}
+
+.baranglist  .add{
+    margin-top: 10px;
+}
+
+.baranglist .table{
+    margin-top: 50px;
+}
+
+.baranglist .table th{
+    color:#002f3f;
+}
+
+.baranglist td{
+    color:#002f3f;
+}
+
+.baranglist tr{
+    color:#002f3f;
+}
+
+.baranglist .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #002f3f;
+    margin: 2px;
+}
+
+.baranglist .btn:hover{
     background-color: #cdac81;
 }
 
@@ -435,12 +573,8 @@
     letter-spacing: 10px;
 }
 
-.lokasi .username{
-    margin-top: 15px;
-}
-
-.lokasi .form-label{
-    margin-top: 15px;
+.lokasi .col{
+    margin-top: 25px;
 }
 
 .lokasi .lokasi-form{
@@ -450,20 +584,18 @@
     margin-bottom: 16vh;
     background-color: #002f3f;
     color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
 }
-.lokasi .button-end input{
+
+.lokasi .button-end .btn{
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
+}
+
+.lokasi .button-end{
     margin-top: 40px;
-    margin-bottom: 10px;
 }
-.lokasi .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-}
+
 .lokasi .btn:hover{
     background-color: #cdac81;
 }
@@ -477,10 +609,20 @@
 .lokasilist  .add{
     margin-top: 10px;
 }
+
 .lokasilist .table{
     margin-top: 50px;
 }
+
 .lokasilist .table th{
+    color:#002f3f;
+}
+
+.lokasilist td{
+    color:#002f3f;
+}
+
+.lokasilist tr{
     color:#002f3f;
 }
 
@@ -488,8 +630,11 @@
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
+    font-size: 13px;
     border-color: #002f3f;
+    margin: 2px;
 }
+
 .lokasilist .btn:hover{
     background-color: #cdac81;
 }
@@ -502,12 +647,8 @@
     letter-spacing: 10px;
 }
 
-.kategori .username{
-    margin-top: 15px;
-}
-
-.kategori .form-label{
-    margin-top: 15px;
+.kategori .col{
+    margin-top: 25px;
 }
 
 .kategori .kategori-form{
@@ -517,62 +658,21 @@
     margin-bottom: 16vh;
     background-color: #002f3f;
     color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
 }
-.kategori .button-end input{
+
+.kategori .button-end .btn{
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
+}
+
+.kategori .button-end{
     margin-top: 40px;
-    margin-bottom: 10px;
 }
-.kategori .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-}
+
 .kategori .btn:hover{
     background-color: #cdac81;
 }
-/* .kategori .text-center h1{
-    font-weight: 600;
-    color: #e4edea;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-
-.kategori .username{
-    margin-top: 15px;
-}
-
-.kategori .form-label{
-    margin-top: 15px;
-}
-
-.kategori .lokasi-form{
-    border-radius: 10px;
-    padding: 50px 60px;
-    margin-top: 15vh;
-    margin-bottom: 16vh;
-    background-color: #002f3f;
-    color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
-}
-.kategori .button-end input{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-.kategori .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-}
-.kategori .btn:hover{
-    background-color: #cdac81;
-} */
 
 /* kategori list */
 .kategorilist .judul{
@@ -583,10 +683,20 @@
 .kategorilist  .add{
     margin-top: 10px;
 }
+
 .kategorilist .table{
     margin-top: 50px;
 }
+
 .kategorilist .table th{
+    color:#002f3f;
+}
+
+.kategorilist td{
+    color:#002f3f;
+}
+
+.kategorilist tr{
     color:#002f3f;
 }
 
@@ -594,152 +704,88 @@
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
+    font-size: 13px;
     border-color: #002f3f;
+    margin: 2px;
 }
+
 .kategorilist .btn:hover{
     background-color: #cdac81;
 }
 
-/* tambah produk css */
-.tambahproduk{
-    margin-left: 10px;
-}
-.tambahproduk all-form{
-    width: 1054px;
-    height: 1392px;
-    background-color: #D9DFDB;
-    margin-top: 80px;
-    position: absolute;
-    margin-left: 1px;
-}
 
-.tambahproduk .judul{
-    margin-bottom: 90px;
-}
-
-.tambahproduk .judul p{
-    text-align: center;
-    margin-top: 80px;
+/* gambar barang */
+.gambar_barang .text-center h1{
     font-weight: 600;
-    font-size: 40px;
+    color: #e4edea;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
-.tambahproduk .input h4{
-    font-weight: 600;
+.gambar_barang .col{
+    margin-top: 25px;
 }
 
-
-
-/* atas */
-
-.tambahproduk .input{
-    margin-left: 120px;
-    margin-bottom: 60px;
+.gambar_barang .gambarBarang-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
 }
 
-.tambahproduk .input h4{
-    margin-bottom: 40px;
-    font-weight: 600;
+.gambar_barang .button-end .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
 }
 
-.tambahproduk .input[name=file] {
-    /* width: 246px;
-    height: 189px;
-    margin-left: 76px;
-    align-items: center;
-    background-color: white;
-    border-color: black;
-    border-width: medium; */
-    display: none;
+.gambar_barang .button-end{
+    margin-top: 40px;
 }
 
-
-.tambahproduk .label-file{
-    width: 249px;
-    height: 189px;
-    background-color: white;
-    border-color: black;
-    border-style: solid;
-    border-width: medium;
+.gambar_barang .btn:hover{
+    background-color: #cdac81;
 }
 
-.tambahproduk .label-file img{
-    margin-left: auto;
-    margin-right: auto;
+/* gambar barang list */
+.gambarBarangList .judul{
+    color: #002f3f;
+    margin-top: 40px;
+}
+
+.gambarBarangList  .add{
+    margin-top: 10px;
+}
+
+.gambarBarangList .table{
     margin-top: 50px;
-    display: block;
 }
 
-
-/* bawah */
-
-.tambahproduk .form-semua{
-    /* margin-left: 120px; */
-    font-weight: 600;
-}
-  
-.tambahproduk .input[name=nproduk] {
-    width: 615px;
-    height: 62px;
-    margin-left: 62px;
-    align-items: center;
-    background-color: #D9DFDB;
-    border-color: black;
-    border-width: medium;
+.gambarBarangList .table th{
+    color:#002f3f;
 }
 
-.tambahproduk .textarea[name=dproduk] {
-    width: 615px;
-    height: 261px;
-    margin-left: 200px;
-    background-color: #D9DFDB;
-    border-color: black;
-    border-width: medium;
-    margin-bottom: 25px;
-    
+.gambarBarangList td{
+    color:#002f3f;
 }
 
-.tambahproduk .input[name=harga] {
-    width: 615px;
-    height: 62px;
-    margin-left: 129px;
-    background-color: #D9DFDB;
-    border-color: black;
-    border-width: medium;
-    margin-bottom: 25px;
+.gambarBarangList tr{
+    color:#002f3f;
 }
 
-.tambahproduk .input[name=hgrosir] {
-    width: 615px;
-    height: 62px;
-    margin-left: 68px;
-    background-color: #D9DFDB;
-    border-color: black;
-    border-width: medium;
-    margin-bottom: 25px;
+.gambarBarangList .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #002f3f;
+    margin: 2px;
 }
 
-.tambahproduk .input[name=variasi] {
-    width: 615px;
-    height: 62px;
-    margin-left: 122px;
-    background-color: #D9DFDB;
-    border-color: black;
-    border-width: medium;
-}
-
-.tambahproduk .footer{
-    text-align: right;
-    margin-top: 50px;
-    margin-right: 118px;
-}
-
-.tambahproduk .footer input{
-    border-radius: 15px;
-    width: 192px;
-    height: 64px;
-    background-color: #212932;
-    color: #FFFDD6;
+.gambarBarangList .btn:hover{
+    background-color: #cdac81;
 }
 
 /* GALERI BISNIS */
@@ -789,225 +835,4 @@
     border-radius: 20px;
     margin-top: 10px;
     text-align: justify;
-}
-  
-
-/* toko-penjual css */
-.toko-penjual .card{
-    margin-top: 30px;
-}
-
-.toko-penjual .nav-link{
-    margin-right: 10px;
-}
-.toko-penjual .nav-link:hover{
-    background-color: #cdac81;
-}
-.toko-penjual .text-center .btn{
-    background-color: #e4edea;
-    color: #002f3f;
-    font-size: 9px;
-}
-.toko-penjual .text-center .btn:hover{
-    background-color: #cdac81;
-    color: #002f3f;
-    border: none;
-}
-.toko-penjual .card-text{
-    font-size: 10px;
-}
-
-.toko-penjual #foot{
-    background-color: #cdac81;
-    color: #002f3f;
-    padding: 2px;
-    margin-top:50px;
-    font-size: small;
-    font-weight: 500;
-}
-
-.toko-penjual .card-footer{
-    margin-top: 10px;
-}
-
-.toko-penjual .barang p{
-    font-size: 10px;
-}
-
-/* toko list */
-.tokolist {
-    margin-top: 50px;
-}
-
-.tokolist h4{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 400;
-    color: #D9DFDB;
-    padding-bottom: 20px;
-}
-
-.tokolist .table{
-    color: #D9DFDB;
-}
-
-.tokolist .btn{
-    background-color: #8A7D63;
-    font-weight: 600;
-    color: #212932;
-    margin-top: 30px;
-    align-items: center;
-}
-
-/* toko */
-.toko .text-center h1{
-    font-weight: 600;
-    color: #e4edea;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-
-.toko .username{
-    margin-top: 15px;
-}
-
-.toko .form-label{
-    margin-top: 15px;
-}
-
-.toko .toko-form{
-    border-radius: 10px;
-    padding: 50px 60px;
-    margin-top: 15vh;
-    margin-bottom: 16vh;
-    background-color: #002f3f;
-    color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
-}
-
-.toko-form h4{
-    margin-bottom: 30px;
-}
-
-.toko .button-end input{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-.toko .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-}
-.toko .btn:hover{
-    background-color: #cdac81;
-}
-/* toko list */
-.tokolist {
-    margin-top: 50px;
-}
-
-.tokolist h4{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 400;
-    color: #D9DFDB;
-    padding-bottom: 20px;
-}
-
-.tokolist .table{
-    color: #D9DFDB;
-    margin-top: 100px;
-}
-
-.tokolist .btn{
-    background-color: #8A7D63;
-    font-weight: 600;
-    color: #212932;
-    margin-top: 30px;
-    align-items: center;
-}
-
-/* barang */
-.barang .text-center h1{
-    font-weight: 600;
-    color: #e4edea;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-
-.barang .username{
-    margin-top: 15px;
-}
-
-.barang .form-label{
-    margin-top: 15px;
-}
-
-.barang .barang-form{
-    border-radius: 10px;
-    padding: 50px 60px;
-    margin-top: 15vh;
-    margin-bottom: 16vh;
-    background-color: #002f3f;
-    color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
-}
-.barang .button-end input{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-.barang .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-}
-.barang .btn:hover{
-    background-color: #cdac81;
-}
-
-/* gambar barang */
-.gambar_barang .text-center h1{
-    font-weight: 600;
-    color: #e4edea;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-
-.gambar_barang .username{
-    margin-top: 15px;
-}
-
-.gambar_barang .form-label{
-    margin-top: 15px;
-}
-
-.gambar_barang .gambarBarang-form{
-    border-radius: 10px;
-    padding: 50px 60px;
-    margin-top: 15vh;
-    margin-bottom: 16vh;
-    background-color: #002f3f;
-    color: #e4edea;
-    box-shadow: 1px 1px 1px #cdac81;
-}
-.gambar_barang .button-end input{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-.gambar_barang .button-end a{
-    background-color: #e4edea;
-    color:#002f3f;
-    font-weight: 400;
-}
-.gambar_barang .btn:hover{
-    background-color: #cdac81;
 }

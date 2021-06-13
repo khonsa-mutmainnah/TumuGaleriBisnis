@@ -3,7 +3,7 @@
         <h1 class="judul"><strong>USERLIST</strong></h1>
         <a class="btn" href="?p=user">ADD</a>
     </div>
-    <table class="table table-responsive">
+    <table class="table">
         <thead>
         <tr>
             <th> NO.</th>
@@ -33,19 +33,17 @@
                 echo '<td class="text-break">'.$dataUser->username .'</td>';
                 echo '<td class="text-break">'.$dataUser->password .'</td>';
                 echo '<td class="text-break">'.$dataUser->nama .'</td>';
-                echo '<td class="text-break">'.$dataUser->no_hp .'</td>';
+                echo '<td class="">'.$dataUser->no_hp .'</td>';
                 echo '<td class="text-break">'.$dataUser->email .'</td>';
                 echo '<td class="text-break">'.$dataUser->kota .'</td>';
                 echo '<td class="text-break">'.$dataUser->instagram_user .'</td>';
                 echo "<td ><img src='./upload/user/".$dataUser->foto."' width='50px'/></td>";
-                echo '<td class="text-break">'.$dataUser->role .'</td>';
-                echo '<td> <a class="btn btn-warning"
-                    href="?p=user&id_user='.$dataUser->id_user.'"> Edit </a> |
-                    <a class="btn btn-danger" 
-                    href="?p=delete-user&id_user='.$dataUser->id_user.'" 
-                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a>| 
-                    <a class="btn btn-warning"
-                    href="?p=user-foto&id_user='.$dataUser->id_user.'"> upload logo </a> </td>';
+                echo '<td class="">'.$dataUser->role .'</td>';
+                echo '<td> 
+                    <a class="btn"href="?p=user&id_user='.$dataUser->id_user.'"> Edit </a>
+                    <a class="btn"href="?p=delete-user&id_user='.$dataUser->id_user.'" 
+                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a>
+                    <a class="btn"href="?p=user-foto&id_user='.$dataUser->id_user.'">edit foto</a> </td>';
                     echo '</tr>';
             }
         }

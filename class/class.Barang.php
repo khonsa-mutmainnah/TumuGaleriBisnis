@@ -55,8 +55,8 @@ include 'class.Toko.php';
 		}
 
 		public function AddBarang(){
-			$sql = "INSERT INTO barang (id_barang, nama_barang, deskripsi, harga, variasi, id_toko) 
-			VALUES ('$this->id_barang', '$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi',".$this->toko->id_toko.")";
+			$sql = "INSERT INTO barang (nama_barang, deskripsi, harga, variasi, id_toko) 
+			VALUES ('$this->nama_barang', '$this->deskripsi', '$this->harga', '$this->variasi',".$this->toko->id_toko.")";
 			
 			$this->hasil = mysqli_query($this->connection, $sql);
 			
@@ -67,15 +67,12 @@ include 'class.Toko.php';
 		}
 		public function UpdateBarang(){
 			$sql = "UPDATE barang 
-			SET nama_barang = '$this->nama_barang', 
-			id_toko = ".$this->id_toko.", 
+			SET nama_barang = '$this->nama_barang',
 			deskripsi = '$this->deskripsi', 
 			harga = '$this->harga', 
 			variasi = '$this->variasi',
 			id_toko = ".$this->toko->id_toko."
-			WHERE id_barang = $this->id_barang";
-			// echo $sql;
-			
+			WHERE id_barang = '$this->id_barang'";
 			$this->hasil = mysqli_query($this->connection, $sql);
 			
 			if($this->hasil)

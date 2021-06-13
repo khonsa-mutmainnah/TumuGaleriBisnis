@@ -31,11 +31,10 @@
                 echo '<td>' . $dataLokasi->kota . '</td>';
                 echo '<td>' . $dataLokasi->provinsi . '</td>';
                 echo '<td>
-                <a class="btn"
-                href="?p=lokasi&id_lokasi=' . $dataLokasi->id_lokasi . '"> Edit </a> |
-                <a class="btn"
-                href="?p=delete-lokasi&id_lokasi=' . $dataLokasi->id_lokasi . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
-                            echo '</tr>';
+                <a class="btn"href="?p=lokasi&id_lokasi='.$dataLokasi->id_lokasi.'"> Edit </a>
+                <a class="btn"href="?p=delete-lokasi&id_lokasi='.$dataLokasi->id_lokasi.'" 
+                onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
+                echo '</tr>';
                 $no++;
             }
         }

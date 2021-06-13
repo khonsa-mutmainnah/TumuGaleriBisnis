@@ -26,11 +26,10 @@
                     echo '<tr>';
                     echo '<td>'.$no.'</td>';
                     echo '<td>'.$dataKategori->nama_kategori.'</td>';
-                    echo '<td> <a class="btn"
-                    href="?p=kategori&id_kategori='.$dataKategori->id_kategori.'"> Edit </a> |
-                    <a class="btn" 
-                    href="?p=delete-kategori&id_kategori='.$dataKategori->id_kategori.'" 
-                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
+                    echo '<td>
+                    <a class="btn"href="?p=kategori&id_kategori='.$dataKategori->id_kategori.'"> Edit </a>
+                    <a class="btn"href="?p=delete-kategori&id_kategori='.$dataKategori->id_kategori.'" 
+                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
                     echo '</tr>';
                     $no++;
                 }

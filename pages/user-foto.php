@@ -51,33 +51,34 @@
     }
 ?>
 
-<div class="container">  
-<div class="span7">			
-  <h4 class="title"><span class="text"><strong>user</strong></span></h4>
-    <form action="" method="post" enctype="multipart/form-data">
-	<table class="table" border="0">
-	<td>foto</td>
-	<td>:</td>
-	<td>
-	<?php 
-		if($objUser->foto !='')
-			echo "<img src='upload/user/".$objUser->foto."' width='100px' height='100px'/>"; 
-	?>
-	</td>
-	</tr>	
-	<tr>
-	<td>Upload Foto</td>
-	<td>:</td>
-	<td><input type="file" class="form-control" id="foto" name="foto" required>	
-	</td>
-	</tr>	
-	<tr>
-	<td></td>
-	<td></td>
-	<td><input type="submit" class="btn btn-primary" value="Save" name="btnSubmit">
-	    <a href="?p=userlist" class="btn btn-primary">Cancel</a></td>
-	</tr>	
-	</table>    
-</form>	
-</div>  
+<div class="user-foto">
+    <div class="container col-lg-7">
+        <form form action="" method="post" class="user-foto-form" enctype="multipart/form-data">
+            <h1 class="title text-center fs-1 fw-bolder" >foto profil</h1>
+            <div class="col">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">foto</label>
+                    <div class="col-sm-9">
+                    <?php 
+                        if($objUser->foto !=null){
+                            echo "<td ><img src='./upload/user/".$objUser->foto."' width='50px'/></td>";
+                        }
+                    ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">upload foto</label>
+                    <div class="col-sm-9">
+                        <input type="file" class="form-control" id="foto" name="foto" required>	
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 button-end">
+                <a class="btn" href="?p=userlist">kembali</a>
+                <input class="btn" name="btnSubmit" type="submit" value="simpan">
+            </div>
+        </form>
+    </div>
 </div>

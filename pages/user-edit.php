@@ -1,128 +1,103 @@
 <?php
-require_once('./class/class.User.php');
-
-
-if (isset($_POST["btnSubmit"])) {
-  $inputemail = $_POST["email"];
-  $objUser = new User();
-  $objUser->id_user=isset($_GET['id_user']);
-  $objUser->id_user = $_GET['id_user'];
-  $objUser->SelectOneUser();
-  $objUser->ValidateEmail($inputemail);
-
-  //kalau terdaftar
-  if ($objUser->hasil) {
-    echo "<script>alert('Email sudah terdaftar');</script>";
-  }
-
-  //kalau nggak
-  else {
-    $lokasi_file = @$_FILES['foto']['tmp_name'];
-    $ukuran_file = @$_FILES['foto']['size'];
-    $type_file = @$_FILES['foto']['type'];
-    $folder = './upload/';
-
-    //image not compatible
-    if ($type_file != "image/gif" and $type_file != "image/jpeg" and $type_file != "image/png") {
-      echo "<script>
-      alert('Gagal Menambahkan Foto, gambarnya nggak kompetible')
-      </script>";
-    }
-
-    //competible
-    else {
-      //move photo to foto folder
-      $uniquesavename = time() . uniqid(rand());
-      $new_destination = $folder . $uniquesavename . ".png";
-      $succes_move = move_uploaded_file($lokasi_file, $new_destination);
-
-      //berhasil pindah
-      if ($succes_move) {
-        $objUser->username = $_POST['username'];
-        $password = $_POST['password'];
-        $objUser->password = password_hash($password, PASSWORD_DEFAULT);
-        $objUser->nama = $_POST['nama'];
-        $objUser->no_hp = $_POST['no_hp'];
-        $objUser->email = $_POST['email'];
-        $objUser->kota = $_POST['kota'];
-        $objUser->role = 'penjual';
-        $objUser->instagram_user = $_POST['instagram_user'];
-        $objUser->foto = $new_destination;
+    require_once('./class/class.User.php');
+    $objUser= new User();
+    if (isset ($_POST['btnSubmit'])){
+      $objUser->username = $_POST['username'];
+      $objUser->password = $_POST['password'];
+      $objUser->password = password_hash($password, PASSWORD_DEFAULT);
+      $objUser->nama = $_POST['nama'];
+      $objUser->no_hp = $_POST['no_hp'];
+      $objUser->email = $_POST['email'];
+      $objUser->kota = $_POST['kota'];
+      $objUser->role = $_POST['role'];
+      $objUser->instagram_user = $_POST['instagram_user'];
+      // $objUser->foto = $_POST['foto'];
+      
+      if(isset ($_GET['id_user'])){
+        $objUser->id_user= $_GET['id_user'];
         $objUser->UpdateUser();
-
-        if ($objUser->hasil) {
-          echo "<script> alert('Registrasi Berhasil'); </script>";
-          echo '<script> window.location="index.php?p=login";</script>';
-        }
+      }
+      else{
+        $objUser->AddUser();
+      }
+      
+      echo "<script> alert('$objUser->message'); </script>";
+      if($objUser->hasil){
+        echo '<script> window.location = "?p=userlist"; </script>';
       }
     }
-  }
-}
+    else if(isset($_GET['id_user'])){
+        $objUser->id_user = $_GET['id_user'];
+        $objUser->SelectOneUser();
+    }
 ?>
 
-<div class="container register-user col-lg-7">
-  <form class="register-form" method="POST" enctype="multipart/form-data">
-    <div class="text-center logol">
-      <img src="./gambar/logo.png" class="rounded" alt="...">
-      <h1 class="daftar">daftar</h1>
-    </div>
-    <div class="col">
-      <img id="image-preview" alt="image preview" class="rounded mx-auto ">
-      <div class="mb-3">
-        <label for="formFile" class="form-label">foto</label>
-        <input class="form-control" type="file" id="foto" name="foto" onchange="previewImage();">
-      </div>
-    </div>
-    <div class="col">
-      <label for="nama" class="form-label">Nama lengkap</label>
-      <input type="text" class="form-control" id="nama" placeholder="nama lengkap" name="nama">
-    </div>
-    <div class="container">
-      <div class="row username">
+<div class="user">
+    <div class="container col-lg-7">
+      <form form action="" method="post" class="user-form">
+        <h4 class="title text-center fs-1 fw-bolder" >Edit profil</h4>
+        <?php echo "<img src='./upload/user/".$objUser->foto."' width='50px'/>";?>
+        <a href="?p=user-foto" style="font-size:8px; color: #e4edea;">edit foto profil</a>
         <div class="col">
-          <label for="username" class="form-label">Username</label>
-          <input type="text" class="form-control" id="username" placeholder="username" name="username">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">username</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="username" value="<?php echo $objUser->username; ?>" placeholder="username" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">nama lengkap</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="nama" value="<?php echo $objUser->nama; ?>" placeholder="nama lengkap" class="form-control">
+              </div>
+          </div>
         </div>
-      </div>
+        <div class="col">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" name="email" value="<?php echo $objUser->email; ?>" placeholder="email@user.com" class="form-control">
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" name="password" value="<?php echo $objUser->username; ?>" placeholder="password" class="form-control">
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">no hp</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="no_hp" value="<?php echo $objUser->no_hp; ?>" placeholder="08123456789" class="form-control">
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">kota</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="kota" value="<?php echo $objUser->kota; ?>" placeholder="kota" class="form-control">
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">instagram</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="instagram" value="<?php echo $objUser->instagram; ?>" placeholder="@instagram" class="form-control">
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6 button-end">
+          <a class="btn" href="?p=GaleriBisnis">kembali</a>
+          <input class="btn" name="btnSubmit" type="submit" value="simpan">
+        </div>
+      </form>
     </div>
-    <div class="col">
-      <label for="no_hp" class="form-label">nomor handphone</label>
-      <input type="text" class="form-control" id="no_hp" placeholder="088888888" name="no_hp">
-    </div>
-    <div class="col">
-      <label for="email" class="form-label">email</label>
-      <input type="email" class="form-control" id="email" placeholder="user@email.com" name="email">
-    </div>
-    <div class="col">
-      <label for="instagram_user" class="form-label">instagram</label>
-      <input type="text" class="form-control" id="instagram_user" placeholder="@instagram_user" name="instagram_user">
-    </div>
-    <div class="col">
-      <label for="kota" class="form-label">kota</label>
-      <input type="text" class="form-control" id="kota" placeholder="kota" name="kota">
-    </div>
-    <div class="col-lg-4 button-end">
-      <input class="btn col-8" type="submit" value="Daftar" name="btnSubmit" id="btnSubmit">
-    </div>
-    <label for="" class="form-label">sudah punya akun?</label>
-    <div class="col-lg-4 button-end">
-      <a class="btn col-8" href="index.php?p=login" role="button">Masuk</a>
-    </div>
-  </form>
-
-  <script>
-    function previewImage() {
-      document.getElementById("image-preview").style.display = "block";
-      var oFReader = new FileReader();
-      oFReader.readAsDataURL(document.getElementById("foto").files[0]);
-
-      oFReader.onload = function(oFREvent) {
-        document.getElementById("image-preview").src = oFREvent.target.result;
-      };
-    };
-  </script>
 </div>

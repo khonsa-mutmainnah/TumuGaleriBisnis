@@ -51,6 +51,37 @@
     }
 ?>
 
+<div class="toko-logo">
+    <div class="container col-lg-7">
+        <form form action="" method="post" class="toko-logo-form" enctype="multipart/form-data">
+            <h1 class="title text-center fs-1 fw-bolder" >logo toko</h1>
+            <div class="col">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">logo</label>
+                    <div class="col-sm-9">
+                    <?php 
+                        if($objToko->logo !='')
+                        echo "<img src='upload/toko/".$objToko->logo."' width='100px' height='100px'/>"; 
+                    ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">upload logo</label>
+                    <div class="col-sm-9">
+                        <input type="file" class="form-control" id="foto" name="foto" required>	
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 button-end">
+                <a class="btn" href="?p=tokolist">kembali</a>
+                <input class="btn" name="btnSubmit" type="submit" value="simpan">
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 
 <div class="container">  
 <div class="span7">			
   <h4 class="title"><span class="text"><strong>toko</strong></span></h4>
@@ -80,4 +111,4 @@
 	</table>    
 </form>	
 </div>  
-</div>
+</div> -->

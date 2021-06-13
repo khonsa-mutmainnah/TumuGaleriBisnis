@@ -27,12 +27,11 @@
                     echo '<tr>';
                     echo '<td>'.$no.'</td>';
                     echo '<td>'.$dataGambarBarang->barang->nama_barang.'</td>';
-                    echo '<td>'.$dataGambarBarang->lokasi_gambar.'</td>';
-                    echo '<td> <a class="btn"
-                    href="index.php?p=gambar_barang&id_barang='.$dataGambarBarang->id_barang.'"> Edit </a> |
+                    echo "<td ><img src='".$dataGambarBarang->lokasi_gambar."' width='50px'/></td>";
+                    echo '<td>
                     <a class="btn" 
-                    href="index.php?p=delete-gambarBarang&id_barang='.$dataGambarBarang->id_barang.'" 
-                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
+                    href="?p=delete-gambarBarang&id_gb='.$dataGambarBarang->id_gb.'" 
+                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')">hapus gambar</a> </td>';
                     echo '</tr>';
                     $no++;
                 }

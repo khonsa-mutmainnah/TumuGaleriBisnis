@@ -117,7 +117,7 @@
                                     <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="?p=toko">tambah toko</a></li>
+                                    <li><a class="dropdown-item" href="?p=toko-edit">tambah toko</a></li>
                                     <li><a class="dropdown-item" href="?p=user-edit">edit profil</a></li>
                                     <li><a class="dropdown-item" href="?p=reset-pw-form">ubah password</a></li>
                                 </ul>

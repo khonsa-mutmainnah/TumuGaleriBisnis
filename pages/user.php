@@ -4,13 +4,14 @@
     if (isset ($_POST['btnSubmit'])){
       $objUser->username = $_POST['username'];
       $objUser->password = $_POST['password'];
+      $objUser->password = password_hash($password, PASSWORD_DEFAULT);
       $objUser->nama = $_POST['nama'];
       $objUser->no_hp = $_POST['no_hp'];
       $objUser->email = $_POST['email'];
       $objUser->kota = $_POST['kota'];
       $objUser->role = $_POST['role'];
       $objUser->instagram_user = $_POST['instagram_user'];
-      $objUser->foto = $_POST['foto'];
+      // $objUser->foto = $_POST['foto'];
       
       if(isset ($_GET['id_user'])){
         $objUser->id_user= $_GET['id_user'];
@@ -36,39 +37,72 @@
       <form form action="" method="post" class="user-form">
         <h4 class="title text-center fs-1 fw-bolder" >USER</h4>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">username</label>
-          <input type="text" class="form-control" name="username" value="<?php echo $objUser->username; ?>" placeholder="username" class="form-control">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">username</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="username" value="<?php echo $objUser->username; ?>" placeholder="username" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">password</label>
-          <input type="password" name="password" value="<?php echo $objUser->username; ?>" class="form-control" id="exampleFormControlInput1" placeholder="password">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">nama lengkap</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="nama" value="<?php echo $objUser->nama; ?>" placeholder="nama lengkap" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">nama lengkap</label>
-          <input type="text" username="nama" name="nama" value="<?php echo $objUser->nama; ?>" class="form-control" id="exampleFormControlInput1" placeholder="nama kota">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" name="email" value="<?php echo $objUser->email; ?>" placeholder="email@user.com" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">no hp</label>
-          <input type="text" username="no_hp" name="no_hp" value="<?php echo $objUser->nama; ?>" class="form-control" id="exampleFormControlInput1" placeholder="08888888">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" name="password" value="<?php echo $objUser->username; ?>" placeholder="password" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">email</label>
-          <input type="text" username="email" name="email" value="<?php echo $objUser->email; ?>" class="form-control" id="exampleFormControlInput1" placeholder="email@gm.com">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">no hp</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="no_hp" value="<?php echo $objUser->no_hp; ?>" placeholder="08123456789" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">kota</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nama kota" username="kota" name="kota" value="<?php echo $objUser->kota; ?>">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">kota</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="kota" value="<?php echo $objUser->kota; ?>" placeholder="kota" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">instagram</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" username="@instagram" name="instagram_user" value="<?php echo $objUser->instagram_user; ?>">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">instagram</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="instagram" value="<?php echo $objUser->instagram; ?>" placeholder="@instagram" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">role</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1"username="irole" name="role" value="<?php echo $objUser->role; ?>">
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">role</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="role" value="<?php echo $objUser->role; ?>" placeholder="role" class="form-control">
+              </div>
+          </div>
         </div>
         <div class="col-lg-6 button-end">
-          <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
+          <a class="btn" href="?p=userlist">kembali</a>
+          <input class="btn" name="btnSubmit" type="submit" value="simpan">
         </div>
       </form>
     </div>

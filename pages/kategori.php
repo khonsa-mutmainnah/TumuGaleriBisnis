@@ -25,14 +25,18 @@
     <div class="container col-lg-7">
       <form form action="" method="post" class="kategori-form">
         <h4 class="title text-center fs-1 fw-bolder" >kategori</h4>
-
-        <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">nama kategori</label>
-          <input type="text" name="nama_kategori" value="<?php echo $objKategori->nama_kategori; ?>" class="form-control" id="exampleFormControlInput1" placeholder="nama kategori">
-        </div>
-        <div class="col-lg-6 button-end">
-          <input type="submit" class="btn btn-success" value="Save" name="btnSubmit">
-        </div>
+            <div class="col">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">nama kategori</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="nama_kategori" value="<?php echo $objKategori->nama_kategori; ?>" placeholder="nama kategori" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 button-end">
+                <a class="btn" href="?p=kategorilist">kembali</a>
+                <input class="btn" name="btnSubmit" type="submit" value="simpan">
+            </div>
       </form>
     </div>
 </div>

@@ -2,6 +2,7 @@
     include "class.Barang.php";
 
     class GambarBarang extends Connection{
+        private $id_gb='';
         private $barang;
         private $lokasi_gambar='';
         private $hasil = false;
@@ -21,7 +22,7 @@
                 return $this->$atribute = $value;
             }
         }
-    
+        
         function __construct() {
             parent::__construct();
             $this->barang = new Barang();
@@ -41,7 +42,7 @@
         }
     
         public function DeleteGambarBarang(){
-            $sql = "DELETE FROM gambar_barang WHERE id_barang='$this->id_barang'";
+            $sql = "DELETE FROM gambar_barang WHERE id_gb='$this->id_gb'";
             $this->hasil = mysqli_query($this->connection, $sql);
     
             if($this->hasil)
@@ -51,15 +52,17 @@
         }
     
         public function SelectAllGambarBarang(){
-            $sql="SELECT * FROM gambar_barang";
+            $sql="SELECT b.nama_barang, gb.lokasi_gambar 
+            FROM gambar_barang gb INNER JOIN barang b 
+            ON b.id_barang=gb.id_barang";
             $result = mysqli_query($this->connection, $sql);
-            $arrResult= array();
+            $arrResult= Array();
             $cnt=0;
     
             if(mysqli_num_rows($result)>0){
                 while ($data=mysqli_fetch_Array($result)){
                     $objGambarBarang = new GambarBarang();
-                    $objGambarBarang->id_barang = $data['id_barang'];
+                    $objGambarBarang->barang->nama_barang = $data['nama_barang'];
                     $objGambarBarang->lokasi_gambar = $data['lokasi_gambar'];
                     $arrResult[$cnt] = $objGambarBarang;
                     $cnt++;
