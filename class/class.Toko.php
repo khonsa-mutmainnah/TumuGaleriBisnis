@@ -1,7 +1,7 @@
 <?php 
-include 'class.User.php';
-include 'class.Kategori.php';
-include 'class.Lokasi.php';
+require_once("class.User.php");
+require_once("class.kategori.php");
+require_once("class.Lokasi.php");
 
 class Toko extends Connection{
     private $id_toko='';
@@ -11,6 +11,7 @@ class Toko extends Connection{
     private $tagline='';
     private $no_telp='';
     private $status;
+    private $status_toko;
     private $instagram='';
     private $url_toko='';
     private $user;
@@ -38,6 +39,7 @@ class Toko extends Connection{
         $this->lokasi = new Lokasi();
         $this->user = new User();
         $this->kategori = new Kategori();
+        $status_toko = array("setujui", "tolak", "ditinjau");
     }
 
     public function SelectAllToko(){
@@ -74,19 +76,19 @@ class Toko extends Connection{
         return $arrResult;
     }
 
-    public function AddToko(){
-        $sql = "INSERT INTO toko(nama_toko, id_lokasi, 
-                tagline, no_telp, instagram, url_toko, id_kategori, id_user)
-                VALUES ('$this->nama_toko', ".$this->lokasi->id_lokasi.",
-                        '$this->tagline', '$this->no_telp', '$this->instagram', '$this->url_toko',
-                        ".$this->kategori->id_kategori.", ".$this->user->id_user.")";
-                $this->hasil=mysqli_query($this->connection, $sql);
+    // public function AddToko(){
+    //     $sql = "INSERT INTO toko(nama_toko, id_lokasi, status,
+    //             tagline, no_telp, instagram, url_toko, id_kategori, id_user)
+    //             VALUES ('$this->nama_toko', ".$this->lokasi->id_lokasi.", '$this->status',
+    //                     '$this->tagline', '$this->no_telp', '$this->instagram', '$this->url_toko',
+    //                     ".$this->kategori->id_kategori.", ".$this->user->id_user.")";
+    //             $this->hasil=mysqli_query($this->connection, $sql);
                 
-        if($this->hasil)
-            $this->message='toko berhasil ditambahkan!';
-        else
-            $this->message='toko gagal ditambahkan';
-    }
+    //     if($this->hasil)
+    //         $this->message='toko berhasil ditambahkan!';
+    //     else
+    //         $this->message='toko gagal ditambahkan';
+    // }
 
     public function AddLogoToko(){
         $sql = "INSERT INTO toko(logo)
@@ -102,7 +104,8 @@ class Toko extends Connection{
     public function UpdateToko(){
         $sql = "UPDATE toko
                 SET nama_toko='$this->nama_toko', id_lokasi=".$this->lokasi->id_lokasi.",
-                    tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', url_toko='$this->url_toko',
+                    tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', 
+                    url_toko='$this->url_toko', status='$this->status',
                     id_kategori=".$this->kategori->id_kategori.", id_user=".$this->user->id_user."
                 WHERE id_toko = '$this->id_toko'";
                 $this->hasil=mysqli_query($this->connection, $sql);
@@ -117,6 +120,7 @@ class Toko extends Connection{
         $sql = "UPDATE toko
                 SET logo='$this->logo'
                 WHERE id_toko='$this->id_toko'";
+                $this->hasil = mysqli_query($this->connection, $sql);
         
         if($this->hasil)
             $this->message='toko berhasil diupdate!';
@@ -155,7 +159,5 @@ class Toko extends Connection{
         else
             $this->message='data gagal dihapus';
     }
-
-    
 }
 ?>

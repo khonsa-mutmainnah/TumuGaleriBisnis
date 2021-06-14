@@ -3,7 +3,7 @@
         <h1 class="judul"><strong>USERLIST</strong></h1>
         <a class="btn" href="?p=user">ADD</a>
     </div>
-    <table class="table table-responsive">
+    <table class="table">
         <thead>
         <tr>
             <th> NO.</th>
@@ -33,7 +33,7 @@
                 echo '<td class="text-break">'.$dataUser->username .'</td>';
                 echo '<td class="text-break">'.$dataUser->password .'</td>';
                 echo '<td class="text-break">'.$dataUser->nama .'</td>';
-                echo '<td class="text-break">'.$dataUser->no_hp .'</td>';
+                echo '<td class="">'.$dataUser->no_hp .'</td>';
                 echo '<td class="text-break">'.$dataUser->email .'</td>';
                 echo '<td class="text-break">'.$dataUser->kota .'</td>';
                 echo '<td class="text-break">'.$dataUser->instagram_user .'</td>';

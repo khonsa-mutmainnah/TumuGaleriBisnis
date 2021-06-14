@@ -15,9 +15,7 @@
                 <th scope="col">instagram</th>
                 <th scope="col">url toko</th>
                 <th scope="col">user</th>
-                <th scope="col">kecamatan</th>
-                <th scope="col">kota</th>
-                <th scope="col">provinsi</th>
+                <th scope="col">lokasi</th>
                 <th scope="col">kategori</th>
                 <th scope="col">action</th>
             </tr>
@@ -52,20 +50,17 @@
                     echo '<td>'.$dataToko->instagram.'</td>';
                     echo '<td>'.$dataToko->url_toko.'</td>';
                     echo '<td>'.$dataToko->user->username.'</td>';
-                    echo '<td>'.$dataToko->lokasi->kecamatan.'</td>';
-                    echo '<td>'.$dataToko->lokasi->kota.'</td>';
-                    echo '<td>'.$dataToko->lokasi->provinsi.'</td>';
+                    echo '<td class="text-break">'.$dataToko->lokasi->kecamatan.', '.$dataToko->lokasi->kota.', '.$dataToko->lokasi->provinsi.'</td>';
                     echo '<td>'.$dataToko->kategori->nama_kategori.'</td>';
                     
                     // echo '<td>'.$dataToko->status.'</td>';
                     
-                    echo '<td> <a class="btn btn-warning"
-                    href="?p=toko&id_toko='.$dataToko->id_toko.'"> Edit </a> |
-                    <a class="btn btn-danger" 
-                    href="?p=delete-toko&id_toko='.$dataToko->id_toko.'" 
-                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a> </td>';
+                    echo '<td>
+                    <a class="btn"href="?p=toko&id_toko='.$dataToko->id_toko.'"> Edit </a>
+                    <a class="btn"href="?p=delete-toko&id_toko='.$dataToko->id_toko.'" 
+                    onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a>
+                    <a class="btn"href="?p=toko-logo&id_toko='.$dataToko->id_toko.'"> edit logo</a> </td>';
                     echo '</tr>';
-                    $no++;
                 }
             }
         ?>

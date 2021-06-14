@@ -6,7 +6,7 @@
     <table class="table">
         <thead>
             <tr>
-			<th>id barang</th>
+			<th>no</th>
 			<th>nama barang</th>
 			<th>deskripsi</th>
 			<th>harga</th>
@@ -28,16 +28,17 @@
             foreach ($arrayResult as $dataBarang) {
                 echo '<tr>';
 				// echo "<td>" . $no . "</td>";
-				echo "<td>" . $dataBarang->id_barang . "</td>";
+				echo "<td>" . $no . "</td>";
 				echo "<td>" . $dataBarang->nama_barang . "</td>";
 				echo "<td>" . $dataBarang->deskripsi . "</td>";
 				echo "<td>" . $dataBarang->harga . "</td>";
 				echo "<td>" . $dataBarang->variasi . "</td>";
                 echo "<td>" . $dataBarang->toko->nama_toko . "</td>";
                 echo '<td>
-                <a class="btn" href="index.php?p=barang&id_barang=' . $dataBarang->id_barang . '"> Edit </a> |
-                <a class="btn" href="index.php?p=delete-barang&id_barang=' . $dataBarang->id_barang . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
-                            echo '</tr>';
+                <a class="btn"href="?p=barang&id_barang='.$dataBarang->id_barang.'"> Edit </a>
+                <a class="btn"href="?p=delete-barang&id_barang='.$dataBarang->id_barang.'" 
+                onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a></td>';
+                echo '</tr>';
                 $no++;
             }
         }

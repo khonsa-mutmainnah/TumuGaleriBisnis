@@ -7,7 +7,6 @@
 	$objTokoList= $objToko->SelectAllToko();
 
 	if (isset($_POST['btnSubmit'])) {
-		$objBarang->id_barang = $_POST['id_barang'];
 		$objBarang->nama_barang = $_POST['nama_barang'];
 		$objBarang->deskripsi= $_POST['deskripsi'];
 		$objBarang->harga = $_POST['harga'];
@@ -23,7 +22,7 @@
 
 		echo "<script> alert('$objBarang->message'); </script>";
 		if($objBarang->hasil){
-			echo '<script> window.location = "dashboard.php?p=baranglist"; </script>';
+			echo '<script> window.location = "?p=baranglist"; </script>';
 		}
 	}
 	else if (isset($_GET['id_barang'])) {
@@ -34,26 +33,43 @@
 <div class="barang">
     <div class="container col-lg-7">
         <form form action="" method="POST" class="barang-form" enctype="multipart/form-data">
-            <h4 class="title text-center fs-1 fw-bolder" >Barang</h4>
-    
+            <h1 class="title text-center fs-1 fw-bolder" >Barang</h1>
+
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
-                <input type="text" class="form-control" name="nama_barang" value="<?php echo $objBarang->nama_barang; ?>" placeholder="nama barang" class="form-control">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Nama Barang</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="nama_barang" value="<?php echo $objBarang->nama_barang; ?>" placeholder="nama barang" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Deskripsi</label>
-                <input type="textarea" name="deskripsi" value="<?php echo $objBarang->deskripsi; ?>" class="form-control" id="exampleFormControlInput1" placeholder="deskripsi">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Deskripsi barang</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="deskripsi" value="<?php echo $objBarang->deskripsi; ?>" placeholder="deskripsi barang" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Harga</label>
-                <input type="text" name="harga" value="<?php echo $objBarang->harga; ?>" class="form-control" id="exampleFormControlInput1" placeholder="harga">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">harga</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="harga" value="<?php echo $objBarang->harga; ?>" placeholder="harga" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Variasi</label>
-                <input type="text" name="variasi" value="<?php echo $objBarang->variasi; ?>" class="form-control" id="exampleFormControlInput1" placeholder="variasi">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">variasi</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="variasi" value="<?php echo $objBarang->variasi; ?>" placeholder="variasi yang ada pada barang" class="form-control">
+                    </div>
+                </div>
             </div>
 			<div class="col-lg-6 button-end">
-                <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
+                <a class="btn" href="?p=toko-penjual">kembali</a>
+                <input class="btn" name="btnSubmit" type="submit" value="simpan">
             </div>
         </form>
     </div>

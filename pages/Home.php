@@ -5,7 +5,7 @@
         <div class="text-center">
             <img src="./gambar/web.png" class="rounded" alt="logo-toko" style="width: 110px;">
         </div>
-        <h4 class="card-title" style="font-weight: 600; margin-top:7px;">Nama Toko</h4>
+        <h4 class="card-title" style="font-weight: 600; margin-top:5px;">Nama Toko</h4>
         <p class="card-text">disini nantinya akan jadi tagline toko</p>
         <p class="card-text">kecamatan, kota, provinsi (alamat toko)</p>
         <p class="card-text">jumlah produk</p>
@@ -56,6 +56,134 @@
 
   <div class="container">
     <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card">
+          <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">nama barang</h5>
+              <p class="card-text">di sini nantinya jadi deskripsi barang. isinya bisa pengertian barang atau apa apa yang terkait dengan barang tersebut.</p>
+              <p class="card-text text-break">harga barang</p>
+              <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
+              <p class="card-text">00000000</p>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">nama barang</h5>
+              <p class="card-text">di sini nantinya jadi deskripsi barang. isinya bisa pengertian barang atau apa apa yang terkait dengan barang tersebut.</p>
+              <p class="card-text text-break">harga barang</p>
+              <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
+              <p class="card-text">00000000</p>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">nama barang</h5>
+              <p class="card-text">di sini nantinya jadi deskripsi barang. isinya bisa pengertian barang atau apa apa yang terkait dengan barang tersebut.</p>
+              <p class="card-text text-break">harga barang</p>
+              <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
+              <p class="card-text">00000000</p>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">nama barang</h5>
+              <p class="card-text">di sini nantinya jadi deskripsi barang. isinya bisa pengertian barang atau apa apa yang terkait dengan barang tersebut.</p>
+              <p class="card-text text-break">harga barang</p>
+              <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
+              <p class="card-text">00000000</p>
+            </div>
+        </div>
+      </div>
       <div class="col">
         <div class="card">
           <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">

@@ -1,6 +1,6 @@
 <?php
-class User extends Connection
-{
+require_once("class.Toko.php");
+class User extends Connection{
     private $id_user = "";
     private $username = "";
     private $password = "";
@@ -113,6 +113,18 @@ class User extends Connection
         }
     }
 
+    public function UpdateFotoUser(){
+        $sql = "UPDATE user
+                SET foto='$this->foto'
+                WHERE id_user='$this->id_user'";
+                $this->hasil = mysqli_query($this->connection, $sql);
+        
+        if($this->hasil)
+            $this->message='toko berhasil diupdate!';
+        else
+            $this->message='toko gagal diupdate';
+    }
+
     public function ValidateEmail($email){
 
         $sql = "SELECT * FROM user WHERE email = '$email'";
@@ -144,6 +156,20 @@ class User extends Connection
         } catch (PDOException $e) {
             return "gagal mengedit";
         }
+    }
+
+    public function AddToko($nama_toko, $id_lokasi, $status,
+    $tagline, $no_telp, $instagram, $url_toko, $id_kategori){
+        $sql = "INSERT INTO toko(nama_toko, id_lokasi, status,
+                tagline, no_telp, instagram, url_toko, id_kategori, id_user)
+                VALUES ($nama_toko, $id_lokasi, $status,$tagline, $no_telp, $instagram, 
+                $url_toko, $id_kategori, '$this->id_user')";
+    $this->hasil=mysqli_query($this->connection, $sql);
+                
+        if($this->hasil)
+            $this->message='toko berhasil ditambahkan!';
+        else
+            $this->message='toko gagal ditambahkan';
     }
 
     // //reset pass user

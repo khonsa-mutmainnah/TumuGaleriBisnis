@@ -26,16 +26,17 @@
         $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
         $objToko->kategori->id_kategori = $_POST['id_kategori'];
 
-        if (isset ($_GET['id_toko'])){
-            $objToko->id_toko = $_GET['id_toko'];
-            $objToko->UpdateToko();
-        }
-        else{
-            $objToko->AddToko();
-        }
-        echo "<script> alert('$objToko->message'); </script>";
-        if($objToko->hasil){
-            echo '<script> window.location = "?p=tokolist"; </script>';
+        // if (isset ($_GET['id_toko'])){
+        //     $objToko->id_toko = $_GET['id_toko'];
+        //     $objToko->UpdateToko();
+        // }
+        // else{
+            $objUser->AddToko($objToko->nama_toko, $objToko->lokasi->id_lokasi, 0, $objToko->tagline,
+            $objToko->no_telp, $objToko->instagram, $objToko->url_toko, $objToko->lokasi->id_lokasi);
+        // }
+        echo "<script> alert('$objUser->message'); </script>";
+        if($objUser->hasil){
+            echo '<script> window.location = "?p=Home"; </script>';
         }
     }
     else if(isset($_GET['id_toko'])){
@@ -47,7 +48,6 @@
     <div class="container col-lg-7">
         <form form action="" method="POST" class="toko-form" enctype="multipart/form-data">
             <h4 class="title text-center fs-1 fw-bolder" >toko</h4>
-            
             <div class="col">
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-3 col-form-label">nama toko</label>
@@ -60,7 +60,7 @@
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-3 col-form-label">tagline</label>
                     <div class="col-sm-9">
-                        <textarea type="text" class="form-control" name="tagline" value="<?php echo $objToko->tagline; ?>" placeholder="tagline" class="form-control"></textarea>
+                        <input type="text" class="form-control" name="tagline" value="<?php echo $objToko->tagline; ?>" placeholder="tagline" class="form-control">
                     </div>
                 </div>
             </div>
@@ -126,8 +126,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 button-end">
-                <input class="btn btnsuccess" name="btnSubmit" type="submit" value="Save" >
+            <div class="col-lg-6 button-end">
+                <a class="btn" href="?p=GaleriBisnis">kembali</a>
+                <input class="btn" name="btnSubmit" type="submit" value="simpan">
             </div>
         </form>
     </div>
