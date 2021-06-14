@@ -46,6 +46,7 @@ class Toko extends Connection{
                 FROM toko t JOIN user u ON u.id_user=t.id_user 
                     JOIN kategori k ON k.id_kategori=t.id_kategori
                     JOIN lokasi l ON l.id_lokasi=t.id_lokasi";
+        
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;

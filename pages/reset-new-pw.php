@@ -18,7 +18,6 @@
   require_once("./class/class.User.php");
   $id_user = $_GET['id_user'];
   if(isset($_POST['btnSubmit'])){
-
       $newpass = $_POST['newpass'];
       $repass = $_POST['repass'];
       // $id_user = $_POST['id_user'];
@@ -71,11 +70,11 @@
         <h1 class="masuk">Masukkan Password Baru</h1>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword" class="form-label">New Password</label>
+        <label for="exampleInputPassword" class="form-label">Password Baru</label>
         <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordHelp" name="newpass">
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword" class="form-label">Confirm Password</label>
+        <label for="exampleInputPassword" class="form-label">Konfirmasi Password</label>
         <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordHelp" name="repass">
       </div>
       <div class="button-end">

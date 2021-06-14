@@ -40,7 +40,7 @@
                 echo "<td ><img src='".$dataUser->foto."' width='50px'/></td>";
                 echo '<td class="text-break">'.$dataUser->role .'</td>';
                 echo '<td>
-                <a class="btn"
+                <a class="btn btn-warning"
                 href="?p=user&id_user=' . $dataUser->id_user . '"> Edit </a> 
                 <a class="btn"
                 href="?p=delete-user&id_user=' . $dataUser->id_user . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';

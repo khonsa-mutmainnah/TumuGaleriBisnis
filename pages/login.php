@@ -15,7 +15,7 @@
       if (!isset($_SESSION)) {
         session_start();
         }
-        $_SESSION["username"]= $objUser->usename;
+        $_SESSION["username"]= $objUser->username;
         $_SESSION["password"]= $objUser->password;
         $_SESSION["email"]= $objUser->email;
         $_SESSION["nama"]= $objUser->nama;

@@ -54,7 +54,7 @@
             </div>
             <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">no telp</label>
-                <input type="text" name="no_telp" value="<?php echo $objToko->no_telp; ?>" class="form-control" id="exampleFormControlInput1" placeholder="password">
+                <input type="text" name="no_telp" value="<?php echo $objToko->no_telp; ?>" class="form-control" id="exampleFormControlInput1" placeholder="nomor telepon">
             </div>
             <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">instagram</label>
@@ -62,7 +62,7 @@
             </div>
             <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">url toko</label>
-                <input type="text" name="url_toko" value="<?php echo $objToko->url_toko; ?>" class="form-control" id="exampleFormControlInput1" placeholder="@instagram_toko">
+                <input type="text" name="url_toko" value="<?php echo $objToko->url_toko; ?>" class="form-control" id="exampleFormControlInput1" placeholder="http://../">
             </div>
             <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">id_user</label>
