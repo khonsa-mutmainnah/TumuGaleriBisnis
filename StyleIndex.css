@@ -354,6 +354,19 @@
 }
 
 /* toko-penjual css */
+.toko .toko-form{
+    border-radius: 10px;
+    padding: 50px 60px;
+    margin-top: 15vh;
+    margin-bottom: 16vh;
+    background-color: #002f3f;
+    color: #e4edea;
+}
+.toko .button-end .btn{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+}
 .toko-penjual .card{
     margin-top: 30px;
 }
@@ -496,7 +509,7 @@
     margin-top: 40px;
 }
 .barang .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* barang list */
@@ -540,7 +553,7 @@
 }
 
 .baranglist .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* lokasi css */
@@ -575,7 +588,7 @@
 }
 
 .lokasi .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* lokasilist css */

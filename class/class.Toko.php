@@ -48,7 +48,7 @@ class Toko extends Connection{
                 FROM toko t JOIN user u ON u.id_user=t.id_user 
                     JOIN kategori k ON k.id_kategori=t.id_kategori
                     JOIN lokasi l ON l.id_lokasi=t.id_lokasi";
-        
+        $this->hasil=mysqli_query($this->connection, $sql);
         $result = mysqli_query($this->connection, $sql);
         $arrResult= Array();
         $cnt=0;
@@ -159,5 +159,38 @@ class Toko extends Connection{
         else
             $this->message='data gagal dihapus';
     }
+
+    //get status kos
+    public function getStatusToko()
+    {
+        try {
+            $sql = "SELECT t.status, u.email FROM toko t INNER JOIN user u ON u.id_user = t.id_user WHERE t.id_toko=$this->id_toko";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $this->status = $result['status'];
+            $this->user->email = $result['email'];
+
+            return "Berhasil mengambil data";
+        } catch (PDOException $e) {
+            return "gagal mengambil data";
+        }
+    }
+
+    //edit status kos
+    public function editStatusToko()
+    {
+        try {
+            $sql = "UPDATE toko SET status='$this->status'
+                    WHERE id_toko=$this->id_toko";
+            $this->conn->exec($sql);
+
+            return "berhasil mengedit";
+        } catch (PDOException $e) {
+            return "gagal mengedit";
+        }
+    }
+
 }
 ?>
