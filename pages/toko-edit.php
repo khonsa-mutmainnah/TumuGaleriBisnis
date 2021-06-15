@@ -22,20 +22,20 @@
         $objToko->no_telp = $_POST['no_telp'];
         $objToko->instagram = $_POST['instagram'];
         $objToko->url_toko = $_POST['url_toko'];
-        // $objToko->user->id_user = $_POST['id_user'];
+        $objToko->status = 2;
+        $objToko->user->id_user = $_GET['id_user'];
         $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
         $objToko->kategori->id_kategori = $_POST['id_kategori'];
 
-        // if (isset ($_GET['id_toko'])){
-        //     $objToko->id_toko = $_GET['id_toko'];
-        //     $objToko->UpdateToko();
-        // }
-        // else{
-            $objUser->AddToko($objToko->nama_toko, $objToko->lokasi->id_lokasi, 0, $objToko->tagline,
-            $objToko->no_telp, $objToko->instagram, $objToko->url_toko, $objToko->lokasi->id_lokasi);
-        // }
-        echo "<script> alert('$objUser->message'); </script>";
-        if($objUser->hasil){
+        if (isset ($_GET['id_toko'])){
+            $objToko->id_toko = $_GET['id_toko'];
+            $objToko->UpdateToko();
+        }
+        else{
+            $objToko->AddToko();
+        }
+        echo "<script> alert('$objToko->message'); </script>";
+        if($objToko->hasil){
             echo '<script> window.location = "?p=Home"; </script>';
         }
     }

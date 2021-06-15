@@ -1,15 +1,20 @@
 <?php 
-    require "connection.php";
+    require("connection.php");
 
     if (!isset($_SESSION)) {
         session_start();
     }
 
+    $id_user = $_SESSION['id_user'];
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
     $email = $_SESSION['email'];
     $nama = $_SESSION['nama'];
     $role = $_SESSION['role'];
+    $no_hp = $_SESSION['no_hp'];
+    $instagram_user = $_SESSION['instagram_user'];
+    $kota = $_SESSION['kota'];
+    $foto = $_SESSION['foto'];
 
 ?>
 <!DOCTYPE html>
@@ -69,7 +74,7 @@
     
                             <div class="btn-group">
                                 <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
+                                    <img src="./gambar/aa.jpg" style="width:20px; height:20px;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="?p=userlist">user</a></li>
@@ -111,14 +116,13 @@
                             </div>
 
                             <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
-    
                             <div class="btn-group">
                                 <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="?p=toko-edit">tambah toko</a></li>
-                                    <li><a class="dropdown-item" href="?p=user-edit">edit profil</a></li>
+                                    <li><a class="dropdown-item" href="?p=toko-edit&id_user=<?php echo $id_user; ?>">tambah toko</a></li>
+                                    <li><a class="dropdown-item" href="?p=user-edit&id_user=<?php echo $id_user; ?>">edit profil</a></li>
                                     <li><a class="dropdown-item" href="?p=reset-pw-form">ubah password</a></li>
                                 </ul>
                             </div>
@@ -127,9 +131,6 @@
                 
                     }
                 ?>
-                
-                
-                        
                     </div>
                 </div>
             </div>

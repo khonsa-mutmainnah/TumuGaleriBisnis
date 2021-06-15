@@ -23,7 +23,7 @@
         require_once('./class/class.User.php');
         $objUser = new User();
         $arrayResult = $objUser->SelectAllUser();
-        if (count($arrayResult) == 0) {
+        if (count($arrayResult) == 0) { 
             echo '<tr><td colspan="5">Tidak ada data!</td></tr>';
         } else {
             $no = 1;

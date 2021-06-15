@@ -43,7 +43,9 @@ class User extends Connection{
     public function UpdateUser()
     {
             $sql = "UPDATE user
-            SET username ='$this->username', password = '$this->password', nama = '$this->nama', no_hp = '$this->no_hp', email = '$this->email', kota = '$this->kota', role = '$this->role', instagram_user = '$this->instagram_user', foto = '$this->foto' 
+            SET username='$this->username', password='$this->password', nama='$this->nama', 
+            no_hp='$this->no_hp', email='$this->email', kota='$this->kota', role='$this->role', 
+            instagram_user='$this->instagram_user', foto='$this->foto' 
             WHERE id_user = '$this->id_user'";
 
             $this->hasil = mysqli_query($this->connection, $sql);
@@ -51,8 +53,6 @@ class User extends Connection{
                 $this->message = 'Data berhasil diubah!';
             else
                 $this->message = 'Data gagal diubah!';
-
-
     }
 
 
@@ -131,7 +131,7 @@ class User extends Connection{
 
         $result = mysqli_query($this->connection, $sql);
         if (mysqli_num_rows ($result) == 1){
-            $this->hasil = true;
+            
             $data = mysqli_fetch_assoc($result);
             $this->id_user = $data['id_user'];
             $this->username = $data['username'];
@@ -139,6 +139,12 @@ class User extends Connection{
             $this->nama = $data['nama'];
             $this->email = $data['email'];
             $this->role = $data['role'];
+            $this->instagram_user = $data['instagram_user'];
+            $this->kota = $data['kota'];
+            $this->no_hp = $data['no_hp'];
+            $this->foto = $data['foto'];
+
+            $this->hasil=true;
         }
     }
 

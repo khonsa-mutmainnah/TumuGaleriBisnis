@@ -12,14 +12,20 @@
       $ismatch = password_verify($password, $objUser->password);
 
       if($ismatch){
-      if (!isset($_SESSION)) {
-        session_start();
+        if (!isset($_SESSION)) {
+          session_start();
         }
-        $_SESSION["username"]= $objUser->usename;
-        $_SESSION["password"]= $objUser->password;
-        $_SESSION["email"]= $objUser->email;
-        $_SESSION["nama"]= $objUser->nama;
-        $_SESSION["role"]= $objUser->role;
+
+        $_SESSION['id_user']= $objUser->id_user;
+        $_SESSION['username']= $objUser->username;
+        $_SESSION['password']= $objUser->password;
+        $_SESSION['email']= $objUser->email;
+        $_SESSION['nama']= $objUser->nama;
+        $_SESSION['role']= $objUser->role;
+        $_SESSION['no_hp']= $objUser->no_hp;
+        $_SESSION['instagram_user']= $objUser->instagram_user;
+        $_SESSION['kota']= $objUser->kota;
+        $_SESSION['foto']= $objUser->foto;
 
         echo "<script>alert('Login sukses');</script>";
 
