@@ -116,7 +116,7 @@
     background-color: #e4edea;
 }
 .reset #submit-reset:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 .reset .text-center h2{
@@ -148,7 +148,8 @@
     font-weight: 400;
 }
 .reset .btn:hover{
-    background-color: #cdac81;
+    color: #e4edea;
+    background-color: #185adb;
 }
 
 /* register user css */
@@ -195,7 +196,8 @@
     font-weight: 400;
 }
 .register-user .btn:hover{
-    background-color: #cdac81;
+    color: #e4edea;
+    background-color: #185adb;
 }
 
 .register-user #image-preview{
@@ -221,7 +223,7 @@
     font-size: 9px;
 }
 .home .text-center .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
     color: #002f3f;
     border: none;
 }
@@ -230,7 +232,7 @@
 }
 
 .home #foot{
-    background-color: #cdac81;
+    background-color: #185adb;
     color: #002f3f;
     padding: 2px;
     margin-top:50px;
@@ -276,7 +278,7 @@
     margin-top: 40px;
 }
 .user .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* userlist */
@@ -310,7 +312,7 @@
     margin: 2px;
 }
 .userlist .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* user-foto */
@@ -342,22 +344,16 @@
 .user-foto .button-end{
     margin-top: 40px;
 }
-.user-foto .btn:hover{
-    background-color: #cdac81;
+.lokasi .button-end a{
+    background-color: #185adb;
+    color:#002f3f;
+    font-weight: 400;
+}
+.lokasi .btn:hover{
+    background-color: #185adb;
 }
 
-/* toko */
-.toko .text-center h1{
-    font-weight: 600;
-    color: #e4edea;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-
-.toko .col{
-    margin-top: 25px;
-}
-
+/* toko-penjual css */
 .toko .toko-form{
     border-radius: 10px;
     padding: 50px 60px;
@@ -366,20 +362,11 @@
     background-color: #002f3f;
     color: #e4edea;
 }
-
 .toko .button-end .btn{
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
 }
-.toko .button-end{
-    margin-top: 40px;
-}
-.toko .btn:hover{
-    background-color: #cdac81;
-}
-
-/* toko-penjual css */
 .toko-penjual .card{
     margin-top: 30px;
 }
@@ -455,9 +442,8 @@
     border-color: #002f3f;
     margin: 2px;
 }
-
-.tokolist .btn:hover{
-    background-color: #cdac81;
+.lokasilist .btn:hover{
+    background-color: #185adb;
 }
 
 /* toko-logo */
@@ -489,8 +475,8 @@
 .toko-logo .button-end{
     margin-top: 40px;
 }
-.toko-logo .btn:hover{
-    background-color: #cdac81;
+.kategori .btn:hover{
+    background-color: #185adb;
 }
 
 /* barang */
@@ -523,7 +509,7 @@
     margin-top: 40px;
 }
 .barang .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* barang list */
@@ -542,6 +528,11 @@
 
 .baranglist .table th{
     color:#002f3f;
+    font-weight: 400;
+    border-color: #002f3f;
+}
+.kategorilist .btn:hover{
+    background-color: #185adb;
 }
 
 .baranglist td{
@@ -562,7 +553,7 @@
 }
 
 .baranglist .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* lokasi css */
@@ -597,7 +588,7 @@
 }
 
 .lokasi .btn:hover{
-    background-color: #cdac81;
+    background-color: #185adb;
 }
 
 /* lokasilist css */
@@ -635,8 +626,17 @@
     margin: 2px;
 }
 
-.lokasilist .btn:hover{
-    background-color: #cdac81;
+.galeri-bisnis .nav-link:hover{
+    background-color: #185adb;
+    color: #002f3f;
+    font-weight: 500;
+    border: none;
+}
+.galeri-bisnis .nav-link:active{
+    background-color: #185adb;
+    color: #002f3f;
+    font-weight: 500;
+    border: none;
 }
 
 /* Kategori */
@@ -669,13 +669,16 @@
 .kategori .button-end{
     margin-top: 40px;
 }
-
-.kategori .btn:hover{
-    background-color: #cdac81;
+.toko-penjual .nav-link:hover{
+    background-color: #185adb;
 }
-
-/* kategori list */
-.kategorilist .judul{
+.toko-penjual .text-center .btn{
+    background-color: #e4edea;
+    color: #002f3f;
+    font-size: 9px;
+}
+.toko-penjual .text-center .btn:hover{
+    background-color: #185adb;
     color: #002f3f;
     margin-top: 40px;
 }
@@ -684,8 +687,13 @@
     margin-top: 10px;
 }
 
-.kategorilist .table{
-    margin-top: 50px;
+.toko-penjual #foot{
+    background-color: #185adb;
+    color: #002f3f;
+    padding: 2px;
+    margin-top:50px;
+    font-size: small;
+    font-weight: 500;
 }
 
 .kategorilist .table th{
@@ -713,6 +721,13 @@
     background-color: #cdac81;
 }
 
+.tokolist .btn{
+    background-color: #185adb;
+    font-weight: 600;
+    color: #212932;
+    margin-top: 30px;
+    align-items: center;
+}
 
 /* gambar barang */
 .gambar_barang .text-center h1{
@@ -740,6 +755,13 @@
     color:#002f3f;
     font-weight: 400;
 }
+.toko .btn:hover{
+    background-color: #185adb;
+}
+/* toko list */
+.tokolist {
+    margin-top: 50px;
+}
 
 .gambar_barang .button-end{
     margin-top: 40px;
@@ -749,10 +771,12 @@
     background-color: #cdac81;
 }
 
-/* gambar barang list */
-.gambarBarangList .judul{
-    color: #002f3f;
-    margin-top: 40px;
+.tokolist .btn{
+    background-color: #185adb;
+    font-weight: 600;
+    color: #212932;
+    margin-top: 30px;
+    align-items: center;
 }
 
 .gambarBarangList  .add{
@@ -779,9 +803,9 @@
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
-    font-size: 13px;
-    border-color: #002f3f;
-    margin: 2px;
+}
+.barang .btn:hover{
+    background-color: #185adb;
 }
 
 .gambarBarangList .btn:hover{
@@ -808,31 +832,6 @@
     background-color: #e4edea;
     color:#002f3f;
 }
-
-.galeri-bisnis .nav-link:hover{
-    background-color: #cdac81;
-    color: #002f3f;
-    font-weight: 500;
-    border: none;
-}
-.galeri-bisnis .nav-link:active{
-    background-color: #cdac81;
-    color: #002f3f;
-    font-weight: 500;
-    border: none;
-}
-
-.galeri-bisnis .tab-content p{
-    font-size: 10px;
-}
-
-.galeri-bisnis .tab-content a{
-    font-size: 8px;
-    background-color: #e4edea;
-}
-
-.galeri-bisnis .card{
-    border-radius: 20px;
-    margin-top: 10px;
-    text-align: justify;
+.gambar_barang .btn:hover{
+    background-color: #185adb;
 }

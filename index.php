@@ -59,8 +59,8 @@ if (isset($_SESSION["role"])) {
                 </button>
                 <div class="collapse navbar-collapse ml-auto justify-content-end " id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
-                        <a class="nav-link " style="color: #002f3f;"href="?p=login">login</a>
-                        <a class="nav-link " style="color: #002f3f;"href="?p=register">register</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=login">Masuk</a>
+                        <a class="nav-link " style="color: #002f3f;"href="?p=register">registrasi</a>
                     </div>
                 </div>
             </div>

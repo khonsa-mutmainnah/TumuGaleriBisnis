@@ -70,7 +70,7 @@
                     if(isset($_SESSION["role"])){
                         if($_SESSION["role"]=="admin"){
                 ?>
-                            <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
+                            <a class="nav-link " style="color: #002f3f;"href="?p=logout">Keluar</a>
     
                             <div class="btn-group">
                                 <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
