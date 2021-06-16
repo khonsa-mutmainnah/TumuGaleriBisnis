@@ -74,7 +74,7 @@
     
                             <div class="btn-group">
                                 <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./gambar/aa.jpg" style="width:20px; height:20px;">
+                                    <img src="./gambar/aa.jpg" style="width:20px;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="?p=userlist">user</a></li>
@@ -105,8 +105,21 @@
                                             <div class="row row-cols-1 row-cols-md-4 g-4">
                                                 <div class="col">
                                                     <div class="card" style="background-color: #e4edea;">
-                                                        <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
-                                                        <a class="btn nama-toko-dash" style="font-size: 10px; margin-top:0px;" href="?p=toko-penjual">nama toko</a>
+                                                        <?php
+                                                            require_once('./class/class.Toko.php'); 		
+                                                            $objToko = new Toko();
+                                                            $objToko->user->id_user= $id_user;
+                                                            $arrayResult = $objToko->SelectTokoById();
+                                                            if(count($arrayResult)==0){
+                                                                echo '<tr><td colspan="9">TIDAK ADA DATA!</td></tr>';
+                                                            }
+                                                            else{
+                                                                foreach ($arrayResult as $dataToko){
+                                                                    echo "<img src='./upload/toko/".$dataToko->logo."' class='card-img-top rounded mx-auto d-block alt='logo'>";
+                                                                    echo '<a class="btn nama-toko-dash" style="font-size: 10px; margin-top:0px;" href="?p=toko-penjual&id_toko='.$dataToko->id_toko.'">'.$dataToko->nama_toko.'</a>';
+                                                                }
+                                                            }
+                                                        ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -118,12 +131,13 @@
                             <a class="nav-link " style="color: #002f3f;"href="?p=logout">Logout</a>
                             <div class="btn-group">
                                 <button type="button" class="btn" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./gambar/aa.jpg" style="width:35px; border-radius:50%;">
+                                    <img src="./gambar/aa.jpg" style="width:20px;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="?p=toko-edit&id_user=<?php echo $id_user; ?>">tambah toko</a></li>
                                     <li><a class="dropdown-item" href="?p=user-edit&id_user=<?php echo $id_user; ?>">edit profil</a></li>
                                     <li><a class="dropdown-item" href="?p=reset-pw-form">ubah password</a></li>
+                                    <li><a class="dropdown-item" href="?p=Home">home</a></li>
                                 </ul>
                             </div>
                 <?php

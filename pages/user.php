@@ -89,7 +89,7 @@
           <div class="row mb-3">
             <label class="col-sm-3 col-form-label">instagram</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" name="instagram" value="<?php echo $objUser->instagram; ?>" placeholder="@instagram" class="form-control">
+                <input type="text" class="form-control" name="instagram" value="<?php echo $objUser->instagram_user; ?>" placeholder="@instagram" class="form-control">
               </div>
           </div>
         </div>

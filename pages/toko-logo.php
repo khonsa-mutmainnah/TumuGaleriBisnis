@@ -7,7 +7,7 @@
         $isErrorFile = false;
         $folder		= './upload/toko/';
         $file_type	= array('jpg','jpeg','png','gif','bmp');
-        $max_size	= 1000000; // 1MB	
+        $max_size	= 5000000; // 5MB	
         $file_name	= $_FILES['logo']['name'];
         $file_size	= $_FILES['logo']['size'];
         //cari extensi file dengan menggunakan fungsi explode
@@ -70,7 +70,7 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">upload logo</label>
                     <div class="col-sm-9">
-                        <input type="file" class="form-control" id="foto" name="foto" required>	
+                        <input type="file" class="form-control" id="logo" name="logo" required>	
                     </div>
                 </div>
             </div>

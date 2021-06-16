@@ -45,7 +45,7 @@
     background-color: #e4edea;
 }
 .log-in #submit-login:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 .log-in .text-center h2{
@@ -93,7 +93,7 @@
 }
 .log-in .btn:hover{
     color: #e4edea;
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* reset password css*/
@@ -116,7 +116,7 @@
     background-color: #e4edea;
 }
 .reset #submit-reset:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 .reset .text-center h2{
@@ -149,7 +149,7 @@
 }
 .reset .btn:hover{
     color: #e4edea;
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* register user css */
@@ -197,7 +197,7 @@
 }
 .register-user .btn:hover{
     color: #e4edea;
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 .register-user #image-preview{
@@ -223,7 +223,7 @@
     font-size: 9px;
 }
 .home .text-center .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
     color: #002f3f;
     border: none;
 }
@@ -232,7 +232,7 @@
 }
 
 .home #foot{
-    background-color: #185adb;
+    background-color: #cdac81;
     color: #002f3f;
     padding: 2px;
     margin-top:50px;
@@ -278,7 +278,7 @@
     margin-top: 40px;
 }
 .user .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* userlist */
@@ -312,7 +312,7 @@
     margin: 2px;
 }
 .userlist .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* user-foto */
@@ -345,12 +345,12 @@
     margin-top: 40px;
 }
 .lokasi .button-end a{
-    background-color: #185adb;
+    background-color: #cdac81;
     color:#002f3f;
     font-weight: 400;
 }
 .lokasi .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* toko-penjual css */
@@ -374,19 +374,19 @@
 .toko-penjual .nav-link{
     margin-right: 10px;
 }
-.toko-penjual .nav-link:hover{
+/* .toko-penjual .nav-link:hover{
     background-color: #cdac81;
-}
+} */
 .toko-penjual .text-center .btn{
     background-color: #e4edea;
     color: #002f3f;
     font-size: 9px;
 }
-.toko-penjual .text-center .btn:hover{
+/* .toko-penjual .text-center .btn:hover{
     background-color: #cdac81;
     color: #002f3f;
     border: none;
-}
+} */
 .toko-penjual .card-text{
     font-size: 10px;
 }
@@ -408,6 +408,18 @@
     font-size: 10px;
 }
 
+.toko-penjual .nav-link:hover{
+    background-color: #185adb;
+}
+.toko-penjual .text-center .btn{
+    background-color: #e4edea;
+    color: #002f3f;
+    font-size: 9px;
+}
+.toko-penjual .text-center .btn:hover{
+    background-color: #185adb;
+    color: #e4edea;
+}
 /* toko list */
 .tokolist .judul{
     color: #002f3f;
@@ -442,8 +454,8 @@
     border-color: #002f3f;
     margin: 2px;
 }
-.lokasilist .btn:hover{
-    background-color: #185adb;
+.tokolist .btn:hover{
+    background-color: #cdac81;
 }
 
 /* toko-logo */
@@ -476,7 +488,7 @@
     margin-top: 40px;
 }
 .kategori .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* barang */
@@ -509,7 +521,7 @@
     margin-top: 40px;
 }
 .barang .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* barang list */
@@ -532,7 +544,7 @@
     border-color: #002f3f;
 }
 .kategorilist .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 .baranglist td{
@@ -553,7 +565,7 @@
 }
 
 .baranglist .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* lokasi css */
@@ -588,7 +600,7 @@
 }
 
 .lokasi .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 /* lokasilist css */
@@ -621,19 +633,19 @@
     background-color: #e4edea;
     color:#002f3f;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     border-color: #002f3f;
     margin: 2px;
 }
 
-.galeri-bisnis .nav-link:hover{
-    background-color: #185adb;
+.lokasilist .nav-link:hover{
+    background-color: #cdac81;
     color: #002f3f;
     font-weight: 500;
     border: none;
 }
-.galeri-bisnis .nav-link:active{
-    background-color: #185adb;
+.lokasilist .nav-link:active{
+    background-color: #cdac81;
     color: #002f3f;
     font-weight: 500;
     border: none;
@@ -678,26 +690,13 @@
     background-color: #185adb;
 }
 
-/* pisah */
-.toko-penjual .nav-link:hover{
-    background-color: #185adb;
-}
-.toko-penjual .text-center .btn{
-    background-color: #e4edea;
-    color: #002f3f;
-    font-size: 9px;
-}
-.toko-penjual .text-center .btn:hover{
-    background-color: #185adb;
-    color: #e4edea;
-}
 
 .kategorilist  .add{
     margin-top: 10px;
 }
 
 .toko-penjual #foot{
-    background-color: #185adb;
+    background-color: #cdac81;
     color: #002f3f;
     padding: 2px;
     margin-top:50px;
@@ -730,8 +729,8 @@
     background-color: #cdac81;
 }
 
-.tokolist .btn{
-    background-color: #185adb;
+.kategorilist .btn{
+    background-color: #cdac81;
     font-weight: 600;
     color: #212932;
     margin-top: 30px;
@@ -765,7 +764,7 @@
     font-weight: 400;
 }
 .toko .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 /* toko list */
 .tokolist {
@@ -780,8 +779,8 @@
     background-color: #cdac81;
 }
 
-.tokolist .btn{
-    background-color: #185adb;
+.gambar_barang .btn{
+    background-color: #cdac81;
     font-weight: 600;
     color: #212932;
     margin-top: 30px;
@@ -814,7 +813,7 @@
     font-weight: 400;
 }
 .barang .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
 }
 
 .gambarBarangList .btn:hover{
@@ -842,5 +841,33 @@
     color:#002f3f;
 }
 .gambar_barang .btn:hover{
-    background-color: #185adb;
+    background-color: #cdac81;
+}
+
+.galeri-bisnis .nav-link:hover{
+    background-color: #cdac81;
+    color: #002f3f;
+    font-weight: 500;
+    border: none;
+}
+.galeri-bisnis .nav-link:active{
+    background-color: #cdac81;
+    color: #002f3f;
+    font-weight: 500;
+    border: none;
+}
+
+.galeri-bisnis .tab-content p{
+    font-size: 10px;
+}
+
+.galeri-bisnis .tab-content a{
+    font-size: 8px;
+    background-color: #e4edea;
+}
+
+.galeri-bisnis .card{
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: justify;
 }

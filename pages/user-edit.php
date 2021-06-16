@@ -33,10 +33,10 @@
         echo '<script> window.location = "?p=GaleriBisnis"; </script>';
       }
     }
-    else if(isset($_GET['id_user'])){
-        $objUser->id_user = $_GET['id_user'];
-        $objUser->SelectOneUser();
-    }
+    // else if(isset($_GET['id_user'])){
+    //     $objUser->id_user = $_GET['id_user'];
+    //     $objUser->SelectOneUser();
+    // }
 ?>
 
 <div class="user">

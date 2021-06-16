@@ -12,7 +12,7 @@
 		$objBarang->deskripsi= $_POST['deskripsi'];
 		$objBarang->harga = $_POST['harga'];
 		$objBarang->variasi = $_POST['variasi'];
-		$objBarang->toko->id_toko = $_POST['id_toko'];
+		$objBarang->toko->id_toko = $_GET['id_toko'];
 
 		if (isset($_GET['id_barang'])) {
 			$objBarang->id_barang = $_GET['id_barang'];

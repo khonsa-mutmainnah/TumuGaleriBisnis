@@ -52,7 +52,7 @@
         }
     
         public function SelectAllGambarBarang(){
-            $sql="SELECT b.nama_barang, gb.lokasi_gambar 
+            $sql="SELECT gb.id_gb, b.nama_barang, gb.lokasi_gambar 
             FROM gambar_barang gb INNER JOIN barang b 
             ON b.id_barang=gb.id_barang";
             $result = mysqli_query($this->connection, $sql);
@@ -62,6 +62,7 @@
             if(mysqli_num_rows($result)>0){
                 while ($data=mysqli_fetch_Array($result)){
                     $objGambarBarang = new GambarBarang();
+                    $objGambarBarang->id_gb = $data['id_gb'];
                     $objGambarBarang->barang->nama_barang = $data['nama_barang'];
                     $objGambarBarang->lokasi_gambar = $data['lokasi_gambar'];
                     $arrResult[$cnt] = $objGambarBarang;

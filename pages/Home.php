@@ -1,55 +1,79 @@
 <div class="home">
     <div class=container>
-    <div class="card text-center">
+      <div class="card text-center">
         <div class="card-body">
-        <div class="text-center">
-            <img src="./gambar/web.png" class="rounded" alt="logo-toko" style="width: 110px;">
-        </div>
-        <h4 class="card-title" style="font-weight: 600; margin-top:5px;">Nama Toko</h4>
-        <p class="card-text">disini nantinya akan jadi tagline toko</p>
-        <p class="card-text">kecamatan, kota, provinsi (alamat toko)</p>
-        <p class="card-text">jumlah produk</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil penjual</a>
-        
-        <!-- Modal profil penjual -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title text-center" id="staticBackdropLabel">Profil Penjual</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="text-center">
-                    <img src="./gambar/aa.jpg" class="rounded" alt="logo-toko" style="width: 110px;">
-                    <h3>Nama pemilik toko</h3>
-                    <p>0888888888</p>
-                    <p>oca@email.com</p>
-                    <p>Bandung</p>
+        <section>
+          <?php
+            require_once('./class/class.Toko.php'); 		
+            $objToko = new Toko();
+            $objToko->id_toko = $_GET['id_toko'];
+            if(isset($_GET['id_toko'])){
+              $objToko->SelectOneToko();
+
+              echo '<div class="text-center">';
+              echo "<img src='./upload/toko/".$objToko->logo."' class='rounded' style='width:110px;' alt='logo'/>";
+              echo '</div>';
+              echo '<h4 class="card-title" style="font-weight: 600; margin-top:5px;">'.$objToko->nama_toko.'</h4>';
+              echo '<p class="card-text">'.$objToko->tagline.'</p>';
+              echo '<p class="card-text">'.$objToko->lokasi->kecamatan.', '.$objToko->lokasi->kota.', '.$objToko->lokasi->provinsi.''.'</p>';
+              echo '<br>';  
+          ?>
+          <!-- Button trigger modal -->
+          <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil penjual</a>
+          
+          <!-- Modal profil penjual -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticBackdropLabel">Profil Penjual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                    <?php
+                    echo '<img src="./upload/user/'.$objToko->user->foto.'" class="rounded" alt="foto-user" style="width: 110px;">';
+                    echo '<h3>'.$objToko->user->username.'</h3>';
+                    echo '<p>'.$objToko->user->nama.'</p>';
+                    echo '<p>'.$objToko->user->instagram_user.'</p>';
+                    echo '<p>'.$objToko->user->no_hp.'</p>';
+                    echo '<p>'.$objToko->user->email.'</p>';
+                    echo '<p>'.$objToko->user->kota.'</p>';
+                  ?>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row align-items-start">
+                <div class="col">
+                  <img src="./gambar/telfon.png" style="padding-top:0px; width:20px;">
+                  <?php
+                    echo '<p>'.$objToko->no_telp.'</p>';
+                  ?>
+                </div>
+                <div class="col">
+                  <img src="./gambar/ig.png" style="padding-top:0px; width:20px;">
+                  <?php
+                    echo '<p>'.$objToko->instagram.'</p>';
+                  ?>
+                </div>
+                <div class="col">
+                  <img src="./gambar/web.png" style="padding-top:0px; width:20px;">
+                  <?php
+                    echo '<br>';
+                    echo '<a href='.$objToko->url_toko.'>kunjungi toko</a>';
+                  ?>
                 </div>
             </div>
-            </div>
+            <?php
+            }
+          ?>
           </div>
-        </div>
-        <div class="card-footer">
-          <div class="row align-items-start">
-              <div class="col">
-              <img src="./gambar/telfon.png" style="padding-top:0px; width:20px;">
-              <p>088888888888</p>
-              </div>
-              <div class="col">
-              <img src="./gambar/ig.png" style="padding-top:0px; width:20px;">
-              <p>@nama_instagram</p>
-              </div>
-              <div class="col">
-              <img src="./gambar/web.png" style="padding-top:0px; width:20px;">
-              <p>www.web-toko.com</p>
-              </div>
-          </div>
-        </div>
-    </div>
+        </section>
+      </div>
     </div>
 
 

@@ -94,18 +94,6 @@
         </div>
 		<div class="col">
                 <div class="row mb-3">
-					<img id="image-preview" alt="image preview" class="rounded mx-auto">
-					<script>
-						function previewImage() {
-							document.getElementById("image-preview").style.display = "block";
-							var oFReader = new FileReader();
-							oFReader.readAsDataURL(document.getElementById("gambar_barang").files[0]);
-
-							oFReader.onload = function(oFREvent) {
-								document.getElementById("image-preview").src = oFREvent.target.result;
-							};
-						};
-					</script>
                     <label class="col-sm-3 col-form-label">masukkan gambar</label>
                     <div class="col-sm-9">
 						<input class="form-control" type="file" id="gambar_barang" name="gambar_barang" onchange="previewImage();" required>

@@ -45,10 +45,6 @@
                 echo "<script> alert('Proses upload gagal. Silakan ulangi'); </script>";			
         }		
     }
-    else if(isset($_GET['id_user'])){	
-        $objUser->id = $_GET['id_user'];	
-        $objUser->SelectOneUser();
-    }
 ?>
 
 <div class="user-foto">
