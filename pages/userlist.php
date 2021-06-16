@@ -37,13 +37,14 @@
                 echo '<td class="text-break">'.$dataUser->email .'</td>';
                 echo '<td class="text-break">'.$dataUser->kota .'</td>';
                 echo '<td class="text-break">'.$dataUser->instagram_user .'</td>';
-                echo "<td ><img src='".$dataUser->foto."' width='50px'/></td>";
+                echo "<td ><img src='./upload/user/".$dataUser->foto."' width='50px'/></td>";
                 echo '<td class="text-break">'.$dataUser->role .'</td>';
                 echo '<td>
-                <a class="btn btn-warning"
+                <a class="btn"
                 href="?p=user&id_user=' . $dataUser->id_user . '"> Edit </a> 
                 <a class="btn"
-                href="?p=delete-user&id_user=' . $dataUser->id_user . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a></td>';
+                href="?p=delete-user&id_user=' . $dataUser->id_user . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a>
+                <a class="btn"href="?p=user-foto&id_user='.$dataUser->id_user.'"> edit logo</a></td>';
                 echo '</tr>';
                 $no++;
             }

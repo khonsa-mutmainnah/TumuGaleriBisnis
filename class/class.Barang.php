@@ -1,5 +1,5 @@
 <?php 
-include 'class.Toko.php';
+	require_once("class.Barang.php");
 	class Barang extends Connection
 	{
 		

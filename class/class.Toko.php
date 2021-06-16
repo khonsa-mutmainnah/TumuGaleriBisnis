@@ -76,6 +76,31 @@ class Toko extends Connection{
         return $arrResult;
     }
 
+
+    public function SelectTokoById(){
+        $sql="SELECT t.id_toko, t.nama_toko, t.logo
+                FROM toko t JOIN user u ON u.id_user=t.id_user 
+                    JOIN kategori k ON k.id_kategori=t.id_kategori
+                    JOIN lokasi l ON l.id_lokasi=t.id_lokasi
+                WHERE t.id_user=".$this->user->id_user."";
+        $result = mysqli_query($this->connection, $sql);
+        $arrResult= Array();
+        $cnt=0;
+
+        if(mysqli_num_rows($result)>0){
+            while ($data=mysqli_fetch_Array($result)){
+                $objToko = new Toko();
+                $objToko->id_toko = $data['id_toko'];
+                $objToko->nama_toko = $data['nama_toko'];
+                $objToko->logo = $data['logo'];
+                // $objToko->status = $data['status'];
+                $arrResult[$cnt]=$objToko;
+                $cnt++;
+            }
+        }
+        return $arrResult;
+    }
+    
     public function AddToko(){
         $sql = "INSERT INTO toko(nama_toko, id_lokasi, status,
                 tagline, no_telp, instagram, url_toko, id_kategori, id_user)
@@ -116,6 +141,21 @@ class Toko extends Connection{
             $this->message='toko gagal diupdate';
     }
 
+    public function UpdateTokoPenjual(){
+        $sql = "UPDATE toko
+                SET nama_toko='$this->nama_toko', id_lokasi=".$this->lokasi->id_lokasi.",
+                    tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', 
+                    url_toko='$this->url_toko', 
+                    id_kategori=".$this->kategori->id_kategori.", id_user=".$this->user->id_user."
+                WHERE id_toko = '$this->id_toko'";
+                $this->hasil=mysqli_query($this->connection, $sql);
+
+        if($this->hasil)
+            $this->message='toko berhasil diupdate!';
+        else
+            $this->message='toko gagal diupdate';
+    }
+
     public function UpdateLogoToko(){
         $sql = "UPDATE toko
                 SET logo='$this->logo'
@@ -129,24 +169,38 @@ class Toko extends Connection{
     }
 
     public function SelectOneToko(){
-        $sql="SELECT* FROM toko WHERE id_toko='$this->id_toko'";
+        $sql="SELECT t.id_toko, t.nama_toko, t.logo, t.tagline, t.no_telp, t.instagram, t.url_toko,
+        u.username , k.nama_kategori, l.kecamatan, l.kota, l.provinsi, t.status, u.foto, u.nama, u.instagram_user,
+        u.no_hp, u.email, u.kota, u.id_user
+        FROM toko t JOIN user u ON u.id_user=t.id_user 
+            JOIN kategori k ON k.id_kategori=t.id_kategori
+            JOIN lokasi l ON l.id_lokasi=t.id_lokasi WHERE id_toko='$this->id_toko'";
         $resultOne = mysqli_query($this->connection, $sql) or die(mysqli_error($this->connection));
 
         if(mysqli_num_rows($resultOne)==1){
             $this->hasil=true;
             $data=mysqli_fetch_assoc($resultOne);
 
-            $this->id_toko = $data['id_toko'];
-            $this->nama_toko = $data['nama_toko'];
-            $this->logo = $data['logo'];
-            $this->tagline = $data['tagline'];
-            $this->no_telp = $data['no_telp'];
-            $this->status = $data['status'];
-            $this->instagram = $data['instagram'];
-            $this->url_toko = $data['url_toko'];
-            $this->user->id_user = $data['id_user'];
-            $this->lokasi->id_lokasi = $data['id_lokasi'];
-            $this->kategori->id_kategori = $data['id_kategori'];
+                $this->id_toko = $data['id_toko'];
+                $this->nama_toko = $data['nama_toko'];
+                $this->logo = $data['logo'];
+                $this->tagline = $data['tagline'];
+                $this->no_telp = $data['no_telp'];
+                $this->status = $data['status'];
+                $this->instagram = $data['instagram'];
+                $this->url_toko = $data['url_toko'];
+                $this->user->id_user = $data['id_user'];
+                $this->user->username = $data['username'];
+                $this->user->foto = $data['foto'];
+                $this->user->nama = $data['nama'];
+                $this->user->instagram_user = $data['instagram_user'];
+                $this->user->no_hp = $data['no_hp'];
+                $this->user->email = $data['email'];
+                $this->user->kota = $data['kota'];
+                $this->lokasi->kecamatan = $data['kecamatan'];
+                $this->lokasi->kota = $data['kota'];
+                $this->lokasi->provinsi = $data['provinsi'];
+                $this->kategori->nama_kategori = $data['nama_kategori'];
         }
     }
 

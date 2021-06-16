@@ -34,24 +34,24 @@
                 foreach ($arrayResult as $dataToko){
                     echo '<tr>';
                     echo '<td>'.$no.'</td>';
-                    echo '<td>'.$dataToko->nama_toko.'</td>';
+                    echo '<td class="text-break">'.$dataToko->nama_toko.'</td>';
                     echo "<td ><img src='./upload/toko/".$dataToko->logo."' width='50px'/></td>";
-                    echo '<td>'.$dataToko->tagline.'</td>';
+                    echo '<td class="text-break">'.$dataToko->tagline.'</td>';
                     echo '<td>'.$dataToko->no_telp.'</td>';
                     if($dataToko->status==0){
-                        echo '<td>butuh persetujuan</td>';
+                        echo '<td class="text-break">butuh persetujuan</td>';
                     }
                     else if($dataToko->status==1){
                         echo '<td>disetujui</td>';
                     }
                     else{
-                        echo '<td>tidak disetujui</td>';
+                        echo '<td class="text-break">tidak disetujui</td>';
                     }
                     echo '<td>'.$dataToko->instagram.'</td>';
-                    echo '<td>'.$dataToko->url_toko.'</td>';
+                    echo '<td class="text-break">'.$dataToko->url_toko.'</td>';
                     echo '<td>'.$dataToko->user->username.'</td>';
                     echo '<td class="text-break">'.$dataToko->lokasi->kecamatan.', '.$dataToko->lokasi->kota.', '.$dataToko->lokasi->provinsi.'</td>';
-                    echo '<td>'.$dataToko->kategori->nama_kategori.'</td>';
+                    echo '<td class="text-break">'.$dataToko->kategori->nama_kategori.'</td>';
                     
                     // echo '<td>'.$dataToko->status.'</td>';
                     
