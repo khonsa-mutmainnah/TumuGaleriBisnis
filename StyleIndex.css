@@ -669,6 +669,16 @@
 .kategori .button-end{
     margin-top: 40px;
 }
+
+.kategori .btn:hover{
+    background-color: #185adb;
+}
+/* kategorilist css */
+.kategorilist .btn:hover{
+    background-color: #185adb;
+}
+
+/* pisah */
 .toko-penjual .nav-link:hover{
     background-color: #185adb;
 }
@@ -679,8 +689,7 @@
 }
 .toko-penjual .text-center .btn:hover{
     background-color: #185adb;
-    color: #002f3f;
-    margin-top: 40px;
+    color: #e4edea;
 }
 
 .kategorilist  .add{

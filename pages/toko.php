@@ -1,8 +1,10 @@
 <?php
+    require_once('./akses-admin.php'); 
     require_once('./class/class.Toko.php');
     require_once('./class/class.User.php');
     require_once('./class/class.Lokasi.php');
     require_once('./class/class.kategori.php');
+    require_once('./class/class.Mail.php');
 
     $objToko= new Toko();
     $objUser= new User();
@@ -138,34 +140,47 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">status</label>
                     <div class="col-sm-9">
                         <select name="status" class="form-control">
                             <option value="">--status--</option>
+                            <option value="<?php echo $objToko->status=1; ?>">setujui</option>
+                            <option value="<?php echo $objToko->status=2; ?>">tolak</option>
+                            <option value="<?php echo $objToko->status=0; ?>">meninjau</option>
                             <?php
                                 $arrlength=count($objToko->status_toko);
                                     for($x = 0; $x < $arrlength; $x++){
-                                        echo '<option value='.$objToko->status=array_search($status_toko).'>'.$objToko->status_toko.'</option>';
-                                        if($objToko->status=array_search($status_toko)==0){
-                                            echo '<option selected="true" value='.$objToko->status='0'.'>'.$objToko->status_toko.'</option>';
+                                        if($objToko->status==0){
                                         }
-                                        else if($objToko->status=array_search($status_toko)==1){
-                                            echo '<option selected="true" value='.$objToko->status='1'.'>'.$objToko->status_toko.'</option>';
+                                        else if($objToko->status==1){
+                                            if(isset($_POST['btnSubmit'])){
+                                                $objToko->user->email = $_POST['email'];
+                                                $password = $_POST['password'];
+                                                $objToko->hasil = true;
+                                            
+                                                if($objToko->hasil){
+                                                  echo "<script>alert('Konfirmasi Telah dikirim Via email');</script>";
+                                                  $email = $_POST['email'];
+                                                  $mail = new Mail();
+                                                  $mail->mailUser = $email;
+                                                  $mail->sendMailAction();
+                                                }
+                                                else{
+                                                  echo "<script>alert('Email tidak terdaftar');</script>";
+                                                }
+                                              }
                                         }
-                                        else if($objToko->status=array_search($status_toko)==2){
+                                        else if($objToko->status=2){
                                             echo '<option selected="true" value='.$objToko->status='2'.'>'.$objToko->status_toko.'</option>';
                                         }
                                     }
                             ?>
-                            <option value="<?php echo $objToko->status=1; ?>">setujui</option>
-                            <option value="<?php echo $objToko->status=2; ?>">tolak</option>
-                            <option value="<?php echo $objToko->status=0; ?>">meninjau</option>
                         </select>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col-lg-6 button-end">
                 <a class="btn" href="?p=tokolist">kembali</a>
                 <input class="btn" name="btnSubmit" type="submit" value="simpan">

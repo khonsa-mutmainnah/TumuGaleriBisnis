@@ -1,5 +1,6 @@
 <?php
-    require_once ('./class/class.kategori.php');
+    require_once('./akses-admin.php');
+    require_once('./class/class.kategori.php');
     $objKategori= new Kategori();
     if(isset ($_POST['btnSubmit'])){
         $objKategori->nama_kategori = $_POST['nama_kategori'];

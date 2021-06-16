@@ -1,3 +1,6 @@
+<?php 
+require_once('./akses-admin.php'); 
+?>
 <div class="container tokolist">
     <div class="text-center">
         <h1 class="judul"><strong>TOKO</strong></h1>
@@ -38,6 +41,7 @@
                     echo "<td ><img src='./upload/toko/".$dataToko->logo."' width='50px'/></td>";
                     echo '<td>'.$dataToko->tagline.'</td>';
                     echo '<td>'.$dataToko->no_telp.'</td>';
+                    // echo '<td>'.$dataToko->status.'</td>';
                     if($dataToko->status==0){
                         echo '<td>butuh persetujuan</td>';
                     }
@@ -56,6 +60,7 @@
                     // echo '<td>'.$dataToko->status.'</td>';
                     
                     echo '<td>
+                    <a class="btn"href="?p=toko-status-edit&id_toko='.$dataToko->id_toko.'"> status </a>
                     <a class="btn"href="?p=toko&id_toko='.$dataToko->id_toko.'"> Edit </a>
                     <a class="btn"href="?p=delete-toko&id_toko='.$dataToko->id_toko.'" 
                     onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Delete </a>

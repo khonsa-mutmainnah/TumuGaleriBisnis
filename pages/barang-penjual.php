@@ -1,6 +1,7 @@
 <?php 
 	require_once('./class/class.Barang.php');
 	require_once('./class/class.Toko.php');
+    require_once('./akses-penjual.php');
 
 	$objBarang = new Barang();
 	$objToko = new Toko();

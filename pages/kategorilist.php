@@ -1,3 +1,6 @@
+<?php 
+require_once('./akses-admin.php');
+?>
 <div class="container kategorilist">
     <div class="text-center">
         <h1 class="judul"><strong>KATEGORI</strong></h1>

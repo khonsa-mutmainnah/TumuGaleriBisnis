@@ -1,4 +1,5 @@
 <?php
+    require_once('./akses-penjual.php');
     require_once('./class/class.Toko.php');
     require_once('./class/class.User.php');
     require_once('./class/class.Lokasi.php');
@@ -22,7 +23,7 @@
         $objToko->no_telp = $_POST['no_telp'];
         $objToko->instagram = $_POST['instagram'];
         $objToko->url_toko = $_POST['url_toko'];
-        $objToko->status = 2;
+        $objToko->status = 1;
         $objToko->user->id_user = $_GET['id_user'];
         $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
         $objToko->kategori->id_kategori = $_POST['id_kategori'];

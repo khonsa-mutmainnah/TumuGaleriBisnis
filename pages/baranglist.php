@@ -1,3 +1,7 @@
+<?php 
+require_once('./akses-admin.php');
+?>
+
 <div class="container baranglist">
     <div class="text-center">
         <h1 class="judul"><strong>Barang</strong></h1>

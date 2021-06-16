@@ -1,4 +1,5 @@
 <?php
+    require_once('./akses-penjual.php'); 
     require_once('./class/class.User.php');
     $objUser= new User();
 

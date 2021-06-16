@@ -1,4 +1,5 @@
 <?php 
+    require_once('./akses-admin.php');
 	require_once('./class/class.Barang.php');
 	require_once('./class/class.Toko.php');
 

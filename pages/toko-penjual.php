@@ -1,3 +1,6 @@
+<?php 
+require_once('./akses-penjual.php');
+?>
 <div class="toko-penjual">
     <div class=container>
     <div class="card text-center">

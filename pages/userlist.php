@@ -1,3 +1,6 @@
+<?php 
+require_once('./akses-admin.php'); 
+?>
 <div class="container userlist">
     <div class="text-center">
         <h1 class="judul"><strong>USERLIST</strong></h1>

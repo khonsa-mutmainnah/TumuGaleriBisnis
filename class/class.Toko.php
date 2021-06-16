@@ -105,7 +105,7 @@ class Toko extends Connection{
         $sql = "UPDATE toko
                 SET nama_toko='$this->nama_toko', id_lokasi=".$this->lokasi->id_lokasi.",
                     tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', 
-                    url_toko='$this->url_toko', status='$this->status',
+                    url_toko='$this->url_toko',
                     id_kategori=".$this->kategori->id_kategori.", id_user=".$this->user->id_user."
                 WHERE id_toko = '$this->id_toko'";
                 $this->hasil=mysqli_query($this->connection, $sql);
@@ -160,23 +160,56 @@ class Toko extends Connection{
             $this->message='data gagal dihapus';
     }
 
-    //get status kos
-    public function getStatusToko()
+    public function getTokoData()
     {
-        try {
-            $sql = "SELECT t.status, u.email FROM toko t INNER JOIN user u ON u.id_user = t.id_user WHERE t.id_toko=$this->id_toko";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM toko t INNER JOIN user u ON t.id_user = u.id_user WHERE t.id_toko = '$this->id_toko'";
+        $this->hasil = mysqli_query($this->connection, $sql);
+        $result = mysqli_query($this->connection, $sql);
+        // $arrResult= Array();
+        $cnt=0;
 
-            $this->status = $result['status'];
-            $this->user->email = $result['email'];
-
-            return "Berhasil mengambil data";
-        } catch (PDOException $e) {
-            return "gagal mengambil data";
+        if(mysqli_num_rows($result)>0){
+            $data=mysqli_fetch_Array($result);
+                $this->user->email=$data['email'];
+                $this->status = $data['status'];
+                // $objToko = new Toko();
+                // $objToko->id_toko = $data['id_toko'];
+                // $objToko->nama_toko = $data['nama_toko'];
+                // $objToko->logo = $data['logo'];
+                // $objToko->tagline = $data['tagline'];
+                // $objToko->no_telp = $data['no_telp'];
+                // $objToko->status = $data['status'];
+                // $objToko->instagram = $data['instagram'];
+                // $objToko->url_toko = $data['url_toko'];
+                // $objToko->user->id_user = $data['id_user'];
+                // $objToko->user->email = $data['email'];
+                // $objToko->lokasi->kecamatan = $data['kecamatan'];
+                // $objToko->lokasi->kota = $data['kota'];
+                // $objToko->lokasi->provinsi = $data['provinsi'];
+                // $objToko->kategori->nama_kategori = $data['nama_kategori'];
+                // $arrResult[$cnt]=$objToko;
+                // $cnt++;
         }
     }
+
+    //get status kos
+    // public function getStatusToko()
+    // {
+    //     try {
+    //         $sql = "SELECT t.status, u.email FROM toko t INNER JOIN user u ON u.id_user = t.id_user WHERE t.id_toko=$this->id_toko";
+    //         $this->hasil = mysqli_query($this->connection, $sql);
+
+    //         // $stmt->execute();
+    //         // $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    //         // $this->status = $result['status'];
+    //         // $this->user->email = $result['email'];
+
+    //         return "Berhasil mengambil data";
+    //     } catch (PDOException $e) {
+    //         return "gagal mengambil data";
+    //     }
+    // }
 
     //edit status kos
     public function editStatusToko()
@@ -184,7 +217,7 @@ class Toko extends Connection{
         try {
             $sql = "UPDATE toko SET status='$this->status'
                     WHERE id_toko=$this->id_toko";
-            $this->conn->exec($sql);
+            mysqli_query($this->connection, $sql);
 
             return "berhasil mengedit";
         } catch (PDOException $e) {

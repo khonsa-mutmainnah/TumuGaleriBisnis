@@ -1,5 +1,6 @@
 <?php
-    require_once ('./class/class.User.php');
+    require_once('./akses-admin.php'); 
+    require_once('./class/class.User.php');
     $objUser= new User();
     if (isset ($_POST['btnSubmit'])){
       $objUser->username = $_POST['username'];

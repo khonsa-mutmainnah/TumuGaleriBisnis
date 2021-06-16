@@ -1,6 +1,6 @@
 <?php
   require_once("./class/class.Lokasi.php");
-  // require_once("./akses-admin.php");
+  require_once("./akses-admin.php");
 
   $objLokasi = new Lokasi();
   if (isset ($_POST['btnSubmit'])){
