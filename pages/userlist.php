@@ -47,7 +47,7 @@ require_once('./akses-admin.php');
                 href="?p=user&id_user=' . $dataUser->id_user . '"> Edit </a> 
                 <a class="btn"
                 href="?p=delete-user&id_user=' . $dataUser->id_user . '" onclick="return confirm(\'Apakah anda yakin ingin menghapus?\')"> Del </a>
-                <a class="btn"href="?p=user-foto&id_user='.$dataUser->id_user.'"> edit logo</a></td>';
+                <a class="btn"href="?p=user-foto&id_user='.$dataUser->id_user.'"> edit foto</a></td>';
                 echo '</tr>';
                 $no++;
             }
