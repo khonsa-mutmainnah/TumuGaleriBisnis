@@ -13,6 +13,12 @@ class Mail extends Connection
     private $linkemail;
     private $toko;
 
+    function __construct()
+    {
+        parent::__construct();
+        $this->toko = new Toko();
+    }
+
     //auto get
     public function __get($atribute)
     {
@@ -80,7 +86,7 @@ class Mail extends Connection
     //     <div class="button-end">
     //     <input class="btn col-lg-4" type="submit" value="Save" name="btnReset">
     //   </div>
-        $link = "<a href = '$toko->status'></a>";
+        // $link = "<a href = '$toko->status'></a>";
         // '
         // <div class="container log-in col-lg-4">
         //     <div class="button-end">
@@ -115,7 +121,7 @@ class Mail extends Connection
                 <img src="cid:image_cid1">
                 <h4 class="title text-center fs-1 fw-bolder" >TUMU GALERI BISNIS<br>Info Status Tokomu</h4>
                 <p>Isi Email <br></p>
-                <p>status Tokomu <b>' . $link . '</b></p>'.
+                <p>status Tokomu <b>' . $this->toko->status . '</b></p>'.
             '</div>';
         $mail->Body = $bodyContent;
 
