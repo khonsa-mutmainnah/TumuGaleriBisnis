@@ -2,6 +2,7 @@
     require_once('./akses-penjual.php'); 
     require_once('./class/class.User.php');
     $objUser= new User();
+    $objUser->id_user = $_GET['id_user'];
 
     if (isset ($_POST['btnSubmit'])){
       $objUser->username = $_POST['username'];
@@ -43,8 +44,11 @@
     <div class="container col-lg-7">
       <form form action="" method="post" class="user-form">
         <h4 class="title text-center fs-1 fw-bolder" >Edit profil</h4>
-        <?php echo "<img src='./upload/user/".$foto."' width='50px'/>";?>
-        <a href="?p=user-foto" style="font-size:8px; color: #e4edea;">edit foto profil</a>
+        <?php 
+        echo "<img src='./upload/user/".$objUser->foto."' width='50px'/>";
+        echo '<a href="?p=user-edit-foto&id_user='.$objUser->id_user.'" style="font-size:8px; color: #e4edea;">edit foto profil</a>';
+        ?>
+        
         <div class="col">
           <div class="row mb-3">
             <label class="col-sm-3 col-form-label">username</label>
@@ -102,9 +106,9 @@
           </div>
         </div>
         <div class="col-lg-6 button-end">
-          <a class="btn" href="?p=GaleriBisnis">kembali</a>
-          <input class="btn" name="btnSubmit" type="submit" value="simpan">
-        </div>
+                <a class="btn" href="?p=GaleriBisnis">kembali</a>
+                <input class="btn" name="btnSubmit" type="submit" value="simpan">
+            </div>
       </form>
     </div>
 </div>

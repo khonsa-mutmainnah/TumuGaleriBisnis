@@ -1,5 +1,20 @@
 <?php 
 require_once('./akses-penjual.php');
+
+require_once('./class/class.Toko.php');
+require_once('./class/class.gambar_barang.php');
+require_once('./class/class.Barang.php');
+
+$id_toko = $_GET['id_toko'];
+$objToko = new Toko();
+$objToko->id_toko = $id_toko;
+
+//fetch data kosan by id
+$objBarang = new Barang();
+$objBarang->toko->id_toko = $id_toko;
+$objBarang->SelectBarangByToko();
+
+
 ?>
 <div class="home">
     <div class=container>
@@ -220,43 +235,89 @@ require_once('./akses-penjual.php');
 
 
 
-  <div class="container">
+          <div class="container">
     <div class="row row-cols-1 row-cols-md-4 g-4">
-      <div class="col">
-        <div class="card">
-          <div id="carouselExampleControlsNoTouching_4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./gambar/foto.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching_4" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title text-center">nama barang</h5>
-              <p class="card-text">di sini nantinya jadi deskripsi barang. isinya bisa pengertian barang atau apa apa yang terkait dengan barang tersebut.</p>
-              <p class="card-text text-break">harga barang</p>
-              <p class="card-text">variasinya ada apa aja. macem macem warna atau apapun</p>
-              <p class="card-text">00000000</p>
-              <a class="btn card-text d-grid gap-2" href="?p=barang">edit barang</a>
-            </div>
-        </div>
-      </div>
+    <?php 
+      // $objBarang->toko->id_toko= $id_toko;
+      $arrayResult = $objBarang->SelectBarangByToko();
+      if(count($arrayResult)==0){
+          echo '<tr><td colspan="9"></td></tr>';
+      }
+      else{
+          foreach ($arrayResult as $dataBarang){
+
+            //fetch foto kosan by id
+            $allGambar = $objBarang->getAllGambarBarang();
+
+                    //kosong
+            if ($allGambar == "kosong") {
+              // echo '<div class="carousel-item active">';
+              // echo '<img class="d-block w-100" src="./gambar/aa.jpg">';
+              // echo '</div>';
+            }
+
+                    //selain itu
+            else {
+            $string = "";
+            $jumlah = count($allGambar);
+
+                        //lebih dari 1
+            if ($jumlah > 1) {
+              $i = 0;
+              foreach ($allGambar as $dataGambar) {
+              $i++;
+              if ($i == 1) {
+                $string = $string . '<div class="carousel-item active">
+                <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
+                </div>';
+              } 
+              else {
+                $string = $string . '<div class="carousel-item">
+                <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
+                </div>';
+              }
+            }
+
+            echo $string;
+
+                            // prev button
+            echo '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">';
+            echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+            echo '</a>';
+
+                            //next button
+            echo '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">';
+            echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+            echo '</a>';
+          }
+
+                        //selain 1
+          else if ($jumlah == 1) {
+            foreach ($allGambar as $dataGambar) {
+              $string = $string . '<div class="carousel-item active">
+              <img class="d-block w-100" src="' . substr($dataGambar->lokasi_gambar, 0) . "?t=" . time() . '">
+              </div>';
+          }
+
+          echo $string;
+        }
+      }
+
+            echo '<div class="card-body">';
+            echo  '<h5 class="card-title text-center">'.$dataBarang->nama_barang.'</h5>';
+            echo  '<p class="card-text">'.$dataBarang->deskripsi.'</p>';
+            echo  '<p class="card-text text-break">'.$dataBarang->harga.'</p>';
+            echo  '<p class="card-text">'.$dataBarang->variasi.'</p>';
+            echo  '<p class="card-text">'.$dataBarang->harga.'</p>';
+            echo  '<a class="btn card-text d-grid gap-2" href="?p=barang&id_barang='.$dataBarang->id_barang.'">edit barang</a>';
+            echo '</div>';
+          }
+          echo '</div>';
+      }
+      ?>
+  
     </div>
   </div>
 </div>
 
-<!-- jajs -->
+</div>
