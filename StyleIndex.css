@@ -249,6 +249,10 @@
     font-size: 10px;
 }
 
+.home .card-img-top{
+    height: 50px;
+}
+
 /* user css */
 .user .text-center h1{
     font-weight: 600;
@@ -730,13 +734,6 @@
     background-color: #cdac81;
 }
 
-.kategorilist .btn{
-    background-color: #cdac81;
-    font-weight: 600;
-    color: #212932;
-    margin-top: 30px;
-    align-items: center;
-}
 
 /* gambar barang */
 .gambar_barang .text-center h1{
@@ -832,43 +829,46 @@
 }
 
 .galeri-bisnis .btn:hover{
-    background-color: #e4edea;
+    background-color: #cdac81;
 }
   
-.galeri-bisnis .nav-link{
-    margin-top: 40px;
-    border: none;
-    background-color: #e4edea;
-    color:#002f3f;
-}
 .gambar_barang .btn:hover{
     background-color: #cdac81;
 }
 
-.galeri-bisnis .nav-link:hover{
-    background-color: #cdac81;
-    color: #002f3f;
-    font-weight: 500;
-    border: none;
-}
-.galeri-bisnis .nav-link:active{
-    background-color: #cdac81;
-    color: #002f3f;
-    font-weight: 500;
-    border: none;
+.galeri-bisnis .card{
+    margin-top: 10px;
 }
 
-.galeri-bisnis .tab-content p{
-    font-size: 10px;
+.galeri-bisnis .kategori-gb{
+    background-color: #e4edea;
+    color:#002f3f;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #002f3f;
+    margin: 4px;
 }
 
-.galeri-bisnis .tab-content a{
-    font-size: 8px;
+.galeri-bisnis .kategori-dan-toko{
+    margin-top: 40px;
+}
+
+.galeri-bisnis .card-img-top{
+    height: 180px;
+}
+
+.galeri-bisnis .card-text{
+    font-size: 12px;
+}
+
+.galeri-bisnis .card a{
     background-color: #e4edea;
 }
 
+.galeri-bisnis .row{
+    margin-top: 20px;
+}
+
 .galeri-bisnis .card{
-    border-radius: 20px;
-    margin-top: 10px;
-    text-align: justify;
+    margin-right: 10px;
 }

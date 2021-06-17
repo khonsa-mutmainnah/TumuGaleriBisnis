@@ -76,6 +76,41 @@ class Toko extends Connection{
         return $arrResult;
     }
 
+    public function SelectTokoByKategori(){
+        $sql="SELECT t.id_toko, t.nama_toko, t.logo, t.tagline, t.no_telp, t.instagram, t.url_toko,
+            u.username , k.nama_kategori, l.kecamatan, l.kota, l.provinsi, t.status, u.foto, u.nama, u.instagram_user,
+            u.no_hp, u.email, u.kota, u.id_user, t.id_kategori, k.id_kategori
+            FROM toko t JOIN user u ON u.id_user=t.id_user 
+            JOIN kategori k ON k.id_kategori=t.id_kategori
+            JOIN lokasi l ON l.id_lokasi=t.id_lokasi 
+            WHERE t.id_kategori=".$this->kategori->id_kategori."";
+        $result = mysqli_query($this->connection, $sql);
+        $arrResult= Array();
+        $cnt=0;
+
+        if(mysqli_num_rows($result)>0){
+            while ($data=mysqli_fetch_Array($result)){
+                $objToko = new Toko();
+                $objToko->id_toko = $data['id_toko'];
+                $objToko->nama_toko = $data['nama_toko'];
+                $objToko->logo = $data['logo'];
+                $objToko->tagline = $data['tagline'];
+                $objToko->no_telp = $data['no_telp'];
+                $objToko->status = $data['status'];
+                $objToko->instagram = $data['instagram'];
+                $objToko->url_toko = $data['url_toko'];
+                $objToko->user->username = $data['username'];
+                $objToko->lokasi->kecamatan = $data['kecamatan'];
+                $objToko->lokasi->kota = $data['kota'];
+                $objToko->lokasi->provinsi = $data['provinsi'];
+                $objToko->kategori->nama_kategori = $data['nama_kategori'];
+                $objToko->kategori->id_kategori = $data['id_kategori'];
+                $arrResult[$cnt]=$objToko;
+                $cnt++;
+            }
+        }
+        return $arrResult;
+    }
 
     public function SelectTokoById(){
         $sql="SELECT t.id_toko, t.nama_toko, t.logo

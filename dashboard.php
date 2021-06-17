@@ -103,24 +103,26 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="row row-cols-1 row-cols-md-4 g-4">
-                                                <div class="col">
-                                                    <div class="card" style="background-color: #e4edea;">
+                                                    
                                                         <?php
                                                             require_once('./class/class.Toko.php'); 		
                                                             $objToko = new Toko();
                                                             $objToko->user->id_user= $id_user;
                                                             $arrayResult = $objToko->SelectTokoById();
                                                             if(count($arrayResult)==0){
+                                                                
                                                                 echo '<tr><td colspan="9">TIDAK ADA DATA!</td></tr>';
                                                             }
                                                             else{
                                                                 foreach ($arrayResult as $dataToko){
+                                                                    echo '<div class="card" style="background-color: #e4edea;">';
                                                                     echo "<img src='./upload/toko/".$dataToko->logo."' class='card-img-top rounded mx-auto d-block alt='logo'>";
                                                                     echo '<a class="btn nama-toko-dash" style="font-size: 10px; margin-top:0px;" href="?p=toko-penjual&id_toko='.$dataToko->id_toko.'">'.$dataToko->nama_toko.'</a>';
+                                                                    echo '</div>';
                                                                 }
                                                             }
                                                         ?>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +139,6 @@
                                     <li><a class="dropdown-item" href="?p=toko-edit&id_user=<?php echo $id_user; ?>">tambah toko</a></li>
                                     <li><a class="dropdown-item" href="?p=user-edit&id_user=<?php echo $id_user; ?>">edit profil</a></li>
                                     <li><a class="dropdown-item" href="?p=reset-pw-form">ubah password</a></li>
-                                    <li><a class="dropdown-item" href="?p=Home">home</a></li>
                                 </ul>
                             </div>
                 <?php
