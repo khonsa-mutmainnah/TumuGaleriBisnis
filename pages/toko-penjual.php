@@ -1,13 +1,13 @@
 <?php 
 require_once('./akses-penjual.php');
 
-require_once('./class/class.Toko.php');
-require_once('./class/class.gambar_barang.php');
-require_once('./class/class.Barang.php');
+  require_once('./class/class.Toko.php');
+  require_once('./class/class.gambar_barang.php');
+  require_once('./class/class.Barang.php');
 
-$id_toko = $_GET['id_toko'];
-$objToko = new Toko();
-$objToko->id_toko = $id_toko;
+  $id_toko = $_GET['id_toko'];
+  $objToko = new Toko();
+  $objToko->id_toko = $id_toko;
 
 //fetch data kosan by id
 $objBarang = new Barang();
@@ -180,23 +180,20 @@ $objBarang->SelectBarangByToko();
 
           <div class="container">
     <div class="row row-cols-1 row-cols-md-4 g-4">
-    <?php 
-      // $objBarang->toko->id_toko= $id_toko;
-      $arrayResult = $objBarang->SelectBarangByToko();
-      if(count($arrayResult)==0){
-          echo '<tr><td colspan="9"></td></tr>';
-      }
-      else{
-          foreach ($arrayResult as $dataBarang){
-
+      <div class="col">
+        <div class="card">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <!-- foto -->
+          <div class="carousel-inner">
+            <?php
             //fetch foto kosan by id
             $allGambar = $objBarang->getAllGambarBarang();
 
                     //kosong
             if ($allGambar == "kosong") {
-              // echo '<div class="carousel-item active">';
+              echo '<div class="carousel-item active">';
               // echo '<img class="d-block w-100" src="./gambar/aa.jpg">';
-              // echo '</div>';
+              echo '</div>';
             }
 
                     //selain itu
@@ -211,12 +208,12 @@ $objBarang->SelectBarangByToko();
               $i++;
               if ($i == 1) {
                 $string = $string . '<div class="carousel-item active">
-                <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
+                <img class="d-block w-100" src="' . substr($dataGambar->lokasi_gambar, 0) . "?t=" . time() . '">
                 </div>';
               } 
               else {
                 $string = $string . '<div class="carousel-item">
-                <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
+                <img class="d-block w-100" src="' . substr($dataGambar->lokasi_gambar, 0) . "?t=" . time() . '">
                 </div>';
               }
             }
@@ -245,22 +242,28 @@ $objBarang->SelectBarangByToko();
           echo $string;
         }
       }
+    ?>
+    </div>
+  </div>
 
+
+      <?php 
+      // $objBarang->toko->id_toko= $id_toko;
+      $arrayResult = $objBarang->SelectBarangByToko();
+      if(count($arrayResult)==0){
+          echo '<tr><td colspan="9">tidak ada data</td></tr>';
+      }
+      else{
+          foreach ($arrayResult as $dataBarang){
             echo '<div class="card-body">';
             echo  '<h5 class="card-title text-center">'.$dataBarang->nama_barang.'</h5>';
             echo  '<p class="card-text">'.$dataBarang->deskripsi.'</p>';
             echo  '<p class="card-text text-break">'.$dataBarang->harga.'</p>';
             echo  '<p class="card-text">'.$dataBarang->variasi.'</p>';
             echo  '<p class="card-text">'.$dataBarang->harga.'</p>';
-            echo  '<a class="btn card-text d-grid gap-2" href="?p=barang&id_barang='.$dataBarang->id_barang.'">edit barang</a>';
+            echo  '<a class="btn card-text d-grid gap-2" href="?p=barang-penjual&id_barang='.$dataBarang->id_barang.'">edit barang</a>';
             echo '</div>';
           }
-          echo '</div>';
       }
       ?>
-  
-    </div>
-  </div>
-</div>
-
 </div>

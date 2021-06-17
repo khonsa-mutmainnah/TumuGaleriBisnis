@@ -94,90 +94,86 @@ $objBarang->SelectBarangByToko();
     <div class="container">
     <div class="row row-cols-1 row-cols-md-4  ">
       <div class="col">
-        <div class="card">
+        
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <!-- foto -->
           <div class="carousel-inner">
-            <?php
-            
-    ?>
-    </div>
-  </div>
+        </div>
+      </div>
 
 
-      <?php 
-      // $objBarang->toko->id_toko= $id_toko;
-      $arrayResult = $objBarang->SelectBarangByToko();
-      if(count($arrayResult)==0){
-          echo '<tr><td colspan="9">wakwaw!</td></tr>';
-      }
-      else{
-          foreach ($arrayResult as $dataBarang){
+          <?php 
+          // $objBarang->toko->id_toko= $id_toko;
+          $arrayResult = $objBarang->SelectBarangByToko();
+          if(count($arrayResult)==0){
+              echo '<tr><td colspan="9"></td></tr>';
+          }
+          else{
+              foreach ($arrayResult as $dataBarang){
 
-            //fetch foto kosan by id
-            $allGambar = $objBarang->getAllGambarBarang();
+                //fetch foto kosan by id
+                $allGambar = $objBarang->getAllGambarBarang();
 
-                    //kosong
-            if ($allGambar == "kosong") {
-              // echo '<div class="carousel-item active">';
-              // echo '<img class="d-block w-100" src="./gambar/aa.jpg">';
-              // echo '</div>';
-            }
+                        //kosong
+                if ($allGambar == "kosong") {
+                  // echo '<div class="carousel-item active">';
+                  // echo '<img class="d-block w-100" src="./gambar/aa.jpg">';
+                  // echo '</div>';
+                }
 
-                    //selain itu
-            else {
-            $string = "";
-            $jumlah = count($allGambar);
+                        //selain itu
+                else {
+                $string = "";
+                $jumlah = count($allGambar);
 
-                        //lebih dari 1
-            if ($jumlah > 1) {
-              $i = 0;
-              foreach ($allGambar as $dataGambar) {
-              $i++;
-              if ($i == 1) {
-                $string = $string . '<div class="carousel-item active">
-                <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
-                </div>';
-              } 
-              else {
-                $string = $string . '<div class="carousel-item">
-                <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
-                </div>';
+                            //lebih dari 1
+                if ($jumlah > 1) {
+                  $i = 0;
+                  foreach ($allGambar as $dataGambar) {
+                  $i++;
+                  if ($i == 1) {
+                    $string = $string . '<div class="carousel-item active">
+                    <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
+                    </div>';
+                  } 
+                  else {
+                    $string = $string . '<div class="carousel-item">
+                    <img class="d-block w-100" src="'.$dataGambar->lokasi_gambar.'">
+                    </div>';
+                  }
+                }
+
+                echo $string;
+
+                                // prev button
+                echo '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">';
+                echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+                echo '</a>';
+
+                                //next button
+                echo '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">';
+                echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+                echo '</a>';
               }
+
+                            //selain 1
+              else if ($jumlah == 1) {
+                foreach ($allGambar as $dataGambar) {
+                  $string = $string . '<div class="carousel-item active">
+                  <img class="d-block w-100" src="' . substr($dataGambar->lokasi_gambar, 0) . "?t=" . time() . '">
+                  </div>';
+              }
+
+              echo $string;
             }
-
-            echo $string;
-
-                            // prev button
-            echo '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">';
-            echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
-            echo '</a>';
-
-                            //next button
-            echo '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">';
-            echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
-            echo '</a>';
           }
-
-                        //selain 1
-          else if ($jumlah == 1) {
-            foreach ($allGambar as $dataGambar) {
-              $string = $string . '<div class="carousel-item active">
-              <img class="d-block w-100" src="' . substr($dataGambar->lokasi_gambar, 0) . "?t=" . time() . '">
-              </div>';
-          }
-
-          echo $string;
-        }
-      }
-
+          echo '<div class="card">';
             echo '<div class="card-body">';
             echo  '<h5 class="card-title text-center">'.$dataBarang->nama_barang.'</h5>';
             echo  '<p class="card-text">'.$dataBarang->deskripsi.'</p>';
             echo  '<p class="card-text text-break">'.$dataBarang->harga.'</p>';
             echo  '<p class="card-text">'.$dataBarang->variasi.'</p>';
             echo  '<p class="card-text">'.$dataBarang->harga.'</p>';
-            echo  '<a class="btn card-text d-grid gap-2" href="?p=barang&id_barang='.$dataBarang->id_barang.'">edit barang</a>';
             echo '</div>';
           }
           echo '</div>';

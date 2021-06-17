@@ -6,13 +6,13 @@
 	$objBarang = new Barang();
 	$objToko = new Toko();
 	$objTokoList= $objToko->SelectAllToko();
-
+                              
 	if (isset($_POST['btnSubmit'])) {
 		$objBarang->nama_barang = $_POST['nama_barang'];
 		$objBarang->deskripsi= $_POST['deskripsi'];
 		$objBarang->harga = $_POST['harga'];
 		$objBarang->variasi = $_POST['variasi'];
-		$objBarang->toko->id_toko = $_GET['id_toko'];
+		$objToko->id_toko = $_GET['id_toko']; 
 
 		if (isset($_GET['id_barang'])) {
 			$objBarang->id_barang = $_GET['id_barang'];
@@ -69,7 +69,7 @@
                 </div>
             </div>
 			<div class="col-lg-6 button-end">
-                <a class="btn" href="?p=toko-penjual">kembali</a>
+                <a class="btn" href="?p=toko-penjual&id_toko=<?php $objBarang->toko->id_toko ?>">kembali</a>
                 <input class="btn" name="btnSubmit" type="submit" value="simpan">
             </div>
         </form>
