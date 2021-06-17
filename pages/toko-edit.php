@@ -23,6 +23,7 @@
         $objToko->no_telp = $_POST['no_telp'];
         $objToko->instagram = $_POST['instagram'];
         $objToko->url_toko = $_POST['url_toko'];
+        $objToko->status = $_POST['status'];
         $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
         $objToko->kategori->id_kategori = $_POST['id_kategori'];
         $objToko->user->id_user=$_GET['id_user'];

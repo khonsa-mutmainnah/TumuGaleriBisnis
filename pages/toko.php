@@ -1,5 +1,5 @@
 <?php
-    require_once('./akses-admin.php'); 
+    require_once('./akses-admin.php');
     require_once('./class/class.Toko.php');
     require_once('./class/class.User.php');
     require_once('./class/class.Lokasi.php');
@@ -18,7 +18,6 @@
         $objToko->nama_toko = $_POST['nama_toko'];
         $objToko->tagline = $_POST['tagline'];
         $objToko->no_telp = $_POST['no_telp'];
-        $objToko->status = $_POST['status'];
         $objToko->instagram = $_POST['instagram'];
         $objToko->url_toko = $_POST['url_toko'];
         $objToko->user->id_user = $_POST['id_user'];

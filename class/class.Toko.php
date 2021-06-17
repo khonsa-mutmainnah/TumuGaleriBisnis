@@ -130,7 +130,7 @@ class Toko extends Connection{
         $sql = "UPDATE toko
                 SET nama_toko='$this->nama_toko', id_lokasi=".$this->lokasi->id_lokasi.",
                     tagline='$this->tagline', no_telp='$this->no_telp', instagram='$this->instagram', 
-                    url_toko='$this->url_toko',
+                    url_toko='$this->url_toko', status='$this->status',
                     id_kategori=".$this->kategori->id_kategori.", id_user=".$this->user->id_user."
                 WHERE id_toko = '$this->id_toko'";
                 $this->hasil=mysqli_query($this->connection, $sql);

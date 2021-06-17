@@ -3,7 +3,7 @@ class Connection{
    private $host = "localhost";
    private $struser = "root";
    private $strpassword = "";
-   private $dbname = "galeribisnis";
+   private $dbname = "galeribisnis2";
    public $connection;
       
 	function __construct() {

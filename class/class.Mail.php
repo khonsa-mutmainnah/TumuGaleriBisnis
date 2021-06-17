@@ -35,7 +35,7 @@ class Mail extends Connection
     //     <div class="button-end">
     //     <input class="btn col-lg-4" type="submit" value="Save" name="btnReset">
     //   </div>
-        $link = "<a href = '$this->linkemail'>Klik Link Disini</a>";
+        $link = "<a href = '$this->linkemail'>Reset Password Disini</a>";
         // '
         // <div class="container log-in col-lg-4">
         //     <div class="button-end">
@@ -62,7 +62,7 @@ class Mail extends Connection
 
         $mail->isHTML(true);
         $mail->addEmbeddedImage('./gambar/mailOpen.png', 'image_cid1');
-        $mail->Subject = "Konfirmasi Link";
+        $mail->Subject = "Reset Your Password";
 
         $bodyContent = '
         <div class="card text-center" style="text-align: center">
@@ -107,7 +107,7 @@ class Mail extends Connection
 
         $mail->isHTML(true);
         $mail->addEmbeddedImage('./gambar/InfoStatus.png', 'image_cid1');
-        $mail->Subject = "Konfirmasi Link";
+        $mail->Subject = "Status Toko";
 
         $bodyContent = '
         <div class="card text-center" style="text-align: center">

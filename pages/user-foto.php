@@ -1,4 +1,5 @@
 <?php 
+    
     require_once('./class/class.User.php'); 
     $objUser = new User(); 
 
@@ -44,6 +45,10 @@
             else
                 echo "<script> alert('Proses upload gagal. Silakan ulangi'); </script>";			
         }		
+    }
+    else if(isset($_GET['id_user'])){	
+        $objUser->id = $_GET['id_user'];	
+        $objUser->SelectOneUser();
     }
 ?>
 

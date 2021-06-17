@@ -220,6 +220,7 @@
 .home .text-center .btn{
     background-color: #e4edea;
     color: #002f3f;
+    margin : 2px;
     font-size: 9px;
 }
 .home .text-center .btn:hover{

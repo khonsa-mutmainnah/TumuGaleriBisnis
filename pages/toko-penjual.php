@@ -20,11 +20,32 @@ require_once('./akses-penjual.php');
               echo '<p class="card-text">'.$objToko->tagline.'</p>';
               echo '<p class="card-text">'.$objToko->lokasi->kecamatan.', '.$objToko->lokasi->kota.', '.$objToko->lokasi->provinsi.''.'</p>';
               echo '<br>';  
-              echo '<a class="btn" href="?p=barang-penjual&id_toko='.$objToko->id_toko.'">tambah barang</a>';
-              echo '<a class="btn" href="?p=toko-edit&id_toko='.$objToko->id_toko.'&id_user='.$objToko->user->id_user.'">edit toko</a>';
-              echo '<a class="btn" href="?p=toko-logo">edit logo toko</a>';
+              // echo '<a class="btn" href="?p=barang-penjual&id_toko='.$objToko->id_toko.'">tambah barang</a>';
+              // echo '<a class="btn" href="?p=toko-edit&id_toko='.$objToko->id_toko.'&id_user='.$objToko->user->id_user.'">edit toko</a>';
+              // echo '<a class="btn" href="?p=toko-logo">edit logo toko</a>';
+            
+              //Review
+            if ($objToko->status == 0) {
+                echo '<td><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticTambahBarang">Tambah Barang</a></td>';
+                echo '<td><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticEditToko">Edit Toko</a></td>';
+                echo '<td><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticTokoLogo">Edit Toko Logo</a></td>';
+    
+            }
+            //diterima
+            else if ($objToko->status == 1) {
+                echo '<td><a class="btn" href="?p=barang-penjual&id_toko='.$objToko->id_toko.'">Tambah Barang</a></td>';
+                echo '<td><a class="btn" href="?p=toko-edit&id_toko='.$objToko->id_toko.'&id_user='.$objToko->user->id_user.'"</a>Edit Toko</a></td>';
+                echo '<td><a class="btn" href="?p=toko-logo">Edit Toko Logo</a></td>';
+            }
+            //ditolak
+            else if ($objToko->status == 2) {
+                echo "<td><a id='a2' class='btn'>Tambah Barang</a></td>";
+                echo "<td><a id='a2' class='btn'</a>Edit Toko</a></td>";
+                echo "<td><a class='btn'>>Edit Toko Logo</a></td>";
+            }
               echo '<br>';
           ?>
+
           <!-- Button trigger modal -->
           <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">lihat profil penjual</a>
           
@@ -53,6 +74,9 @@ require_once('./akses-penjual.php');
               </div>
             </div>
           </div>
+
+        
+
           <div class="card-footer">
             <div class="row align-items-start">
                 <div class="col">
@@ -82,6 +106,60 @@ require_once('./akses-penjual.php');
         </section>
       </div>
     </div>
+
+    <!-- Modal Tambah Barang -->
+    <div class="modal fade" id="staticTambahBarang" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticTambahBarangLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticTambahBarangLabel">Tidak Dapat Menambah Barang!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <p>Tokomu masih dalam tahap Peninjauan</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Modal Edit Toko -->
+    <div class="modal fade" id="staticEditToko" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticEditTokoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticEditTokoLabel">Tidak Dapat Mengedit Toko!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <p>Tokomu masih dalam tahap Peninjauan</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Modal Edit Logo Toko -->
+    <div class="modal fade" id="staticTokoLogo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticTokoLogoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticTokoLogoLabel">Tidak Dapat Mengedit Logo Toko!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <p>Tokomu masih dalam tahap Peninjauan</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
 
 
 
