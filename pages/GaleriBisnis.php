@@ -34,7 +34,7 @@
                         <div class="card">
                             <img src="./gambar/foto.jpg" class="card-img-top rounded mx-auto d-block" alt="logo">
                             <div class="card-body">
-                                <h5 class="card-title text-center">nama toko</h5>
+                                <h5 class="card-title text-center">lalala</h5>
                                 <p class="card-text text-break">nanti di sini akan ada tagline tokonya. kurang lebih bisa 2-3 baris</p>
                                 <p class="card-text">kecamatan, kota, provinsi</p>
                                 <p class="card-text">@instagram_toko</p>
