@@ -54,9 +54,9 @@ $objBarang->SelectBarangByToko();
             }
             //ditolak
             else if ($objToko->status == 2) {
-                echo "<td><a id='a2' class='btn'>Tambah Barang</a></td>";
-                echo "<td><a id='a2' class='btn'</a>Edit Toko</a></td>";
-                echo "<td><a class='btn'>>Edit Toko Logo</a></td>";
+              echo '<td><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticTambahBarang2">Tambah Barang</a></td>';
+              echo '<td><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticEditToko2">Edit Toko</a></td>';
+              echo '<td><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#staticTokoLogo2">Edit Toko Logo</a></td>';
             }
               echo '<br>';
           ?>
@@ -169,6 +169,63 @@ $objBarang->SelectBarangByToko();
                   <div class="modal-body">
                     <div class="text-center">
                       <p>Tokomu masih dalam tahap Peninjauan</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Modal Tolak Tambah Barang -->
+    <div class="modal fade" id="staticTambahBarang2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticTambahBarangLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticTambahBarangLabel2">Tidak Dapat Menambah Barang!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <p>Mohon maaf toko Anda tidak disetujui!</p>
+                      <p>Anda Tidak dapat beroperasi</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Modal tolak Edit Toko -->
+    <div class="modal fade" id="staticEditToko2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticEditTokoLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticEditTokoLabel2">Tidak Dapat Mengedit Toko!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                    <p>Mohon maaf toko Anda tidak disetujui!</p>
+                      <p>Anda Tidak dapat beroperasi</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Modal tolak Edit Logo Toko -->
+    <div class="modal fade" id="staticTokoLogo2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticTokoLogoLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticTokoLogoLabel2">Tidak Dapat Mengedit Logo Toko!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                    <p>Mohon maaf toko Anda tidak disetujui!</p>
+                      <p>Anda Tidak dapat beroperasi</p>
                     </div>
                   </div>
               </div>
