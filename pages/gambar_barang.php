@@ -77,7 +77,7 @@
         <h1 class="title text-center fs-1 fw-bolder" >gambar barang</h1>
 		<div class="col">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">kecamatan</label>
+                <label class="col-sm-3 col-form-label">Barang</label>
                 <div class="col-sm-9">
 					<select name="id_barang" class="form-control">
 					<option value="">--Please select barang--</option>

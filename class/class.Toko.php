@@ -273,9 +273,11 @@ class Toko extends Connection{
                     WHERE id_toko=$this->id_toko";
             mysqli_query($this->connection, $sql);
 
-            return "berhasil mengedit";
+            $this->hasil=true;
+
+            // return "berhasil mengedit";
         } catch (PDOException $e) {
-            return "gagal mengedit";
+            $this->hasil=false;
         }
     }
 

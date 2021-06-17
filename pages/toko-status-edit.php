@@ -5,6 +5,7 @@ require_once("./class/class.Toko.php");
 require_once('./class/class.User.php');
 
 $id_toko = $_GET['id_toko'];
+
 $objToko = new Toko();
 $objToko->id_toko = $id_toko;
 $objToko->getTokoData();
@@ -16,7 +17,8 @@ if(isset($_POST['btnSubmit'])){
         $email = $_POST['email'];
         $status = $_POST['status'];
         // $password = $_POST['password'];
-        $objToko->hasil = true;
+        $objToko->status=$status;
+        $objToko->editStatusToko();
     
         if($objToko->hasil){
           echo "<script>alert('Konfirmasi Telah dikirim Via email');</script>";
@@ -45,37 +47,37 @@ if(isset($_POST['btnSubmit'])){
                     <div class="col-sm-9">
                         <select name="status" class="form-control">
                             <option value="">--status--</option>
-                            <option value="<?php echo $objToko->status=1; ?>">setujui</option>
-                            <option value="<?php echo $objToko->status=2; ?>">tolak</option>
-                            <option value="<?php echo $objToko->status=0; ?>">meninjau</option>
-                            <?php
+                            <option value="0"<?php if ($objToko->status == 0) echo 'selected="selected"'; ?>> Tinjau </option>
+                            <option value="1"<?php if ($objToko->status == 1) echo 'selected="selected"'; ?>> Setuju </option>
+                            <option value="2"<?php if ($objToko->status == 2) echo 'selected="selected"'; ?>> Tolak </option>
+                            <!-- <?php
                                 $arrlength=count($objToko->status_toko);
                                     for($x = 0; $x < $arrlength; $x++){
                                         if($objToko->status==0){
                                         }
                                         else if($objToko->status==1){
-                                            // if(isset($_POST['btnSubmit'])){
-                                            //     $objToko->user->email = $_POST['email'];
-                                            //     // $password = $_POST['password'];
-                                            //     $objToko->hasil = true;
+                                            if(isset($_POST['btnSubmit'])){
+                                                $objToko->user->email = $_POST['email'];
+                                                $password = $_POST['password'];
+                                                $objToko->hasil = true;
                                             
-                                                // if($objToko->status){
-                                                //   echo "<script>alert('Konfirmasi Telah dikirim Via email');</script>";
-                                                //   $email = $_POST['email'];
-                                                //   $mail = new Mail();
-                                                //   $mail->mailUser = $email;
-                                                //   $mail->sendMailAction();
-                                                // }
-                                                // else{
-                                                //   echo "<script>alert('Email tidak terdaftar');</script>";
-                                                // }
-                                            // }
+                                                if($objToko->status){
+                                                  echo "<script>alert('Konfirmasi Telah dikirim Via email');</script>";
+                                                  $email = $_POST['email'];
+                                                  $mail = new Mail();
+                                                  $mail->mailUser = $email;
+                                                  $mail->sendMailAction();
+                                                }
+                                                else{
+                                                  echo "<script>alert('Email tidak terdaftar');</script>";
+                                                }
+                                            }
                                         }
                                         else if($objToko->status=2){
                                             echo '<option selected="true" value='.$objToko->status='2'.'>'.$objToko->status_toko.'</option>';
                                         }
                                     }
-                            ?>
+                            ?> -->
                         </select>
                     </div>
                 </div>

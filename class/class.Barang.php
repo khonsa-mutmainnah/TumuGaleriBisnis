@@ -1,5 +1,6 @@
 <?php 
-	require_once("class.Barang.php");
+	require_once("class.Toko.php");
+
 	class Barang extends Connection
 	{
 		

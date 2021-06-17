@@ -1,5 +1,6 @@
 <?php 
 require_once('./akses-admin.php'); 
+
 ?>
 <div class="container tokolist">
     <div class="text-center">
@@ -42,10 +43,10 @@ require_once('./akses-admin.php');
                     echo '<td class="text-break">'.$dataToko->tagline.'</td>';
                     echo '<td>'.$dataToko->no_telp.'</td>';
                     // echo '<td>'.$dataToko->status.'</td>';
-                    if($dataToko->status==0){
+                    if($dataToko->status == 0){
                         echo '<td class="text-break">butuh persetujuan</td>';
                     }
-                    else if($dataToko->status==1){
+                    else if($dataToko->status == 1){
                         echo '<td>disetujui</td>';
                     }
                     else{
