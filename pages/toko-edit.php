@@ -39,6 +39,7 @@
         echo "<script> alert('$objToko->message'); </script>";
         if($objToko->hasil){
             echo '<script> window.location = "?p=galeribisnis='.$objToko->id_toko.'"; </script>';
+            // echo '<script> window.location = "?p=GaleriBisnis"; </script>';
         }
     }
     else if(isset($_GET['id_toko'])){
