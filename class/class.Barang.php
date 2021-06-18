@@ -121,6 +121,7 @@
 			else
 				$this->message ='Data gagal ditambahkan!';
 		}
+
 		public function UpdateBarang(){
 			$sql = "UPDATE barang 
 			SET nama_barang = '$this->nama_barang',
@@ -132,9 +133,9 @@
 			$this->hasil = mysqli_query($this->connection, $sql);
 			
 			if($this->hasil)
-				$this->message ='Data berhasil ditambahkan!';
+				$this->message ='Data berhasil diperbarui!';
 			else
-				$this->message ='Data gagal ditambahkan!';
+				$this->message ='Data gagal diperbarui!';
 		}
 
 		public function SelectSatuBarang(){

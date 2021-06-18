@@ -27,7 +27,7 @@
         $objToko->lokasi->id_lokasi = $_POST['id_lokasi'];
         $objToko->kategori->id_kategori = $_POST['id_kategori'];
         $objToko->user->id_user=$_GET['id_user'];
-        $objToko->id_toko=$_GET['id_toko'];
+        // $objToko->id_toko=$_GET['id_toko'];
 
         if (isset ($_GET['id_toko'])){
             $objToko->id_toko = $_GET['id_toko'];
@@ -38,7 +38,7 @@
         }
         echo "<script> alert('$objToko->message'); </script>";
         if($objToko->hasil){
-            echo '<script> window.location = "?p=toko-penjual&id_toko='.$objToko->id_toko.'"; </script>';
+            echo '<script> window.location = "?p=galeribisnis='.$objToko->id_toko.'"; </script>';
         }
     }
     else if(isset($_GET['id_toko'])){
